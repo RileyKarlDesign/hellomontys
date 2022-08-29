@@ -1,0 +1,70 @@
+    <!-- 
+    title:
+    img: 
+    url: 
+-->
+
+<div class="product-card">
+
+   <div class="product-img">
+
+    
+
+    <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy'  width="300"  height="auto"alt="">
+
+   </div>
+
+    
+
+   
+
+    <div class="product-info">
+
+        {% if product.available %}
+
+            <h4> {{ product.title }}</h4>
+                {% if product.variants.size > 1 %}
+            <p> Sizes :</p>
+                <ul>
+                    {% for variant in product.variants %}
+                        <li> {{ variant.title }} </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+            <p class="product-price"> {{ product.price | money }}</p>
+
+        {% else %}
+            
+         sold out
+
+        
+
+    {% endif %}
+
+
+    
+    <form method="post" action="/cart/add">
+
+        {% if product.available %}
+
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input type="submit" value="Add to cart" class="btn" />
+
+        {% else %}
+
+        <!-- <input type="disabled" value="Sold out" class="btn" /> --> sold out
+
+        {% endif %}
+   
+      </form>
+
+    
+    </div>
+    
+
+    
+
+
+</div>
+

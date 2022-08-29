@@ -1,0 +1,36 @@
+{% if collection.all_products_count > 0 %}
+
+
+    <div class="collection-filters">
+
+        <p>Filters : </p>
+        <div class="filter-wrapper">
+            <ul class="filter-list">
+                {% for tag in collection.all_tags %}
+                {%- if current_tags contains tag -%}
+                        <li class="link active">{{ tag | link_to_remove_tag: tag }}</li>
+                    {%- else -%}
+                        <li class="link" >{{ tag | link_to_add_tag: tag }}</li>
+                    {%- endif -%}
+                 {% endfor %}
+            </ul>
+
+        </div>
+   
+        
+
+    </div>
+
+    
+
+
+    {% for product in collection.products %}
+
+        {% render 'product-card' product: product%}
+    
+    {% else %}
+
+    <p>Sorry, Try reduce filters</p>
+    {% endfor %}
+
+{% endif %}

@@ -1,0 +1,47 @@
+{% assign page = pages.frontpage %}
+{{ page.content }}
+{% assign collection = collections.frontpage %}
+
+
+
+
+
+<div class="collection-links">
+  
+  {% for collection in collections %}
+  
+  <div class="collection-link">
+    
+    <a href="{{collection.url}}">{{ collection.title }}</a>
+
+  </div>
+
+  {% endfor %}
+
+</div>
+
+
+  </ul> 
+
+
+
+
+  <div class="homeproducts">
+
+    {% for product in collection.products %}
+
+
+    {% render 'product-card' with{
+
+product: product
+
+
+  } %}
+  {% endfor %}
+
+  </div>
+
+    
+    
+
+   

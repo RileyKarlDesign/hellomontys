@@ -1,0 +1,42 @@
+<div class="header">
+   
+    
+    
+   
+    <div class="header-top">
+        <h1 class="hero-text"><a href="/">MONTY'S</a></h1> 
+    </div>
+    
+    
+    
+    <div class="header-bottom">
+
+        <div class="cart-button">
+            <a href="/cart">
+
+                <p>Cart</p>
+                <div data-ajax-cart-bind-state="cart.item_count" > 
+                    
+                    <p> {{ cart.item_count }}</p> 
+                 </div>
+    
+                <div data-ajax-cart-bind-state="cart.total_price | money_with_currency">
+                {{ cart.total_price | money_with_currency }}
+              </div>
+
+            </a>
+        </div>
+
+     
+
+        
+        
+        
+        <ul class="head-link-list">
+        {% for link in linklists.main-menu.links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+
+</div>
