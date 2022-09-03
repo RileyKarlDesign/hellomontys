@@ -1,0 +1,55 @@
+@use 'tools';
+
+.product-page-wrapper{
+
+    display: grid; 
+   
+    grid-template-columns: 0.5fr 1.5fr ; 
+    padding: tools.$gutter;
+    grid-gap: tools.$gutter;
+    
+}
+
+.product-page-info{
+    height: fit-content;
+    position: sticky;
+}
+
+.product-page-images{
+
+    padding-top:5vh;
+    height: fit-content;
+    display: grid; 
+    grid-auto-rows: 45vw; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: tools.$gap;
+
+    
+        img{
+            width: 100%;
+            height: 100%;
+            
+            object-fit: cover;
+              
+         }
+    
+}
+
+.product-page-info{
+    position: sticky; // See link
+    top: 0; //to make it stick to the top of the screen
+    height: 100vh; // make the height equal to 100 view height
+    padding-top:5vh;
+    
+}
+
+.single-metafield {
+    display: grid; 
+   
+    grid-template-columns: 1fr 1fr ; 
+    border-top: tools.$standard-border;
+    
+    padding-top:tools.$cell-padding;
+    padding-bottom:tools.$cell-padding
+    
+}

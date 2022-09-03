@@ -1,12 +1,28 @@
-<div class="footer">
+<div class="header">
+   
+    
+    
+   
+  <div class="">
+     
+  <img class="logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt=""> 
 
-    {% for product_vendor in collection.all_vendors %}
-    {{ product_vendor | link_to_vendor }}
-  {% endfor %}
+  </div>
+  
+  
+  
+ 
 
+   
 
-    <h1 class="hero-text">MONTY'S</h1> 
-
+      
+      
+      
+      <div class="head-link-list flex">
+      {% for link in linklists.main-menu.links %}
+      <a class="link-btn" href="{{ link.url }}"><p>{{ link.title }}</p></a>
+      {% endfor %}
+      </div>
+  </div>
 
 </div>
-

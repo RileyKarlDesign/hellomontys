@@ -1,3 +1,5 @@
+
+
 {% assign page = pages.frontpage %}
 {{ page.content }}
 {% assign collection = collections.frontpage %}
@@ -6,27 +8,25 @@
 
 
 
-<div class="collection-links">
-  
-  {% for collection in collections %}
-  
-  <div class="collection-link">
-    
-    <a href="{{collection.url}}">{{ collection.title }}</a>
 
-  </div>
-
-  {% endfor %}
+<div class="spacer">
 
 </div>
 
-
-  </ul> 
-
+<div class="home-main">
 
 
 
-  <div class="homeproducts">
+
+
+
+
+   
+
+
+
+
+  <div class="home-products">
 
     {% for product in collection.products %}
 
@@ -40,6 +40,8 @@ product: product
   {% endfor %}
 
   </div>
+
+</div>
 
     
     

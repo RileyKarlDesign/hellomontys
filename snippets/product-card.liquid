@@ -9,9 +9,9 @@
    <div class="product-img">
 
     
-
-    <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy'  width="300"  height="auto"alt="">
-
+    <a href="{{ product.url }}">
+        <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
+    </a>
    </div>
 
     
@@ -19,37 +19,58 @@
    
 
     <div class="product-info">
-
         {% if product.available %}
+            
+        {% if product.vendor != "hellomonty's" %}
+                <div class="vendor-info ">
+                    <div class="vendor-cell">
+                        <p class="info-cell">{{ product.vendor }}</p>   
+                    </div>
+                    <div class="vendor-mark">
+                    </div>
+                  
+                </div>
 
-            <h4> {{ product.title }}</h4>
-                {% if product.variants.size > 1 %}
-            <p> Sizes :</p>
-                <ul>
-                    {% for variant in product.variants %}
-                        <li> {{ variant.title }} </li>
-                    {% endfor %}
-                </ul>
                 {% endif %}
 
-            <p class="product-price"> {{ product.price | money }}</p>
-
-        {% else %}
-            
-         sold out
+            <div class="product-info-text">
 
         
+        
+        
 
-    {% endif %}
+            <p class="info-cell"> {{ product.title }}</p>
+               
+            <div class="flex">
+                {% if product.variants.size %}
+                    <div class="flex">
+                        {% for variant in product.variants %}
+                            <p class="info-cell"> {{ variant.title }} </p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                <p class="product-price info-cell"> {{ product.price | money_with_currency }}</p>
+                
+                        {% else %}
+                
+                         sold out
+                
+                        
+                
+                        {% endif %}
+            </div>
+
+    </div>
 
 
     
-    <form method="post" action="/cart/add">
+    <form class="mini-add-to-cart" method="post" action="/cart/add">
 
         {% if product.available %}
 
         <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-        <input type="submit" value="Add to cart" class="btn" />
+        
+        <button class='btn'> <i class="fa-solid fa-plus"></i> </button>
 
         {% else %}
 

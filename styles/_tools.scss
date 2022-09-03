@@ -1,0 +1,83 @@
+// colors
+
+    $black: rgb(26, 14, 3);
+    $white: rgb(223, 223, 223);
+    $grey: rgb(184, 184, 184);
+    $yellow: rgb(255, 199, 46);
+    $red: rgb(248, 78, 35);
+    $hovercolor: rgb(255, 255, 255);
+
+// measurements
+
+    $gutter : 20px;
+    $half: 3vw;
+    $gap: calc($gutter / 10);
+    $cell-padding: 5px;
+
+// details 
+
+    $radius: 5px;
+    $standard-border: 1px solid $black;
+    $standard-border-0: 1px solid rgba(0, 0, 0, 0);
+    $standard-border-grey: 1px solid $grey;
+
+
+// design
+
+    // type
+
+        h1{
+
+            font-family:helvetica, arial;
+            font-size:2vw;
+            font-weight: 700;
+        }
+        
+        
+
+        h2{
+            font-family:helvetica, arial; 
+            font-size:2vw;
+            font-weight: 700;
+        }
+
+        
+
+        p{
+            font-family:helvetica, arial;
+            font-weight: 700;
+            font-size:1.6vw;
+        }
+
+        a{
+            font-family:helvetica, arial;
+            font-weight: 500;
+            font-size:1.3vw;
+            color: $black;
+            text-decoration: none;
+        }
+
+        h3{
+            font-family:helvetica, arial;
+            font-weight: 700;
+            font-size:0.9vw;
+        }
+
+
+
+.flex{
+    display: flex;
+}
+
+// Animation
+
+$transition-basic:  ease-in-out 0.2s;
+
+
+// ----------------------------------------------------------------
+
+svg{
+    fill: $black
+}
+
+

@@ -1,0 +1,80 @@
+h1 {
+  font-family: helvetica, arial;
+  font-size: 2vw;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: helvetica, arial;
+  font-size: 2vw;
+  font-weight: 700;
+}
+
+p {
+  font-family: helvetica, arial;
+  font-weight: 700;
+  font-size: 1.6vw;
+}
+
+a {
+  font-family: helvetica, arial;
+  font-weight: 500;
+  font-size: 1.3vw;
+  color: rgb(26, 14, 3);
+  text-decoration: none;
+}
+
+h3 {
+  font-family: helvetica, arial;
+  font-weight: 700;
+  font-size: 0.9vw;
+}
+
+.flex {
+  display: flex;
+}
+
+svg {
+  fill: rgb(26, 14, 3);
+}
+
+.product-page-wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  padding: 20px;
+  grid-gap: 20px;
+}
+
+.product-page-info {
+  height: fit-content;
+  position: sticky;
+}
+
+.product-page-images {
+  padding-top: 5vh;
+  height: fit-content;
+  display: grid;
+  grid-auto-rows: 45vw;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+}
+.product-page-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-page-info {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding-top: 5vh;
+}
+
+.single-metafield {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgb(26, 14, 3);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

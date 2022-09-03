@@ -23,12 +23,26 @@
     {{ 'style.css' | asset_url | stylesheet_tag }}
   
     <script src="{{ 'theme.js' | asset_url }}" defer></script>
-     
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
-    {% render 'header' %}
-    {{ content_for_layout }}
+    
+    <div id="content" class="content-load  animate__animated animate__fadeIn   "  >
+
+      {% render 'header' collection: collection %}
+
+      <div class="wrapper">
+{{ content_for_layout }}
+      </div>
+      
+    
+
+
     {% render 'footer' %}
     <div class="cart-continer">
         {% section 'my-cart' %}
@@ -42,5 +56,7 @@
       <script type="module">
         import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
       </script>
+
+</div>
 </body>
 </html>

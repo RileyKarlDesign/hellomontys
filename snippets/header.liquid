@@ -1,42 +1,111 @@
-<div class="header">
-   
+<!-- collection  -->
+
+<div class="header ">
+<div class="header-top">
+
+    {% if page.title == "Makers"  %}
+            <div class="header-makers-mark animate__animated animate__slideInRight">
+
+            </div> 
+
+        {% elsif product.vendor && product.vendor != "hellomonty's" %}
+
+            <div class="header-makers-mark animate__animated animate__slideInRight">
+
+        </div> 
+
+        {% elsif collection.title == "hand-made" %}
+
+            <div class="header-makers-mark animate__animated animate__slideInRight">
+
+        </div> 
+        
+    {% endif %}
+
+    <div class="version-mark">
+
+    </div>
+        
     
+
     
-   
-    <div class="header-top">
-        <h1 class="hero-text"><a href="/">MONTY'S</a></h1> 
+       
+    <img class="logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt=""> 
+
     </div>
     
     
-    
+  
+
+
     <div class="header-bottom">
+        
 
         <div class="cart-button">
             <a href="/cart">
 
-                <p>Cart</p>
-                <div data-ajax-cart-bind-state="cart.item_count" > 
+                <p>Cart (
+                <span data-ajax-cart-bind-state="cart.item_count" > 
                     
-                    <p> {{ cart.item_count }}</p> 
-                 </div>
-    
-                <div data-ajax-cart-bind-state="cart.total_price | money_with_currency">
-                {{ cart.total_price | money_with_currency }}
-              </div>
+                     {{ cart.item_count }} 
+                </span>
+                 )</p>
+                
 
             </a>
         </div>
+
+           
+        
+
+        <div class="collection-link-list">
+
+            
+
+                    
+                {% for collection in collections %}
+
+                {% if template.name == 'index' and collection.title  == 'All' %}
+                    
+                <a href="{{ collection.url }}"> <p class="link-btn link-btn-active">{{ collection.title }} </p></a>
+                
+
+               
+                    
+                {% elsif  collection.url  ==  request.path %}
+                    
+                        <a href="{{ collection.url }}"> <p class="link-btn link-btn-active">{{ collection.title }} </p></a>
+
+                   {% else %}
+
+                        <a href="{{ collection.url }}"> <p class="link-btn">{{ collection.title }} </p></a> 
+                    
+    
+
+                    {% endif %}
+
+
+                    
+
+                
+                 {% endfor %}
+
+        </div>
+
+
+        
 
      
 
         
         
         
-        <ul class="head-link-list">
+        <div class="head-link-list">
         {% for link in linklists.main-menu.links %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        <a class="link-btn" {% if link.active %} class="link-btn-active" {% endif %} href="{{ link.url }}"><p>{{ link.title }}</p></a>
         {% endfor %}
-        </ul>
+        </div>
     </div>
 
 </div>
+

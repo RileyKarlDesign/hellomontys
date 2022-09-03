@@ -1,0 +1,144 @@
+@use 'tools';
+@use 'components';
+
+
+// ----------------------------------------------------------------
+
+.header-makers-mark{
+    height: 7vw;
+    width: 7vw;
+    background-color:tools.$yellow;
+    border-radius:50%;
+    
+
+    position:absolute;
+    top: 2vw;
+    right: -3vw;
+}
+
+//-----------------------------------------------------------------
+.header{
+    
+    padding: tools.$gutter;
+    // background-color: tools.$white;
+    transition: tools.$transition-basic;
+
+    
+   
+    
+   
+    
+}
+
+
+
+
+.header-top{
+    width: 100%;
+   
+    //transition: tools.$transition-basic;
+    transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    justify-content: center;
+    
+
+    .logo{
+        width:100%;
+        height: fit-content;
+        transition: tools.$transition-basic;
+        fill: red;
+   
+    }
+    
+}
+
+
+//----------------------------------------------------------------
+
+
+.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: tools.$gutter;
+    transition: tools.$transition-basic;
+
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+
+.head-link-list{
+    width: 100%;
+    
+    display: flex;
+    justify-content: right;
+}
+
+.collection-link-list{
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    
+//     -moz-box-shadow:    inset -10px 0 5px #000000;
+//    -webkit-box-shadow: inset -10px 0 5px #000000;
+//    box-shadow:         inset -10px -10px 5px #000000;
+
+} 
+
+
+//----------------------------------------------------------------
+
+//scrolled sate -----------------------------------------------
+
+.header-scrolled{
+    padding-top: 3px ;
+    padding-bottom:15px;
+    
+    height: 20px;
+
+   
+    position: fixed;
+    top: 0;
+    left:5vw;
+    right: 5vw;
+    z-index: 10;
+    
+    background-color:tools.$white;
+//    filter: drop-shadow(0px 8px 1px tools.$white);
+    backdrop-filter: blur(5px);
+
+
+    .header-top{
+       
+        .logo{
+            width: 0%;
+            opacity: 0;
+        }
+        
+    }
+    .header-bottom{
+
+        height: 20px;
+        display: felx;
+        align-items: center;
+        padding: 0;
+
+        a{
+            color: tools.$black;
+        }
+
+        p{
+            color: tools.$black;
+        }
+        
+    }
+    
+    
+    
+}
+
+
+
+.cart-button{
+    width: fit-content;
+}

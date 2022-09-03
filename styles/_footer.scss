@@ -1,0 +1,9 @@
+@use 'tools';
+
+.logo{
+    width:100%;
+    height: fit-content;
+    transition: tools.$transition-basic;
+    fill: red;
+
+}

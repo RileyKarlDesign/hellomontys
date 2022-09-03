@@ -1,14 +1,78 @@
-<h2>{{ product.title }}</h2>
-{{ product.description }}
-<form action="/cart/add" method="post" enctype="multipart/form-data">
-    <select name="id">
-        {% for variant in product.variants %}
-        {% if variant.available == true %}
-        <option value="{{ variant.id }}"> {{ variant.title }} for {{ variant.price | money_with_currency }}</option>
-        {% else %}
-        <option disabled="disabled"> {{ variant.title }} - sold out!</option>
-        {% endif %}
+
+ 
+<!--  
+ {% for feild in product.metafields.custom.colour %}
+
+    <p> {{ feild | metafield_text }}</p>
+
+ {% endfor %} -->
+
+
+   
+
+<div class="spacer">
+
+</div>
+    
+
+<div class="product-page-wrapper">
+    <div class="product-page-info">
+        <p>{{ product.title }}</p>
+        <h3>{{ product.description }}</h3>
+
+         <!-- metafields -->
+    
+         <div class="metafields">
+    
+            <div class="single-metafield ">
+                <p class="metafield-title"> Test</p>  <p>{{ product.metafields.custom.test | metafield_tag }}</p>
+            </div>
+   
+            <div class="single-metafield  ">
+                <p class="metafield-title" > Color</p>  <p>{{ product.metafields.custom.colour | metafield_text }}</p>
+            </div>
+   
+            <div class="single-metafield ">
+                <p class="metafield-title" > Material </p> <p>{{ product.metafields.custom.material | metafield_text }}</p>
+            </div>
+   
+        </div>
+
+        <!-- //---------------------------------------------------------------- -->
+    
+    
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+            <select name="id">
+                {% for variant in product.variants %}
+                {% if variant.available == true %}
+                <option value="{{ variant.id }}"> {{ variant.title }} for {{ variant.price | money_with_currency }}</option>
+                {% else %}
+                <option disabled="disabled"> {{ variant.title }} - sold out!</option>
+                {% endif %}
+                {% endfor %}
+    
+    
+            </select>
+    
+    
+    
+           
+    
+    
+    
+    
+            <input type="submit" name="add" id="add" value="Add to Cart" class="button">
+        </form>
+    </div>
+    
+     <!--  Images  -->
+     <div class="product-page-images">
+        {% for image in product.images %}
+            <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
         {% endfor %}
-    </select>
-    <input type="submit" name="add" id="add" value="Add to Cart" class="button">
-</form>
+    </div>
+</div>
+
+
+<!-- related products -->
+

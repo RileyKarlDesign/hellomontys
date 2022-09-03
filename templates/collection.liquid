@@ -1,7 +1,8 @@
 {% if collection.all_products_count > 0 %}
 
 
-    <div class="collection-filters">
+
+    <!-- <div class="collection-filters">
 
         <p>Filters : </p>
         <div class="filter-wrapper">
@@ -19,18 +20,27 @@
    
         
 
+    </div> -->
+
+    <div class="spacer">
+        
     </div>
-
     
 
 
-    {% for product in collection.products %}
+    <div class="home-products">
 
-        {% render 'product-card' product: product%}
+        {% for product in collection.products %}
     
-    {% else %}
-
-    <p>Sorry, Try reduce filters</p>
-    {% endfor %}
+    
+        {% render 'product-card' with{
+    
+    product: product
+    
+    
+      } %}
+      {% endfor %}
+    
+      </div>
 
 {% endif %}
