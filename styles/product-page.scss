@@ -45,11 +45,29 @@
 
 .single-metafield {
     display: grid; 
-   
+    color: tools.$grey;
     grid-template-columns: 1fr 1fr ; 
-    border-top: tools.$standard-border;
+    border-top: tools.$standard-border-grey;
     
     padding-top:tools.$cell-padding;
     padding-bottom:tools.$cell-padding
+    
+}
+
+.inline-option{
+    
+}
+
+optgroup * {
+    font-size: 100px;
+}
+
+
+
+
+.sizes{
+    display: flex;
+    justify-content: space-between;
+
     
 }

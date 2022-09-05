@@ -25,44 +25,26 @@
          <div class="metafields">
     
             <div class="single-metafield ">
-                <p class="metafield-title"> Test</p>  <p>{{ product.metafields.custom.test | metafield_tag }}</p>
+                <h3 class="metafield-title"> Test</h3>  <h3>{{ product.metafields.custom.test | metafield_tag }}</h3>
             </div>
    
             <div class="single-metafield  ">
-                <p class="metafield-title" > Color</p>  <p>{{ product.metafields.custom.colour | metafield_text }}</p>
+                <h3 class="metafield-title" > Color</h3>  <h3>{{ product.metafields.custom.colour | metafield_text }}</h3>
             </div>
    
             <div class="single-metafield ">
-                <p class="metafield-title" > Material </p> <p>{{ product.metafields.custom.material | metafield_text }}</p>
+                <h3 class="metafield-title" > Material </h3> <h3>{{ product.metafields.custom.material | metafield_text }}</h3>
             </div>
    
         </div>
 
         <!-- //---------------------------------------------------------------- -->
     
-    
-        <form action="/cart/add" method="post" enctype="multipart/form-data">
-            <select name="id">
-                {% for variant in product.variants %}
-                {% if variant.available == true %}
-                <option value="{{ variant.id }}"> {{ variant.title }} for {{ variant.price | money_with_currency }}</option>
-                {% else %}
-                <option disabled="disabled"> {{ variant.title }} - sold out!</option>
-                {% endif %}
-                {% endfor %}
-    
-    
-            </select>
-    
-    
-    
-           
-    
-    
-    
-    
-            <input type="submit" name="add" id="add" value="Add to Cart" class="button">
-        </form>
+        <div class="inline-option">
+        
+            {% render 'add-to-cart-form'  %}
+        </div>
+
     </div>
     
      <!--  Images  -->
@@ -76,3 +58,6 @@
 
 <!-- related products -->
 
+
+
+  

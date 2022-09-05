@@ -43,3 +43,6 @@ function onReady(callback) {
     setVisible('.page', true);
     setVisible('#loading', false);
   });
+
+ 
+

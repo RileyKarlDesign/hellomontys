@@ -31,12 +31,7 @@
     {% for product in collection.products %}
 
 
-    {% render 'product-card' with{
-
-product: product
-
-
-  } %}
+    {% render 'product-card' with{product: product} %}
   {% endfor %}
 
   </div>

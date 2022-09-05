@@ -73,8 +73,18 @@ svg {
 
 .single-metafield {
   display: grid;
+  color: rgb(118, 118, 118);
   grid-template-columns: 1fr 1fr;
-  border-top: 1px solid rgb(26, 14, 3);
+  border-top: 1px solid rgb(118, 118, 118);
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+optgroup * {
+  font-size: 100px;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
 }
