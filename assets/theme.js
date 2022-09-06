@@ -45,4 +45,8 @@ function onReady(callback) {
   });
 
  
+// jquery add to cart--------------------------------------------
+
+
+
 

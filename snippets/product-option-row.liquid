@@ -1,0 +1,33 @@
+<!-- option  -->
+
+
+
+<div class="product-option-row">
+    <label for="{% if type == 'select' %}select-{{ option.name}}{% endif %}"> {{ option.name }} </label> 
+</div>
+
+<div class="option-values">
+
+    {% if type == 'select' %}
+
+    <select name="{{ option_name }}" id="select-{{ option_name }}">
+        {% for value in option.values %}
+            <option value="{{ value }}">{{ value }}</option>
+   
+        {% endfor %}
+    </select>
+
+    {% else %}
+
+        {% for value in option.values %}
+            {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
+            <input class="variant-radio" id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}" {% if value == selected %}checked{% endif %}>
+            <label for="{{ radio_id }}"> {{ value }} </label> 
+        {% endfor %}
+    {% endif %}
+   
+
+
+
+
+</div>

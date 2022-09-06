@@ -22,14 +22,20 @@
     {{ content_for_header }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
   
-    <script src="{{ 'theme.js' | asset_url }}" defer></script>
-    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+    
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+  
+
+  
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    
+    
+
 </head>
 <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
@@ -58,7 +64,13 @@
       <script type="module">
         import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
       </script>
+      
 
-</div>
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"> </script>
+      <!-- <script src="{{ 'theme.js' | asset_url }}"  ></script> -->
+      {{ 'application.js' | asset_url | script_tag }}
+
+
+
 </body>
 </html>

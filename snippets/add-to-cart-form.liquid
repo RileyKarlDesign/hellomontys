@@ -1,50 +1,87 @@
-<!-- {% assign has_multiple_variants = false %}
-{% if products.variants.size > 1 %}
+<!-- 
+    current_variant
+ -->
+
+{% assign has_multiple_variants = false %}
+{% if product.variants.size > 1 %}
 {% assign has_multiple_variants = true %}
-{%endif%}
+{% endif %}
 
 {% assign has_multiple_options = false %}
-{% if products.options.size > 1 %}
+{% if product.options.size > 1 %}
 {% assign has_multiple_options = true %}
-{%endif%} -->
+{% endif %}
+
+{% assign can_add_to_cart = false %}
+
+{% if has_multiple_variants  == false and product.available %}
+
+ {% assign can_add_to_cart == true %}
+
+{% endif %}
 
 
 
 
-<form action="/cart/add" method="post" enctype="multipart/form-data">
-            
-    <!-- {% for option in product.options_with_values %}
-       
-    {% assign option_name = "option" | append: option.position %}
-    {%assign radio_id = 'option-'| append: option_name | append: '-' | append: value | handleize %}
-    <label for=""> {{ option.name }} </label>
+<!-- //---------------------- json get -------------------------------->
+{% if has_multiple_variants %}
 
-        <div class="option-values">
-            {% for value in option.values%}
-            <input id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}">
-            <label for="{{ radio_id }}">{{ value }}</label>
-            {% endfor %}
-        </div>
-    
-    {% endfor %} -->
-    
-    
-    <select name="id">
-        {% for variant in product.variants %}
-        {% if variant.available == true %}
-        <option value="{{ variant.id }}"> {{ variant.title }} for {{ variant.price | money_with_currency }}</option>
-        <input type="radio" value="{{ variant.id }}">
-        {% else %}
-        <option disabled="disabled"> {{ variant.title }} - sold out!</option>
-        {% endif %}
+    <!-- {% render 'get-variants-with-quantity-json' with product: product %} -->
+
+    {% assign variants_with_quantity_json = product.variants | json %}
+
+    {% unless variants_with_quantity_json contains 'inventory_quantity' %}
+
+    {% for variant in product.variants %}
+    {% assign replace_hook_variant_id = '"id":' | append: variant.id %}
+    {% assign replace_id_plus_inventory = replace_hook_variant_id | append: ',' | append: '"inventory_quantity":' | append:
+    variant.inventory_quantity %}
+
+    {% assign variants_with_quantity_json = variants_with_quantity_json | replace: replace_hook_variant_id,
+    replace_id_plus_inventory %}
+
+    {% endfor %}
+
+    {% endunless %}
+
+
+
+{% endif %}
+
+<!-- //---------------------- json get -------------------------------->
+
+
+
+
+
+<form id="add-to-cart-form" action="/cart/add" method="post" enctype="multipart/form-data"
+    data-variants="{{ variants_with_quantity_json | url_param_escape }}">
+
+    {%if has_multiple_options or has_multiple_variants %}
+
+        {% for option in product.options_with_values %}
+
+            {% assign option_name = 'option' | append: option.position %}
+
+            {% if option.name != 'Color'%}
+                {% render 'product-option-row' option: option, option_name: option_name type: 'select' %}
+            {% else %}
+                {% render 'product-option-row' option: option, option_name: option_name type: 'select' %}
+            {% endif %}
+
+
         {% endfor %}
-    </select>
-    
-    <input type="submit" name="add" id="add" value="Add to Cart" class="button">
 
-    
+    {% endif %}
+
+    <input type="hidden" name="id" class='js-variant-id'
+        value={{product.variants.first.id}}>
+
+    <span class="js-price" data-default-price="{{ product.price | money }}"> Price: {{ current_variant.price | money }}
+    </span>
+
+    <label for="Quantity">quanity</label>
+    <input type="number" id="Quanyity" name="quantity" value="1" min="1">
+    <button type="submit" name="add" id="add-to-cart-button" > Add to cart button </button>
 
 </form>
-
-
-
