@@ -1,3 +1,5 @@
+
+<p> Our Labels</p>
 <ul>
     {%- for product_vendor in shop.vendors -%}
       <li>{{ product_vendor | link_to_vendor }}</li>
@@ -8,8 +10,19 @@
   {% schema %}
 {
     "name" : "nz-labels",
-    "settings" : [],
-    "templates": ["article", "index", "page", "product"]
+    "settings" : 
+          {
+            "type": "text",
+            "label": "your headline fro the section",
+            "id" : "heading"
+          },
+          {
+            "type": "richtext",
+            "label": "Your description",
+            "id" : "description"
+          }
+    ],
+    
 }
 
 {% endschema %}
