@@ -44,12 +44,12 @@
         <div class="cart-button">
             <a href="/cart">
 
-                <p>Cart (
+                <h2>Cart (
                 <span data-ajax-cart-bind-state="cart.item_count" > 
                     
                      {{ cart.item_count }} 
                 </span>
-                 )</p>
+                 )</h2>
                 
 
             </a>
@@ -67,18 +67,18 @@
 
                 {% if template.name == 'index' and collection.title  == 'All' %}
                     
-                <a href="{{ collection.url }}"> <p class="link-btn link-btn-active">{{ collection.title }} </p></a>
+                <a href="{{ collection.url }}"> <h2 class="link-btn link-btn-active">{{ collection.title }} </h2></a>
                 
 
                
                     
                 {% elsif  collection.url  ==  request.path %}
                     
-                        <a href="{{ collection.url }}"> <p class="link-btn link-btn-active">{{ collection.title }} </p></a>
+                        <a href="{{ collection.url }}"> <h2 class="link-btn link-btn-active">{{ collection.title }} </h2></a>
 
                    {% else %}
 
-                        <a href="{{ collection.url }}"> <p class="link-btn">{{ collection.title }} </p></a> 
+                        <a href="{{ collection.url }}"> <h2 class="link-btn">{{ collection.title }} </h2></a> 
                     
     
 
@@ -102,7 +102,7 @@
         
         <div class="head-link-list">
         {% for link in linklists.main-menu.links %}
-        <a class="link-btn" {% if link.active %} class="link-btn-active" {% endif %} href="{{ link.url }}"><p>{{ link.title }}</p></a>
+        <a class="link-btn" {% if link.active %} class="link-btn-active" {% endif %} href="{{ link.url }}"><h2>{{ link.title }}</h2></a>
         {% endfor %}
         </div>
     </div>

@@ -4,88 +4,119 @@
     url: 
 -->
 
+{% if product.available %}  
+
+
+     
+
 <div class="product-card">
 
-   <div class="product-img">
 
-    
-    <a href="{{ product.url }}">
-        <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
-    </a>
-   </div>
+    {% if product.vendor != "hellomonty's" %}
 
+    <div class="makers-mark"></div>
+
+    {% endif %}
     
 
-   
+
+    <div class="product-img">
+            <a href="{{ product.url }}">
+            <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
+        </a>
+    </div>
+
+
+
+
 
     <div class="product-info">
-        {% if product.available %}
+        
+        <div class="info-section-one">
+
+            <div class='product-title cell' > 
+            <p class="label title-label">Title:</p>
+            <p> {{ product.title }} </p>
             
-        {% if product.vendor != "hellomonty's" %}
-                <div class="vendor-info ">
-                    <div class="vendor-cell">
-                        <p class="info-cell">{{ product.vendor }}</p>   
-                    </div>
-                    <div class="vendor-mark">
-                    </div>
-                  
-                </div>
+            {% if product.vendor != "hellomonty's" %}
 
-                {% endif %}
-
-            <div class="product-info-text">
-
-        
-        
-        
-
-            <p class="info-cell"> {{ product.title }}</p>
-               
-            <div class="flex">
-                {% if product.variants.size %}
-                    <div class="flex">
-                        {% for variant in product.variants %}
-                            <p class="info-cell"> {{ variant.title }} </p>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                <p class="product-price info-cell"> {{ product.price | money_with_currency }}</p>
-                
-                        {% else %}
-                
-                         sold out
-                
-                        
-                
-                        {% endif %}
+            <div class='product-vendor cell' > 
+            <p class="label">Maker:</p>
+            <p> {{ product.vendor }} </p>
             </div>
 
-    </div>
-
-
-    
-    <form class="mini-add-to-cart" method="post" action="/cart/add">
-
-        {% if product.available %}
-
-        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-        
-        <button class='btn'> <i class="fa-solid fa-plus"></i> </button>
-
-        {% else %}
-
-        <!-- <input type="disabled" value="Sold out" class="btn" /> --> sold out
 
         {% endif %}
-   
-      </form>
+        
+        
+        
+        
+            </div>
+            
+            <div class="info">
+                
+                <div class='product-price cell' >
+                    <p class="label">Price:</p>
+                    <p> {{ product.price | money_with_currency}} </p>
+                    </div>
 
-    
+
+                <!-- {% for option in product.options_with_values %}
+                    {% if option.name != 'Title' %}
+                    <div class="product-option cell">
+                            <p class="product-option-label label" > {{ option.name }}: </p>
+                                {% for value in option.values %}
+                                    <p class="product-option">  {{ value }}</p>
+                                {% endfor %}
+                    </div>
+                    {% endif %}
+                           {% endfor %}
+                     -->
+               
+            </div>
+
+
+            
+        
+
+        </div>
+
+
+       
+
+        <div class="info-section-two">
+            <form class="mini-add-to-cart" method="post" action="/cart/add">
+
+                {% if product.available %}
+        
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                    
+                    <button class='btn'> <i class="fa-solid fa-plus"></i> </button>
+
+                    {% else %}
+
+                    <p class='sold-out-text' > sold out </p>
+                    
+                {% endif %}
+        
+        </form>
+
+        </div>
+
     </div>
-    
+
+
+
+
+   
 
     
-
-
 </div>
+
+{% endif %}
+    
+
+    
+
+
 

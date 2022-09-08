@@ -1,33 +1,35 @@
 h1 {
   font-family: helvetica, arial;
-  font-size: 2vw;
+  font-size: 50px;
   font-weight: 700;
 }
 
 h2 {
-  font-family: helvetica, arial;
-  font-size: 2vw;
+  font-size: 20px;
   font-weight: 700;
 }
 
 p {
-  font-family: helvetica, arial;
   font-weight: 700;
-  font-size: 1.6vw;
+  font-size: 14px;
+  color: rgb(19, 12, 12);
 }
 
 a {
-  font-family: helvetica, arial;
   font-weight: 500;
-  font-size: 1.3vw;
-  color: rgb(26, 14, 3);
+  font-size: 16px;
+  color: rgb(19, 12, 12);
   text-decoration: none;
 }
 
 h3 {
-  font-family: helvetica, arial;
   font-weight: 700;
-  font-size: 0.9vw;
+  font-size: 16px;
+}
+
+.label {
+  color: rgb(95, 95, 95) !important;
+  font-size: 10px !important;
 }
 
 .flex {
@@ -35,7 +37,7 @@ h3 {
 }
 
 svg {
-  fill: rgb(26, 14, 3);
+  fill: rgb(19, 12, 12);
 }
 
 .product-page-wrapper {
@@ -73,9 +75,9 @@ svg {
 
 .single-metafield {
   display: grid;
-  color: rgb(118, 118, 118);
+  color: rgb(95, 95, 95);
   grid-template-columns: 1fr 1fr;
-  border-top: 1px solid rgb(118, 118, 118);
+  border-top: 1px solid rgb(95, 95, 95);
   padding-top: 5px;
   padding-bottom: 5px;
 }

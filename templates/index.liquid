@@ -16,25 +16,17 @@
 <div class="home-main">
 
 
-
-
-
-
-
-   
-
-
-
-
   <div class="home-products">
 
     {% for product in collection.products %}
+      {% if product.available %}  
 
-
-    {% render 'product-card' with{product: product} %}
-  {% endfor %}
-
-  </div>
+        {% render 'product-card'with{product: product} %}
+        
+       {% endif %}
+    {% endfor %}
+  
+    </div>
 
 </div>
 
