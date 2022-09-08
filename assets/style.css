@@ -53,6 +53,16 @@ table {
   box-sizing: border-box;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
 h1 {
   font-family: helvetica, arial;
   font-size: 50px;
