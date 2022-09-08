@@ -1,11 +1,7 @@
 @use 'tools';
 
-.home-main {
-    width: 100%;
-    
-}
 
-.home-products{
+.main-product-grid{
         display: grid; 
         grid-auto-rows:40vw; 
         grid-template-columns: repeat(4, minmax(0, 1fr) ) ; 

@@ -226,11 +226,7 @@ svg {
   fill: red;
 }
 
-.home-main {
-  width: 100%;
-}
-
-.home-products {
+.main-product-grid {
   display: grid;
   grid-auto-rows: 40vw;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -239,13 +235,13 @@ svg {
   padding: 20px;
 }
 @media (max-width: 1200px) {
-  .home-products {
+  .main-product-grid {
     grid-auto-rows: 50vw;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media (max-width: 800px) {
-  .home-products {
+  .main-product-grid {
     grid-auto-rows: 60vw;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -400,7 +396,7 @@ optgroup * {
 }
 
 body {
-  background-color: rgb(252, 55, 6);
+  background-color: rgb(6, 252, 18);
 }
 
 .spacer {
