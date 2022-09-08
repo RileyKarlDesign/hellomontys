@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "nz-labels",
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
