@@ -1,11 +1,12 @@
 {
-    "sections":{
-        "main":{
-            "type": "frontpage-products"
-        }
-  
-    },
-    "order": [
-        "main"
-    ]
-  }
+  "sections": {
+    "main": {
+      "type": "frontpage-products",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
