@@ -13,13 +13,14 @@
     text-decoration: none;
     padding-top:3px; 
     padding-bottom: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: tools.$half;
+    padding-right: tools.$half;
     transition: tools.$transition-basic;
-    border-radius: 10px;
+   
     // margin-left: tools.$half;
-    border: tools.$standard-border-0;
+    
     display: flex;
+    line-height: 15px;
 
     
     
@@ -66,4 +67,15 @@
     background-color:tools.$white;
     
 
+}
+
+.version-mark{
+    position: absolute;
+    right: tools.$half;
+    top: tools.$half;
+    color: tools.$grey;
+    border: tools.$standard-border-grey;
+    padding: 2px 5px 1px ;
+    border-radius: 50%;
+    z-index: 1;
 }

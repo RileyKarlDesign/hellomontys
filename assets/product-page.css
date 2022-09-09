@@ -1,7 +1,8 @@
 h1 {
-  font-family: helvetica, arial;
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 35px;
+  line-height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 h2 {
@@ -12,24 +13,26 @@ h2 {
 p {
   font-weight: 700;
   font-size: 14px;
-  color: rgb(19, 12, 12);
+  color: rgba(19, 12, 12, 0.833);
+  line-height: 20px;
 }
 
 a {
-  font-weight: 500;
-  font-size: 16px;
-  color: rgb(19, 12, 12);
+  font-weight: 700;
+  font-size: 14;
+  color: rgba(19, 12, 12, 0.833);
   text-decoration: none;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .label {
-  color: rgb(95, 95, 95) !important;
+  color: rgba(0, 0, 0, 0.546) !important;
   font-size: 10px !important;
+  line-height: 15px;
 }
 
 .flex {
@@ -37,14 +40,14 @@ h3 {
 }
 
 svg {
-  fill: rgb(19, 12, 12);
+  fill: rgba(19, 12, 12, 0.833);
 }
 
 .product-page-wrapper {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
-  padding: 20px;
-  grid-gap: 20px;
+  padding: 10px;
+  grid-gap: 10px;
 }
 
 .product-page-info {
@@ -58,7 +61,7 @@ svg {
   display: grid;
   grid-auto-rows: 45vw;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2px;
+  grid-gap: 1px;
 }
 .product-page-images img {
   width: 100%;
@@ -75,9 +78,9 @@ svg {
 
 .single-metafield {
   display: grid;
-  color: rgb(95, 95, 95);
+  color: rgba(0, 0, 0, 0.546);
   grid-template-columns: 1fr 1fr;
-  border-top: 1px solid rgb(95, 95, 95);
+  border-top: 1px solid rgba(0, 0, 0, 0.546);
   padding-top: 5px;
   padding-bottom: 5px;
 }

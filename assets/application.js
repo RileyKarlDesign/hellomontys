@@ -93,5 +93,22 @@ $(document).ready(function() {
     
     
       productForm.init()
+
+
+      let cartButton = document.querySelector('.cart-btn')
+      let navWrapper = document.querySelector('.nav-wrapper')
+     
+
+
+       cartButton.addEventListener('click', function (){
+
+          if(navWrapper.classList.contains('cart-open')){
+            navWrapper.classList.remove('cart-open')
+          }else{
+            navWrapper.classList.add('cart-open')
+          }
+          
+       })
+
     
     });

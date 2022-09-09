@@ -1,15 +1,16 @@
 // colors
 
-    $black: rgb(19, 12, 12);
-    $white: rgb(255, 255, 255);
-    $grey: rgb(95, 95, 95);
+    $black: rgba(19, 12, 12, 0.833);
+    $white: rgb(246, 239, 219);
+    $grey-0: rgba(0, 0, 0, 0.257);
+    $grey: rgba(0, 0, 0, 0.546);
     $yellow: rgb(255, 199, 46);
     $red: rgb(248, 78, 35);
-    $hovercolor: rgb(245, 245, 245);
+    $hovercolor: rgba(0, 0, 0, 0.056);
 
 // measurements
 
-    $gutter : 20px;
+    $gutter : 10px;
     $half: 10px;
     $gap: calc($gutter / 10);
     $cell-padding: 5px;
@@ -20,6 +21,9 @@
     $standard-border: 1px solid $black;
     $standard-border-0: 1px solid rgba(0, 0, 0, 0);
     $standard-border-grey: 1px solid $grey;
+    $standard-border-grey-0: 1px solid $grey-0;
+    $drop-shadow-up: drop-shadow(-0px -10px 20px rgba(0, 0, 0, 0.372));
+    $drop-shadow-center: drop-shadow(-0px -0px 20px rgba(0, 0, 0, 0.56));
 
 
 // design
@@ -28,9 +32,11 @@
 
         h1{
 
-            font-family:helvetica, arial;
-            font-size:50px;
-            font-weight: 700;
+            font-size:35px;
+            line-height: 40px;
+            
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
         }
         
         
@@ -47,13 +53,14 @@
             
             font-weight: 700;
             font-size:14px;
-            color:$black;
+            color:$black; 
+            line-height:20px;
         }
 
         a{
             
-            font-weight: 500;
-            font-size:16px;
+            font-weight: 700;
+            font-size:14; 
             color: $black;
             text-decoration: none;
         }
@@ -61,12 +68,14 @@
         h3{
             
             font-weight: 700;
-            font-size:16px;
+            font-size:10px;
+            
         }
 
         .label{
           color: $grey !important;
            font-size: 10px !important;
+           line-height: 15px;
            
                 }
 

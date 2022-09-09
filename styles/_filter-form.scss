@@ -1,0 +1,11 @@
+@use 'tools';
+
+.filter-form{
+    
+    display: flex;
+    padding: 0 tools.$gutter ;
+
+    .filter-group-summary{
+        display: flex;
+    }
+}

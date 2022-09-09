@@ -22,8 +22,13 @@
 
     <div class="product-img">
             <a href="{{ product.url }}">
-            <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
-        </a>
+                <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
+            </a>
+
+
+            <div class="img-tab">
+                <p class="label">View Product</p>
+            </div>
     </div>
 
 
@@ -32,34 +37,28 @@
 
     <div class="product-info">
         
-        <div class="info-section-one">
+        <div class="info-section">
 
-            <div class='product-title cell' > 
-            <p class="label title-label">Title:</p>
-            <p> {{ product.title }} </p>
+            <div class='product-info-cell' > 
+                <p class="label title-label">Title:</p>
+                <p> {{ product.title }} </p>
             
             {% if product.vendor != "hellomonty's" %}
 
-            <div class='product-vendor cell' > 
-            <p class="label">Maker:</p>
-            <p> {{ product.vendor }} </p>
+            <div class='product-info-cell' > 
+                <p class="label">Label:</p>
+                <p class="label"> {{ product.vendor }} </p>
             </div>
 
-
-        {% endif %}
-        
-        
-        
+            {% endif %}
         
             </div>
-            
-            <div class="info">
-                
-                <div class='product-price cell' >
+   
+            <div class='product-info-cell' >
                     <p class="label">Price:</p>
                     <p> {{ product.price | money_with_currency}} </p>
-                    </div>
-
+            </div>
+            
 
                 <!-- {% for option in product.options_with_values %}
                     {% if option.name != 'Title' %}
@@ -73,7 +72,7 @@
                            {% endfor %}
                      -->
                
-            </div>
+            
 
 
             
@@ -84,7 +83,7 @@
 
        
 
-        <div class="info-section-two">
+        <!-- <div class="info-section-two">
             <form class="mini-add-to-cart" method="post" action="/cart/add">
 
                 {% if product.available %}
@@ -101,7 +100,7 @@
         
         </form>
 
-        </div>
+        </div> -->
 
     </div>
 

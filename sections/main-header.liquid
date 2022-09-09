@@ -1,0 +1,75 @@
+<!-- collection  -->
+
+<div class="header ">
+    <div class="header-top">
+    
+        {% if page.title == "Makers"  %}
+                <div class="header-makers-mark animate__animated animate__slideInRight">
+    
+                </div> 
+    
+            {% elsif product.vendor and product.vendor != "hellomonty's" %}
+    
+                <div class="header-makers-mark animate__animated animate__slideInRight">
+    
+            </div> 
+    
+            {% elsif collection.title == "hand-made" %}
+    
+                <div class="header-makers-mark animate__animated animate__slideInRight">
+    
+            </div> 
+            
+        {% endif %}
+    
+      
+            
+        <a href="/"><img class="logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt=""></a> 
+        
+        
+           
+        
+        <div class="version-mark">
+            <h3> V3 </h3>
+        </div>
+        </div>
+       
+
+        
+
+
+
+
+<div class="nav-wrapper">
+    <div class="nav-module">
+       
+    
+        <div class="head-link-list">
+            {% for link in linklists.main-menu.links %}
+            <a class="link-btn" {% if link.active %} class="link-btn-active" {% endif %} href="{{ link.url }}"><p>{{ link.title }}</p></a>
+            {% endfor %}
+            </div>
+
+            <div class="link-btn cart-btn">
+                
+        
+                    <p>Cart (
+                    <span data-ajax-cart-bind-state="cart.item_count" >
+        
+                         {{ cart.item_count }}
+                    </span>
+                     )</p>
+        
+        
+               
+            </div>
+
+
+
+        </div>
+
+        
+        {% render 'my-cart' %}
+        
+</div>
+

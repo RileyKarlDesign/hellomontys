@@ -32,9 +32,11 @@
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
     
     
@@ -45,23 +47,19 @@
     
     <div id="content" class="content-load  animate__animated animate__fadeIn   "  >
 
-      {% render 'header' collection: collection %}
+      {% section'main-header' %}
 
       <div class="wrapper">
-{{ content_for_layout }}
+      {{ content_for_layout }}
       </div>
       
     
 
 
-    {% render 'footer' %}
-    
-    <!-- <div class="cart-continer">
-        {% section 'my-cart' %}
-    </div>
-     -->
+    {% section 'footer' %}
+ 
 
-    <script type="application/json" data-ajax-cart-initial-state >
+      <script type="application/json" data-ajax-cart-initial-state >
         {{ cart | json }}
       </script>
        
@@ -74,7 +72,8 @@
       <!-- <script src="{{ 'theme.js' | asset_url }}"  ></script> -->
       {{ 'application.js' | asset_url | script_tag }}
 
-
+   
+  
 
 </body>
 </html>

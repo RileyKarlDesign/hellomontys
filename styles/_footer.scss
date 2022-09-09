@@ -7,3 +7,19 @@
     fill: red;
 
 }
+
+.footer{
+    padding: tools.$gutter;
+}
+
+.footer-top{
+    padding-top: tools.$half;
+    display: grid;
+    grid-template-columns: 4fr 7fr 1fr;
+    border-top: tools.$standard-border-grey-0;
+}
+.footer-bottom{
+    padding: tools.$gutter;
+    padding-top: 0;
+
+}

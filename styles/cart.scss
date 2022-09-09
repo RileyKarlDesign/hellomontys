@@ -1,0 +1,20 @@
+@use 'tools';
+
+.cart-open{
+    height: 100vh;
+    top: 0vh;
+    filter: tools.$drop-shadow-center;
+}
+
+
+.cart{
+    background-color:tools.$white;
+    width: 17.5em;
+    z-index: 10;
+    padding: tools.$gutter;
+    border-radius: 0 0 tools.$radius tools.$radius;
+    
+ 
+    
+    
+ }
