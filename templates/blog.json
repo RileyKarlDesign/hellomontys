@@ -1,13 +1,12 @@
 {
-    "sections": {
-      "main": {
-        "type": "my-blog",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "my-blog",
+      "settings": {
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
