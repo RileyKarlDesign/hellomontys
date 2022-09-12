@@ -1,8 +1,14 @@
 @use 'tools';
 
+
+.js-ajax-cart-message--error{
+    color: red;
+    
+}
+
 .cart-open{
-    height: 100vh;
-    top: 0vh;
+    
+    top: 10vh;
     filter: tools.$drop-shadow-center;
 }
 
@@ -18,3 +24,10 @@
     
     
  }
+
+ .cart-item{
+    border-top: tools.$standard-border;
+ }
+
+
+ 

@@ -12,61 +12,68 @@
         <div class="my-cart__items" data-ajax-cart-section-scroll>
           {% for item in cart.items %}
             {% assign item_index = forloop.index %}
-            <hr />
-            <div><a href="{{ item.url }}">{{ item.title }}</a></div>
+            
+            <div class="cart-item">
+            <p class="label">Item:</p>
+            <div><a href="{{ item.url }}"><p>{{ item.title }}</p></a></div>
   
-            {% for property in item.properties %}
+            
+              {% for property in item.properties %}
+                <div>
+                  {{ property.first }}:
+                </div>
+              {% endfor %}
+              <p class="label">Price:</p>
+              <div><p>{{ item.final_price | money }}</p></div>
               <div>
-                {{ property.first }}:
+                <p class="label">Quantity:</p>
+                <!-- data-ajax-cart-request-button ajaxifies the "Minus one" button -->
+                <a data-ajax-cart-request-button
+                  href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | minus: 1 }}" >
+                  -
+                </a>
+                <!-- data-ajax-cart-quantity-input ajaxifies the line item quantity input -->
+                <input data-ajax-cart-quantity-input="{{ item_index }}"
+                  name="updates[]"
+                  value="{{ item.quantity }}"
+                  type="number" />
+                <!-- data-ajax-cart-request-button ajaxifies the "Plus one" button -->
+                <a data-ajax-cart-request-button
+                  href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | plus: 1 }}">
+                  +
+                </a>
               </div>
-            {% endfor %}
-  
-            <div>Price: {{ item.final_price | money }}</div>
-  
-            <div>
-              Quantity:
-              <!-- data-ajax-cart-request-button ajaxifies the "Minus one" button -->
-              <a data-ajax-cart-request-button
-                href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | minus: 1 }}" >
-                Minus one
-              </a>
-  
-              <!-- data-ajax-cart-quantity-input ajaxifies the line item quantity input -->
-              <input data-ajax-cart-quantity-input="{{ item_index }}"
-                name="updates[]"
-                value="{{ item.quantity }}"
-                type="number" />
-  
-              <!-- data-ajax-cart-request-button ajaxifies the "Plus one" button -->
-              <a data-ajax-cart-request-button
-                href="{{ routes.cart_change_url }}?line={{ item_index }}&quantity={{ item.quantity | plus: 1 }}">
-                Plus one
-              </a>
             </div>
   
             <!-- Container for errors -->
             <div data-ajax-cart-messages="{{ item.key }}"></div>
   
-            <div>Total: <strong>{{ item.final_line_price | money }}</strong></div>
+            <div class="cart-total">
+              <p class="label">Total: </p>
+              <p>{{ item.final_line_price | money }}</p>
+  
+            </div>
           {% endfor %}
         </div>
   
         <!-- data-ajax-cart-property-input ajaxifies the cart note textarea -->
-        <textarea data-ajax-cart-property-input
+        <!-- <textarea data-ajax-cart-property-input
           name="note"
           placeholder="Cart note">
           {{ cart.note }}
-        </textarea>
+        </textarea> -->
   
         <!-- data-ajax-cart-static-element keeps the container unchanged
         when the cart and the surrounding HTML get updated -->
         <div data-ajax-cart-static-element class="my-cart__app-container"></div>
   
-        <button type="submit" name="checkout">
-          Checkout — {{ cart.total_price | money_with_currency }}
+        <button type="submit" name="checkout" class="hero-btn">
+          <p>Checkout</p>
         </button>
       </div>
     </form>
+
+    <img class="logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt="">
   
 </div>
 

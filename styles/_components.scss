@@ -5,6 +5,19 @@
 
 // buttons
 
+.hero-btn{
+
+    outline: none;
+    stroke: none;
+
+    background-color: green;
+    padding: tools.$gap;
+
+    :focus{
+        outline: none;
+    }
+
+}
 
 .link-btn {
 
