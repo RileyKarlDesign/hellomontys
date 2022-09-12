@@ -1,5 +1,32 @@
 @use 'tools';
 
+//---------------------- reset styles
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+
+}
+
+input{
+    background-color: none !important;
+    width: fit-content;
+    outline: none;
+    border: none;
+}
+
+//---------------------------------------------------------
+
+
+
+
+
 
 .js-ajax-cart-message--error{
     color: red;
@@ -8,26 +35,66 @@
 
 .cart-open{
     
-    top: 10vh;
+    top: 25vh;
     filter: tools.$drop-shadow-center;
+    
+}
+
+.cart-open .cart{
+    padding: tools.$gutter 0 ;
+    height: 50vh;
+    padding:  tools.$half ;
 }
 
 
 .cart{
-    background-color:tools.$white;
+    background-color: rgb(66, 126, 255);
     width: 17.5em;
     z-index: 10;
-    padding: tools.$gutter;
+    padding:  0 ;
+    height: 0;
+    
     border-radius: 0 0 tools.$radius tools.$radius;
     
- 
     
     
+
  }
+
+
+ .cart-section{
+    display:  flex;
+    flex-direction: column;
+    
+}
+
+
 
  .cart-item{
     border-top: tools.$standard-border;
+    flex: 1 1 100px;
  }
+
+ .cart-logo{
+    width:100%;
+    
+ }
+
+ .cart-footer{
+    background-color:red;
+    flex: 1 1 100px;
+ }
+
+ .cart-items{
+    background-color:green;
+    height: 100% !important;
+    
+ }
+
+ 
+
+
+ 
 
 
  

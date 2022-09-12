@@ -10,8 +10,10 @@
     border-radius: 0 !important;
     
 
-    :hover{
-        border-radius: tools.$radius;
+    :hover img {
+        
+        height: 110%;
+        width: 110%;
         
 
     }

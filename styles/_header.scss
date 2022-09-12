@@ -151,7 +151,7 @@
     position:fixed;
     left: 0;
     right: 0;
-    top: 95vh;
+    bottom: 0;
     z-index: 100;
     display:flex;
     align-items: center;
@@ -159,6 +159,10 @@
     flex-direction: column;
     transition: tools.$transition-basic;
     
+    
+}
+
+.entered{
     
 }
 
@@ -177,7 +181,7 @@
     z-index: 10;
     // border: tools.$standard-border;
     filter: tools.$drop-shadow-up;
-
+    transition: tools.$transition-basic;
     
     .head-link-list{
         display: flex;

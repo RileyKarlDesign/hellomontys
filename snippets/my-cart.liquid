@@ -1,15 +1,15 @@
 <div class="cart">
   <!-- sections/my-cart.liquid -->
   
-  <form action="{{ routes.cart_url }}" method="post" class="my-cart">
+  <form  action="{{ routes.cart_url }}" method="post" class="my-cart">
       <!-- data-ajax-cart-section makes the element's HTML update
       when the cart gets changed -->
-      <div data-ajax-cart-section>
-        <p>Cart</p>
+      <div class="cart-section" data-ajax-cart-section>
+       
   
         <!-- data-ajax-cart-section-scroll keeps the scroll position unchanged
         when the element's HTML is changed -->
-        <div class="my-cart__items" data-ajax-cart-section-scroll>
+        <div class="cart-items my-cart__items" data-ajax-cart-section-scroll>
           {% for item in cart.items %}
             {% assign item_index = forloop.index %}
             
@@ -65,17 +65,21 @@
   
         <!-- data-ajax-cart-static-element keeps the container unchanged
         when the cart and the surrounding HTML get updated -->
-        <div data-ajax-cart-static-element class="my-cart__app-container"></div>
+        
+          <div class="cart-foot">
+              <div data-ajax-cart-static-element class="my-cart__app-container"></div>
+              <button type="submit" name="checkout" class="hero-btn">
+                <p>Checkout</p>
+              </button>
+              
+                  </form>
+              
+                  <img class="cart-logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt="">
+          </div>
+ </div>
+      
   
-        <button type="submit" name="checkout" class="hero-btn">
-          <p>Checkout</p>
-        </button>
-      </div>
-    </form>
 
-    <img class="logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt="">
-  
-</div>
 
 
 

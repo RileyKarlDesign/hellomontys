@@ -7,14 +7,19 @@
 
 .hero-btn{
 
-    outline: none;
+    border: none;
     stroke: none;
+    width: 100%;
 
-    background-color: green;
-    padding: tools.$gap;
+    background-color: tools.$hovercolor;
+    padding: 10px;
+    margin-bottom: tools.$half;
+    border: tools.$standard-border-grey;
+    transition: tools.$transition-basic;
 
-    :focus{
-        outline: none;
+    &:hover{
+        border: tools.$standard-border;
+        background-color: tools.$white
     }
 
 }
@@ -84,8 +89,8 @@
 
 .version-mark{
     position: absolute;
-    right: tools.$half;
-    top: tools.$half;
+    right: 5px;
+    top: 5px;
     color: tools.$grey;
     border: tools.$standard-border-grey;
     padding: 2px 5px 1px ;

@@ -110,5 +110,21 @@ $(document).ready(function() {
           
        })
 
+       //-------------------------------------------------------------------------------------------------------
+
+//        const foot = document.querySelector('.footer')
+
+//       if(foot){
+//         console.log('we on')
+//       }
+
+//       enterView({
+//         selector: foot,
+//       enter: function(el) {
+//       el.classList.add('entered');
+        
+// 	}
+// });
+
     
     });
