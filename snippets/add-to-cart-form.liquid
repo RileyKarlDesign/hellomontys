@@ -64,9 +64,9 @@
             {% assign option_name = 'option' | append: option.position %}
 
             {% if option.name != 'Color'%}
-                {% render 'product-option-row' option: option, option_name: option_name type: 'select' %}
+                {% render 'product-option-row' option: option, option_name: option_name type: 'radio' %}
             {% else %}
-                {% render 'product-option-row' option: option, option_name: option_name type: 'select' %}
+                {% render 'product-option-row' option: option, option_name: option_name type: 'radio' %}
             {% endif %}
 
 
@@ -76,12 +76,13 @@
 
     <input type="hidden" name="id" class='js-variant-id'
         value={{product.variants.first.id}}>
+    <div class="product-price">
+        <p> Price</p>
+        <p class="js-price" data-default-price="{{ product.price | money }}">{{ current_variant.price | money }}</p>
+    </div>
 
-    <span class="js-price" data-default-price="{{ product.price | money }}"> Price: {{ current_variant.price | money }}
-    </span>
-
-    <label for="Quantity">quanity</label>
-    <input type="number" id="Quanyity" name="quantity" value="1" min="1">
-    <button type="submit" name="add" id="add-to-cart-button" > Add to cart button </button>
+    <!-- <label for="Quantity">quanity</label>
+    <input type="number" id="Quanyity" name="quantity" value="1" min="1"> -->
+    <button class="hero-btn" type="submit" name="add" id="add-to-cart-button" > Add to cart </button>
 
 </form>

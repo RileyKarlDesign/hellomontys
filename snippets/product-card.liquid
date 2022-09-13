@@ -2,6 +2,7 @@
     title:
     img: 
     url: 
+
 -->
 
 {% if product.available %}  
@@ -11,6 +12,7 @@
 
 <div class="product-card">
 
+    <!-- <p class="label"> {{ forloop.index }}</p> -->
 
     {% if product.vendor != "hellomonty's" %}
 
@@ -40,22 +42,24 @@
         <div class="info-section">
 
             <div class='product-info-cell' > 
-                <p class="label title-label">Title:</p>
+                
+                <p class="label"> {{ product.vendor }} </p>
+            </div>
+
+            <div class='product-info-cell' > 
+                
                 <p> {{ product.title }} </p>
             
             {% if product.vendor != "hellomonty's" %}
 
-            <div class='product-info-cell' > 
-                <p class="label">Label:</p>
-                <p class="label"> {{ product.vendor }} </p>
-            </div>
+         
 
             {% endif %}
         
             </div>
    
             <div class='product-info-cell' >
-                    <p class="label">Price:</p>
+                    
                     <p> {{ product.price | money_with_currency}} </p>
             </div>
             

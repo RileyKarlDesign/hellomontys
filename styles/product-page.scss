@@ -4,25 +4,42 @@
 
     display: grid; 
    
-    grid-template-columns: 0.5fr 1.5fr ; 
+    grid-template-columns: 1fr 3fr ; 
     padding: tools.$gutter;
     grid-gap: tools.$gutter;
     
 }
 
 .product-page-info{
+    position: sticky; // See link
+    top: 0; //to make it stick to the top of the screen
+    height: 100vh; // make the height equal to 100 view height
+    padding-top:tools.$half;
     height: fit-content;
-    position: sticky;
+   
+
+    .product-title{
+        margin-bottom:tools.$gutter;
+    }
+
+    .product-description{
+        margin-bottom:tools.$gutter;
+        color: tools.$black;
+    }
 }
 
 .product-page-images{
 
-    padding-top:5vh;
+    
     height: fit-content;
     display: grid; 
-    grid-auto-rows: 45vw; 
-    grid-template-columns: 1fr 1fr; 
-    grid-gap: tools.$gap;
+    grid-auto-rows: 40vw; 
+    grid-template-columns: 1fr 1fr ; 
+    grid-gap: tools.$half; 
+
+    .img-index{
+       
+    }
 
     
         img{
@@ -35,18 +52,12 @@
     
 }
 
-.product-page-info{
-    position: sticky; // See link
-    top: 0; //to make it stick to the top of the screen
-    height: 100vh; // make the height equal to 100 view height
-    padding-top:5vh;
-    
-}
+
 
 .single-metafield {
     display: grid; 
     color: tools.$grey;
-    grid-template-columns: 1fr 1fr ; 
+    grid-template-columns: 1fr 2fr ; 
     border-top: tools.$standard-border-grey;
     
     padding-top:tools.$cell-padding;
@@ -54,9 +65,40 @@
     
 }
 
-.inline-option{
+.metafeild-notes{
+
+    .metafield-title{
+        padding-bottom: tools.$half;
+    }
+    // border-top: tools.$standard-border;
+    // padding-top: tools.$half;
+    margin-bottom: tools.$gutter;
+}
+
+.product-option-row{
+
+    display: grid; 
+    color: tools.$grey;
+    grid-template-columns: 1fr 2fr ; 
+    border-top: tools.$standard-border-grey;
+    
+    padding-top:tools.$cell-padding;
+    padding-bottom:tools.$cell-padding;
+
+ 
     
 }
+
+.product-price{
+    display: grid; 
+    color: tools.$grey;
+    grid-template-columns: 1fr 2fr ; 
+    border-top: tools.$standard-border-grey;
+    
+    padding-top:tools.$cell-padding;
+    padding-bottom:tools.$cell-padding
+}
+
 
 optgroup * {
     font-size: 100px;

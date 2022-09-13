@@ -41,13 +41,13 @@
    
     //transition: tools.$transition-basic;
     transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
-    display: flex;
+    
     justify-content: center;
     
 
     .logo{
         width:100%;
-        height: fit-content;
+        height: min-content;
         transition: tools.$transition-basic;
         fill: red;
    
@@ -169,9 +169,9 @@
 
 .nav-module{
     
-    width: 17.5em;
+    
     background-color: tools.$white;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     border-radius: tools.$radius tools.$radius 0 0 ;

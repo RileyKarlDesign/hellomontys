@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     height:100%;
-    overflow: hidden;
+    
     border-radius: 0 !important;
     
 
@@ -71,8 +71,7 @@
 
         .info-section {
             padding-top:tools.$half;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
+            
         }
     }
 
@@ -90,13 +89,14 @@
     
     .makers-mark{
         position: absolute;
-        top: tools.$half;
-        right: tools.$half;
+        top: 5px;
+        right:-4px ;
         background-color: tools.$yellow;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        filter: tools.$drop-shadow-center;
+        
+        z-index: 10;
     }
     
 

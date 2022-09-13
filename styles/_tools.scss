@@ -1,12 +1,12 @@
 // colors
 
     $black: rgba(19, 12, 12, 0.833);
-    $white: rgb(246, 239, 219);
+    $white: rgb(255, 252, 242);
     $grey-0: rgba(0, 0, 0, 0.257);
-    $grey: rgba(0, 0, 0, 0.546);
+    $grey: rgba(0, 0, 0, 0.423);
     $yellow: rgb(255, 199, 46);
     $red: rgb(248, 78, 35);
-    $hovercolor: rgba(0, 0, 0, 0.056);
+    $hovercolor: rgba(0, 0, 0, 0.178);
 
 // measurements
 
@@ -44,36 +44,44 @@
 
         h2{
             
-            font-size:20px;
+            font-size:1.5rem;
             font-weight: 700;
             font-style: regular;
-        }
-
-        
-
-        p{
-            
-            font-weight: 700;
-            font-size:14px;
-            color:$black; 
-            line-height:20px;
-            font-style: regular;
-        }
-
-        a{
-            
-            font-weight: 700;
-            font-size:14; 
-            color: $black;
-            text-decoration: none;
         }
 
         h3{
             
             font-weight: 700;
-            font-size:10px;
+            font-size:16px;
             
         }
+
+        
+
+        p, a, label, input {
+            
+            font-weight: 500;
+            font-size:16px;
+            color:$black; 
+            line-height:15px;
+            font-style: regular;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        h5{
+            font-weight: 500;
+            font-size:16px;
+            color:$grey; 
+            line-height:15px;
+            font-style: regular; 
+        }
+
+       
+
+       
 
         .label{
           color: $grey !important;
@@ -90,13 +98,10 @@
 
 // Animation
 
-$transition-basic:  ease-in-out 0.5s;
+$transition-basic:  ease-in-out 0.2s;
 
 
 // ----------------------------------------------------------------
 
-svg{
-    fill: $black
-}
 
 

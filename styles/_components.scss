@@ -5,11 +5,25 @@
 
 // buttons
 
+.btn{
+    background-color: tools.$hovercolor;
+    border-radius: tools.$radius;
+    padding-top:3px; 
+    padding-bottom: 1px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.btn-active{
+    
+}
+
 .hero-btn{
 
     border: none;
     stroke: none;
     width: 100%;
+
 
     background-color: tools.$hovercolor;
     padding: 10px;
@@ -96,4 +110,35 @@
     padding: 2px 5px 1px ;
     border-radius: 50%;
     z-index: 1;
+}
+
+.active-filters{
+
+}
+
+.active-filter {
+    color: tools.$white;
+    background-color: tools.$black;
+    padding: 2px 5px;
+    border-radius: tools.$radius;
+    font-weight: 200;
+
+}
+
+// inputs --------------------------------------------------------
+input{
+    display: none;
+}
+
+input +  label {
+    border: none;
+    color: tools.$grey;
+   
+    border: none;
+    }
+
+input:checked +  label {
+    color: tools.$black;
+    // text-decoration: underline;
+
 }
