@@ -19,24 +19,25 @@
 
 <div class="product-page-wrapper">
     <div class="product-page-info">
-        <p>{{ product.title }}</p>
-        <h3>{{ product.description }}</h3>
-
+        <p class="product-title">{{ product.title }}</p>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="metafeild-notes ">
+          <p class="metafield-title" > Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.notes | metafield_text }}</p>
+      </div>
          <!-- metafields -->
     
          <div class="metafields">
     
-            <div class="single-metafield ">
-                <h3 class="metafield-title"> Test</h3>  <h3>{{ product.metafields.custom.test | metafield_tag }}</h3>
-            </div>
-   
+          
             <div class="single-metafield  ">
-                <h3 class="metafield-title" > Color</h3>  <h3>{{ product.metafields.custom.colour | metafield_text }}</h3>
+                <p class="metafield-title" > Color</p>  <h5>{{ product.metafields.custom.colour | metafield_text }}</h5>
             </div>
    
             <div class="single-metafield ">
-                <h3 class="metafield-title" > Material </h3> <h3>{{ product.metafields.custom.material | metafield_text }}</h3>
+                <p class="metafield-title" > Material </p> <h5>{{ product.metafields.custom.material | metafield_text }}</h5>
             </div>
+
+          
    
         </div>
 
@@ -45,14 +46,17 @@
         
         
             {% render 'add-to-cart-form' with current_variant: current_variant  %}
-        
+            
 
     </div>
     
      <!--  Images  -->
      <div class="product-page-images">
         {% for image in product.images %}
-            <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
+            <div class="product-img">
+              <div class="img-index "> <h5>{{ forloop.index }} </h5> </div>
+              <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
+            </div>
         {% endfor %}
     </div>
 </div>
