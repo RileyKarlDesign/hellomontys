@@ -8,7 +8,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 300;
   font-style: regular;
 }
 
@@ -75,6 +75,14 @@ h5 {
   grid-auto-rows: 40vw;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+}
+.product-page-images .product-img {
+  position: relative;
+}
+.product-page-images .img-index {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 .product-page-images img {
   width: 100%;

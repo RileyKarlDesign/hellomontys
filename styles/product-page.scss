@@ -37,7 +37,13 @@
     grid-template-columns: 1fr 1fr ; 
     grid-gap: tools.$half; 
 
+    .product-img{
+        position: relative;
+    }
     .img-index{
+        position: absolute;
+        top: tools.$half;
+        left: tools.$half;
        
     }
 

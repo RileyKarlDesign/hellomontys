@@ -54,7 +54,7 @@
      <div class="product-page-images">
         {% for image in product.images %}
             <div class="product-img">
-              <div class="img-index "> <h5>{{ forloop.index }} </h5> </div>
+              <div class="img-index "> <h2>{{ forloop.index }} </h2> </div>
               <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
             </div>
         {% endfor %}
