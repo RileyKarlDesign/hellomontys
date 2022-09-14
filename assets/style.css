@@ -723,7 +723,7 @@ input {
 
 .recommended-grid {
   display: grid;
-  grid-auto-rows: 50vw;
+  grid-auto-rows: 40vw;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2vw 10px;
   width: 100%;
@@ -758,6 +758,7 @@ input {
 
 body {
   background-color: rgb(0, 0, 0);
+  padding: 3em;
 }
 
 .spacer {
