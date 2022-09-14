@@ -335,7 +335,7 @@ input:checked + label {
   border-right: 0;
 }
 
-.logo {
+.foot-logo {
   width: 100%;
   transition: ease-in-out 0.2s;
   fill: red;
