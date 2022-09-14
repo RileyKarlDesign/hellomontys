@@ -17,9 +17,9 @@ h3 {
   font-size: 16px;
 }
 
-p, a, label, input {
+p, a, label, input, button {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(19, 12, 12, 0.833);
   line-height: 15px;
   font-style: regular;
@@ -32,13 +32,13 @@ a {
 h5 {
   font-weight: 500;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.423);
+  color: rgb(148, 148, 148);
   line-height: 15px;
   font-style: regular;
 }
 
 .label {
-  color: rgba(0, 0, 0, 0.423) !important;
+  color: rgb(148, 148, 148) !important;
   font-size: 10px !important;
   line-height: 15px;
 }
@@ -66,50 +66,87 @@ input {
   border: none;
 }
 
+.my-cart {
+  height: 100%;
+}
+
 .js-ajax-cart-message--error {
   color: red;
 }
 
 .cart-open {
-  top: 25vh;
+  top: 0;
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.56));
+}
+.cart-open .nav-content {
+  height: 50vh;
+}
+.cart-open .nav-module {
+  background-color: rgb(255, 199, 46) !important;
 }
 
 .cart-open .cart {
   padding: 10px 0;
-  height: 50vh;
+  height: 100%;
   padding: 10px;
 }
 
 .cart {
-  background-color: rgb(66, 126, 255);
-  width: 17.5em;
+  background-color: rgb(255, 199, 46) !important;
+  border: 1px solid rgb(148, 148, 148);
+  border-top: 0;
+  width: 100%;
+  height: 0;
   z-index: 10;
   padding: 0;
-  height: 0;
+  overflow: scroll;
   border-radius: 0 0 5px 5px;
 }
 
 .cart-section {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: scroll;
 }
 
-.cart-item {
-  border-top: 1px solid rgba(19, 12, 12, 0.833);
-  flex: 1 1 100px;
+.items {
+  overflow: hidden;
+}
+
+.cart-items {
+  background-color: rgba(255, 0, 0, 0);
+  height: 100%;
+  overflow: scroll;
 }
 
 .cart-logo {
   width: 100%;
 }
 
-.cart-footer {
-  background-color: red;
-  flex: 1 1 100px;
+.cart-foot {
+  height: min-content;
 }
 
 .cart-items {
-  background-color: green;
   height: 100% !important;
+}
+
+.cart-item {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid rgba(19, 12, 12, 0.833);
+  padding: 10px;
+  height: fit-content;
+}
+.cart-item .item-info {
+  padding-left: 10px;
+}
+.cart-item .label {
+  color: rgba(19, 12, 12, 0.833) !important;
+}
+.cart-item .cart-image {
+  height: 100%;
+  object-fit: cover;
 }

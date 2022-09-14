@@ -7,6 +7,10 @@
 
  {% endfor %} -->
 
+
+
+
+
  {% assign current_variant = product.selected_or_first_available_variant %}
 
 
@@ -51,36 +55,29 @@
     </div>
     
      <!--  Images  -->
-     <div class="product-page-images">
-        {% for image in product.images %}
-            <div class="product-img">
-              <div class="img-index "> <h2>{{ forloop.index }} </h2> </div>
-              <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
-            </div>
-        {% endfor %}
-    </div>
+     
+       <div class="product-page-images">
+          {% for image in product.images %}
+              <div class="product-img">
+                <div class="img-index label"> <p class="label">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
+                <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
+              </div>
+          {% endfor %}
+           </div>
+
+
 </div>
+<div id="recommendations">
+    
+  {% section 'product-recommendations' %}
+
+</div>     
 
 
 <!-- related products -->
 
 
 
-  <div id="product-recommendations">
-    {%- if recommendations.products_count > 0 -%}
-      <h2>You may also like</h2>
 
-      <ul>
-        {%- for product in recommendations.products -%}
-          <li class="grid__item small--one-half medium-up--one-quarter">
-            <a href="{{ product.url }}">
-              <span>{{ product.title }}</span>
-              <span>{{ product.price | money }}</span>
-            </a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-  </div>
 
   

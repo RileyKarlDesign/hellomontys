@@ -17,9 +17,9 @@ h3 {
   font-size: 16px;
 }
 
-p, a, label, input {
+p, a, label, input, button {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(19, 12, 12, 0.833);
   line-height: 15px;
   font-style: regular;
@@ -32,13 +32,13 @@ a {
 h5 {
   font-weight: 500;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.423);
+  color: rgb(148, 148, 148);
   line-height: 15px;
   font-style: regular;
 }
 
 .label {
-  color: rgba(0, 0, 0, 0.423) !important;
+  color: rgb(148, 148, 148) !important;
   font-size: 10px !important;
   line-height: 15px;
 }
@@ -51,6 +51,7 @@ h5 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 10px;
+  padding-bottom: 0;
   grid-gap: 10px;
 }
 
@@ -72,9 +73,10 @@ h5 {
 .product-page-images {
   height: fit-content;
   display: grid;
-  grid-auto-rows: 40vw;
+  grid-auto-rows: 50vw;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+  padding-bottom: 10px;
 }
 .product-page-images .product-img {
   position: relative;
@@ -92,9 +94,9 @@ h5 {
 
 .single-metafield {
   display: grid;
-  color: rgba(0, 0, 0, 0.423);
+  color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
-  border-top: 1px solid rgba(0, 0, 0, 0.423);
+  border-top: 1px solid rgb(148, 148, 148);
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -108,18 +110,18 @@ h5 {
 
 .product-option-row {
   display: grid;
-  color: rgba(0, 0, 0, 0.423);
+  color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
-  border-top: 1px solid rgba(0, 0, 0, 0.423);
+  border-top: 1px solid rgb(148, 148, 148);
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 .product-price {
   display: grid;
-  color: rgba(0, 0, 0, 0.423);
+  color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
-  border-top: 1px solid rgba(0, 0, 0, 0.423);
+  border-top: 1px solid rgb(148, 148, 148);
   padding-top: 5px;
   padding-bottom: 5px;
 }

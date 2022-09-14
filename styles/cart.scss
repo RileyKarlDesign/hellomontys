@@ -23,7 +23,9 @@ input{
 
 //---------------------------------------------------------
 
-
+.my-cart{
+    height: 100%;
+}
 
 
 
@@ -35,24 +37,37 @@ input{
 
 .cart-open{
     
-    top: 25vh;
+    top: 0;
     filter: tools.$drop-shadow-center;
     
+    .nav-content{
+        height: 50vh;
+        
+    }
+
+    .nav-module{
+        background-color:tools.$yellow !important;
+    }
 }
 
 .cart-open .cart{
     padding: tools.$gutter 0 ;
-    height: 50vh;
+    height: 100%;
     padding:  tools.$half ;
 }
 
 
 .cart{
-    background-color: rgb(66, 126, 255);
-    width: 17.5em;
+    background-color:tools.$yellow !important;
+    border: tools.$standard-border-grey;
+    border-top: 0;
+    width: 100%;
+    height: 0;
     z-index: 10;
     padding:  0 ;
-    height: 0;
+    overflow: scroll;
+    
+    
     
     border-radius: 0 0 tools.$radius tools.$radius;
     
@@ -66,13 +81,24 @@ input{
     display:  flex;
     flex-direction: column;
     
+    height: 100%;
+    overflow: scroll;
+    
 }
 
 
+.items{
+    
+    overflow: hidden;
+    
+    
+}
 
- .cart-item{
-    border-top: tools.$standard-border;
-    flex: 1 1 100px;
+ .cart-items{
+    background-color:rgba(255, 0, 0, 0);
+    height: 100%;
+    overflow: scroll;
+    
  }
 
  .cart-logo{
@@ -80,15 +106,39 @@ input{
     
  }
 
- .cart-footer{
-    background-color:red;
-    flex: 1 1 100px;
+ .cart-foot{
+    
+    height: min-content;
  }
 
  .cart-items{
-    background-color:green;
+    
     height: 100% !important;
     
+ }
+
+ .cart-item{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    border-top: tools.$standard-border;
+    padding:tools.$gutter;
+    height:fit-content;
+
+    .item-info{
+        padding-left: tools.$half;
+        
+    }
+    .label{
+        color: tools.$black !important ;
+    }
+
+
+    .cart-image{
+        
+        height: 100%; 
+        object-fit: cover;
+    }
  }
 
  

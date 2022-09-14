@@ -127,7 +127,7 @@
 
 // inputs --------------------------------------------------------
 input{
-    display: none;
+    // display: none;
 }
 
 input +  label {
@@ -139,6 +139,6 @@ input +  label {
 
 input:checked +  label {
     color: tools.$black;
-    // text-decoration: underline;
+     text-decoration: underline;
 
 }

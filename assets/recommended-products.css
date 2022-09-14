@@ -47,17 +47,32 @@ h5 {
   display: flex;
 }
 
-.details {
-  position: sticky;
-}
-
-.contact-section {
-  padding-bottom: 1em;
-}
-
-.page-content {
-  display: grid;
-  grid-template-columns: 3fr 5fr;
-  min-height: 100vh;
+#recommendations {
+  padding-top: 10px;
   padding: 10px;
+  border-top: 1px solid rgb(148, 148, 148);
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-auto-rows: 50vw;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2vw 10px;
+  width: 100%;
+}
+@media (max-width: 1300px) {
+  .recommended-grid {
+    grid-auto-rows: 37vw;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .recommended-grid {
+    grid-auto-rows: 50vw;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

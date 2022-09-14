@@ -5,32 +5,27 @@
 // ----------------------------------------------------------------
 
 .header-makers-mark{
-    height: 7vw;
-    width: 7vw;
+    height: 5vw;
+    width:5vw;
     background-color:tools.$yellow;
     border-radius:50%;
     
-
-    position:absolute;
-    top: 2vw;
-    right: -3vw;
-    filter: tools.$drop-shadow-center;
+    position: fixed;
+    
+    top: 5px;
+    right: 5px;
+    
     z-index: 5;
 }
 
 //-----------------------------------------------------------------
 .header{
     
-    padding: tools.$gutter;
+    
     padding-bottom: 0;
     // background-color: tools.$white;
     transition: tools.$transition-basic;
-
-    
-   
-    
-   
-    
+ 
 }
 
 
@@ -38,19 +33,34 @@
 
 .header-top{
     width: 100%;
-   
+    display: flex;
+    align-items: center;
+    
     //transition: tools.$transition-basic;
     transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
-    
+    position: fixed;
     justify-content: center;
+    height:2.5rem;
+    z-index: 10;
+    top: 0rem;
     
+    
+   
+    .logo-wrapper{
+        
+    }
 
     .logo{
-        width:100%;
-        height: fit-content;
+       
+        background-color: tools.$white-50;
+        backdrop-filter: blur(5px);
         transition: tools.$transition-basic;
-        fill: red;
-    
+        position: sticky;
+        // filter: tools.$drop-shadow-center;
+        height: 2.5rem;
+        padding: tools.$half;
+        border-radius: 0 0 tools.$radius tools.$radius;
+        border: tools.$standard-border-grey
     }
     
 }
@@ -138,7 +148,7 @@
 
 
 .cart-button{
-    width: fit-content;
+    width: min-content;
 }
 
 
@@ -160,29 +170,39 @@
     transition: tools.$transition-basic;
     
     
+    
 }
 
 .entered{
     
 }
 
+.nav-content{
+    width: min-content;
+    
+    
+}
 
 .nav-module{
     
     
-    background-color: tools.$white;
+    background-color: tools.$white-50;
     display: flex; 
     align-items: center;
     justify-content: center;
     border-radius: tools.$radius tools.$radius 0 0 ;
     height: 2.5em;
     padding: 10px;
-
+    width: max-content;
     z-index: 10;
     // border: tools.$standard-border;
-    filter: tools.$drop-shadow-up;
-    transition: tools.$transition-basic;
     
+    transition: tools.$transition-basic;
+    backdrop-filter: blur(5px);
+    border-top: tools.$standard-border-grey ;
+    border-left: tools.$standard-border-grey ;
+    border-right: tools.$standard-border-grey ;
+    border-top: tools.$standard-border-grey ;
     .head-link-list{
         display: flex;
 
@@ -190,6 +210,8 @@
 
        
     }
+
+    
 
     .link-btn{
 

@@ -2,8 +2,9 @@
 
     $black: rgba(19, 12, 12, 0.833);
     $white: rgb(255, 252, 242);
+    $white-50: rgba(255, 252, 242, 0.786);
     $grey-0: rgba(0, 0, 0, 0.257);
-    $grey: rgba(0, 0, 0, 0.423);
+    $grey: rgb(148, 148, 148);
     $yellow: rgb(255, 199, 46);
     $red: rgb(248, 78, 35);
     $hovercolor: rgba(0, 0, 0, 0.178);
@@ -58,10 +59,10 @@
 
         
 
-        p, a, label, input {
+        p, a, label, input, button {
             
             font-weight: 500;
-            font-size:16px;
+            font-size:15px;
             color:$black; 
             line-height:15px;
             font-style: regular;
