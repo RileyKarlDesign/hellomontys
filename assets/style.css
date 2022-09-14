@@ -337,7 +337,6 @@ input:checked + label {
 
 .logo {
   width: 100%;
-  height: fit-content;
   transition: ease-in-out 0.2s;
   fill: red;
 }
