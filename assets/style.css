@@ -202,8 +202,8 @@ input + label {
 }
 
 input:checked + label {
-  color: rgba(19, 12, 12, 0.833);
-  text-decoration: underline;
+  color: rgba(19, 12, 12, 0.833) !important;
+  border-bottom: 1px solid rgba(19, 12, 12, 0.833) !important;
 }
 
 .header-makers-mark {
@@ -367,13 +367,16 @@ input:checked + label {
   padding-top: 0;
 }
 
+.product-page-grid {
+  position: relative;
+}
+
 .main-product-grid {
   display: grid;
   grid-auto-rows: 25vw;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 2vw 10px;
   width: 100%;
-  padding-top: 10px;
 }
 @media (max-width: 1300px) {
   .main-product-grid {
@@ -446,6 +449,114 @@ input:checked + label {
   z-index: 10;
 }
 
+.open {
+  height: 33.8em !important;
+  transition: ease-in-out 0.2s;
+  overflow: scroll !important;
+}
+.open .all-filters {
+  opacity: 100 !important;
+}
+
+.filter-form {
+  height: 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 10px;
+  top: calc(100vh - 2rem);
+  z-index: 100;
+  transition: ease-in-out 0.2s;
+  margin-top: 5em;
+  overflow: hidden;
+}
+.filter-form .filter-title {
+  position: absolute;
+  top: calc(-1.5em - 10px);
+}
+.filter-form .active-filters {
+  padding-bottom: 10px;
+}
+.filter-form .filter-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5em;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.filter-form .all-filters {
+  transition: ease all 0.6s;
+  height: 30em;
+  opacity: 0;
+  overflow: scroll;
+  padding-bottom: 2em;
+  border-top: 1px solid rgb(148, 148, 148);
+}
+.filter-form .all-filters ba label {
+  border: none;
+  color: rgb(148, 148, 148);
+  border: none;
+}
+.filter-form .all-filters ba label label [type=checkbox] {
+  display: none;
+}
+.filter-form .filter-group {
+  width: min-content;
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  width: 100%;
+  border-top: 1px solid rgb(148, 148, 148);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.filter-form .filter-group:nth-child(1) {
+  border-top: 0;
+}
+.filter-form .filter-group-summary {
+  display: flex;
+}
+.filter-form .filter-li input {
+  display: none;
+}
+.filter-form .filter-li input + label {
+  border: none;
+  color: rgb(148, 148, 148);
+  border: none;
+}
+.filter-form .filter-li label + input:checked {
+  color: rgba(19, 12, 12, 0.833);
+  border-bottom: 1px solid rgba(19, 12, 12, 0.833) !important;
+}
+.filter-form .filter-group-display__list {
+  width: 100%;
+}
+.filter-form .filter-li {
+  margin-bottom: 5px;
+}
+
+.filter-footer {
+  width: 100%;
+  position: relative;
+}
+.filter-footer .fade {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 252, 242) 20%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 3em;
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.filter-footer .filter-foot-wrapper {
+  width: 100%;
+  height: 2em;
+}
 .wrapper {
   padding: 10px;
 }
@@ -671,61 +782,6 @@ input {
 
 .collection-filter:hover {
   color: rgba(0, 0, 0, 0.178);
-}
-
-.open {
-  height: 30em !important;
-  transition: ease-in-out 0.2s;
-  overflow: scroll !important;
-}
-
-.filter-form {
-  height: 1.7rem;
-  overflow: hidden;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 10px;
-  top: calc(100vh - 2rem);
-  z-index: 100;
-  transition: ease-in-out 0.2s;
-  margin-top: 5em;
-}
-.filter-form .active-filters {
-  padding-bottom: 10px;
-}
-.filter-form .filter-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  width: max-content;
-}
-.filter-form .filter-group {
-  width: min-content;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.filter-form .filter-group-summary {
-  display: flex;
-}
-.filter-form .filter-group-display {
-  width: 20%;
-}
-.filter-form .filter-li {
-  margin-bottom: 5px;
-}
-
-.filter-footer {
-  display: flex;
-  justify-content: flex-end;
 }
 
 #recommendations {

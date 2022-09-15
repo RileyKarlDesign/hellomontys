@@ -138,7 +138,8 @@ input +  label {
     }
 
 input:checked +  label {
-    color: tools.$black;
-     text-decoration: underline;
+    color: tools.$black !important;
+     
+    border-bottom: tools.$standard-border !important;
 
 }

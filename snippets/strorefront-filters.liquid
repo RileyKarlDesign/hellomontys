@@ -1,7 +1,7 @@
 
 <form class="filter-form ">
 
-  <p class=" btn filter-label"> Filters + </p>
+  <p class=" btn filter-label filter-title"> Filters + </p>
 
   <div class="active-filters">
     {{ collection.filters.active_values.size  }}
@@ -28,11 +28,12 @@
     {%- endfor -%}
   </div>
 
+  <div class="all-filters">
     {%- for filter in collection.filters -%}
       <div class="filter-group">
         <summary class="filter-group-summary">
           <div >
-            <p>{{ filter.label }} </p>
+            <p>{{ filter.label}} </p>
   
             {%- if filter.active_values.size > 0 -%}
               <p>({{ filter.active_values.size }})</p>
@@ -51,20 +52,22 @@
   
           {%- case filter.type -%}
             {%- when 'boolean' or 'list' -%}
-              <ul class="filter-group-display__list">
+              <div class="filter-group-display__list">
                 {%- for filter_value in filter.values -%}
-                  <li class=" filter-li filter-group-display__list-item">
-                    <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                  <div class=" filter-li filter-group-display__list-item">
+                    
+                    
                     <input type="checkbox"
                       name="{{ filter_value.param_name }}"
                       value="{{ filter_value.value }}"
                       id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
                       {% if filter_value.active -%}checked{%- endif %}
                       {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}
-                    >{{ filter_value.label }}</label>
-                  </li>
+                    >
+                    <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">{{ filter_value.label }}</label>
+                  </div>
                 {%- endfor -%}
-              </ul>
+                </div>
   
               <div class="filter-group-display__submit">
                 
@@ -112,9 +115,19 @@
         </div>
       </div>
     {%- endfor -%}
-
+  </div>
     <div class="filter-footer">
-     <input class="btn filter-label" type="submit" value="Apply Filters">
+      <div class="fade"></div>
+
+      <div class="filter-foot-wrapper">
+       
+       
+        
+        <input class="btn filter-label" type="submit" value="Apply Filters">
+        
+        
+
+    </div>
     </div>
 
     
