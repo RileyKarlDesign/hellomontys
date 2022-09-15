@@ -59,5 +59,4 @@ h5 {
   display: grid;
   grid-template-columns: 3fr 5fr;
   min-height: 100vh;
-  padding: 10px;
 }

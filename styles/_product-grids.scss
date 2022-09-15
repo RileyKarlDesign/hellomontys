@@ -12,7 +12,7 @@
         grid-template-columns: repeat(6, minmax(0, 1fr) ) ; 
         gap:2vw 10px; 
         width:100%; 
-        padding:tools.$gutter;
+        padding-top: tools.$half;
         
 
         @media (max-width: 1300px) {

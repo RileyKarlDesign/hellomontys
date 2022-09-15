@@ -47,12 +47,14 @@ h5 {
   display: flex;
 }
 
+.wrapper {
+  padding: 10px;
+}
+
 .product-page-wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  padding: 10px;
   padding-bottom: 0;
-  grid-gap: 10px;
 }
 
 .product-page-info {
@@ -61,6 +63,7 @@ h5 {
   height: 100vh;
   padding-top: 10px;
   height: fit-content;
+  padding-right: 10px;
 }
 .product-page-info .product-title {
   margin-bottom: 10px;

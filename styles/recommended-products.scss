@@ -2,7 +2,7 @@
 
 #recommendations{
     padding-top: tools.$half;
-    padding: tools.$gutter;
+    
     border-top: tools.$standard-border-grey;
 }
 
@@ -17,7 +17,7 @@
     display: grid; 
     grid-auto-rows:40vw; 
     grid-template-columns: repeat(4, minmax(0, 1fr) ) ; 
-    gap:2vw 10px; 
+    gap:tools.$half; 
     width:100%; 
     
    

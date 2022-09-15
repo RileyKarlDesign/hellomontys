@@ -44,7 +44,7 @@
 </head>
 <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
-    
+    <div class="ticker-top"></div>
     <div id="content" class="content-load  animate__animated animate__fadeIn   "  >
 
       {% section'main-header' %}
@@ -58,7 +58,8 @@
 
     {% section 'footer' %}
  
-
+</div>
+<div class="ticker-bottom"></div>
       <script type="application/json" data-ajax-cart-initial-state >
         {{ cart | json }}
       </script>
@@ -69,7 +70,7 @@
       
 
       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"> </script>
-       <script src="{{ 'theme.js' | asset_url }}"  ></script> 
+       <script src="{{ 'theme.js' | asset_url }}" defer ></script> 
       {{ 'application.js' | asset_url | script_tag }}
       
 

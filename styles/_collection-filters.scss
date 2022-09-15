@@ -20,3 +20,102 @@
 
 
 .collection-filter{}
+
+
+.open{
+    height: 30em !important;
+    transition: tools.$transition-basic;
+    overflow: scroll !important;
+    
+}
+
+.filter-form{
+ 
+    height: 1.7rem;
+    overflow: hidden;
+   // background-color: green;
+    width: 100%;
+    padding-left: 0;
+    padding-right: tools.$half;
+    top: calc( 100vh - 2rem );
+    z-index: 100;
+    transition: tools.$transition-basic;
+    margin-top: 5em;
+
+
+    .active-filters{
+        padding-bottom:tools.$half;
+    }
+
+    .filter-label{
+        
+        
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom:tools.$half;
+        cursor: pointer;
+        width: max-content;
+        
+       
+    }
+
+    .filter-group{
+        
+        
+       
+        width:min-content;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-top: tools.$standard-border-grey;
+        padding-top: tools.$half;
+        padding-bottom: tools.$half;
+        
+    }
+
+
+    .filter-group-summary{
+        display: flex;
+       
+        
+        
+    }
+
+    .filter-group-display{
+    
+        
+        width: 20%;
+    }
+
+    .filter-group-display__list{
+        
+    }
+
+    .filter-li{
+       
+        margin-bottom: 5px;
+        }
+
+        
+
+        
+    }
+
+    .filter-footer{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+
+    
+
+
+.open{
+
+}
