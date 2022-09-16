@@ -12,6 +12,13 @@
     
     padding-bottom: 0;
     // grid-gap: tools.$gutter;
+
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        //background-color:red;
+        flex-direction: column-reverse;
+    }
     
 }
 
@@ -44,8 +51,18 @@
     grid-gap: tools.$half; 
     padding-bottom: tools.$half;
 
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
+
+        
+    }
+
     .product-img{
         position: relative;
+
+       
     }
     .img-index{
         position: absolute;
@@ -60,6 +77,12 @@
             height: 100%;
             
             object-fit: cover;
+
+            @media (max-width: 1000px) {
+                height: 60vh;
+                width: 80vw;
+        
+            }
               
          }
     
