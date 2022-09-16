@@ -54,6 +54,11 @@
             
             font-weight: 700;
             font-size:16px;
+
+            @media (max-width: 1000px) {
+                font-size: 12px;
+        
+            }
             
         }
 
@@ -66,6 +71,11 @@
             color:$black; 
             line-height:15px;
             font-style: regular;
+
+            @media (max-width: 1000px) {
+                font-size: 12px;
+        
+            }
         }
 
         a{
@@ -78,6 +88,8 @@
             color:$grey; 
             line-height:15px;
             font-style: regular; 
+
+            
         }
 
        

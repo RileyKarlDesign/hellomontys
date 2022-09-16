@@ -36,6 +36,12 @@
 body{
     background-color:black;
       padding: 2em ; 
+
+      @media (max-width: 1000px) {
+        padding: 1em;
+
+    }
+    overflow: hidden
 }
 
 .ticker-top{

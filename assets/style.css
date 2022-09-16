@@ -81,6 +81,11 @@ h3 {
   font-weight: 700;
   font-size: 16px;
 }
+@media (max-width: 1000px) {
+  h3 {
+    font-size: 12px;
+  }
+}
 
 p, a, label, input, button {
   font-weight: 500;
@@ -88,6 +93,11 @@ p, a, label, input, button {
   color: rgba(19, 12, 12, 0.833);
   line-height: 15px;
   font-style: regular;
+}
+@media (max-width: 1000px) {
+  p, a, label, input, button {
+    font-size: 12px;
+  }
 }
 
 a {
@@ -188,22 +198,38 @@ h5 {
 }
 
 .active-filter {
-  color: rgb(255, 252, 242);
-  background-color: rgba(19, 12, 12, 0.833);
+  color: rgb(255, 252, 242) !important;
+  border: 1px solid rgb(148, 148, 148);
   padding: 2px 5px;
   border-radius: 5px;
   font-weight: 200;
 }
 
+.no-background {
+  background-color: none !important;
+}
+
+input {
+  display: none;
+}
+
 input + label {
   border: none;
   color: rgb(148, 148, 148);
+  cursor: pointer;
   border: none;
+}
+input + label:hover {
+  color: rgba(19, 12, 12, 0.833);
 }
 
 input:checked + label {
   color: rgba(19, 12, 12, 0.833) !important;
   border-bottom: 1px solid rgba(19, 12, 12, 0.833) !important;
+}
+
+input:disabled + label {
+  text-decoration: line-through;
 }
 
 .header-makers-mark {
@@ -214,7 +240,7 @@ input:checked + label {
   position: fixed;
   top: 5px;
   right: 5px;
-  z-index: 5;
+  z-index: 10;
 }
 
 .header {
@@ -227,6 +253,7 @@ input:checked + label {
   top: 1px !important;
   left: 0 !important;
   padding-top: 0px !important;
+  z-index: 20;
 }
 
 .header-top {
@@ -237,11 +264,10 @@ input:checked + label {
   transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
   padding-top: 3px;
   height: 2.5rem;
-  z-index: 10;
+  z-index: 200;
 }
 .header-top .logo {
   background-color: rgba(255, 252, 242, 0.786);
-  backdrop-filter: blur(5px);
   transition: ease-in-out 0.2s;
   height: 2.5rem;
   padding: 10px;
@@ -275,7 +301,6 @@ input:checked + label {
   right: 5vw;
   z-index: 10;
   background-color: rgb(255, 252, 242);
-  backdrop-filter: blur(5px);
 }
 .header-scrolled .header-top .logo {
   opacity: 0;
@@ -313,6 +338,12 @@ input:checked + label {
 .nav-bottom-fixed {
   bottom: 2em;
 }
+@media (max-width: 1000px) {
+  .nav-bottom-fixed {
+    bottom: 0em;
+    opacity: 0.2;
+  }
+}
 
 .nav-content {
   width: min-content;
@@ -329,7 +360,6 @@ input:checked + label {
   width: max-content;
   z-index: 10;
   transition: ease-in-out 0.2s;
-  backdrop-filter: blur(5px);
   border-top: 1px solid rgb(148, 148, 148);
   border-left: 1px solid rgb(148, 148, 148);
   border-right: 1px solid rgb(148, 148, 148);
@@ -450,11 +480,14 @@ input:checked + label {
 }
 
 .open {
-  height: 33.8em !important;
+  height: 32.1em !important;
   transition: ease-in-out 0.2s;
   overflow: scroll !important;
 }
 .open .all-filters {
+  width: 100% !important;
+}
+.open .filter-group {
   opacity: 100 !important;
 }
 
@@ -462,19 +495,22 @@ input:checked + label {
   height: 0;
   width: 100%;
   padding-left: 0;
-  padding-right: 10px;
   top: calc(100vh - 2rem);
   z-index: 100;
   transition: ease-in-out 0.2s;
   margin-top: 5em;
-  overflow: hidden;
+  overflow: hidden !important;
+}
+.filter-form .active-filters {
+  position: absolute;
+  top: -2em;
+  right: 0%;
+  display: flex;
+  height: fit-content;
 }
 .filter-form .filter-title {
   position: absolute;
   top: calc(-1.5em - 10px);
-}
-.filter-form .active-filters {
-  padding-bottom: 10px;
 }
 .filter-form .filter-label {
   display: flex;
@@ -482,27 +518,23 @@ input:checked + label {
   justify-content: center;
   height: 1.5em;
   padding: 5px;
+  margin-right: 10px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
   width: max-content;
 }
+.filter-form .filter-label i {
+  font-size: 0.8em;
+}
 .filter-form .all-filters {
   transition: ease all 0.6s;
   height: 30em;
-  opacity: 0;
   overflow: scroll;
   padding-bottom: 2em;
   border-top: 1px solid rgb(148, 148, 148);
-}
-.filter-form .all-filters ba label {
-  border: none;
-  color: rgb(148, 148, 148);
-  border: none;
-}
-.filter-form .all-filters ba label label [type=checkbox] {
-  display: none;
+  height: 30em;
 }
 .filter-form .filter-group {
   width: min-content;
@@ -512,24 +544,14 @@ input:checked + label {
   border-top: 1px solid rgb(148, 148, 148);
   padding-top: 10px;
   padding-bottom: 10px;
+  opacity: 0;
+  transition: ease all 1s;
 }
 .filter-form .filter-group:nth-child(1) {
   border-top: 0;
 }
 .filter-form .filter-group-summary {
   display: flex;
-}
-.filter-form .filter-li input {
-  display: none;
-}
-.filter-form .filter-li input + label {
-  border: none;
-  color: rgb(148, 148, 148);
-  border: none;
-}
-.filter-form .filter-li label + input:checked {
-  color: rgba(19, 12, 12, 0.833);
-  border-bottom: 1px solid rgba(19, 12, 12, 0.833) !important;
 }
 .filter-form .filter-group-display__list {
   width: 100%;
@@ -552,6 +574,7 @@ input:checked + label {
   left: 0;
   right: 0;
   z-index: 1;
+  pointer-events: none;
 }
 .filter-footer .filter-foot-wrapper {
   width: 100%;
@@ -565,6 +588,13 @@ input:checked + label {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding-bottom: 0;
+}
+@media (max-width: 1000px) {
+  .product-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
 }
 
 .product-page-info {
@@ -591,6 +621,13 @@ input:checked + label {
   grid-gap: 10px;
   padding-bottom: 10px;
 }
+@media (max-width: 1000px) {
+  .product-page-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+}
 .product-page-images .product-img {
   position: relative;
 }
@@ -603,6 +640,12 @@ input:checked + label {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 1000px) {
+  .product-page-images img {
+    height: 60vh;
+    width: 80vw;
+  }
 }
 
 .single-metafield {
@@ -787,6 +830,7 @@ input {
 #recommendations {
   padding-top: 10px;
   border-top: 1px solid rgb(148, 148, 148);
+  min-height: 80vh;
 }
 
 .title {
@@ -831,6 +875,12 @@ input {
 body {
   background-color: black;
   padding: 2em;
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  body {
+    padding: 1em;
+  }
 }
 
 .ticker-top {

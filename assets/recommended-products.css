@@ -16,6 +16,11 @@ h3 {
   font-weight: 700;
   font-size: 16px;
 }
+@media (max-width: 1000px) {
+  h3 {
+    font-size: 12px;
+  }
+}
 
 p, a, label, input, button {
   font-weight: 500;
@@ -23,6 +28,11 @@ p, a, label, input, button {
   color: rgba(19, 12, 12, 0.833);
   line-height: 15px;
   font-style: regular;
+}
+@media (max-width: 1000px) {
+  p, a, label, input, button {
+    font-size: 12px;
+  }
 }
 
 a {
@@ -50,6 +60,7 @@ h5 {
 #recommendations {
   padding-top: 10px;
   border-top: 1px solid rgb(148, 148, 148);
+  min-height: 80vh;
 }
 
 .title {

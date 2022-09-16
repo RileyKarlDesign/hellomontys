@@ -1,11 +1,17 @@
 @use 'tools';
 
 .open{
-    height:33.8em !important;
+    height:32.1em !important;
     transition: ease-in-out 0.2s;
     overflow: scroll !important;
 
     .all-filters{
+        
+        width: 100% !important;
+    }
+
+    .filter-group{
+        
         opacity: 100!important;
     }
 }
@@ -17,15 +23,25 @@
    // background-color: green;
     width: 100%;
     padding-left: 0;
-    padding-right: tools.$half;
+   
     top: calc( 100vh - 2rem );
     z-index: 100;
     transition: tools.$transition-basic;
     margin-top: 5em;
     
    
-    overflow: hidden;
+    overflow: hidden !important;
     
+    .active-filters{
+        //background-color:rgba(255, 0, 0, 0.152);
+        position: absolute;
+        top: -2em;
+        right: 00%;
+        display: flex;
+       height: fit-content;
+       
+       
+    }
 
     .filter-title{
         position: absolute;
@@ -33,10 +49,7 @@
        
     }
 
-    .active-filters{
-        padding-bottom:tools.$half;
-       
-    }
+   
 
     .filter-label{
         
@@ -47,44 +60,50 @@
         justify-content: center;
         height: 1.5em;
         padding: 5px;
+        margin-right: tools.$half;
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom:tools.$half;
         cursor: pointer;
         width: max-content;
+        i{
+            font-size:0.8em;
+        }
         
        
     }
+   
 
     .all-filters{
 
         transition: ease all 0.6s;
         height: 30em;
-        opacity: 0;
+        
         overflow: scroll;
         padding-bottom: 2em;
         border-top: tools.$standard-border-grey;
-        ba
+       
+        // animation
+       
+        height: 30em;
 
-
-        label {
-            border: none;
-            color: tools.$grey;
+    //     label {
+    //         border: none;
+    //         color: tools.$grey;
            
-            border: none;
+    //         border: none;
             
         
 
-        input{
-            //  display: none;
-        }
+    //     input{
+    //         //  display: none;
+    //         cursor: pointer;
+    //     }
         
            
-        label [type="checkbox"] {
-            display: none;
-          }
+       
 
-    }
+    // }
     }
 
 
@@ -101,6 +120,10 @@
         padding-bottom: tools.$half;
         //background-color: tools.$yellow;
         
+        // animation
+       opacity: 0;
+         
+        transition: ease all 1s;
         
         
         
@@ -120,24 +143,36 @@
 
     .filter-li{
     
-        input{
-             display: none;
-        }
+        // input{
+        //      display: none;
+        // }
         
-        input +  label {
-            border: none;
-            color: tools.$grey;
+        // input +  label {
+        //     border: none;
+        //     color: tools.$grey;
            
-            border: none;
-            }
+        //     border: none;
+
+        //     &:hover{
+        //         color: tools.$black;
+        //     }
+        //     }
         
-            label + input:checked    {
-            color: tools.$black;
-            border-bottom: tools.$standard-border !important;
+        //     label + input:checked    {
+        //     color: red;
+        //     border-bottom: tools.$standard-border !important;
         
-        }
+        //     }
+
+            
+
+
+
+            
         
     }
+
+    
 
     .filter-group-display__list{
         
@@ -170,6 +205,7 @@
             left: 0;
             right: 0;
             z-index: 1;
+            pointer-events: none;
         }
 
         .filter-foot-wrapper{

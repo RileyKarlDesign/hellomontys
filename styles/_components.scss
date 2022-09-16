@@ -117,29 +117,45 @@
 }
 
 .active-filter {
-    color: tools.$white;
-    background-color: tools.$black;
+    color: tools.$white !important;
+    //background-color: tools.$black;
+    border: tools.$standard-border-grey;
     padding: 2px 5px;
     border-radius: tools.$radius;
     font-weight: 200;
 
 }
 
+.no-background{
+    background-color: none !important;
+}
+
 // inputs --------------------------------------------------------
 input{
-    // display: none;
+     display: none;
 }
 
 input +  label {
     border: none;
     color: tools.$grey;
-   
+    cursor: pointer;
     border: none;
+
+    &:hover{
+        color: tools.$black;
+    }
+    
     }
 
 input:checked +  label {
-    color: tools.$black !important;
-     
+     color: tools.$black !important;
     border-bottom: tools.$standard-border !important;
 
 }
+
+input:disabled +  label {
+    text-decoration: line-through;
+   
+
+}
+

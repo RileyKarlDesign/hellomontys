@@ -16,6 +16,11 @@ h3 {
   font-weight: 700;
   font-size: 16px;
 }
+@media (max-width: 1000px) {
+  h3 {
+    font-size: 12px;
+  }
+}
 
 p, a, label, input, button {
   font-weight: 500;
@@ -23,6 +28,11 @@ p, a, label, input, button {
   color: rgba(19, 12, 12, 0.833);
   line-height: 15px;
   font-style: regular;
+}
+@media (max-width: 1000px) {
+  p, a, label, input, button {
+    font-size: 12px;
+  }
 }
 
 a {
@@ -56,6 +66,13 @@ h5 {
   grid-template-columns: 1fr 3fr;
   padding-bottom: 0;
 }
+@media (max-width: 1000px) {
+  .product-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
 
 .product-page-info {
   position: sticky;
@@ -81,6 +98,13 @@ h5 {
   grid-gap: 10px;
   padding-bottom: 10px;
 }
+@media (max-width: 1000px) {
+  .product-page-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+}
 .product-page-images .product-img {
   position: relative;
 }
@@ -93,6 +117,12 @@ h5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 1000px) {
+  .product-page-images img {
+    height: 60vh;
+    width: 80vw;
+  }
 }
 
 .single-metafield {
