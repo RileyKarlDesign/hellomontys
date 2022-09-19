@@ -1,94 +1,22 @@
-{{ "floating_cards.css" | asset_url | stylesheet_tag }}
-
-<div class="floating_cards" id="fc_{{section.id}}">
-<div class="floating_cards-inner">
 
 
-<div class="flex justify-center items-center curve_wrap type-curved-heading-r">
-<div class="floating_card-curve_wrap">
-{% render 'circle_text' with section.settings.title_text, radius: 300 %}
-</div>
-</div>
-
-
-
-
-<div class="floating_cards" id="fc_{{section.id}}">  
-    <div class="floating_cards-inner">
-
-    
-        <div class="flex justify-center items-center curve_wrap type-curved-heading-r">
-            <div class="floating_card-curve_wrap">
-                <h1>  {{section.settings.title_text }} </h1>
-            </div>
-        </div>
-
-
-
-
-        <ul class="card_row site-width">
-            {% for block in section.blocks %}
-                {% assign card = block.settings%}
-                <li data-random-delay class="info_card" data-speed="0.9">
-                    <div class="info_card-inner">
-                        <p class=" type-floating-card type-caps">{{card.title}}</p>
-                        <img src="{{ card.image | img_url: 'master'}}">
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-
-    </div>
-    <div class="floating_card-cloud_container">
-        {% for i in (1..5) %}
-            <div data-random-delay data-speed="0.8" class="cloud" id="cloud_{{forloop.index0}}">
-                <svg width="619" height="320" viewBox="0 0 619 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M89.6073 319.89C48.394 311.58 16.3147 292.063 3.9972 256.846C-12.7526 208.95 24.763 163.933 86.1545 155.747C95.6314 154.481 105.255 154.032 115.858 153.113C117.009 137.372 118.43 121.714 119.238 106.014C122.421 44.1947 172.377 2.58728 247.261 0.300714C267.807 -0.332175 288.499 0.0966012 309.044 1.23989C332.945 2.58733 353.417 11.2844 371.171 24.5751C387.112 36.5184 403.201 48.3595 419.143 60.3028C425.118 64.7943 430.603 65.6926 438.072 61.6299C467.629 45.5422 498.802 49.4211 528.653 59.874C558.994 70.4902 569.695 93.7234 570.895 118.855C571.728 136.433 578.339 150.316 591.22 163.607C611.57 184.574 621.977 208.807 618.255 235.981C612.525 277.976 565.801 314.173 514.621 315.684" fill="white" fill-opacity="0.5"/>
-                    </svg>
-                    
-            </div>
-        {% endfor %}
-    </div>
-</div>
-
-
-
+<div class="card-img">{{ section.settings.image_1 | img_url: '2048x' | img_tag }}</div>
 
 {% schema %}
+{
+  "name": "Image",
+  "settings": [
     {
-        "name":"Floating Cards",
-        "tag":"section",
-        "settings":[
-            {
-                "type":"text",
-                "id":"title_text",
-                "label":"Curved Text"
-            },
-            {
-                "type":"image_picker",
-                "id":"cloud_image",
-                "label":"Cloud Graphic"
-            }
-        
-        ],
-        "blocks":[
-            {
-                "type":"card",
-                "name":"Card",
-                "settings":[
-                    {
-                        "type":"text",
-                        "id":"title",
-                        "label":"Title"
-                    },
-                    {
-                        "type":"image_picker",
-                        "id":"image",
-                        "label":"Graphic"
-                    }
-                ]
-            }
-        ],
-        "presets":[{"name":"Floating Cards"}]
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"    
     }
+  ],
+  "presets": [
+    {
+      "name": "Image",
+      "category": "Content"
+    }
+  ]
+}
 {% endschema %}
