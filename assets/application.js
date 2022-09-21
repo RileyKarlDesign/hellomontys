@@ -97,13 +97,19 @@ $(document).ready(function() {
 
       let cartButton = document.querySelector('.cart-btn')
       let navWrapper = document.querySelector('.nav-wrapper')
-     
+      
+      function tidyclose (){
+
+        navWrapper.classList.remove('cart-open')
+        navWrapper.classList.remove('cart-close')
+      }
 
 
        cartButton.addEventListener('click', function (){
 
           if(navWrapper.classList.contains('cart-open')){
-            navWrapper.classList.remove('cart-open')
+            navWrapper.classList.add('cart-close')
+            setTimeout(tidyclose,300)
           }else{
             navWrapper.classList.add('cart-open')
           }

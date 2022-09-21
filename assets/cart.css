@@ -94,6 +94,13 @@ input {
   color: red;
 }
 
+.cart-close {
+  top: calc(100vh - 2.5em) !important;
+}
+.cart-close .nav-module {
+  background-color: rgba(255, 252, 242, 0.786);
+}
+
 .cart-open {
   top: 15vh;
 }
@@ -104,7 +111,8 @@ input {
   height: 10em;
 }
 .cart-open .nav-module {
-  background-color: rgb(255, 199, 46) !important;
+  background-color: rgb(255, 199, 46);
+  transition: ease all 0.5;
 }
 
 .cart-open .cart {

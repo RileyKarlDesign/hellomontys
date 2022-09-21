@@ -2,13 +2,45 @@
 
 
 
+
+.scrolled-filters{
+    color: red;
+    border: 2px solid red;
+    display: none;
+}
+
 .collection-filters{
-    display: flex;
-    gap: tools.$half;
    
+    gap: tools.$half;
     //background-color:red;
     align-items: center;
-    justify-content:center
+    justify-content:center;
+    display: flex;
+    padding: tools.$half;
+    border: tools.$standard-border-grey ;
+    border-top: none;
+    border-radius: 0 0 tools.$radius tools.$radius;
+    position: absolute;
+    top: 0;
+    padding-top: 5em;
+    margin-left: auto;
+
+    
+
+    .collection-filter{
+        display: flex;
+        
+        padding:  tools.$half 0 ;
+  
+         &:hover{color: tools.$black !important;}
+
+    }
+
+    
+   
+    h2{
+        
+    }
 }
 
 .collection-filter{

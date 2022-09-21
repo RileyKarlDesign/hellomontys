@@ -5,15 +5,15 @@
 // ----------------------------------------------------------------
 
 .header-makers-mark{
-    height: 5vw;
-    width:5vw;
+    height: 3vw;
+    width:3vw;
     background-color:tools.$yellow;
     border-radius:50%;
     
     position: fixed;
     
-    top: 5px;
-    right: 5px;
+    top: 40px;
+    right: 15px;
     
     z-index: 10;
 }
@@ -25,7 +25,7 @@
     padding-bottom: 0;
     // background-color: tools.$white;
     transition: tools.$transition-basic;
- 
+    
 }
 
 
@@ -46,7 +46,7 @@
     //transition: tools.$transition-basic;
     transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
     padding-top: 3px;
-    
+    position: absolute ;
     height:2.5rem;
     z-index: 200;
  

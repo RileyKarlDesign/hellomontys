@@ -36,8 +36,15 @@ input{
     
 }
 
+.cart-close{
+    top: calc( 100vh - 2.5em ) !important;
+    .nav-module{
+        background-color: tools.$white-50 ;
+    }
+}
+
 .cart-open{
-    top: 15vh;
+    top: 15vh ;
    .nav-wrapper{
     
     height: 70vh;
@@ -49,7 +56,8 @@ input{
     }
 
     .nav-module{
-        background-color:tools.$yellow !important;
+        background-color:tools.$yellow ;
+        transition: ease all 0.5;
     }
 }
 
