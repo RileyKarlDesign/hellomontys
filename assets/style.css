@@ -63,6 +63,15 @@ select::-ms-expand {
   display: none;
 }
 
+.unavailble {
+  color: rgb(148, 148, 148);
+  text-decoration: line-through;
+}
+
+.grey {
+  color: rgb(148, 148, 148) !important;
+}
+
 h1 {
   font-size: 35px;
   line-height: 40px;
@@ -129,6 +138,10 @@ h5 {
   padding-bottom: 1px;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+#add-to-cart-button:disabled {
+  opacity: 40%;
 }
 
 .hero-btn {
@@ -307,7 +320,6 @@ input:disabled + label {
 }
 .header-scrolled .header-bottom {
   height: 20px;
-  display: felx;
   align-items: center;
   padding: 0;
 }
@@ -326,7 +338,7 @@ input:disabled + label {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: calc(100% - 2.5em);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -364,6 +376,7 @@ input:disabled + label {
   border-left: 1px solid rgb(148, 148, 148);
   border-right: 1px solid rgb(148, 148, 148);
   border-top: 1px solid rgb(148, 148, 148);
+  transition: ease-in-out 0.2s;
 }
 .nav-module .head-link-list {
   display: flex;
@@ -436,8 +449,11 @@ input:disabled + label {
   bottom: 0em !important;
   filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 0.372));
 }
+.product-card :hover .info-section {
+  color: rgb(148, 148, 148) !important;
+}
 .product-card .product-img {
-  background-color: rgb(70, 240, 28);
+  background-color: rgba(0, 0, 0, 0.178) !important;
   overflow: hidden;
   position: relative;
   height: 80%;
@@ -446,6 +462,10 @@ input:disabled + label {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: ease-in-out 0.2s;
+}
+.product-card .product-img:hover img {
+  transform: scale(1.1, 1.1);
 }
 .product-card .product-img .img-tab {
   background-color: rgb(255, 252, 242);
@@ -601,12 +621,13 @@ input:disabled + label {
   position: sticky;
   top: 0;
   height: 100vh;
-  padding-top: 10px;
   height: fit-content;
   padding-right: 10px;
 }
 .product-page-info .product-title {
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .product-page-info .product-description {
   margin-bottom: 10px;
@@ -653,15 +674,47 @@ input:disabled + label {
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .metafeild-notes {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(19, 12, 12, 0.833);
+  padding-bottom: 10px;
   margin-bottom: 10px;
+}
+.metafeild-notes .warning-check {
+  padding-top: 10px;
+  display: flex;
+  gap: 7px;
+}
+.metafeild-notes .warning-check label {
+  display: flex;
+  border-bottom: none !important;
+}
+.metafeild-notes .warning-check input:checked + label .input-block {
+  background-color: rgba(19, 12, 12, 0.833);
+  border-bottom: none !important;
+}
+.metafeild-notes .warning-check .input-block {
+  height: 0.9em;
+  width: 0.9em;
+  margin-right: 7px;
+  border: 1px solid rgba(19, 12, 12, 0.833);
+  border-radius: 50%;
+  transition: ease-in-out 0.2s;
+}
+.metafeild-notes .warning-check .input-block:hover {
+  background-color: rgba(19, 12, 12, 0.833);
 }
 .metafeild-notes .metafield-title {
   padding-bottom: 10px;
+}
+.metafeild-notes .metafield-title i {
+  font-size: 0.8em;
+  color: rgba(19, 12, 12, 0.833);
 }
 
 .product-option-row {
@@ -669,8 +722,11 @@ input:disabled + label {
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.product-option-row .product-option {
+  padding-bottom: 7px;
 }
 
 .product-price {
@@ -678,8 +734,8 @@ input:disabled + label {
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 optgroup * {
@@ -733,6 +789,7 @@ input {
 
 .my-cart {
   height: 100%;
+  transition: ease-in-out 0.2s;
 }
 
 .js-ajax-cart-message--error {
@@ -740,11 +797,13 @@ input {
 }
 
 .cart-open {
-  top: 0;
-  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.56));
+  top: 15vh;
+}
+.cart-open .nav-wrapper {
+  height: 70vh;
 }
 .cart-open .nav-content {
-  height: 70vh;
+  height: 10em;
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46) !important;
@@ -752,7 +811,7 @@ input {
 
 .cart-open .cart {
   padding: 10px 0;
-  height: 100%;
+  height: 70vh;
   padding: 10px;
 }
 
@@ -829,8 +888,24 @@ input {
 
 #recommendations {
   padding-top: 10px;
-  border-top: 1px solid rgb(148, 148, 148);
   min-height: 80vh;
+}
+
+.line {
+  border-top: 1px solid rgb(148, 148, 148);
+  width: 0%;
+  transition: linear all 1s;
+  margin-bottom: 10px;
+}
+
+.entered {
+  opacity: 100% !important;
+}
+.entered .line {
+  width: 100%;
+}
+.entered .recommended-grid {
+  opacity: 100 !important;
 }
 
 .title {
@@ -838,11 +913,13 @@ input {
 }
 
 .recommended-grid {
+  opacity: 0;
   display: grid;
   grid-auto-rows: 40vw;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   width: 100%;
+  transition: ease all 1s;
 }
 @media (max-width: 1300px) {
   .recommended-grid {
@@ -889,6 +966,47 @@ body {
   body {
     padding: 1em;
   }
+}
+
+@keyframes colorshift {
+  0% {
+    background-color: rgb(255, 199, 46);
+    background-image: linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%), linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    transform: scale(1, 1);
+    position: absolute;
+    top: 0;
+  }
+  25% {
+    background-color: rgb(255, 199, 46);
+    background-image: linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%), linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    transform: scale(0.95, 0.95);
+  }
+  50% {
+    background-color: rgb(255, 199, 46);
+    background-image: linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%), linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    transform: scale(0.95, 0.95);
+  }
+  75% {
+    background-color: rgb(255, 199, 46);
+    background-image: linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%), linear-gradient(45deg, rgba(255, 78, 34, 0.368) 25%, transparent 25%, transparent 75%, rgba(255, 78, 34, 0.368) 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+  }
+  100% {
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+  }
+}
+.atc-animation {
+  animation: colorshift 2s normal ease;
 }
 
 .ticker-top {

@@ -1,3 +1,12 @@
+.unavailble {
+  color: rgb(148, 148, 148);
+  text-decoration: line-through;
+}
+
+.grey {
+  color: rgb(148, 148, 148) !important;
+}
+
 h1 {
   font-size: 35px;
   line-height: 40px;
@@ -59,8 +68,24 @@ h5 {
 
 #recommendations {
   padding-top: 10px;
-  border-top: 1px solid rgb(148, 148, 148);
   min-height: 80vh;
+}
+
+.line {
+  border-top: 1px solid rgb(148, 148, 148);
+  width: 0%;
+  transition: linear all 1s;
+  margin-bottom: 10px;
+}
+
+.entered {
+  opacity: 100% !important;
+}
+.entered .line {
+  width: 100%;
+}
+.entered .recommended-grid {
+  opacity: 100 !important;
 }
 
 .title {
@@ -68,11 +93,13 @@ h5 {
 }
 
 .recommended-grid {
+  opacity: 0;
   display: grid;
   grid-auto-rows: 40vw;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   width: 100%;
+  transition: ease all 1s;
 }
 @media (max-width: 1300px) {
   .recommended-grid {

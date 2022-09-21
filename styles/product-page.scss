@@ -26,13 +26,21 @@
     position: sticky; // See link
     top: 0; //to make it stick to the top of the screen
     height: 100vh; // make the height equal to 100 view height
-    padding-top:tools.$half;
+    
     height: fit-content;
     padding-right: tools.$half; 
+    // border: tools.$standard-border;
+    // border-radius: tools.$radius;
    
 
     .product-title{
+        // border-bottom: tools.$standard-border !important;
+        // border-top: tools.$standard-border !important;
         margin-bottom:tools.$gutter;
+       
+        padding-bottom: tools.$half;
+        padding-top: tools.$half;
+
     }
 
     .product-description{
@@ -102,9 +110,59 @@
 }
 
 .metafeild-notes{
+   padding: tools.$half;
+   border-radius: tools.$radius;
+   
+    
+    //background-color: tools.$yellow50;
+    border: tools.$standard-border;
+    padding-bottom:tools.$half;
+    
+    .warning-check{
+        padding-top:tools.$half;
+        input{
+            //display: unset;
+        }
+        label{
+            display: flex;
+            border-bottom:none !important;
+        }
+
+        input:checked  + label .input-block{
+            background-color: tools.$black;
+            border-bottom:none !important;
+        }
+
+
+        .input-block{
+            height: 0.9em;
+            width: 0.9em;
+            margin-right: tools.$cell-padding;
+            border: tools.$standard-border;
+            border-radius: 50%;
+            transition: tools.$transition-basic;
+
+            &:hover{
+                background-color: tools.$black
+            }
+        }
+        display:flex;
+        gap: tools.$cell-padding;
+
+    }
 
     .metafield-title{
+
+        //border-top: tools.$standard-border-grey;
+
+       
         padding-bottom: tools.$half;
+        
+        i{
+            font-size:0.8em;
+
+            color: tools.$black
+        }
     }
     // border-top: tools.$standard-border;
     // padding-top: tools.$half;
@@ -120,6 +178,10 @@
     
     padding-top:tools.$cell-padding;
     padding-bottom:tools.$cell-padding;
+
+    .product-option{
+        padding-bottom: tools.$cell-padding;
+    }
 
  
     

@@ -137,7 +137,7 @@
     .header-bottom{
 
         height: 20px;
-        display: felx;
+        
         align-items: center;
         padding: 0;
 
@@ -171,7 +171,7 @@
     position:fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: calc(100% - 2.5em);
     z-index: 100;
     display:flex;
     align-items: center;
@@ -200,6 +200,7 @@
     width: min-content;
     
     
+    
 }
 
 .nav-module{
@@ -222,6 +223,8 @@
     border-left: tools.$standard-border-grey ;
     border-right: tools.$standard-border-grey ;
     border-top: tools.$standard-border-grey ;
+
+    transition: tools.$transition-basic;
     .head-link-list{
         display: flex;
 

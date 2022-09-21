@@ -18,7 +18,11 @@
     
 }
 
-.hero-btn{
+#add-to-cart-button:disabled {
+   opacity: 40%;
+}
+
+.hero-btn{ 
 
     border: none;
     stroke: none;
@@ -37,6 +41,8 @@
     }
 
 }
+
+
 
 .link-btn {
 

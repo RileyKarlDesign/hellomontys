@@ -1,6 +1,6 @@
 <div class="product-recommendations main-product-grid" data-product-id="{{ product.id }}" data-limit="3">
   {%- if recommendations.products_count > 0 -%}
-    
+    <div class="line"></div>
     <div class="recommended-grid">
       <p class="title ">Recommended Products</p>
       {%- for product in recommendations.products -%}

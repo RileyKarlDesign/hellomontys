@@ -23,7 +23,7 @@ enterView({
 
 
 let headerTop = document.querySelector('.header-top');
-let content = document.querySelector('#content');
+
 
 const spacer = document.querySelector('.spacer')
 
@@ -45,6 +45,20 @@ enterView({
 	
 });
 
+enterView({
+	
+	selector: '#recommendations',
+
+	enter: function(el) {
+		el.classList.add('entered');
+		
+	}
+	
+	
+	
+	
+});
+
 //  cart--------------------------------------------
 
 
@@ -55,45 +69,29 @@ enterView({
 const filterForm = document.querySelector('.filter-form')
 const filterLabel = document.querySelector('.filter-label')
 
-filterLabel.addEventListener('click', () => {
+if(filterLabel){
+
+	filterLabel.addEventListener('click', () => {
 	
-if(filterForm.classList.contains('open') ){
-	
-	filterForm.classList.remove('open')
-	filterLabel.innerHTML=" Filters +"
-} else{
-	filterForm.classList.add('open')
-	filterLabel.innerHTML=" Filters -"
+		if(filterForm.classList.contains('open') ){
+			
+			filterForm.classList.remove('open')
+			filterLabel.innerHTML=" Filters +"
+		} else{
+			filterForm.classList.add('open')
+			filterLabel.innerHTML=" Filters -"
+		}
+			
+		})
+
 }
-	
-})
-
-// intersection -------------------------------------------------
 
 
-
-// headerOptions = {
-
-// 	threshold: 0,
-// 	rootMargin: "-0px 0px 0px -100%"
-// };
-
-// const headerObserver = new IntersectionObserver( function(entries, headerObserver){
-
-// 	entries.forEach( entry => {
-// 		console.log('!')
-// 		if(!entry.isLeaving){
-// 			headerTop.classList.add('header-top-fixed')
-// 			console.log('.')
-// 		}else{
-// 			headerTop.classList.remove('header-top-fixed')
-// 		}
-		
-// 	})
-
-// }, headerOptions )
+// atc -------------------------------------------------
 
 
-// headerObserver.observe(headerTop)
+
+
+
 
 //----------------------------------------------------------

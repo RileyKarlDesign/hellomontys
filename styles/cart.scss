@@ -25,6 +25,7 @@ input{
 
 .my-cart{
     height: 100%;
+    transition: tools.$transition-basic;
 }
 
 
@@ -36,12 +37,14 @@ input{
 }
 
 .cart-open{
+    top: 15vh;
+   .nav-wrapper{
     
-    top: 0;
-    filter: tools.$drop-shadow-center;
+    height: 70vh;
+   }
     
     .nav-content{
-        height: 70vh;
+        height:10em;
         
     }
 
@@ -52,8 +55,9 @@ input{
 
 .cart-open .cart{
     padding: tools.$gutter 0 ;
-    height: 100%;
+    height: 70vh ;
     padding:  tools.$half ;
+    
 }
 
 
@@ -62,10 +66,11 @@ input{
     border: tools.$standard-border-grey;
     border-top: 0;
     width: 100%;
-    height: 0;
+   height: 0;
     z-index: 10;
     padding:  0 ;
     overflow: scroll;
+   
     
     
     

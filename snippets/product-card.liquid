@@ -60,7 +60,12 @@
    
             <div class='product-info-cell' >
                     
+                    {% if product.compare_at_price > 0 %}
+                    <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
                     <p> {{ product.price | money_with_currency}} </p>
+                    {% else %}
+                    <p> {{ product.price | money_with_currency}} </p>
+                    {% endif %}
             </div>
             
 

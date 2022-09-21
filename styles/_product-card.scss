@@ -25,23 +25,38 @@
         filter: tools.$drop-shadow-up;
     }
 
+    :hover .info-section{
+        color: tools.$grey !important;
+    }
+
   
     
 
     .product-img {
         
-        background-color:rgb(70, 240, 28);
+        background-color:tools.$hovercolor !important;
         overflow: hidden;
         
         position: relative;
         height:80%;
+        
        
         img{
 
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: tools.$transition-basic;
 
+        }
+
+        &:hover{
+
+            
+
+            img{
+                transform: scale(1.1, 1.1);
+            }
         }
 
         .img-tab{

@@ -5,8 +5,10 @@
     $white-50: rgba(255, 252, 242, 0.786);
     $grey-0: rgba(0, 0, 0, 0.257);
     $grey: rgb(148, 148, 148);
+    $grey50: rgba(0, 0, 0, 0.065);
     $yellow: rgb(255, 199, 46);
-    $red: rgb(248, 78, 35);
+    $yellow50: rgba(255, 199, 46, 0.519);
+    $red: rgba(255, 78, 34, 0.368);
     $hovercolor: rgba(0, 0, 0, 0.178);
 
 // measurements
@@ -14,7 +16,7 @@
     $gutter : 10px;
     $half: 10px;
     $gap: calc($gutter / 10);
-    $cell-padding: 5px;
+    $cell-padding: 7px;
 
 // details 
 
@@ -26,7 +28,18 @@
     $drop-shadow-up: drop-shadow(-0px -10px 20px rgba(0, 0, 0, 0.372));
     $drop-shadow-center: drop-shadow(-0px -0px 20px rgba(0, 0, 0, 0.56));
 
+// text decoration
 
+.unavailble{
+   
+    color: $grey;
+    text-decoration: line-through;
+    
+}
+
+.grey{
+    color: $grey !important;
+}
 // design
 
     // type

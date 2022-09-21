@@ -1,4 +1,4 @@
-
+<script src="{{'product.js'|asset_url}}" defer="defer"></script> 
  
 <!--  
  {% for feild in product.metafields.custom.colour %}
@@ -22,24 +22,46 @@
     
 
 <div class="product-page-wrapper">
+  
     <div class="product-page-info">
+      
         <p class="product-title">{{ product.title }}</p>
+        
         <p class="product-description">{{ product.description }}</p>
-        <div class="metafeild-notes ">
-          <p class="metafield-title" > Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.notes | metafield_text }}</p>
-      </div>
-         <!-- metafields -->
+         
+        
+        <!-- metafields -->
+        
+       
+       
+      
+     
     
          <div class="metafields">
-    
+
+          {% assign colour = product.metafields.custom.colour | metafield_text %}
+          {% assign material = product.metafields.custom.material | metafield_text %}
+          {% assign vendor = product.vendor  %}
           
+          
+          {% if vendor != "hellomonty's" %}
             <div class="single-metafield  ">
-                <p class="metafield-title" > Color</p>  <h5>{{ product.metafields.custom.colour | metafield_text }}</h5>
+              <p class="metafield-title" > Label</p> <a href="/collections/vendors?q={{vendor}}"> <p>{{ vendor }}</p></a>
             </div>
+          {% endif %}
+
+
+          {% if colour != '' %}
+            <div class="single-metafield  ">
+                <p class="metafield-title" > Color</p>  <p>{{ colour }}</p>
+            </div>
+          {% endif %}
    
+          {% if material != '' %}
             <div class="single-metafield ">
-                <p class="metafield-title" > Material </p> <h5>{{ product.metafields.custom.material | metafield_text }}</h5>
+                <p class="metafield-title" > Material </p> <p>{{ material }}</p>
             </div>
+          {% endif %}
 
           
    
@@ -49,8 +71,12 @@
     
         
         
-            {% render 'add-to-cart-form' with current_variant: current_variant  %}
-            
+        {% render 'add-to-cart-form' with current_variant: current_variant  %}
+        {% assign shipping = product.metafields.custom.shipping | metafield_text %}
+        {% assign notes = product.metafields.custom.notes | metafield_text %}
+    
+
+     
 
     </div>
     
@@ -62,7 +88,11 @@
                 <div class="img-index label"> <p class="label">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
                 <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
               </div>
+
+              
           {% endfor %}
+
+          
            </div>
 
 
@@ -76,6 +106,14 @@
 
 <!-- related products -->
 
+<script>
+  let atc = document.getElementById('add-to-cart-btn');
+
+
+if( atc ){
+	console.log('yep')
+};
+</script>
 
 
 

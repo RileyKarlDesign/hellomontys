@@ -1,3 +1,12 @@
+.unavailble {
+  color: rgb(148, 148, 148);
+  text-decoration: line-through;
+}
+
+.grey {
+  color: rgb(148, 148, 148) !important;
+}
+
 h1 {
   font-size: 35px;
   line-height: 40px;
@@ -78,12 +87,13 @@ h5 {
   position: sticky;
   top: 0;
   height: 100vh;
-  padding-top: 10px;
   height: fit-content;
   padding-right: 10px;
 }
 .product-page-info .product-title {
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .product-page-info .product-description {
   margin-bottom: 10px;
@@ -130,15 +140,47 @@ h5 {
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .metafeild-notes {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(19, 12, 12, 0.833);
+  padding-bottom: 10px;
   margin-bottom: 10px;
+}
+.metafeild-notes .warning-check {
+  padding-top: 10px;
+  display: flex;
+  gap: 7px;
+}
+.metafeild-notes .warning-check label {
+  display: flex;
+  border-bottom: none !important;
+}
+.metafeild-notes .warning-check input:checked + label .input-block {
+  background-color: rgba(19, 12, 12, 0.833);
+  border-bottom: none !important;
+}
+.metafeild-notes .warning-check .input-block {
+  height: 0.9em;
+  width: 0.9em;
+  margin-right: 7px;
+  border: 1px solid rgba(19, 12, 12, 0.833);
+  border-radius: 50%;
+  transition: ease-in-out 0.2s;
+}
+.metafeild-notes .warning-check .input-block:hover {
+  background-color: rgba(19, 12, 12, 0.833);
 }
 .metafeild-notes .metafield-title {
   padding-bottom: 10px;
+}
+.metafeild-notes .metafield-title i {
+  font-size: 0.8em;
+  color: rgba(19, 12, 12, 0.833);
 }
 
 .product-option-row {
@@ -146,8 +188,11 @@ h5 {
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.product-option-row .product-option {
+  padding-bottom: 7px;
 }
 
 .product-price {
@@ -155,8 +200,8 @@ h5 {
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 optgroup * {

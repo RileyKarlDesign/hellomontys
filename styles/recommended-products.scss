@@ -3,8 +3,29 @@
 #recommendations{
     padding-top: tools.$half;
     
-    border-top: tools.$standard-border-grey;
+    
     min-height: 80vh;
+    
+    
+}
+
+.line{
+    border-top: tools.$standard-border-grey;
+    width: 0%;
+    transition: linear all 1s;
+    margin-bottom: tools.$half;
+}
+
+.entered{
+opacity: 100% !important;
+
+ .line{
+    width: 100%;
+ }
+
+ .recommended-grid{
+    opacity: 100 !important;
+ }
 }
 
 .title {
@@ -14,12 +35,13 @@
 .recommended-grid{
     
 
-    
+    opacity: 0;
     display: grid; 
     grid-auto-rows:40vw; 
     grid-template-columns: repeat(4, minmax(0, 1fr) ) ; 
     gap:tools.$half; 
     width:100%; 
+    transition: ease all 1s;
     
    
     
