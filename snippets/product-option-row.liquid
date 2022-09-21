@@ -3,7 +3,7 @@
 
 
 <div class="product-option-row">
-    <label for="{% if type == 'select' %}select-{{ option.name}}{% endif %}"> {{ option.name }} </label> 
+    <label class="grey" for="{% if type == 'select' %}select-{{ option.name}}{% endif %}"> {{ option.name }} </label> 
 
 
 <div class="option-values">
@@ -24,7 +24,8 @@
             <div class="product-option">
                 
                 <input class="variant-radio" {% if forloop.index == 1 %} checked="checked" {% endif %} id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}" {% if value == selected %}checked{% endif %}>
-                <label for="{{ radio_id }}"> {{ value }} </label>
+                <label  for="{{ radio_id }}"> {{ value }} </label>
+                
             </div>
         {% endfor %}
     {% endif %}

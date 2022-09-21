@@ -72,7 +72,7 @@ h5 {
 }
 
 .line {
-  border-top: 1px solid rgb(148, 148, 148);
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
   width: 0%;
   transition: linear all 1s;
   margin-bottom: 10px;
@@ -101,15 +101,14 @@ h5 {
   width: 100%;
   transition: ease all 1s;
 }
-@media (max-width: 1300px) {
-  .recommended-grid {
-    grid-auto-rows: 37vw;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .recommended-grid {
     grid-auto-rows: 50vw;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 2fr;
+  }
+  .recommended-grid .title {
+    grid-column: 1/5;
+    grid-row: 1;
   }
 }

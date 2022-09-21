@@ -13,7 +13,7 @@
     padding-bottom: 0;
     // grid-gap: tools.$gutter;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 700px) {
         display: flex;
         flex-direction: column;
         //background-color:red;
@@ -40,6 +40,7 @@
        
         padding-bottom: tools.$half;
         padding-top: tools.$half;
+        border-bottom: tools.$standard-border-grey !important;
 
     }
 
@@ -105,8 +106,11 @@
     border-top: tools.$standard-border-grey;
     
     padding-top:tools.$cell-padding;
-    padding-bottom:tools.$cell-padding
+    padding-bottom:tools.$cell-padding;
     
+    .metafield-title{
+        color: tools.$grey;
+    }
 }
 
 .metafeild-notes{
@@ -114,36 +118,55 @@
    border-radius: tools.$radius;
    
     
-    //background-color: tools.$yellow50;
-    border: tools.$standard-border;
+   background-color: tools.$hovercolor;
+    border: tools.$standard-border-grey;
     padding-bottom:tools.$half;
+    transition: tools.$transition-basic;
+
+    &:hover{
+        filter: drop-shadow(0 10px 10px tools.$grey50 );
+        background-color: tools.$white;
+    }
     
+
+    
+
     .warning-check{
         padding-top:tools.$half;
+        transition: tools.$transition-basic;
         input{
+            
             //display: unset;
         }
         label{
             display: flex;
             border-bottom:none !important;
+            color: tools.$black;
+            align-items: center;
+            
         }
 
         input:checked  + label .input-block{
             background-color: tools.$black;
             border-bottom:none !important;
+
+           
         }
+
+       
 
 
         .input-block{
             height: 0.9em;
             width: 0.9em;
-            margin-right: tools.$cell-padding;
+            margin-right: calc( tools.$cell-padding * 2 );
             border: tools.$standard-border;
             border-radius: 50%;
             transition: tools.$transition-basic;
+            background-color: tools.$white;
 
             &:hover{
-                background-color: tools.$black
+                background-color: tools.$black;
             }
         }
         display:flex;
@@ -168,6 +191,30 @@
     // padding-top: tools.$half;
     margin-bottom: tools.$gutter;
 }
+
+.metafeild-notes:has(input:checked){
+
+    background-color: tools.$white;
+        
+}
+
+.warning-title{
+
+    //border-top: tools.$standard-border-grey;
+
+   
+    padding-bottom: tools.$half;
+    
+    i{
+        font-size:0.8em;
+
+        color: tools.$black
+    }
+}
+// border-top: tools.$standard-border;
+// padding-top: tools.$half;
+
+
 
 .product-option-row{
 

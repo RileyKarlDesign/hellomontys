@@ -77,7 +77,7 @@
     <input type="hidden" name="id" class='js-variant-id'
         value={{product.variants.first.id}}>
     <div class="product-price">
-        <p> Price</p>
+        <p class="grey"> Price</p>
        
         <ul>
         {% if product.compare_at_price > 0 %}
@@ -98,7 +98,7 @@
 
     {% if wear != '' %}
     <div class="metafeild-notes animate__animated animate__slideInLeft ">
-      <p class="metafield-title" > Wear Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.notes | metafield_text }}</p>
+      <p class="warning-title" > Wear Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.notes | metafield_text }}</p>
       
       <div class=" warning-check">
         <input class="js-warning-check" type="checkbox" id="wear" name="scales">
@@ -114,7 +114,7 @@
 
     {% if shipping != '' %}
     <div class="metafeild-notes animate__animated animate__slideInLeft">
-      <p class="metafield-title " > Shipping  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.shipping | metafield_text }}</p>
+      <p class="warning-title " > Shipping  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.shipping | metafield_text }}</p>
       
       <div class=" warning-check">
         <input class="js-warning-check" type="checkbox" id="shipping" name="scales">
@@ -139,17 +139,17 @@
 
 function atcReview(){
     
-    console.log('yooo')
+    
     
     let pass = false;
     let count = 0;
 
     check.forEach( c =>{
         if(!c.checked){
-            console.log('it is not checked');
+            
             add.setAttribute('disabled', '');
             count += 1;
-            console.log(count);
+            
         }else if(count <= 0){
             add.removeAttribute('disabled', '');
         }

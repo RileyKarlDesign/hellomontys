@@ -141,7 +141,11 @@ h5 {
 }
 
 #add-to-cart-button:disabled {
-  opacity: 40%;
+  opacity: 60%;
+}
+#add-to-cart-button:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.178) !important;
+  border: 1px solid rgba(0, 0, 0, 0.228) !important;
 }
 
 .hero-btn {
@@ -151,7 +155,7 @@ h5 {
   background-color: rgba(0, 0, 0, 0.178);
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid rgb(148, 148, 148);
+  border: 1px solid rgba(0, 0, 0, 0.228);
   transition: ease-in-out 0.2s;
 }
 .hero-btn:hover {
@@ -204,7 +208,7 @@ h5 {
   right: 5px;
   top: 5px;
   color: rgb(148, 148, 148);
-  border: 1px solid rgb(148, 148, 148);
+  border: 1px solid rgba(0, 0, 0, 0.228);
   padding: 2px 5px 0px 5px;
   border-radius: 50%;
   z-index: 1;
@@ -212,7 +216,7 @@ h5 {
 
 .active-filter {
   color: rgb(255, 252, 242) !important;
-  border: 1px solid rgb(148, 148, 148);
+  border: 1px solid rgba(0, 0, 0, 0.228);
   padding: 2px 5px;
   border-radius: 5px;
   font-weight: 200;
@@ -285,7 +289,7 @@ input:disabled + label {
   height: 2.5rem;
   padding: 10px;
   border-radius: 0 0 5px 5px;
-  border: 1px solid rgb(148, 148, 148);
+  border: 1px solid rgba(0, 0, 0, 0.228);
   border-top: 0;
 }
 
@@ -372,10 +376,10 @@ input:disabled + label {
   width: max-content;
   z-index: 10;
   transition: ease-in-out 0.2s;
-  border-top: 1px solid rgb(148, 148, 148);
-  border-left: 1px solid rgb(148, 148, 148);
-  border-right: 1px solid rgb(148, 148, 148);
-  border-top: 1px solid rgb(148, 148, 148);
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
+  border-left: 1px solid rgba(0, 0, 0, 0.228);
+  border-right: 1px solid rgba(0, 0, 0, 0.228);
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
   transition: ease-in-out 0.2s;
 }
 .nav-module .head-link-list {
@@ -553,7 +557,7 @@ input:disabled + label {
   height: 30em;
   overflow: scroll;
   padding-bottom: 2em;
-  border-top: 1px solid rgb(148, 148, 148);
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
   height: 30em;
 }
 .filter-form .filter-group {
@@ -561,7 +565,7 @@ input:disabled + label {
   display: grid;
   grid-template-columns: 6fr 2fr;
   width: 100%;
-  border-top: 1px solid rgb(148, 148, 148);
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 10px;
   padding-bottom: 10px;
   opacity: 0;
@@ -609,7 +613,7 @@ input:disabled + label {
   grid-template-columns: 1fr 3fr;
   padding-bottom: 0;
 }
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .product-page-wrapper {
     display: flex;
     flex-direction: column;
@@ -628,6 +632,7 @@ input:disabled + label {
   margin-bottom: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228) !important;
 }
 .product-page-info .product-description {
   margin-bottom: 10px;
@@ -673,26 +678,38 @@ input:disabled + label {
   display: grid;
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
-  border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 7px;
-  padding-bottom: 7px;
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.single-metafield .metafield-title {
+  color: rgb(148, 148, 148);
 }
 
 .metafeild-notes {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid rgba(19, 12, 12, 0.833);
+  background-color: rgba(0, 0, 0, 0.178);
+  border: 1px solid rgba(0, 0, 0, 0.228);
   padding-bottom: 10px;
+  transition: ease-in-out 0.2s;
   margin-bottom: 10px;
+}
+.metafeild-notes:hover {
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.065));
+  background-color: rgb(255, 252, 242);
 }
 .metafeild-notes .warning-check {
   padding-top: 10px;
+  transition: ease-in-out 0.2s;
   display: flex;
-  gap: 7px;
+  gap: 5px;
 }
 .metafeild-notes .warning-check label {
   display: flex;
   border-bottom: none !important;
+  color: rgba(19, 12, 12, 0.833);
+  align-items: center;
 }
 .metafeild-notes .warning-check input:checked + label .input-block {
   background-color: rgba(19, 12, 12, 0.833);
@@ -701,10 +718,11 @@ input:disabled + label {
 .metafeild-notes .warning-check .input-block {
   height: 0.9em;
   width: 0.9em;
-  margin-right: 7px;
+  margin-right: 10px;
   border: 1px solid rgba(19, 12, 12, 0.833);
   border-radius: 50%;
   transition: ease-in-out 0.2s;
+  background-color: rgb(255, 252, 242);
 }
 .metafeild-notes .warning-check .input-block:hover {
   background-color: rgba(19, 12, 12, 0.833);
@@ -717,25 +735,37 @@ input:disabled + label {
   color: rgba(19, 12, 12, 0.833);
 }
 
+.metafeild-notes:has(input:checked) {
+  background-color: rgb(255, 252, 242);
+}
+
+.warning-title {
+  padding-bottom: 10px;
+}
+.warning-title i {
+  font-size: 0.8em;
+  color: rgba(19, 12, 12, 0.833);
+}
+
 .product-option-row {
   display: grid;
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
-  border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 7px;
-  padding-bottom: 7px;
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .product-option-row .product-option {
-  padding-bottom: 7px;
+  padding-bottom: 5px;
 }
 
 .product-price {
   display: grid;
   color: rgb(148, 148, 148);
   grid-template-columns: 1fr 2fr;
-  border-top: 1px solid rgb(148, 148, 148);
-  padding-top: 7px;
-  padding-bottom: 7px;
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 optgroup * {
@@ -817,7 +847,7 @@ input {
 
 .cart {
   background-color: rgb(255, 199, 46) !important;
-  border: 1px solid rgb(148, 148, 148);
+  border: 1px solid rgba(0, 0, 0, 0.228);
   border-top: 0;
   width: 100%;
   height: 0;
@@ -892,7 +922,7 @@ input {
 }
 
 .line {
-  border-top: 1px solid rgb(148, 148, 148);
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
   width: 0%;
   transition: linear all 1s;
   margin-bottom: 10px;
@@ -921,16 +951,15 @@ input {
   width: 100%;
   transition: ease all 1s;
 }
-@media (max-width: 1300px) {
-  .recommended-grid {
-    grid-auto-rows: 37vw;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .recommended-grid {
     grid-auto-rows: 50vw;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 2fr;
+  }
+  .recommended-grid .title {
+    grid-column: 1/5;
+    grid-row: 1;
   }
 }
 
@@ -960,7 +989,7 @@ input {
 body {
   background-color: black;
   padding: 2em;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media (max-width: 1000px) {
   body {
