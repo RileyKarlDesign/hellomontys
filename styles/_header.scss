@@ -185,12 +185,17 @@
 
 .nav-bottom-fixed{
 
+    position:absolute;
+    
+    
+    bottom: 0;
+    
+    
 
-    bottom: 2em;
 
     @media (max-width: 1000px) {
        
-        bottom: 0em;
+        bottom: 0px;
        opacity: 0.2;
 
     }
@@ -219,10 +224,11 @@
     
     transition: tools.$transition-basic;
     // backdrop-filter: blur(5px);
-    border-top: tools.$standard-border-grey ;
-    border-left: tools.$standard-border-grey ;
-    border-right: tools.$standard-border-grey ;
-    border-top: tools.$standard-border-grey ;
+
+    border: tools.$standard-border-grey ;
+    border-bottom: 0;
+    overflow: hidden;
+    
 
     transition: tools.$transition-basic;
     .head-link-list{

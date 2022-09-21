@@ -8,7 +8,7 @@
     $grey50: rgba(0, 0, 0, 0.065);
     $yellow: rgb(255, 199, 46);
     $yellow50: rgba(255, 199, 46, 0.519);
-    $red: rgba(255, 78, 34, 0.368);
+    $red: rgb(255, 45, 34);
     $hovercolor: rgba(0, 0, 0, 0.178);
 
 // measurements
@@ -46,11 +46,11 @@
 
         h1{
 
-            font-size:35px;
-            line-height: 40px;
+            font-size:26px;
+            line-height: 32px;
             
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
+           
+            font-weight: 300;
             font-style: regular;
         }
         

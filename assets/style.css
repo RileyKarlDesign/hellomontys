@@ -73,10 +73,9 @@ select::-ms-expand {
 }
 
 h1 {
-  font-size: 35px;
-  line-height: 40px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 300;
   font-style: regular;
 }
 
@@ -352,11 +351,12 @@ input:disabled + label {
 }
 
 .nav-bottom-fixed {
-  bottom: 2em;
+  position: absolute;
+  bottom: 0;
 }
 @media (max-width: 1000px) {
   .nav-bottom-fixed {
-    bottom: 0em;
+    bottom: 0px;
     opacity: 0.2;
   }
 }
@@ -376,10 +376,9 @@ input:disabled + label {
   width: max-content;
   z-index: 10;
   transition: ease-in-out 0.2s;
-  border-top: 1px solid rgba(0, 0, 0, 0.228);
-  border-left: 1px solid rgba(0, 0, 0, 0.228);
-  border-right: 1px solid rgba(0, 0, 0, 0.228);
-  border-top: 1px solid rgba(0, 0, 0, 0.228);
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  border-bottom: 0;
+  overflow: hidden;
   transition: ease-in-out 0.2s;
 }
 .nav-module .head-link-list {
@@ -834,7 +833,7 @@ input {
   top: calc(100vh - 2.5em) !important;
 }
 .cart-close .nav-module {
-  background-color: rgba(255, 252, 242, 0.786);
+  background-color: rgba(255, 252, 242, 0.786) !important;
 }
 
 .cart-open {
@@ -848,17 +847,18 @@ input {
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46);
-  transition: ease all 0.5;
+  transition: ease all 0.3;
 }
 
 .cart-open .cart {
   padding: 10px 0;
   height: 70vh;
   padding: 10px;
+  background-color: rgb(255, 199, 46) !important;
 }
 
 .cart {
-  background-color: rgb(255, 199, 46) !important;
+  background-color: rgb(255, 252, 242) !important;
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-top: 0;
   width: 100%;
@@ -1001,14 +1001,13 @@ input {
 }
 .card-img img {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   object-fit: cover;
 }
-.card-img h2 {
-  width: 70%;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
+.card-img h1 {
+  width: 50%;
+  padding-top: 10px;
+} /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
   display: none;
 }
@@ -1036,21 +1035,21 @@ body {
 
 @keyframes colorshift {
   0% {
-    background-color: rgba(255, 78, 34, 0.368);
+    background-color: rgb(255, 45, 34);
     transform: scale(1, 1);
     position: absolute;
     top: 0;
   }
   25% {
-    background-color: rgba(255, 78, 34, 0.368);
+    background-color: rgb(255, 45, 34);
     transform: scale(0.98, 0.98);
     padding-top: 20em;
   }
   50% {
-    background-color: rgba(255, 78, 34, 0.368);
+    background-color: rgb(255, 45, 34);
   }
   75% {
-    background-color: rgba(255, 78, 34, 0.368);
+    background-color: rgb(255, 45, 34);
   }
   100% {
     background-color: rgb(0, 0, 0);
@@ -1084,4 +1083,5 @@ body {
   height: fit-content;
   margin: auto;
   border-radius: 5px;
+  overflow: hidden;
 }

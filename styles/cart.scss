@@ -39,7 +39,7 @@ input{
 .cart-close{
     top: calc( 100vh - 2.5em ) !important;
     .nav-module{
-        background-color: tools.$white-50 ;
+        background-color: tools.$white-50 !important;
     }
 }
 
@@ -57,7 +57,7 @@ input{
 
     .nav-module{
         background-color:tools.$yellow ;
-        transition: ease all 0.5;
+        transition: ease all 0.3;
     }
 }
 
@@ -65,12 +65,13 @@ input{
     padding: tools.$gutter 0 ;
     height: 70vh ;
     padding:  tools.$half ;
+    background-color:tools.$yellow !important;
     
 }
 
 
 .cart{
-    background-color:tools.$yellow !important;
+    background-color:tools.$white !important;
     border: tools.$standard-border-grey;
     border-top: 0;
     width: 100%;

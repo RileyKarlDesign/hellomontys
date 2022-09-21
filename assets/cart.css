@@ -8,10 +8,9 @@
 }
 
 h1 {
-  font-size: 35px;
-  line-height: 40px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 300;
   font-style: regular;
 }
 
@@ -98,7 +97,7 @@ input {
   top: calc(100vh - 2.5em) !important;
 }
 .cart-close .nav-module {
-  background-color: rgba(255, 252, 242, 0.786);
+  background-color: rgba(255, 252, 242, 0.786) !important;
 }
 
 .cart-open {
@@ -112,17 +111,18 @@ input {
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46);
-  transition: ease all 0.5;
+  transition: ease all 0.3;
 }
 
 .cart-open .cart {
   padding: 10px 0;
   height: 70vh;
   padding: 10px;
+  background-color: rgb(255, 199, 46) !important;
 }
 
 .cart {
-  background-color: rgb(255, 199, 46) !important;
+  background-color: rgb(255, 252, 242) !important;
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-top: 0;
   width: 100%;
