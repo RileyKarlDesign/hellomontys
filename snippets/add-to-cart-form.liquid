@@ -78,11 +78,97 @@
         value={{product.variants.first.id}}>
     <div class="product-price">
         <p> Price</p>
-        <p class="js-price" data-default-price="{{ product.price | money }}">{{ current_variant.price | money }}</p>
+       
+        <ul>
+        {% if product.compare_at_price > 0 %}
+        
+            <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
+            <p class="js-price" data-default-price="{{ product.price | money }}"> {{ product.price | money_with_currency}} </p>
+            {% else %}
+            <p class="js-price" data-default-price="{{ product.price | money }}">{{ current_variant.price | money }}</p>
+        {% endif %}
+        </ul>
     </div>
 
     <!-- <label for="Quantity">quanity</label>
     <input type="number" id="Quanyity" name="quantity" value="1" min="1"> -->
-    <button class="hero-btn" type="submit" name="add" id="add-to-cart-button" > Add to cart </button>
+    {% assign wear = product.metafields.custom.notes | metafield_text %}
+    {% assign shipping = product.metafields.custom.shipping | metafield_text %}
+    
+
+    {% if wear != '' %}
+    <div class="metafeild-notes animate__animated animate__slideInLeft ">
+      <p class="metafield-title" > Wear Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.notes | metafield_text }}</p>
+      
+      <div class=" warning-check">
+        <input class="js-warning-check" type="checkbox" id="wear" name="scales">
+        
+        <label for="wear"><div class="input-block"></div> I understand</label>
+      </div>
+   
+   
+    </div>
+
+    
+    {% endif %}
+
+    {% if shipping != '' %}
+    <div class="metafeild-notes animate__animated animate__slideInLeft">
+      <p class="metafield-title " > Shipping  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.shipping | metafield_text }}</p>
+      
+      <div class=" warning-check">
+        <input class="js-warning-check" type="checkbox" id="shipping" name="scales">
+        
+        <label for="shipping"><div class="input-block"></div> I understand</label>
+      </div>
+
+    </div>
+    {% endif %}
+
+
+
+    <button class="hero-btn js-atc" type="submit" name="add" id="add-to-cart-button" > Add to cart </button>
 
 </form>
+
+
+<script> 
+ const check = document.querySelectorAll('.js-warning-check')
+ const add = document.querySelector('.js-atc')
+
+
+function atcReview(){
+    
+    console.log('yooo')
+    
+    let pass = false;
+    let count = 0;
+
+    check.forEach( c =>{
+        if(!c.checked){
+            console.log('it is not checked');
+            add.setAttribute('disabled', '');
+            count += 1;
+            console.log(count);
+        }else if(count <= 0){
+            add.removeAttribute('disabled', '');
+        }
+
+
+    })
+    
+
+
+}
+
+
+
+ check.forEach( single =>  {
+
+   single.addEventListener('click', atcReview)
+ })
+
+
+ atcReview()
+
+</script>
