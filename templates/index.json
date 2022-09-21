@@ -4,19 +4,11 @@
       "type": "card",
       "settings": {
         "image_1": "shopify:\/\/shop_images\/247544831_3126111794337644_5268097543946293388_n.jpg",
-        "title_text": "Welcome to Montys ! The home of nick nacs and things you may have never seen."
-      }
-    },
-    "1663546793398fdaf1": {
-      "type": "card",
-      "settings": {
-        "image_1": "shopify:\/\/shop_images\/258179536_436279601392095_1581080895628776058_n.jpg",
-        "title_text": ""
+        "title_text": "Welcome to Montys ! The home of nick nacs and things you may have never seen. PLease have fun through our inventory and please feel free to contact us regarding any product"
       }
     }
   },
   "order": [
-    "main",
-    "1663546793398fdaf1"
+    "main"
   ]
 }
