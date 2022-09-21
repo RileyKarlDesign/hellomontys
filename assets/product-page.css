@@ -123,6 +123,10 @@ h5 {
   position: absolute;
   top: 10px;
   left: 10px;
+  background-color: rgb(255, 252, 242);
+  border-radius: 10px;
+  padding: 2px 7px;
+  border: 1px solid rgba(0, 0, 0, 0.228);
 }
 .product-page-images img {
   width: 100%;

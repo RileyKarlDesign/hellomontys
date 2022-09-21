@@ -1,6 +1,10 @@
 
 
-<div class="card-img">{{ section.settings.image_1 | img_url: '2048x' | img_tag }}</div>
+<div class="card-img">
+  {{ section.settings.image_1 | img_url: '2048x' | img_tag }}
+<h1>{{ section.settings.text }}</h1>
+
+</div>
 
 {% schema %}
 {
@@ -10,8 +14,16 @@
       "type": "image_picker",
       "id": "image_1",
       "label": "Image"    
-    }
+    },
+    {
+      "type":"text",
+      "id":"title_text",
+      "label":"home-text"
+  },
   ],
+
+
+  
   "presets": [
     {
       "name": "Image",

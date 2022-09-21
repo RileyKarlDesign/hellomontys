@@ -77,7 +77,11 @@
         position: absolute;
         top: tools.$half;
         left: tools.$half;
-       
+        
+        background-color: tools.$white;
+        border-radius:tools.$half;
+        padding: 2px 7px;
+        border:tools.$standard-border-grey
     }
 
     
@@ -195,7 +199,10 @@
 .metafeild-notes:has(input:checked){
 
     background-color: tools.$white;
-        
+   
+
+
+      
 }
 
 .warning-title{
