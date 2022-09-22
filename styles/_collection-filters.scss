@@ -16,12 +16,13 @@
     align-items: center;
     justify-content:center;
     display: flex;
+    flex-direction: column;
     padding: tools.$half;
     border: tools.$standard-border-grey ;
     border-top: none;
     border-radius: 0 0 tools.$radius tools.$radius;
-    position: absolute;
-    top: 0;
+    
+    
     padding-top: 5em;
     margin-left: auto;
 

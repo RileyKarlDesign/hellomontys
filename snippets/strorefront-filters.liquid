@@ -1,12 +1,29 @@
 
 <form class="filter-form ">
+<div class="filter-head">
+  <p class=" btn filter-label filter-title"> Filters <i class="fa-solid fa-plus"></i> </p>
 
-  <p class=" btn filter-label filter-title"> Filters + </p>
-
-  <div class="active-filters">
+  <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="filter-label clear-btn btn active-filters__clear">Clear all</a>
+</div>
   
 
+
+
+ 
+     
+
+  
+      
+
+  <div class="active-filters">
    
+    
+  <div class="fade-r"></div>
+  <div class="fade-l"></div>
+
+   
+     <div class="scroll-wrap">
+
      
     {%- for filter in collection.filters -%}
       {%- if filter.type == "price_range" -%}
@@ -26,12 +43,10 @@
       {%- endif- %}
     {%- endfor -%}
 
-    {%- if collection.filters.active_values.size > 0 -%}
-
-      {{ collection.filters.active_values }}
-      <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="filter-label btn active-filters__clear">Clear all</a>
-
-     {% endif %}     
+  </div>
+    
+     
+     
   </div>
 
   <div class="all-filters">
@@ -42,7 +57,7 @@
             <p>{{ filter.label}} </p>
   
             {%- if filter.active_values.size > 0 -%}
-              <p>({{ filter.active_values.size }})</p>
+              <p class="label">({{ filter.active_values.size }})</p>
             {%- endif -%}
           </div>
         </summary>
@@ -52,7 +67,7 @@
             <!-- <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span> -->
   
             {%- if filter.active_values.size > 0 -%}
-              <a href="{{ filter.url_to_remove }}" class=" filter-label no-background btn filter-group-display__header-reset">Reset</a>
+              <a href="{{ filter.url_to_remove }}" class=" reset filter-label no-background btn filter-group-display__header-reset">Reset</a>
             {%- endif -%}
           </div>
   

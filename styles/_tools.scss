@@ -75,18 +75,28 @@
             
         }
 
-        
+        $base :  15px ; 
+        $base-s: 12px;
 
-        p, a, label, input, button {
+        .filter-label{
+            font-size: $base !important ;
+
+            @media (max-width: 1000px) {
+                font-size: $base-s !important;
+        
+            }
+        }
+
+        p, a, label, input, button, .btn {
             
             font-weight: 500;
-            font-size:15px;
+            font-size:$base;
             color:$black; 
             line-height:15px;
             font-style: regular;
 
             @media (max-width: 1000px) {
-                font-size: 12px;
+                font-size:$base-s;
         
             }
         }

@@ -1,6 +1,32 @@
 
+const filterWrap = document.querySelector('.scroll-wrap')
+
+if(filterWrap){
+
+	console.log( ' exists')
+	filterWrap.addEventListener("wheel", (evt) => {
+		evt.preventDefault();
+		filterWrap.scrollLeft += evt.deltaY;
+	});
 
 
+
+
+const clearBtn = document.querySelector('.active-filters__clear')
+
+if(filterWrap){
+	console.log('yes')
+}
+
+if( filterWrap.childNodes.length === 1){
+
+	clearBtn.style.display = "none";
+
+}else{
+
+	console.log( filterWrap.childNodes.length )
+}
+}
 
 const foot = document.querySelector('.footer')
 const nav = document.querySelector('.nav-wrapper')
@@ -76,10 +102,10 @@ if(filterLabel){
 		if(filterForm.classList.contains('open') ){
 			
 			filterForm.classList.remove('open')
-			filterLabel.innerHTML=" Filters +"
+			filterLabel.innerHTML=' Filters <i class="fa-solid fa-plus"></i> '
 		} else{
 			filterForm.classList.add('open')
-			filterLabel.innerHTML=" Filters -"
+			filterLabel.innerHTML=' Filters <i class="fa-solid fa-minus"></i> '
 		}
 			
 		})

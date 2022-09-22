@@ -1,5 +1,21 @@
 @use 'tools';
 
+
+.clear-btn{
+    background-color:tools.$white;
+
+    &:hover{
+        background-color:tools.$hovercolor !important;
+    }
+}
+
+.filter-title{
+    i{
+        margin-left: 5px;
+    }
+}
+  
+
 .open{
 
     
@@ -36,21 +52,91 @@
     overflow: hidden !important;
    
    
-      
     .active-filters{
         //background-color:rgba(255, 0, 0, 0.152);
         position: absolute;
         top: -2em;
         right: 00%;
         display: flex;
+        
         height: fit-content;
+
+        //background-color: red;
+        width: calc( 50% + 2.5em );
+        overflow: hidden;
+        
+
+        .scroll-wrap::-webkit-scrollbar {
+            display: none;
+          }
+
+
+        .scroll-wrap{
+
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            
+        }
+        
+       
+        .scroll-wrap{
+            display: flex;
+            overflow-x: scroll;
+            width: 100%;
+            background: rgba(0, 128, 0, 0);
+            padding-left: 2.5em;
+            padding-right: 2.5em;
+        }
+        .fade-r{
+            background: rgb(255, 36, 36);
+            background: linear-gradient(270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
+            width: 2.5em;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+            
+            
+        }
+
+        .fade-l{
+            background: rgb(255, 36, 36);
+            background: linear-gradient(-270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
+            width: 2.5em;
+            height: 2.5em;
+            position: absolute;
+            bottom: 0;
+            
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+            
+            
+        }
+        
+
+       
        
        
     }
 
-    .filter-title{
+    .active-filter{
+
+        min-width: max-content !important;
+        
+        &:hover{
+            background-color:tools.$hovercolor !important;
+        }
+    }
+
+    .filter-head{
         position: absolute;
         top: calc( 0em - 1.5em - tools.$half);
+        display: flex;
+        
        
     }
 
@@ -68,16 +154,20 @@
         margin-right: tools.$half;
         padding-left: 10px;
         padding-right: 10px;
-        margin-bottom:tools.$half;
+        
         cursor: pointer;
         width: max-content;
+        border: tools.$standard-border-grey;
+        transition: tools.$transition-basic;
         i{
             font-size:0.8em;
         }
 
         &:hover{
 
-            
+            border: tools.$standard-border-grey;
+            background-color: rgba(0, 0, 0, 0);
+
 
         }
         
@@ -91,7 +181,7 @@
         
         
         overflow: scroll;
-        padding-bottom: 2em;
+        padding-bottom: 10em;
         border-top: tools.$standard-border-grey;
        
         // animation
@@ -129,7 +219,7 @@
         border-top: tools.$standard-border-grey;
         padding-top: tools.$half;
         padding-bottom: tools.$half;
-        //background-color: tools.$yellow;
+        //background-color: tools.$white;
         
         // animation
        opacity: 0;
@@ -183,6 +273,11 @@
         
     }
 
+    .reset{
+    
+        background-color: tools.$white !important;
+       }
+
     
 
     .filter-group-display__list{
@@ -210,7 +305,7 @@
             background: rgb(255,255,255);
             background: linear-gradient(0deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
             width: 100%;
-            height: 3em;
+            height: 5em;
             position: absolute;
             bottom: 2em;
             left: 0;

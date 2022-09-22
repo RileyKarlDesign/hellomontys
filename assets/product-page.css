@@ -30,7 +30,16 @@ h3 {
   }
 }
 
-p, a, label, input, button {
+.filter-label {
+  font-size: 15px !important;
+}
+@media (max-width: 1000px) {
+  .filter-label {
+    font-size: 12px !important;
+  }
+}
+
+p, a, label, input, button, .btn {
   font-weight: 500;
   font-size: 15px;
   color: rgba(19, 12, 12, 0.833);
@@ -38,7 +47,7 @@ p, a, label, input, button {
   font-style: regular;
 }
 @media (max-width: 1000px) {
-  p, a, label, input, button {
+  p, a, label, input, button, .btn {
     font-size: 12px;
   }
 }
