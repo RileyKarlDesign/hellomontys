@@ -31,7 +31,7 @@ h3 {
 }
 
 .filter-label {
-  font-size: 15px !important;
+  font-size: 13px !important;
 }
 @media (max-width: 1000px) {
   .filter-label {
@@ -41,9 +41,9 @@ h3 {
 
 p, a, label, input, button, .btn {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 13px;
   color: rgba(19, 12, 12, 0.833);
-  line-height: 15px;
+  line-height: 13px;
   font-style: regular;
 }
 @media (max-width: 1000px) {

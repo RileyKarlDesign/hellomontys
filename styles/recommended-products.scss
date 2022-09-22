@@ -5,6 +5,13 @@
     
     
     min-height: 80vh;
+
+    .product-card{
+        opacity: 100% !important;
+        padding-top:0 !important;
+        grid-column: span 2 !important;
+    }
+
     
     
 }
@@ -29,7 +36,10 @@ opacity: 100% !important;
 }
 
 .title {
+    display: flex;
+    gap: tools.$half;
     padding-bottom: tools.$half;
+    grid-column: span 3;
 }
 
 .recommended-grid{

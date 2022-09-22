@@ -9,232 +9,124 @@
 
 
 {% assign mod = forloop.index | modulo: 4.5%}
-    {% if mod == 0 %}
-    <div class="product-card ">
-
-        <!-- <p class="label"> {{ forloop.index }}</p> -->
     
-        {% if product.vendor != "hellomonty's" %}
     
-        <div class="makers-mark"></div>
-    
-        {% endif %}
+<a href="{{ product.url }}">
+    <div class="product-card" number= "{{ forloop.index }}" id="{{ forloop.index }}">
+        <div class="product-content">
+            <!-- <p class="label"> {{ forloop.index }}</p> -->
         
-    
-    
-        <div class="product-img">
-                <a href="{{ product.url }}">
-                    <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
-                </a>
-    
-    
-                <div class="img-tab">
-                    <p class="label">View Product</p>
-                </div>
-        </div>
-    
-    
-    
-    
-    
-        <div class="product-info">
-            
-            <div class="info-section">
-    
-                <div class='product-info-cell' > 
+            {% if product.vendor != "hellomonty's" %}
+        
+            <div class="makers-mark"></div>
+        
+            {% endif %}
+        
+        
+        
+            <div class="product-img">
                     
-                    <p class="label"> {{ product.vendor }} </p>
-                </div>
-    
-                <div class='product-info-cell' > 
-                    
-                    <p> {{ product.title }} </p>
-                
-                {% if product.vendor != "hellomonty's" %}
-    
-             
-    
-                {% endif %}
-            
-                </div>
-       
-                <div class='product-info-cell' >
-                        
-                        {% if product.compare_at_price > 0 %}
-                        <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
-                        <p> {{ product.price | money_with_currency}} </p>
-                        {% else %}
-                        <p> {{ product.price | money_with_currency}} </p>
-                        {% endif %}
-                </div>
-                
-    
-                    <!-- {% for option in product.options_with_values %}
-                        {% if option.name != 'Title' %}
-                        <div class="product-option cell">
-                                <p class="product-option-label label" > {{ option.name }}: </p>
-                                    {% for value in option.values %}
-                                        <p class="product-option">  {{ value }}</p>
-                                    {% endfor %}
-                        </div>
-                        {% endif %}
-                               {% endfor %}
-                         -->
+                        <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
                    
-                
-    
-    
-                
-            
-    
+        
+        
+                    <div class="img-tab">
+                        <p class="label">View Product</p>
+                    </div>
             </div>
-    
-    
-           
-    
-            <!-- <div class="info-section-two">
-                <form class="mini-add-to-cart" method="post" action="/cart/add">
-    
-                    {% if product.available %}
-            
-                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                        
-                        <button class='btn'> <i class="fa-solid fa-plus"></i> </button>
-    
-                        {% else %}
-    
-                        <p class='sold-out-text' > sold out </p>
-                        
+        
+        
+        
+        
+        
+            <div class="product-info">
+        
+                <div class="info-section">
+        
+                    <div class='product-info-cell' >
+        
+                        <p class="label"> {{ product.vendor }} </p>
+                    </div>
+        
+                    <div class='product-info-cell' >
+        
+                        <p> {{ product.title }} </p>
+        
+                    {% if product.vendor != "hellomonty's" %}
+        
+        
+        
                     {% endif %}
-            
-            </form>
-    
-            </div> -->
-    
-        </div>
-    
-    
-    
-    
-       
-    
         
-    </div>
-    {% else %}
-    <div class="product-card ">
-
-        <!-- <p class="label"> {{ forloop.index }}</p> -->
-    
-        {% if product.vendor != "hellomonty's" %}
-    
-        <div class="makers-mark"></div>
-    
-        {% endif %}
+                    </div>
         
-    
-    
-        <div class="product-img">
-                <a href="{{ product.url }}">
-                    <img src="{{ product.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
-                </a>
-    
-    
-                <div class="img-tab">
-                    <p class="label">View Product</p>
+                    <div class='product-info-cell' >
+        
+                            {% if product.compare_at_price > 0 %}
+                            <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
+                            <p> {{ product.price | money_with_currency}} </p>
+                            {% else %}
+                            <p> {{ product.price | money_with_currency}} </p>
+                            {% endif %}
+                    </div>
+        
+        
+                        <!-- {% for option in product.options_with_values %}
+                            {% if option.name != 'Title' %}
+                            <div class="product-option cell">
+                                    <p class="product-option-label label" > {{ option.name }}: </p>
+                                        {% for value in option.values %}
+                                            <p class="product-option">  {{ value }}</p>
+                                        {% endfor %}
+                            </div>
+                            {% endif %}
+                                   {% endfor %}
+                             -->
+        
+        
+        
+        
+        
+        
+        
                 </div>
-        </div>
-    
-    
-    
-    
-    
-        <div class="product-info">
-            
-            <div class="info-section">
-    
-                <div class='product-info-cell' > 
-                    
-                    <p class="label"> {{ product.vendor }} </p>
-                </div>
-    
-                <div class='product-info-cell' > 
-                    
-                    <p> {{ product.title }} </p>
-                
-                {% if product.vendor != "hellomonty's" %}
-    
-             
-    
-                {% endif %}
-            
-                </div>
-       
-                <div class='product-info-cell' >
-                        
-                        {% if product.compare_at_price > 0 %}
-                        <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
-                        <p> {{ product.price | money_with_currency}} </p>
-                        {% else %}
-                        <p> {{ product.price | money_with_currency}} </p>
+        
+        
+        
+        
+                <!-- <div class="info-section-two">
+                    <form class="mini-add-to-cart" method="post" action="/cart/add">
+        
+                        {% if product.available %}
+        
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        
+                            <button class='btn'> <i class="fa-solid fa-plus"></i> </button>
+        
+                            {% else %}
+        
+                            <p class='sold-out-text' > sold out </p>
+        
                         {% endif %}
-                </div>
-                
-    
-                    <!-- {% for option in product.options_with_values %}
-                        {% if option.name != 'Title' %}
-                        <div class="product-option cell">
-                                <p class="product-option-label label" > {{ option.name }}: </p>
-                                    {% for value in option.values %}
-                                        <p class="product-option">  {{ value }}</p>
-                                    {% endfor %}
-                        </div>
-                        {% endif %}
-                               {% endfor %}
-                         -->
-                   
-                
-    
-    
-                
-            
-    
+        
+                </form>
+        
+                </div> -->
+        
             </div>
-    
-    
-           
-    
-            <!-- <div class="info-section-two">
-                <form class="mini-add-to-cart" method="post" action="/cart/add">
-    
-                    {% if product.available %}
-            
-                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                        
-                        <button class='btn'> <i class="fa-solid fa-plus"></i> </button>
-    
-                        {% else %}
-    
-                        <p class='sold-out-text' > sold out </p>
-                        
-                    {% endif %}
-            
-            </form>
-    
-            </div> -->
-    
-        </div>
-    
-    
-    
-    
-       
-    
         
+        
+        
+        
+        
+        
+        
+        </div>
     </div>
-    {% endif %}
-    {% endif %}
-    
+</a>
 
+    
+{% endif %}
     
 
 

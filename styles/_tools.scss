@@ -75,7 +75,7 @@
             
         }
 
-        $base :  15px ; 
+        $base :  13px ; 
         $base-s: 12px;
 
         .filter-label{
@@ -92,7 +92,7 @@
             font-weight: 500;
             font-size:$base;
             color:$black; 
-            line-height:15px;
+            line-height:13px;
             font-style: regular;
 
             @media (max-width: 1000px) {

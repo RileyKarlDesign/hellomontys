@@ -141,6 +141,64 @@ enterView({
 	
 });
 
+
+
+const pc = document.querySelectorAll(".product-card")
+
+
+	
+	function freeze(e) {
+	// e.preventDefault();
+	console.log( e.target.id );
+	let tId = e.target.id ;
+		console.log( pc )
+		
+		
+	for( i of pc ){
+		i.style.transitionDelay = 0;
+		if ( i.id != tId ){
+			console.log(i)
+			i.classList.remove('card-entered')
+						
+
+		}
+	}
+
+	e.target.classList.add('card-clicked')
+
+	
+}
+
+
+
+pc.forEach( i => {
+	i.style.transitionDelay = i.attributes.number.value + "00ms";
+	i.classList.add('card-entered')
+
+	i.addEventListener( 'click', freeze )
+
+	
+})
+
+
+
+
+
+enterView({
+	
+	selector: '.product-card',
+
+	enter: function(el) {
+		el.classList.add('card-entered');
+		
+		
+	},
+	
+	offset: 0.1,
+	
+	
+});
+
 //  cart--------------------------------------------
 
 

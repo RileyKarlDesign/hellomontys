@@ -2,11 +2,13 @@
   {%- if recommendations.products_count > 0 -%}
     <div class="line"></div>
     <div class="recommended-grid">
-      <p class="title ">Recommended Products</p>
+      <div class="title "> <div class="anchor-circle"> </div> <p> Related Products </p> </div>
       {%- for product in recommendations.products -%}
-
-      {% render 'product-card'with {product: product , forloop: forloop } %}
-
+      <div class="recomended-product" id="{{ forloop.index }}">
+      
+        {% render 'product-card'with {product: product , forloop: forloop } %}
+      
+      </div>
       
       {%- endfor -%}
     </div>

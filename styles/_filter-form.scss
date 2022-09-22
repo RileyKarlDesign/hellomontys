@@ -279,6 +279,7 @@
     .reset{
     
         background-color: tools.$white !important;
+        margin-bottom: 2em;
        }
 
     
@@ -295,7 +296,9 @@
         margin-bottom: 5px;
         }
 
-     
+        input:disabled + label{
+            display: none;
+        }
 
         
     }
@@ -304,13 +307,15 @@
         
         width:100%;
         position: relative;
+        border-top: tools.$standard-border-grey;
+        z-index: 10;
         .fade{
             background: rgb(255,255,255);
             background: linear-gradient(0deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
             width: 100%;
-            height: 5em;
+            height: 2em;
             position: absolute;
-            bottom: 2em;
+            bottom: 2em; 
             left: 0;
             right: 0;
             z-index: 1;

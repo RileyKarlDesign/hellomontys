@@ -41,6 +41,8 @@
         padding-bottom: tools.$half;
         padding-top: tools.$half;
         border-bottom: tools.$standard-border-grey !important;
+        display: flex;
+        gap: tools.$half;
 
     }
 
@@ -75,13 +77,13 @@
     }
     .img-index{
         position: absolute;
-        top: tools.$half;
-        left: tools.$half;
+        top:-10px ;
+        left: 0px;
         
-        background-color: tools.$white;
+       
         border-radius:tools.$half;
-        padding: 2px 7px;
-        border:tools.$standard-border-grey
+       
+        
     }
 
     

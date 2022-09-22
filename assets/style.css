@@ -96,7 +96,7 @@ h3 {
 }
 
 .filter-label {
-  font-size: 15px !important;
+  font-size: 13px !important;
 }
 @media (max-width: 1000px) {
   .filter-label {
@@ -106,9 +106,9 @@ h3 {
 
 p, a, label, input, button, .btn {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 13px;
   color: rgba(19, 12, 12, 0.833);
-  line-height: 15px;
+  line-height: 13px;
   font-style: regular;
 }
 @media (max-width: 1000px) {
@@ -169,6 +169,14 @@ h5 {
 .hero-btn:hover {
   border: 1px solid rgba(19, 12, 12, 0.833);
   background-color: rgb(255, 252, 242);
+}
+
+.anchor-circle {
+  height: 0.7em;
+  width: 0.7em;
+  border: 50%;
+  background-color: rgba(19, 12, 12, 0.833);
+  border-radius: 50%;
 }
 
 .link-btn {
@@ -456,40 +464,65 @@ input:disabled + label {
   grid-row: span 2;
 }
 
+.card-entered {
+  height: 100% !important;
+  opacity: 100% !important;
+  padding-top: 0 !important;
+}
+.card-entered .makers-mark {
+  position: absolute;
+  top: 5px;
+  right: -4px;
+  background-color: rgb(255, 199, 46);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
 .product-card {
+  opacity: 0;
+  transition: ease all 0.5s;
+  position: relative;
+  overflow: hidden;
+  padding-top: 2em;
+}
+
+.product-content {
   transition: ease-in-out 0.2s !important;
   position: relative;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   border-radius: 0 !important;
 }
-.product-card :hover img {
+.product-content :hover img {
   height: 110%;
   width: 110%;
 }
-.product-card :hover .img-tab {
+.product-content :hover .img-tab {
   bottom: 0em !important;
   filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 0.372));
 }
-.product-card :hover .info-section {
+.product-content :hover .info-section {
   color: rgb(148, 148, 148) !important;
 }
-.product-card .product-img {
+.product-content .product-img {
   background-color: rgba(0, 0, 0, 0.178) !important;
   overflow: hidden;
   position: relative;
-  height: 80%;
+  height: 20em;
 }
-.product-card .product-img img {
+.product-content .product-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: ease-in-out 0.2s;
 }
-.product-card .product-img:hover img {
-  transform: scale(1.1, 1.1);
+.product-content .product-img:hover img {
+  transform: scale(1.02, 1.02);
 }
-.product-card .product-img .img-tab {
+.product-content .product-img .img-tab {
   background-color: rgb(255, 252, 242);
   transition: ease-in-out 0.2s;
   height: 1.5em;
@@ -503,21 +536,22 @@ input:disabled + label {
   justify-content: center;
   pointer-events: none;
 }
-.product-card .product-info {
+.product-content .product-info {
   height: fit-content;
 }
-.product-card .product-info .info-section {
+.product-content .product-info .info-section {
   padding-top: 10px;
 }
 
 .makers-mark {
   position: absolute;
   top: 5px;
-  right: -4px;
+  right: -20px;
   background-color: rgb(255, 199, 46);
-  width: 30px;
-  height: 30px;
+  width: 0px;
+  height: 0px;
   border-radius: 50%;
+  transition: ease-in-out 0.2s;
   z-index: 10;
 }
 
@@ -613,7 +647,7 @@ input:disabled + label {
   display: flex;
 }
 .filter-form .filter-label {
-  font-size: 15px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -659,6 +693,7 @@ input:disabled + label {
 }
 .filter-form .reset {
   background-color: rgb(255, 252, 242) !important;
+  margin-bottom: 2em;
 }
 .filter-form .filter-group-display__list {
   width: 100%;
@@ -666,16 +701,21 @@ input:disabled + label {
 .filter-form .filter-li {
   margin-bottom: 5px;
 }
+.filter-form input:disabled + label {
+  display: none;
+}
 
 .filter-footer {
   width: 100%;
   position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
+  z-index: 10;
 }
 .filter-footer .fade {
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgb(255, 252, 242) 20%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
-  height: 5em;
+  height: 2em;
   position: absolute;
   bottom: 2em;
   left: 0;
@@ -717,6 +757,8 @@ input:disabled + label {
   padding-bottom: 10px;
   padding-top: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.228) !important;
+  display: flex;
+  gap: 10px;
 }
 .product-page-info .product-description {
   margin-bottom: 10px;
@@ -743,12 +785,9 @@ input:disabled + label {
 }
 .product-page-images .img-index {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgb(255, 252, 242);
+  top: -10px;
+  left: 0px;
   border-radius: 10px;
-  padding: 2px 7px;
-  border: 1px solid rgba(0, 0, 0, 0.228);
 }
 .product-page-images img {
   width: 100%;
@@ -1041,6 +1080,11 @@ input {
   padding-top: 10px;
   min-height: 80vh;
 }
+#recommendations .product-card {
+  opacity: 100% !important;
+  padding-top: 0 !important;
+  grid-column: span 2 !important;
+}
 
 .line {
   border-top: 1px solid rgba(0, 0, 0, 0.228);
@@ -1060,7 +1104,10 @@ input {
 }
 
 .title {
+  display: flex;
+  gap: 10px;
   padding-bottom: 10px;
+  grid-column: span 3;
 }
 
 .recommended-grid {
@@ -1194,5 +1241,4 @@ body {
   height: fit-content;
   margin: auto;
   border-radius: 5px;
-  overflow: hidden;
 }
