@@ -362,6 +362,11 @@ input:disabled + label {
 .nav-bottom-fixed {
   position: absolute;
   bottom: 0;
+  transition: unset;
+}
+.nav-bottom-fixed .cart {
+  height: 0 !important;
+  transition: ease-in-out 0.2s;
 }
 @media (max-width: 1000px) {
   .nav-bottom-fixed {
@@ -916,6 +921,11 @@ input {
   background-color: rgba(255, 252, 242, 0.786) !important;
 }
 
+.cart-close-bottom .nav-module {
+  background-color: rgba(255, 252, 242, 0.786) !important;
+  height: 2.5em !important;
+}
+
 .cart-open {
   top: 15vh;
 }
@@ -1086,7 +1096,13 @@ input {
 .card-img h1 {
   width: 50%;
   padding-top: 10px;
-} /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
   font-family: arial, helvetica, sans-serif;

@@ -30,6 +30,54 @@ if( filterWrap.childNodes.length === 1){
 
 const foot = document.querySelector('.footer')
 const nav = document.querySelector('.nav-wrapper')
+const cartBtn = document.querySelector('.cart-btn')
+
+let bottom = false;
+
+function tidyclose (){
+
+	if(!bottom){
+		nav.classList.remove('cart-open')
+  		nav.classList.remove('cart-close')
+	}else{
+		nav.classList.remove('cart-open')
+  		nav.classList.remove('cart-close-bottom')
+		nav.classList.add('nav-bottom-fixed')
+		
+		
+	}
+  
+}
+
+
+ cartBtn.addEventListener('click', function (){
+
+	if(nav.classList.contains('cart-open')){
+	  	if(!bottom){
+		
+		nav.classList.add('cart-close')
+	  	setTimeout(tidyclose,300)
+		} else{
+			
+			nav.classList.remove('cart-open')
+  		
+		nav.classList.add('nav-bottom-fixed')
+	  		
+
+			
+		}
+
+	}else{
+	  nav.classList.add('cart-open')
+	  nav.classList.remove('nav-bottom-fixed')
+		
+	}
+	
+ })
+
+
+
+
 
 
 
@@ -37,11 +85,19 @@ const nav = document.querySelector('.nav-wrapper')
 enterView({
 	selector: '.ticker-bottom',
 	enter: function(el) {
+
+		bottom = true;
+
+		if(!nav.classList.contains('cart-open')){
 		 nav.classList.add('nav-bottom-fixed');
+		}
+		
+		
    
 	},
 
   exit: function(el) {
+		bottom = false;
 		nav.classList.remove('nav-bottom-fixed');
 	},
 });

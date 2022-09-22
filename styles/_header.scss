@@ -186,11 +186,13 @@
 .nav-bottom-fixed{
 
     position:absolute;
-    
-    
     bottom: 0;
-    
-    
+   
+    transition: unset;
+    .cart{
+        height:0 !important;
+        transition: tools.$transition-basic;
+    }
 
 
     @media (max-width: 1000px) {

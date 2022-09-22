@@ -109,6 +109,11 @@ input {
   background-color: rgba(255, 252, 242, 0.786) !important;
 }
 
+.cart-close-bottom .nav-module {
+  background-color: rgba(255, 252, 242, 0.786) !important;
+  height: 2.5em !important;
+}
+
 .cart-open {
   top: 15vh;
 }

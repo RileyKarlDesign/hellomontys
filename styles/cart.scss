@@ -43,8 +43,28 @@ input{
     }
 }
 
+.cart-close-bottom{
+//     position: absolute;
+//    bottom: calc( 5vh - 2em ) !important;
+    
+    // .cart{
+    //     height: 0 !important;
+    //     overflow: hidden !important;
+    //     padding: 0!important;
+    //     opacity: 0 !important;
+    // }
+    
+
+    
+    .nav-module{
+        background-color: tools.$white-50 !important;
+        height: 2.5em !important;
+    }
+}
+
 .cart-open{
-    top: 15vh ;
+    top: 15vh  ;
+    
    .nav-wrapper{
     
     height: 70vh;
@@ -79,6 +99,7 @@ input{
     z-index: 10;
     padding:  0 ;
     overflow: scroll;
+    // transition: tools.$transition-basic;
    
     
     
