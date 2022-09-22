@@ -1,13 +1,16 @@
 @use 'tools';
 
 .open{
-    height:32.1em !important;
+
+    
     transition: ease-in-out 0.2s;
     overflow: scroll !important;
+    max-height: 30em !important;
 
     .all-filters{
         
         width: 100% !important;
+        max-height: 28em !important;
     }
 
     .filter-group{
@@ -18,7 +21,7 @@
 
 .filter-form{
  
-    height: 0;
+    max-height: 0;
     
    // background-color: green;
     width: 100%;
@@ -31,14 +34,16 @@
     
    
     overflow: hidden !important;
-    
+   
+   
+      
     .active-filters{
         //background-color:rgba(255, 0, 0, 0.152);
         position: absolute;
         top: -2em;
         right: 00%;
         display: flex;
-       height: fit-content;
+        height: fit-content;
        
        
     }
@@ -54,12 +59,12 @@
     .filter-label{
         
         
-        
+        font-size: tools.$base;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 1.5em;
-        padding: 5px;
+        
+        padding: 3px;
         margin-right: tools.$half;
         padding-left: 10px;
         padding-right: 10px;
@@ -69,6 +74,12 @@
         i{
             font-size:0.8em;
         }
+
+        &:hover{
+
+            
+
+        }
         
        
     }
@@ -77,15 +88,15 @@
     .all-filters{
 
         transition: ease all 0.6s;
-        height: 30em;
+        
         
         overflow: scroll;
         padding-bottom: 2em;
         border-top: tools.$standard-border-grey;
        
         // animation
-       
-        height: 30em;
+        max-height: 30em;
+        
 
     //     label {
     //         border: none;
@@ -216,9 +227,9 @@
 
        
 
-        .btn{
-
-        }
+        
+            
+          
     }
 
     
