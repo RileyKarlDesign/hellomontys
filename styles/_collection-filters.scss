@@ -11,14 +11,14 @@
 
 .collection-filters{
    
-    gap: tools.$half;
+    
     //background-color:red;
     align-items: center;
     justify-content:center;
     display: flex;
     flex-direction: column;
     padding: tools.$half;
-    border: tools.$standard-border-grey ;
+    // border: tools.$standard-border-grey ;
     border-top: none;
     border-radius: 0 0 tools.$radius tools.$radius;
     
@@ -26,14 +26,33 @@
     padding-top: 5em;
     margin-left: auto;
 
+    &:hover{
+
+        color: tools.$grey;
+    }
+
+    .count{
+        position: absolute;
+        top: -0px;
+        left: calc(100% + tools.$half );
+
+        min-width: max-content;
+    }
     
 
     .collection-filter{
         display: flex;
+        position: relative;
+        gap: tools.$half;
         
         padding:  tools.$half 0 ;
-  
-         &:hover{color: tools.$black !important;}
+        border-bottom: tools.$standard-border-grey-0 ;
+        margin-bottom:1em;
+         
+        &:hover{
+            color: tools.$grey !important;
+            border-bottom: tools.$standard-border ;
+        }
 
     }
 

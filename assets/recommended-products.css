@@ -81,7 +81,6 @@ h5 {
 #recommendations .product-card {
   opacity: 100% !important;
   padding-top: 0 !important;
-  grid-column: span 2 !important;
 }
 
 .line {
@@ -105,14 +104,13 @@ h5 {
   display: flex;
   gap: 10px;
   padding-bottom: 10px;
-  grid-column: span 3;
 }
 
 .recommended-grid {
   opacity: 0;
   display: grid;
   grid-auto-rows: 40vw;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   width: 100%;
   transition: ease all 1s;
@@ -122,9 +120,5 @@ h5 {
     grid-auto-rows: 50vw;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: 2fr;
-  }
-  .recommended-grid .title {
-    grid-column: 1/5;
-    grid-row: 1;
   }
 }

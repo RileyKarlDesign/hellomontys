@@ -31,12 +31,12 @@
             
         
             {% if forloop.last %}
-            <p> {{ collection.title }} </p>
+            <h2> {{ collection.title }} </h2>
             {% else %}
-            <p> {{ collection.title }}</p>
+            <h2> {{ collection.title }}</h2>
             {% endif %}
 
-            <p class="label"> [ {{ collection.products_count }} ]  </p>
+         <p class="label count"> [ {{ collection.products_count }} ]  </p> 
         </a>
     </div>
 
