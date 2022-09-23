@@ -1,4 +1,8 @@
 
+
+
+
+
 const filterWrap = document.querySelector('.scroll-wrap')
 
 if(filterWrap){
@@ -131,6 +135,7 @@ enterView({
 	
 	selector: '#recommendations',
 
+	
 	enter: function(el) {
 		el.classList.add('entered');
 		
@@ -148,14 +153,15 @@ const pc = document.querySelectorAll(".product-card")
 
 	
 	function freeze(e) {
-	// e.preventDefault();
+	//  e.preventDefault();
 	console.log( e.target.id );
+	
 	let tId = e.target.id ;
-		console.log( pc )
+		console.log( tId )
 		
 		
 	for( i of pc ){
-		i.style.transitionDelay = 0;
+		
 		if ( i.id != tId ){
 			console.log(i)
 			i.classList.remove('card-entered')

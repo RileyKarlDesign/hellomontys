@@ -1,5 +1,14 @@
 <script src="{{'product.js'|asset_url}}" defer="defer"></script> 
- 
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
 <!--  
  {% for feild in product.metafields.custom.colour %}
 
@@ -20,6 +29,8 @@
     
 
 <div class="product-page-wrapper">
+
+  
   
     <div class="product-page-info">
       
@@ -88,14 +99,53 @@
                 <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
               </div>
 
-              
           {% endfor %}
+
+
+        
 
           
            </div>
 
+           <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+          
+              {% for image in product.images %}
+                  <div class="swiper-slide">
+              
+                      
+                      <img src="{{ image.src | product_img_url: 'large' }}" width='500' height='auto'}>
+                      <div class="img-index label"> <p class="label img-count">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
+                    
+                  </div>
+              {% endfor%}
+              
+              
+            </div>
+            <!-- If we need pagination -->
+            
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-btns">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          
+            
+          </div>
+           
+
+
+           
+
 
 </div>
+
+
+
+
 <div id="recommendations">
     
   {% section 'product-recommendations' %}
@@ -103,15 +153,43 @@
 </div>     
 
 
+
 <!-- related products -->
 
-<script>
-  let atc = document.getElementById('add-to-cart-btn');
 
 
-if( atc ){
-	console.log('yep')
-};
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+  
+  if(document.querySelector('.swiper')){
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 1.2 ,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+  }
+
+
+  
 </script>
 
 
