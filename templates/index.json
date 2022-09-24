@@ -15,10 +15,19 @@
         "title_text": "",
         "sub_text": ""
       }
+    },
+    "166398697878269868": {
+      "type": "collection-block",
+      "settings": {
+        "collection": "clothing",
+        "title_text": "",
+        "sub_text": ""
+      }
     }
   },
   "order": [
     "main",
-    "1663986559385f67a4"
+    "1663986559385f67a4",
+    "166398697878269868"
   ]
 }
