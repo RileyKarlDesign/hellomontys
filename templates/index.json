@@ -4,14 +4,6 @@
       "type": "card",
       "settings": {
         "image_1": "shopify:\/\/shop_images\/228162959_241638911111036_8198211351712797613_n_4838d0f3-1030-4a1a-a090-ad58e6a6993f.jpg",
-        "title_text": "Monty’s welcomes all and strives to provide a safe space for you to come and browse our ever changing collection. Or to just pop in and have a chat!",
-        "sub_text": "28th june 2020"
-      }
-    },
-    "166398697878269868": {
-      "type": "collection-block",
-      "settings": {
-        "collection": "frontpage",
         "title_text": "",
         "sub_text": ""
       }
@@ -20,6 +12,14 @@
       "type": "collection-block",
       "settings": {
         "collection": "hand-made",
+        "title_text": "",
+        "sub_text": ""
+      }
+    },
+    "166398697878269868": {
+      "type": "collection-block",
+      "settings": {
+        "collection": "frontpage",
         "title_text": "",
         "sub_text": ""
       }
@@ -35,8 +35,8 @@
   },
   "order": [
     "main",
-    "166398697878269868",
     "166398945037400c23",
+    "166398697878269868",
     "1663989601b9adb31c"
   ]
 }
