@@ -23,11 +23,20 @@
         "title_text": "",
         "sub_text": ""
       }
+    },
+    "1663989601b9adb31c": {
+      "type": "collection-block",
+      "settings": {
+        "collection": "furniture",
+        "title_text": "",
+        "sub_text": ""
+      }
     }
   },
   "order": [
     "main",
     "166398697878269868",
-    "166398945037400c23"
+    "166398945037400c23",
+    "1663989601b9adb31c"
   ]
 }
