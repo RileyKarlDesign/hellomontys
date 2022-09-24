@@ -4,16 +4,8 @@
       "type": "card",
       "settings": {
         "image_1": "shopify:\/\/shop_images\/228162959_241638911111036_8198211351712797613_n_4838d0f3-1030-4a1a-a090-ad58e6a6993f.jpg",
-        "title_text": "Welcome to Montys ! The home of nick nacs and things you may have never seen. PLease have fun through our inventory and please feel free to contact us regarding any product",
+        "title_text": "Monty’s welcomes all and strives to provide a safe space for you to come and browse our ever changing collection. Or to just pop in and have a chat!",
         "sub_text": "28th june 2020"
-      }
-    },
-    "1663986559385f67a4": {
-      "type": "card",
-      "settings": {
-        "image_1": "shopify:\/\/shop_images\/247544831_3126111794337644_5268097543946293388_n.jpg",
-        "title_text": "",
-        "sub_text": ""
       }
     },
     "166398697878269868": {
@@ -23,11 +15,28 @@
         "title_text": "",
         "sub_text": ""
       }
+    },
+    "166398945037400c23": {
+      "type": "collection-block",
+      "settings": {
+        "collection": "hand-made",
+        "title_text": "",
+        "sub_text": ""
+      }
+    },
+    "1663989601b9adb31c": {
+      "type": "collection-block",
+      "settings": {
+        "collection": "furniture",
+        "title_text": "",
+        "sub_text": ""
+      }
     }
   },
   "order": [
     "main",
-    "1663986559385f67a4",
-    "166398697878269868"
+    "166398697878269868",
+    "166398945037400c23",
+    "1663989601b9adb31c"
   ]
 }
