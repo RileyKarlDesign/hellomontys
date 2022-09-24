@@ -1,0 +1,40 @@
+
+
+<div class="card-img">
+  <div class="hero-img">{{ section.settings.image_1 | img_url: '2048x' | img_tag }}</div>
+  <p>{{ section.settings.sub_text}}</p>
+<h1>{{ section.settings.title_text}}</h1>
+
+</div>
+
+{% schema %}
+{
+  "name": "Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"    
+    },
+    {
+      "type":"text",
+      "id":"title_text",
+      "label":"home-text"
+  },
+  {
+    "type":"text",
+    "id":"sub_text",
+    "label":"sub-text"
+}
+  ],
+
+
+  
+  "presets": [
+    {
+      "name": "Image",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

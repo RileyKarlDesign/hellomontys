@@ -95,8 +95,9 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
        <div class="product-page-images">
           {% for image in product.images %}
               <div class="product-img">
-                <div class="img-index label"> <p class="label img-count">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
+                
                 <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
+                <div class="img-index label"> <p class="label img-count">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
               </div>
 
           {% endfor %}
