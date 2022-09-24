@@ -1,11 +1,12 @@
-
+{%- assign collection = collections[section.settings.collection] -%}
 
 <div class="collection-block" >
+ 
+<div class="collection-title">  <div class="anchor-circle"> </div> <p> {{ collection.title }} </p></div>
 
-  {%- assign collection = collections[section.settings.collection] -%}
 
-{%- for product in collection.products -%}
-    {% render 'product-card' }
+{%- for product in collection.products limit:3 -%}
+  {% render 'product-card'with {product: product , forloop: forloop }  %}
 {%- endfor -%}
 
 
