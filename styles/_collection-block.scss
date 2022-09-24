@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: repeat( 4 , 1fr);
     gap: tools.$half;
+    margin-bottom: tools.$half;
     .collection-title{
         display: flex;
         gap: tools.$half;
