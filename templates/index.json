@@ -8,18 +8,18 @@
         "sub_text": "28th june 2020"
       }
     },
-    "166398697878269868": {
-      "type": "collection-block",
-      "settings": {
-        "collection": "frontpage",
-        "title_text": "",
-        "sub_text": ""
-      }
-    },
     "166398945037400c23": {
       "type": "collection-block",
       "settings": {
         "collection": "hand-made",
+        "title_text": "",
+        "sub_text": ""
+      }
+    },
+    "166398697878269868": {
+      "type": "collection-block",
+      "settings": {
+        "collection": "frontpage",
         "title_text": "",
         "sub_text": ""
       }
@@ -35,8 +35,8 @@
   },
   "order": [
     "main",
-    "166398697878269868",
     "166398945037400c23",
+    "166398697878269868",
     "1663989601b9adb31c"
   ]
 }
