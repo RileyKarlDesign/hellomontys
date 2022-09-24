@@ -5,7 +5,7 @@
   {%- assign collection = collections[section.settings.collection] -%}
 
 {%- for product in collection.products -%}
-    {{ product.title }}
+    {% render 'product-card' }
 {%- endfor -%}
 
 
