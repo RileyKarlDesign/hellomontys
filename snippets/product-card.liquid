@@ -16,11 +16,18 @@
         <div class="product-content">
             <!-- <p class="label"> {{ forloop.index }}</p> -->
         
-            {% if product.vendor != "hellomonty's" %}
-        
-            <div class="makers-mark"></div>
-        
+           
+
+            {% for p in product.collections %}
+               
+            {% if p.title == "Aotearoa Labels" %}
+
+                <div class="makers-mark"></div>
+
+                
             {% endif %}
+
+            {%endfor %}
         
         
         

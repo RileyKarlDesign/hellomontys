@@ -20,6 +20,9 @@
 
 html{
   scroll-behavior: smooth;
+ 
+    scroll-snap-type: y mandatory;
+  
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -156,6 +159,8 @@ body{
     background-color: rgba(255, 126, 5, 0);
     height: 5em;
 }
+
+
 
 #content{
     

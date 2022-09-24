@@ -140,13 +140,30 @@ enterView({
 		el.classList.add('entered');
 		
 	}
+
+	
 	
 	
 	
 	
 });
 
+enterView({
+	
+	selector: '.line',
 
+	
+	enter: function(el) {
+		el.classList.add('entered');
+		
+	}
+
+	
+	
+	
+	
+	
+});
 
 const pc = document.querySelectorAll(".product-card")
 

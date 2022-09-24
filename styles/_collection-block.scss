@@ -1,10 +1,21 @@
 @use 'components';
 @use 'tools';
 
+.block-wrapper{
+    margin-bottom: 2em;
+    
+
+    .entered{
+        width: 100%  !important;
+      }
+}
+
+
+
 
 .collection-block{
-    border-top: tools.$standard-border-grey;
-    padding-top: tools.$half;
+    // border-top: tools.$standard-border-grey;
+    // padding-top: tools.$half;
     
     display: grid;
     grid-template-columns: repeat( 4 , 1fr);
