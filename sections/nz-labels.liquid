@@ -1,11 +1,9 @@
-<div class="spacer">
-
-</div>
+{%- assign collection = collections[section.settings.collection] -%}
 
 
 <div class="labels">
 
-  {%- for product_vendor in shop.vendors -%}
+  {%- for product_vendor in collection.vendors -%}
   <div class="vendor-item">
     <h1 class="venor-link" >{{ product_vendor | link_to_vendor }}</h1>
     <img src="" alt="">
@@ -20,12 +18,25 @@
 
 
   {% schema %}
-{
-    "name" : "nz-labels",
-    "settings" :[
-    ]
+  {
+    "name": "collection block",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "collection"    
+      }
+    ],
+  
+  
     
-}
+    "presets": [
+      {
+        "name": "Labels",
+        "category": "Content"
+      }
+    ]
+  }
 
 {% endschema %}
 
