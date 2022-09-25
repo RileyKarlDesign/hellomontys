@@ -1,49 +1,56 @@
 {%- assign collection = collections[section.settings.collection] -%}
 
+<div class="block-wrapper">
+  <div class="line"></div>
+  <div class="collection-block" >
+  
+  <div class="collection-info">
+    <div class="collection-title">
+      
+      <div class="anchor-circle"> </div> <p> {{ collection.title }} </p>
+    </div>
+    <a href="{{ collection.url }}"> <p>See More </p> </a>
 
-<div class="labels">
-
-  {%- for product_vendor in collection.vendors -%}
-  <div class="vendor-item">
-    <h1 class="venor-link" >{{ product_vendor | link_to_vendor }}</h1>
-    <img src="" alt="">
   </div>
-{%- endfor -%}
+  
+  
+  {%- for product in collection.products limit:3 -%}
+    {% render 'product-card'with {product: product , forloop: forloop }  %}
+  {%- endfor -%}
 
-
+  
+  
+  </div>
 </div>
 
-  
-  
-
-
-  {% schema %}
+{% schema %}
+{
+  "name": "vendor",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "collection"    
+    },
+    {
+      "type":"text",
+      "id":"title_text",
+      "label":"home-text"
+  },
   {
-    "name": "collection block",
-    "settings": [
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "collection"    
-      }
-    ],
-  
-  
-    
-    "presets": [
-      {
-        "name": "Labels",
-        "category": "Content"
-      }
-    ]
-  }
+    "type":"text",
+    "id":"sub_text",
+    "label":"sub-text"
+}
+  ],
 
+
+  
+  "presets": [
+    {
+      "name": "vendor",
+      "category": "Content"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-
-{% endstylesheet %}
-
-{% javascript %}
-
-{% endjavascript %}
