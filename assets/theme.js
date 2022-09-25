@@ -181,6 +181,8 @@ const pc = document.querySelectorAll(".product-card")
 		
 		if ( i.id != tId ){
 			console.log(i)
+
+		
 			i.classList.remove('card-entered')
 						
 
