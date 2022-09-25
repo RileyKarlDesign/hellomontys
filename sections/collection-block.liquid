@@ -17,6 +17,7 @@
   {%- for product in collection.products limit:3 -%}
     {% render 'product-card'with {product: product , forloop: forloop }  %}
   {%- endfor -%}
+
   
   
   </div>
