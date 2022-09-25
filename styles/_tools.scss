@@ -7,6 +7,7 @@
     $grey: rgb(148, 148, 148);
     $grey50: rgba(0, 0, 0, 0.065);
     $yellow: rgb(255, 199, 46);
+    $yellow-0: rgba(255, 199, 46, 0);
     $yellow50: rgba(255, 199, 46, 0.519);
     $red: rgb(255, 45, 34);
     $hovercolor: rgba(0, 0, 0, 0.178);
@@ -75,8 +76,8 @@
             
         }
 
-        $base :  13px ; 
-        $base-s: 12px;
+        $base : 16px ; 
+        $base-s: 13px;
 
         .filter-label{
             font-size: $base !important ;
@@ -92,7 +93,7 @@
             font-weight: 500;
             font-size:$base;
             color:$black; 
-            line-height:13px;
+            line-height:19px;
             font-style: regular;
 
             @media (max-width: 1000px) {

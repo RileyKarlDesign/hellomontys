@@ -85,7 +85,7 @@ a{
         overflow: hidden;
         
         position: relative;
-        height:20vw;
+        height:30vw;
 
         @media (max-width: 1300px) {
              
@@ -113,14 +113,14 @@ a{
 
         }
 
-        &:hover{
+        // &:hover{
 
             
 
-            img{
-                transform: scale(1.02, 1.02);
-            }
-        }
+        //     img{
+        //         transform: scale(1.02, 1.02);
+        //     }
+        // }
 
         .img-tab{
 
@@ -146,6 +146,7 @@ a{
     .product-info{
 
         height:fit-content;
+        padding-bottom: 3em;
         // background-color: red;
 
         .info-section {

@@ -4,7 +4,14 @@
   <div class="line"></div>
   <div class="collection-block" >
   
-  <div class="collection-title">  <div class="anchor-circle"> </div> <p> {{ collection.title }} </p></div>
+  <div class="collection-info">
+    <div class="collection-title">
+      
+      <div class="anchor-circle"> </div> <p> {{ collection.title }} </p>
+    </div>
+    <a href="{{ collection.url }}"> <p>See More </p> </a>
+
+  </div>
   
   
   {%- for product in collection.products limit:3 -%}

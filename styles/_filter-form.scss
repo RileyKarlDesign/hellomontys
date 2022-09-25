@@ -4,6 +4,7 @@
 
 .clear-btn{
     background-color:tools.$white;
+    margin-right: 0;
 
     &:hover{
         background-color:tools.$hovercolor !important;
@@ -46,7 +47,7 @@
     width: 100%;
     padding-left: 0;
    
-    top: calc( 100vh - 2rem );
+    top: calc( 0em - 1.5em - 13px );
     z-index: 100;
     transition: tools.$transition-basic;
     margin-top: 5em;
@@ -58,14 +59,14 @@
     .active-filters{
         //background-color:rgba(255, 0, 0, 0.152);
         position: absolute;
-        top: -2em;
-        right: 00%;
+        top: calc(-1.5em - 12px);
+        left: 00%;
         display: flex;
         
         height: fit-content;
 
         //background-color: red;
-        width: calc( 50% + 2.5em );
+        width: calc( 80% + 2.5em );
         overflow: hidden;
         
 
@@ -87,13 +88,20 @@
             overflow-x: scroll;
             width: 100%;
             background: rgba(0, 128, 0, 0);
-            padding-left: 2.5em;
+            
             padding-right: 2.5em;
+
+            .filter-label{
+                margin-left: 0 !important;
+                margin-right: tools.$half;
+            }
         }
+
+       
         .fade-r{
             background: rgb(255, 36, 36);
             background: linear-gradient(270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
-            width: 2.5em;
+            width: 6em;
             height: 100%;
             position: absolute;
             bottom: 0;
@@ -108,12 +116,12 @@
         .fade-l{
             background: rgb(255, 36, 36);
             background: linear-gradient(-270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
-            width: 2.5em;
+            width: 20px;
             height: 2.5em;
             position: absolute;
             bottom: 0;
             
-            left: 0;
+            left: -10px;
             z-index: 1;
             pointer-events: none;
             
@@ -137,7 +145,8 @@
 
     .filter-head{
         position: absolute;
-        top: calc( 0em - 1.5em - tools.$half);
+        top: calc( 0em - 1.5em - 12px );
+        right: 0;
         display: flex;
         
        
@@ -154,7 +163,7 @@
         justify-content: center;
         
         padding: 3px;
-        margin-right: tools.$half;
+        margin-left: tools.$half;
         padding-left: 10px;
         padding-right: 10px;
         
