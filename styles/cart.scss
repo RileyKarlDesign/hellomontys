@@ -98,9 +98,20 @@ input{
 .cart-open .cart{
     padding: tools.$gutter 0 ;
     height: 70vh ;
-    padding:  tools.$half ;
+    
     padding-top:0;
     background-color:tools.$yellow !important;
+
+    .items{
+        padding:  tools.$half ;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+    .cart-foot{
+        padding: tools.$half;
+
+    }
     
 }
 
@@ -163,7 +174,7 @@ input{
     position: relative;
     background-color:tools.$yellow;
     padding-top:tools.$half;
-    border-top:tools.$standard-border;
+    border-top:tools.$standard-border-grey;
 
     .hero-btn{
        
@@ -191,7 +202,7 @@ input{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-
+   
     .item-info{
         padding-left: tools.$half;
         display: flex;
@@ -231,7 +242,9 @@ input{
 
     
  }
-
+.card.item::nrth-child(1) {
+    border-top: none;
+}
  
 
 
