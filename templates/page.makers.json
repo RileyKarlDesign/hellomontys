@@ -3,12 +3,9 @@
     "main": {
       "type": "nz-labels",
       "settings": {
-<<<<<<< HEAD
         
-        "collection": "frontpage",
-=======
+       
         "collection": "hand-made",
->>>>>>> 761c5e5a79897a68ebc0e4c9427970470bd906b7
         "title_text": "",
         "sub_text": ""
       }
