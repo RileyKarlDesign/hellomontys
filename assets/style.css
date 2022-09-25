@@ -1007,7 +1007,7 @@ optgroup * {
 .page-content {
   display: grid;
   grid-template-columns: 3fr 5fr;
-  min-height: 100vh;
+  min-height: 40vh;
 }
 
 .labels {
@@ -1285,6 +1285,7 @@ input {
 
 .card-img {
   width: 100%;
+  padding-bottom: 5em;
 }
 .card-img img {
   width: 100%;
@@ -1294,6 +1295,12 @@ input {
 .card-img h1 {
   width: 100%;
   padding-top: 10px;
+}
+
+.img-sub-txt {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .block-wrapper {

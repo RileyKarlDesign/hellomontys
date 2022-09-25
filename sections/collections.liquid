@@ -10,6 +10,7 @@
     
         {% if forloop.last %}
         <h2> {{ collection.title }} </h2>
+        <img src="{{ collection.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
         {% else %}
         <h2> {{ collection.title }}</h2>
         {% endif %}
