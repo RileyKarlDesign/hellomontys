@@ -18,15 +18,52 @@
     // padding-top: tools.$half;
     
     display: grid;
-    grid-template-columns: repeat( 4 , 1fr);
+    grid-template-columns: 1fr 3fr;
     gap: tools.$half;
     margin-bottom: tools.$half;
+    
+    @media (max-width: 800px) {
+            
+        display: flex;
+        flex-direction: column !important;
 
 
+       
+    
+    }
+
+    .collection-info{
+
+        
+        @media (max-width: 800px) {
+            
+            grid-column: 1 / 5;
+            grid-row: 1;
+
+           
+        
+        }
+    }
 
     .collection-title{
         display: flex;
         gap: tools.$half;
+
+        
+        
+    }
+
+    .info{
+        
+
+        @media (max-width: 800px) {
+            width: 100%;
+            display : flex;
+            justify-content:space-between;
+
+           
+        
+        }
     }
 
     .product-card{
@@ -43,14 +80,11 @@
             position: relative;
             height:30vw;
     
-            @media (max-width: 1300px) {
-                 
-                height:30vw;
-            }
+            
            
             @media (max-width: 800px) {
-               
-                height:30vw;
+                height:65vw;
+                width:50vw;
             }
 
             // ------------------shouldnt need to touch this but could cause errors
@@ -65,4 +99,24 @@
             }
     }
     }
+}
+
+
+.collection-images{
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    gap: tools.$half;
+    overflow: scroll;
+
+    @media (max-width: 800px) {
+               
+        display: flex;
+        gap: tools.$half;
+
+        .product-info{
+            height: 20vw;
+        }
+    }
+
+    
 }
