@@ -602,6 +602,11 @@ a {
   justify-content: flex-end;
   gap: 10px;
 }
+@media (max-width: 900px) {
+  .filters-scroll .filters-fixed {
+    justify-content: space-between;
+  }
+}
 
 .filter-head {
   position: absolute;
