@@ -1,10 +1,10 @@
 .unavailble {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   text-decoration: line-through;
 }
 
 .grey {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
 }
 
 h1 {
@@ -59,13 +59,13 @@ a {
 h5 {
   font-weight: 500;
   font-size: 16px;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   line-height: 15px;
   font-style: regular;
 }
 
 .label {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
   font-size: 10px !important;
   line-height: 15px;
 }

@@ -13,6 +13,11 @@
     display: grid;
     grid-template-columns: 3fr 5fr;
     min-height:40vh;
+
+    @media (max-width: 800px) {
+           
+        grid-template-columns: 1fr;
+    }
    
    
 }

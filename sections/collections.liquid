@@ -3,30 +3,51 @@
 
 
 
-<div class="collection-filters">
 
-   
+<div class="collection-filters">
+    
+   <div class="links">
+
+    <div class="collections-title">  <div class="anchor-circle"> </div> <p class="label"> Collections </p></div>
+    
+    {% assign thisCollection = collection.title %}
+    
+    
     {% for collection in collections %}
     
-    <div class="collection-main-link">
-        <a class="collection-filter" href="{{ collection.url }}">
+    
+        
             
         
-            {% if forloop.last %}
-            <p> {{ collection.title }} </p>
+            {% if collection.title == thisCollection %}
+            <div class=" active collection-main-link">
+                <a class=" collection-filter" href="{{ collection.url }}">
+                    <p class=""> {{ collection.title }} </p>
+                    <p class="label count"> [ {{ collection.products_count }} ] </p> 
+                </a>
+            </div>
             {% else %}
-            <p> {{ collection.title }}</p>
+            <div class="collection-main-link">
+                <a class="collection-filter" href="{{ collection.url }}">
+                    <p class=""> {{ collection.title }} </p>
+                    <p class="label count"> [ {{ collection.products_count }} ] </p> 
+                </a>
+            </div>
             {% endif %}
 
-         <p class="label count"> [ {{ collection.products_count }} ] </p> 
-        </a>
-    </div>
+        
 
-
+        
     
 
-    
     {% endfor %}
+    </div>  
+
+
+   
+    <img src="{{ collection.image | img_url:'master' }}" alt="">
+
+
 </div>
 <div id="filters" ></div>
 

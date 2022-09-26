@@ -1,10 +1,10 @@
 .unavailble {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   text-decoration: line-through;
 }
 
 .grey {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
 }
 
 h1 {
@@ -59,13 +59,13 @@ a {
 h5 {
   font-weight: 500;
   font-size: 16px;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   line-height: 15px;
   font-style: regular;
 }
 
 .label {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
   font-size: 10px !important;
   line-height: 15px;
 }
@@ -117,11 +117,11 @@ input {
   top: calc(100vh - 2.5em) !important;
 }
 .cart-close .nav-module {
-  background-color: rgba(255, 252, 242, 0.883) !important;
+  background-color: rgba(255, 252, 242, 0.786) !important;
 }
 
 .cart-close-bottom .nav-module {
-  background-color: rgba(255, 252, 242, 0.883) !important;
+  background-color: rgba(255, 252, 242, 0.786) !important;
   height: 2.5em !important;
 }
 
@@ -230,7 +230,7 @@ input {
   color: rgba(19, 12, 12, 0.833);
 }
 .cart-item .item-info i:hover {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
 }
 .cart-item .label {
   color: rgba(19, 12, 12, 0.833) !important;

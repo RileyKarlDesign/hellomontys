@@ -64,12 +64,12 @@ select::-ms-expand {
 }
 
 .unavailble {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   text-decoration: line-through;
 }
 
 .grey {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
 }
 
 h1 {
@@ -124,13 +124,13 @@ a {
 h5 {
   font-weight: 500;
   font-size: 16px;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   line-height: 15px;
   font-style: regular;
 }
 
 .label {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
   font-size: 10px !important;
   line-height: 15px;
 }
@@ -225,7 +225,7 @@ h5 {
   position: fixed;
   right: 5px;
   top: 5px;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   padding: 2px 5px 0px 5px;
   border-radius: 50%;
   z-index: 1;
@@ -249,7 +249,7 @@ input {
 
 input + label {
   border: none;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   cursor: pointer;
   border: none;
 }
@@ -295,6 +295,7 @@ input:disabled + label {
 }
 
 .header-top {
+  pointer-events: none !important;
   width: 100%;
   display: flex;
   align-items: center;
@@ -308,7 +309,7 @@ input:disabled + label {
   line-height: 0 !important;
 }
 .header-top .logo {
-  background-color: rgba(255, 252, 242, 0.883);
+  background-color: rgba(255, 252, 242, 0.786);
   transition: ease-in-out 0.2s;
   height: 2.5rem;
   padding: 10px;
@@ -396,7 +397,7 @@ input:disabled + label {
 }
 
 .nav-module {
-  background-color: rgba(255, 252, 242, 0.883);
+  background-color: rgba(255, 252, 242, 0.786);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -524,7 +525,7 @@ a {
   filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 0.372));
 }
 .product-content :hover .info-section {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
 }
 .product-content .product-img {
   background-color: rgba(0, 0, 0, 0.092) !important;
@@ -581,12 +582,12 @@ a {
 }
 @media (max-width: 800px) {
   .product-content .product-info {
-    height: 37vw;
+    padding-bottom: 1em;
   }
 }
 @media (max-width: 600px) {
   .product-content .product-info {
-    height: 60vw;
+    padding-bottom: 1.5em;
   }
 }
 
@@ -815,7 +816,7 @@ a {
   top: calc(-1.5em - 13px);
   z-index: 100;
   transition: ease-in-out 0.2s;
-  margin-top: 5em;
+  margin-top: 2.5em;
   overflow: hidden !important;
 }
 .filter-form .active-filter {
@@ -861,7 +862,7 @@ a {
   gap: 10px;
 }
 .filter-form .filter-tag input + label {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   height: fit-content !important;
   border: none;
 }
@@ -898,7 +899,7 @@ a {
   padding-right: 10px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.092);
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0);
 }
@@ -1089,14 +1090,14 @@ a {
 
 .single-metafield {
   display: grid;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 5px;
   padding-bottom: 5px;
 }
 .single-metafield .metafield-title {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
 }
 
 .metafeild-notes {
@@ -1161,7 +1162,7 @@ a {
 
 .product-option-row {
   display: grid;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 5px;
@@ -1173,7 +1174,7 @@ a {
 
 .product-price {
   display: grid;
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 5px;
@@ -1201,6 +1202,11 @@ optgroup * {
   display: grid;
   grid-template-columns: 3fr 5fr;
   min-height: 40vh;
+}
+@media (max-width: 800px) {
+  .page-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .labels {
@@ -1253,11 +1259,11 @@ input {
   top: calc(100vh - 2.5em) !important;
 }
 .cart-close .nav-module {
-  background-color: rgba(255, 252, 242, 0.883) !important;
+  background-color: rgba(255, 252, 242, 0.786) !important;
 }
 
 .cart-close-bottom .nav-module {
-  background-color: rgba(255, 252, 242, 0.883) !important;
+  background-color: rgba(255, 252, 242, 0.786) !important;
   height: 2.5em !important;
 }
 
@@ -1366,7 +1372,7 @@ input {
   color: rgba(19, 12, 12, 0.833);
 }
 .cart-item .item-info i:hover {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
 }
 .cart-item .label {
   color: rgba(19, 12, 12, 0.833) !important;
@@ -1382,24 +1388,63 @@ input {
   border-top: none;
 }
 
+.active p {
+  color: rgb(167, 167, 167) !important;
+}
+
 .collection-filters {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  gap: 10px;
   border-top: none;
   border-radius: 0 0 5px 5px;
-  padding-top: 5em;
   margin-left: auto;
 }
+.collection-filters .collections-title {
+  display: flex;
+  padding-bottom: 5px;
+  gap: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
+}
+.collection-filters .links {
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .collection-filters .links {
+    position: unset;
+    grid-column: 1/5;
+    grid-row: 2;
+  }
+}
+.collection-filters .links .collection-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.collection-filters img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  grid-column: 2/5;
+}
+@media (max-width: 800px) {
+  .collection-filters img {
+    grid-column: 1/5;
+    height: 50vh;
+  }
+}
 .collection-filters:hover {
-  color: rgb(148, 148, 148);
+  color: rgb(167, 167, 167);
 }
 .collection-filters .count {
-  position: absolute;
-  top: 0px;
-  left: calc(100% + 10px);
   min-width: max-content;
 }
 .collection-filters .collection-filter {
@@ -1410,7 +1455,7 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 .collection-filters .collection-filter:hover {
-  color: rgb(148, 148, 148) !important;
+  color: rgb(167, 167, 167) !important;
   border-bottom: 1px solid rgba(19, 12, 12, 0.833);
 }
 .collection-filter:hover {
