@@ -21,7 +21,7 @@ h2 {
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
 }
 @media (max-width: 1000px) {
@@ -117,11 +117,11 @@ input {
   top: calc(100vh - 2.5em) !important;
 }
 .cart-close .nav-module {
-  background-color: rgba(255, 252, 242, 0.786) !important;
+  background-color: rgba(255, 252, 242, 0.883) !important;
 }
 
 .cart-close-bottom .nav-module {
-  background-color: rgba(255, 252, 242, 0.786) !important;
+  background-color: rgba(255, 252, 242, 0.883) !important;
   height: 2.5em !important;
 }
 

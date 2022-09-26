@@ -85,19 +85,19 @@ a{
         overflow: hidden;
         
         position: relative;
-        height:30vw;
+        height:25vw;
 
         @media (max-width: 1300px) {
              
-            height: 40vw;
+            height: 29vw;
         }
        
         @media (max-width: 800px) {
            
-            height:40vw;
+            height:37vw;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 600px) {
            
             height:60vw;
         }
@@ -146,13 +146,30 @@ a{
     .product-info{
 
         height:fit-content;
-        padding-bottom: 3em;
+        padding-bottom: 2em;
         // background-color: red;
 
         .info-section {
             padding-top:tools.$half;
             
         }
+
+
+        @media (max-width: 1300px) {
+             
+            padding-bottom: 1.5em;
+        }
+       
+        @media (max-width: 800px) {
+           
+            height:37vw;
+        }
+
+        @media (max-width: 600px) {
+           
+            height:60vw;
+        }
+        
     }
 
   

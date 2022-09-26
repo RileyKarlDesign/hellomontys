@@ -3,11 +3,6 @@
 
 
 
-.scrolled-filters{
-    color: red;
-    border: 2px solid red;
-    display: none;
-}
 
 
 .collection-filters{ 
@@ -48,7 +43,7 @@
         
         padding:  tools.$half 0 ;
         border-bottom: tools.$standard-border-grey-0 ;
-        margin-bottom:1em;
+        
          
         &:hover{
             color: tools.$grey !important;
