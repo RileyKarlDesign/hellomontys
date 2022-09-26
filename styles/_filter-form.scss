@@ -40,6 +40,14 @@
 
     .active-filters{
         opacity: 0;
+
+        @media (max-width: 900px) {
+             
+           height: 0;
+           overflow: hidden;
+           pointer-events: none;
+        }
+        
     }
 
     .filter-title{
@@ -49,6 +57,16 @@
             margin-bottom: 4px
         }
     }
+
+    .filter-head{
+
+        @media (max-width: 900px) {
+             
+            top: calc(-1.6em - 12px) !important;
+        }
+        
+    }
+
 }
 
 .filter-form{
@@ -81,6 +99,13 @@
         width: calc( 80% + 2.5em );
         overflow: hidden;
         transition: tools.$transition-basic;
+
+        @media (max-width: 900px) {
+             
+        width: 100%;
+
+        }
+        
         
 
         .scroll-wrap::-webkit-scrollbar {
@@ -161,7 +186,19 @@
         top: calc( 0em - 1.5em - 12px );
         right: 0;
         display: flex;
+
+        @media (max-width: 900px) {
+             
+            position: absolute;
+        top: calc( 0em - 3.8em - 12px );
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        }
         
+        .filter-title{
+            margin-left: 0;
+        }
        
     }
 

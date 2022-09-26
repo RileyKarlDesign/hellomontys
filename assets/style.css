@@ -604,9 +604,21 @@ a {
 .open .active-filters {
   opacity: 0;
 }
+@media (max-width: 900px) {
+  .open .active-filters {
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
 .open .filter-title i {
   rotate: 180deg;
   margin-bottom: 4px;
+}
+@media (max-width: 900px) {
+  .open .filter-head {
+    top: calc(-1.6em - 12px) !important;
+  }
 }
 
 .filter-form {
@@ -628,6 +640,11 @@ a {
   width: calc(80% + 2.5em);
   overflow: hidden;
   transition: ease-in-out 0.2s;
+}
+@media (max-width: 900px) {
+  .filter-form .active-filters {
+    width: 100%;
+  }
 }
 .filter-form .active-filters .scroll-wrap::-webkit-scrollbar {
   display: none;
@@ -680,6 +697,18 @@ a {
   top: calc(-1.5em - 12px);
   right: 0;
   display: flex;
+}
+@media (max-width: 900px) {
+  .filter-form .filter-head {
+    position: absolute;
+    top: calc(-3.8em - 12px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.filter-form .filter-head .filter-title {
+  margin-left: 0;
 }
 .filter-form .filter-label {
   font-size: 16px;
