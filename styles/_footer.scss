@@ -17,6 +17,16 @@
     display: grid;
     grid-template-columns: 3fr 8fr 1fr;
     border-top: tools.$standard-border-grey !important;
+
+    @media (max-width: 800px) {
+               
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        gap: tools.$half;
+
+        
+    }
     
 }
 .footer-bottom{

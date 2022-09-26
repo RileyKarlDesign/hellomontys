@@ -437,6 +437,14 @@ input:disabled + label {
   grid-template-columns: 3fr 8fr 1fr;
   border-top: 1px solid rgba(0, 0, 0, 0.228) !important;
 }
+@media (max-width: 800px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    gap: 10px;
+  }
+}
 
 .footer-bottom {
   padding: 10px;
