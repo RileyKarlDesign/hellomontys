@@ -232,7 +232,7 @@ h5 {
 .metafeild-notes {
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.178);
+  background-color: rgba(0, 0, 0, 0.092);
   border: 1px solid rgba(0, 0, 0, 0.228);
   padding-bottom: 10px;
   transition: ease-in-out 0.2s;
@@ -259,8 +259,8 @@ h5 {
   border: 3px solid rgba(19, 12, 12, 0.833);
 }
 .metafeild-notes .warning-check .input-block {
-  height: 8px;
-  width: 8px;
+  height: 0.8em;
+  width: 0.8em;
   margin-right: 10px;
   border: 1px solid rgba(19, 12, 12, 0.833);
   transition: ease-in-out 0.2s;

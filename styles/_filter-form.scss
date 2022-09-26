@@ -37,6 +37,18 @@
         
         opacity: 100!important;
     }
+
+    .active-filters{
+        opacity: 0;
+    }
+
+    .filter-title{
+
+        i{
+            rotate: 180deg; 
+            margin-bottom: 4px
+        }
+    }
 }
 
 .filter-form{
@@ -68,6 +80,7 @@
         //background-color: red;
         width: calc( 80% + 2.5em );
         overflow: hidden;
+        transition: tools.$transition-basic;
         
 
         .scroll-wrap::-webkit-scrollbar {
@@ -166,6 +179,8 @@
         margin-left: tools.$half;
         padding-left: 10px;
         padding-right: 10px;
+
+        border: 2px solid red;;
         
         cursor: pointer;
         width: max-content;
@@ -193,7 +208,7 @@
         
         
         overflow: scroll;
-        padding-bottom: 10em;
+        
         border-top: tools.$standard-border-grey;
        
         // animation
@@ -226,11 +241,11 @@
        
         width:min-content;
         display: grid;
-        grid-template-columns: 6fr 2fr;
+        grid-template-columns: 4fr 4fr;
         width: 100%;
         border-top: tools.$standard-border-grey;
         padding-top: tools.$half;
-        padding-bottom: tools.$half;
+        
         //background-color: tools.$white;
         
         // animation
@@ -242,6 +257,10 @@
         
     }
 
+    i{
+        transition: tools.$transition-basic;
+    }
+
     .filter-group:nth-child(1){
         border-top: 0;
     }
@@ -249,27 +268,40 @@
 
     .filter-group-summary{
         display: flex;
-       
+       gap: tools.$half;
         
+       .filter-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: tools.$half;
+
+        .filter-info-top{
+            display: flex;
+            gap: tools.$half;
+        }
+       }
         
     }
 
-    .filter-li{
+    .filter-tag{
     
         // input{
         //      display: none;
         // }
         
-        // input +  label {
-        //     border: none;
-        //     color: tools.$grey;
+        input +  label {
+            
            
-        //     border: none;
+            color: tools.$grey;
+            height: fit-content !important;
+            
+            border: none;
 
-        //     &:hover{
-        //         color: tools.$black;
-        //     }
-        //     }
+            &:hover{
+                color: tools.$black;
+            }
+            }
         
         //     label + input:checked    {
         //     color: red;
@@ -288,26 +320,106 @@
     .reset{
     
         background-color: tools.$white !important;
-        margin-bottom: 2em;
+        
+        margin-left: 0 !important;
+        margin-top: 3em;
+        border-bottom: tools.$standard-border !important;
+        
+        width: fit-content !important;
        }
 
     
 
     .filter-group-display__list{
         
+        min-height: max-content;
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: tools.$half;
 
+        padding-bottom:3em;
+        
 
     }
+    .filter-group-display{
 
-    .filter-li{
        
-        margin-bottom: 5px;
+       
+    }
+
+    
+
+        
+       
+        
+
+       
+        
+        
+        
+
+        i{
+            font-size: 0.8em;
         }
 
-        input:disabled + label{
+        input{
             display: none;
+       }
+       
+        label{
+            display: block;
+            padding: 3px 5px;
+            
         }
+
+       input +  label {
+        
+        padding-left: tools.$half;
+        padding-right: tools.$half;
+        border-radius: tools.$radius;
+
+         background-color: tools.$hovercolor;
+           
+           color: tools.$grey;
+           cursor: pointer;
+           border: tools.$standard-border-grey-0;
+          // background-color: red;
+       
+           &:hover{
+               color: tools.$black;
+
+               
+           }
+           
+           }
+       
+       input:checked +  label {
+            color: tools.$black !important;
+            border-bottom: none ;
+            border: tools.$standard-border-grey;
+            background-color: tools.$white;
+
+            
+            
+       
+       }
+       
+       input:disabled +  label  {
+           text-decoration: line-through;
+            display: none
+       
+       }
+       
+        
+        
+        
+
+        
+
+    
+
+      
 
         
     }
@@ -329,15 +441,19 @@
             right: 0;
             z-index: 1;
             pointer-events: none;
+            display: none;
         }
 
         .filter-foot-wrapper{
             width: 100%;
-            height: 2em;
+            padding-top: 10px;
+            padding-bottom: 10px;
             
         }
 
-       
+        .apply-title{
+            margin-left: 0;
+        }
 
         
             

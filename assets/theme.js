@@ -241,10 +241,10 @@ if(filterLabel){
 		if(filterForm.classList.contains('open') ){
 			
 			filterForm.classList.remove('open')
-			filterLabel.innerHTML=' Filters <i class="fa-solid fa-plus"></i> '
+			// filterLabel.innerHTML=' Filters <i class="fa-solid fa-plus"></i> '
 		} else{
 			filterForm.classList.add('open')
-			filterLabel.innerHTML=' Filters <i class="fa-solid fa-minus"></i> '
+			// filterLabel.innerHTML=' Filters <i class="fa-solid fa-minus"></i> '
 		}
 			
 		})

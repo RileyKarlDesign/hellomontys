@@ -140,7 +140,7 @@ h5 {
 }
 
 .btn {
-  background-color: rgba(0, 0, 0, 0.178);
+  background-color: rgba(0, 0, 0, 0.092);
   border-radius: 5px;
   padding-top: 3px;
   padding-bottom: 1px;
@@ -152,7 +152,7 @@ h5 {
   opacity: 60%;
 }
 #add-to-cart-button:disabled:hover {
-  background-color: rgba(0, 0, 0, 0.178) !important;
+  background-color: rgba(0, 0, 0, 0.092) !important;
   border: 1px solid rgba(0, 0, 0, 0.228) !important;
 }
 
@@ -160,7 +160,7 @@ h5 {
   border: none;
   stroke: none;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.178);
+  background-color: rgba(0, 0, 0, 0.092);
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.228);
@@ -172,6 +172,7 @@ h5 {
 }
 
 .anchor-circle {
+  margin-top: 2px;
   height: 0.7em;
   width: 0.7em;
   border: 50%;
@@ -195,7 +196,7 @@ h5 {
   background-color: rgb(255, 199, 46);
 }
 .link-btn:hover {
-  background-color: rgba(0, 0, 0, 0.178);
+  background-color: rgba(0, 0, 0, 0.092);
 }
 
 .link-btn-active {
@@ -257,7 +258,10 @@ input + label:hover {
 
 input:checked + label {
   color: rgba(19, 12, 12, 0.833) !important;
-  border-bottom: 1px solid rgba(19, 12, 12, 0.833) !important;
+  border-bottom: 1px solid rgba(19, 12, 12, 0.833);
+}
+input:checked + label i {
+  rotate: 45deg;
 }
 
 input:disabled + label {
@@ -513,14 +517,14 @@ a {
   color: rgb(148, 148, 148) !important;
 }
 .product-content .product-img {
-  background-color: rgba(0, 0, 0, 0.178) !important;
+  background-color: rgba(0, 0, 0, 0.092) !important;
   overflow: hidden;
   position: relative;
   height: 30vw;
 }
 @media (max-width: 1300px) {
   .product-content .product-img {
-    height: 25vw;
+    height: 40vw;
   }
 }
 @media (max-width: 800px) {
@@ -578,7 +582,7 @@ a {
   margin-right: 0;
 }
 .clear-btn:hover {
-  background-color: rgba(0, 0, 0, 0.178) !important;
+  background-color: rgba(0, 0, 0, 0.092) !important;
 }
 
 .filter-title i {
@@ -596,6 +600,13 @@ a {
 }
 .open .filter-group {
   opacity: 100 !important;
+}
+.open .active-filters {
+  opacity: 0;
+}
+.open .filter-title i {
+  rotate: 180deg;
+  margin-bottom: 4px;
 }
 
 .filter-form {
@@ -616,6 +627,7 @@ a {
   height: fit-content;
   width: calc(80% + 2.5em);
   overflow: hidden;
+  transition: ease-in-out 0.2s;
 }
 .filter-form .active-filters .scroll-wrap::-webkit-scrollbar {
   display: none;
@@ -661,7 +673,7 @@ a {
   min-width: max-content !important;
 }
 .filter-form .active-filter:hover {
-  background-color: rgba(0, 0, 0, 0.178) !important;
+  background-color: rgba(0, 0, 0, 0.092) !important;
 }
 .filter-form .filter-head {
   position: absolute;
@@ -678,6 +690,7 @@ a {
   margin-left: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  border: 2px solid red;
   cursor: pointer;
   width: max-content;
   border: 1px solid rgba(0, 0, 0, 0.228);
@@ -693,38 +706,92 @@ a {
 .filter-form .all-filters {
   transition: ease all 0.6s;
   overflow: scroll;
-  padding-bottom: 10em;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
   max-height: 30em;
 }
 .filter-form .filter-group {
   width: min-content;
   display: grid;
-  grid-template-columns: 6fr 2fr;
+  grid-template-columns: 4fr 4fr;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 10px;
-  padding-bottom: 10px;
   opacity: 0;
   transition: ease all 1s;
+}
+.filter-form i {
+  transition: ease-in-out 0.2s;
 }
 .filter-form .filter-group:nth-child(1) {
   border-top: 0;
 }
 .filter-form .filter-group-summary {
   display: flex;
+  gap: 10px;
+}
+.filter-form .filter-group-summary .filter-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.filter-form .filter-group-summary .filter-info .filter-info-top {
+  display: flex;
+  gap: 10px;
+}
+.filter-form .filter-tag input + label {
+  color: rgb(148, 148, 148);
+  height: fit-content !important;
+  border: none;
+}
+.filter-form .filter-tag input + label:hover {
+  color: rgba(19, 12, 12, 0.833);
 }
 .filter-form .reset {
   background-color: rgb(255, 252, 242) !important;
-  margin-bottom: 2em;
+  margin-left: 0 !important;
+  margin-top: 3em;
+  border-bottom: 1px solid rgba(19, 12, 12, 0.833) !important;
+  width: fit-content !important;
 }
 .filter-form .filter-group-display__list {
+  min-height: max-content;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 3em;
 }
-.filter-form .filter-li {
-  margin-bottom: 5px;
+.filter-form i {
+  font-size: 0.8em;
+}
+.filter-form input {
+  display: none;
+}
+.filter-form label {
+  display: block;
+  padding: 3px 5px;
+}
+.filter-form input + label {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.092);
+  color: rgb(148, 148, 148);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.filter-form input + label:hover {
+  color: rgba(19, 12, 12, 0.833);
+}
+.filter-form input:checked + label {
+  color: rgba(19, 12, 12, 0.833) !important;
+  border-bottom: none;
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  background-color: rgb(255, 252, 242);
 }
 .filter-form input:disabled + label {
+  text-decoration: line-through;
   display: none;
 }
 
@@ -745,10 +812,15 @@ a {
   right: 0;
   z-index: 1;
   pointer-events: none;
+  display: none;
 }
 .filter-footer .filter-foot-wrapper {
   width: 100%;
-  height: 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.filter-footer .apply-title {
+  margin-left: 0;
 }
 
 .wrapper {
@@ -909,7 +981,7 @@ a {
 .metafeild-notes {
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.178);
+  background-color: rgba(0, 0, 0, 0.092);
   border: 1px solid rgba(0, 0, 0, 0.228);
   padding-bottom: 10px;
   transition: ease-in-out 0.2s;
@@ -936,8 +1008,8 @@ a {
   border: 3px solid rgba(19, 12, 12, 0.833);
 }
 .metafeild-notes .warning-check .input-block {
-  height: 8px;
-  width: 8px;
+  height: 0.8em;
+  width: 0.8em;
   margin-right: 10px;
   border: 1px solid rgba(19, 12, 12, 0.833);
   transition: ease-in-out 0.2s;
@@ -1228,7 +1300,7 @@ input {
   border-bottom: 1px solid rgba(19, 12, 12, 0.833);
 }
 .collection-filter:hover {
-  color: rgba(0, 0, 0, 0.178);
+  color: rgba(0, 0, 0, 0.092);
 }
 
 #recommendations {
@@ -1321,7 +1393,7 @@ input {
   gap: 10px;
 }
 .collection-block .product-card .product-img {
-  background-color: rgba(0, 0, 0, 0.178) !important;
+  background-color: rgba(0, 0, 0, 0.092) !important;
   overflow: hidden;
   position: relative;
   height: 30vw;
@@ -1341,6 +1413,14 @@ input {
   height: 100%;
   object-fit: cover;
   transition: ease-in-out 0.2s;
+}
+
+.vendor-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 html {

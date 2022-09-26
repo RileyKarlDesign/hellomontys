@@ -2,7 +2,7 @@
 
 <form class="filter-form" >
 <div class="filter-head">
- <a href="#filters" > <p class=" btn filter-label filter-title"> Filters <i class="fa-solid fa-plus"></i> </p></a>
+ <a href="#filters" > <p class=" btn filter-label filter-title"> Filters <i class="fa-solid fa-arrow-down"></i> </p></a>
 
   <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="filter-label clear-btn btn active-filters__clear">Clear all</a>
 </div>
@@ -54,29 +54,32 @@
     {%- for filter in collection.filters -%}
       <div class="filter-group">
         <summary class="filter-group-summary">
-          <div >
-            <p>{{ filter.label}} </p>
-  
-            {%- if filter.active_values.size > 0 -%}
-              <p class="label">({{ filter.active_values.size }})</p>
-            {%- endif -%}
+          
+          <div class="filter-info" >
+            <div class="filter-info-top">
+              <div class="anchor-circle"></div>
+              <div class="name-and-count">
+                <p>{{ filter.label}} </p>
+                {%- if filter.active_values.size > 0 -%}
+                  <p class="label">({{ filter.active_values.size }})</p>
+                {%- endif -%}
+              </div>
+            </div>
+
+            <!-- {%- if filter.active_values.size > 0 -%}
+              <a href="{{ filter.url_to_remove }}" class=" label reset no-background  filter-group-display__header-reset">Reset {{ filter.label }} </a>
+            {%- endif -%} -->
           </div>
         </summary>
   
         <div class="filter-group-display">
-          <div class="filter-group-display__header">
-            <!-- <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span> -->
-  
-            {%- if filter.active_values.size > 0 -%}
-              <a href="{{ filter.url_to_remove }}" class=" reset filter-label no-background btn filter-group-display__header-reset">Reset</a>
-            {%- endif -%}
-          </div>
+          
   
           {%- case filter.type -%}
             {%- when 'boolean' or 'list' -%}
               <div class="filter-group-display__list">
                 {%- for filter_value in filter.values -%}
-                  <div class=" filter-li filter-group-display__list-item">
+                  
                     
                     
                     <input type="checkbox"
@@ -86,8 +89,8 @@
                       {% if filter_value.active -%}checked{%- endif %}
                       {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}
                     >
-                    <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">{{ filter_value.label }}</label>
-                  </div>
+                    <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">{{ filter_value.label }} <i class="fa-solid fa-plus"></i> </label>
+                  
                 {%- endfor -%}
                 </div>
   
@@ -145,7 +148,7 @@
        
        
         
-        <input class="btn filter-label apply-title" type="submit" value="Update Filters">
+        <input class="btn filter-label apply-title" type="submit" value="Update Filter Tags">
         
         
 

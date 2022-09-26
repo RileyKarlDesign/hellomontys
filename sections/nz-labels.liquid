@@ -1,24 +1,13 @@
 {%- assign collection = collections[section.settings.collection] -%}
 
 <div class="block-wrapper">
-  <div class="line"></div>
-  <div class="collection-block" >
   
-  <div class="collection-info">
-    <div class="collection-title">
-      
-      <div class="anchor-circle"> </div> <p> {{ collection.title }} </p>
-    </div>
-    <a href="{{ collection.url }}"> <p>See More </p> </a>
+  <div class="vendor-block" >
+  
 
-  </div>
-  
-  
-  {%- for product in collection.products limit:3 -%}
-    {% render 'product-card'with {product: product , forloop: forloop }  %}
-  {%- endfor -%}
-
-  
+    {% for i in collection.products %}
+        <h1> {{ i.vendor }} </h1>
+    {% endfor %}
   
   </div>
 </div>
