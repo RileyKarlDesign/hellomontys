@@ -107,6 +107,7 @@
     grid-template-columns: repeat( 3, 1fr);
     gap: tools.$half;
     overflow-x: scroll;
+    overflow-y: hidden;
 
     @media (max-width: 800px) {
                
