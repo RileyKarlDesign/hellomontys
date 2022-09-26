@@ -1,5 +1,205 @@
 @use 'tools';
 
+#filters{
+    height: tools.$half;
+}
+
+.filters-scroll{
+    position: fixed;
+    top: 10px;
+    left: calc( 20px + 10px );
+    right: calc( 20px + 10px );
+    z-index: 20;
+    height: 0;
+    overflow: hidden;
+    transition: ease all 0.3s;
+
+    .btn{
+        background-color: tools.$white;
+        margin: 0!important;
+    }
+    
+    
+
+    .filters-fixed{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+}
+
+
+
+
+.filter-head{
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: -10px;
+    left: -10px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    
+    @media (max-width: 900px) {
+        flex-direction: column;
+        bottom: calc(100% + 10px);
+        
+        
+    }
+
+
+    .filter-head-top{
+        display: flex;
+        padding: 0 tools.$half;
+        
+
+        
+
+        @media (max-width: 900px) {
+            justify-content: space-between;
+            
+            .btn{
+                margin-left:0;
+            }
+        }
+    
+    }
+
+    .filter-head-bottom{
+        display: flex;
+        width: 80%;
+        height:fit-content;
+        transition: tools.$transition-basic;
+       
+        @media (max-width: 900px) {
+                 
+            width: 100%;
+
+            
+    
+            }
+
+        .active-filters{
+            //background-color:rgba(255, 0, 0, 0.152);
+            
+            
+            display: flex;
+            
+            height: fit-content;
+    
+            //background-color: red;
+            width: 100%;
+            overflow: hidden;
+            transition: tools.$transition-basic;
+            
+            
+
+            @media (max-width: 900px) {
+                 
+            width: 100%;
+
+            .filter-label{
+                margin-top: tools.$half;
+            }
+    
+            }
+            
+            
+    
+            .scroll-wrap::-webkit-scrollbar {
+                display: none;
+              }
+    
+    
+            .scroll-wrap{
+    
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                
+            }
+            
+           
+            .scroll-wrap{
+                display: flex;
+                overflow-x: scroll;
+                width: 100%;
+                background: rgba(0, 128, 0, 0);
+                position: relative;
+                padding-right: 2.5em;
+                padding-left: 10px;
+    
+                .filter-label{
+                    margin-left: 0 !important;
+                    margin-right: tools.$half;
+                }
+            }
+    
+           
+            .fade-r{
+                background: rgb(255, 36, 36);
+                background: linear-gradient(270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
+                width: 10px;
+                height: 2.5em;
+                position: absolute;
+                bottom: 0;
+                
+                right: 20%;
+                z-index: 1;
+                pointer-events: none;
+
+                
+                
+                @media (max-width: 900px) {
+                    height: unset ;
+                    right: 0;
+                    top: 50%;
+                    bottom: 0;
+            
+                    }
+                
+            }
+    
+            .fade-l{
+                
+                background: rgb(255, 36, 36);
+                background: linear-gradient(-270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
+                width: 10px;
+                height: 2.5em;
+                position: absolute;
+                bottom: 0;
+                
+                left: 0;
+                z-index: 1;
+                pointer-events: none;
+
+                @media (max-width: 900px) {
+                    height: unset ;
+                    left: 0;
+                    top: 50%;
+                    bottom: 0;
+            
+                    }
+                
+                
+            }
+            
+    
+           
+           
+           
+        }
+    }
+
+
+    
+    
+    .filter-title{
+        margin-left: 0;
+    }
+   
+}
+
 
 
 .clear-btn{
@@ -38,16 +238,9 @@
         opacity: 100!important;
     }
 
-    .active-filters{
-        opacity: 0;
-
-        @media (max-width: 900px) {
-             
-           height: 0;
-           overflow: hidden;
-           pointer-events: none;
-        }
-        
+    .filter-head-bottom{
+        height: 0 !important;
+        overflow: hidden !important;
     }
 
     .filter-title{
@@ -58,15 +251,51 @@
         }
     }
 
-    .filter-head{
-
-        @media (max-width: 900px) {
-             
-            top: calc(-1.6em - 12px) !important;
-        }
-        
+    .fade-l{
+        opacity: 0
     }
 
+    .fade-r{
+        opacity: 0
+    }
+
+    
+
+}
+
+
+.filter-label{
+        
+        
+    font-size: tools.$base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 3px;
+    margin-left: tools.$half;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: 2px solid red;;
+    
+    cursor: pointer;
+    width: max-content;
+    border: tools.$standard-border-grey;
+    transition: tools.$transition-basic;
+    i{
+        font-size:0.8em;
+    }
+
+    &:hover{
+
+        border: tools.$standard-border-grey;
+        background-color: rgba(0, 0, 0, 0);
+
+
+    }
+    
+   
 }
 
 .filter-form{
@@ -86,91 +315,7 @@
     overflow: hidden !important;
    
    
-    .active-filters{
-        //background-color:rgba(255, 0, 0, 0.152);
-        position: absolute;
-        top: calc(-1.5em - 12px);
-        left: 00%;
-        display: flex;
-        
-        height: fit-content;
 
-        //background-color: red;
-        width: calc( 80% + 2.5em );
-        overflow: hidden;
-        transition: tools.$transition-basic;
-
-        @media (max-width: 900px) {
-             
-        width: 100%;
-
-        }
-        
-        
-
-        .scroll-wrap::-webkit-scrollbar {
-            display: none;
-          }
-
-
-        .scroll-wrap{
-
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-            
-        }
-        
-       
-        .scroll-wrap{
-            display: flex;
-            overflow-x: scroll;
-            width: 100%;
-            background: rgba(0, 128, 0, 0);
-            
-            padding-right: 2.5em;
-
-            .filter-label{
-                margin-left: 0 !important;
-                margin-right: tools.$half;
-            }
-        }
-
-       
-        .fade-r{
-            background: rgb(255, 36, 36);
-            background: linear-gradient(270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
-            width: 6em;
-            height: 100%;
-            position: absolute;
-            bottom: 0;
-            
-            right: 0;
-            z-index: 1;
-            pointer-events: none;
-            
-            
-        }
-
-        .fade-l{
-            background: rgb(255, 36, 36);
-            background: linear-gradient(-270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
-            width: 20px;
-            height: 2.5em;
-            position: absolute;
-            bottom: 0;
-            
-            left: -10px;
-            z-index: 1;
-            pointer-events: none;
-            
-            
-        }
-        
-
-       
-       
-       
-    }
 
     .active-filter{
 
@@ -181,62 +326,11 @@
         }
     }
 
-    .filter-head{
-        position: absolute;
-        top: calc( 0em - 1.5em - 12px );
-        right: 0;
-        display: flex;
-
-        @media (max-width: 900px) {
-             
-            position: absolute;
-        top: calc( 0em - 3.8em - 12px );
-        left: 0;
-        display: flex;
-        justify-content: space-between;
-        }
-        
-        .filter-title{
-            margin-left: 0;
-        }
-       
-    }
+    
 
    
 
-    .filter-label{
-        
-        
-        font-size: tools.$base;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        padding: 3px;
-        margin-left: tools.$half;
-        padding-left: 10px;
-        padding-right: 10px;
-
-        border: 2px solid red;;
-        
-        cursor: pointer;
-        width: max-content;
-        border: tools.$standard-border-grey;
-        transition: tools.$transition-basic;
-        i{
-            font-size:0.8em;
-        }
-
-        &:hover{
-
-            border: tools.$standard-border-grey;
-            background-color: rgba(0, 0, 0, 0);
-
-
-        }
-        
-       
-    }
+   
    
 
     .all-filters{
@@ -481,6 +575,7 @@
             display: none;
         }
 
+        
         .filter-foot-wrapper{
             width: 100%;
             padding-top: 10px;

@@ -160,6 +160,7 @@ h5 {
   border: none;
   stroke: none;
   width: 100%;
+  display: unset !important;
   background-color: rgba(0, 0, 0, 0.092);
   padding: 10px;
   margin-bottom: 10px;
@@ -290,6 +291,7 @@ input:disabled + label {
   left: 0 !important;
   padding-top: 0px !important;
   z-index: 20;
+  pointer-events: none !important;
 }
 
 .header-top {
@@ -577,6 +579,145 @@ a {
   z-index: 10;
 }
 
+#filters {
+  height: 10px;
+}
+
+.filters-scroll {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  right: 30px;
+  z-index: 20;
+  height: 0;
+  overflow: hidden;
+  transition: ease all 0.3s;
+}
+.filters-scroll .btn {
+  background-color: rgb(255, 252, 242);
+  margin: 0 !important;
+}
+.filters-scroll .filters-fixed {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.filter-head {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  right: -10px;
+  left: -10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .filter-head {
+    flex-direction: column;
+    bottom: calc(100% + 10px);
+  }
+}
+.filter-head .filter-head-top {
+  display: flex;
+  padding: 0 10px;
+}
+@media (max-width: 900px) {
+  .filter-head .filter-head-top {
+    justify-content: space-between;
+  }
+  .filter-head .filter-head-top .btn {
+    margin-left: 0;
+  }
+}
+.filter-head .filter-head-bottom {
+  display: flex;
+  width: 80%;
+  height: fit-content;
+  transition: ease-in-out 0.2s;
+}
+@media (max-width: 900px) {
+  .filter-head .filter-head-bottom {
+    width: 100%;
+  }
+}
+.filter-head .filter-head-bottom .active-filters {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  transition: ease-in-out 0.2s;
+}
+@media (max-width: 900px) {
+  .filter-head .filter-head-bottom .active-filters {
+    width: 100%;
+  }
+  .filter-head .filter-head-bottom .active-filters .filter-label {
+    margin-top: 10px;
+  }
+}
+.filter-head .filter-head-bottom .active-filters .scroll-wrap::-webkit-scrollbar {
+  display: none;
+}
+.filter-head .filter-head-bottom .active-filters .scroll-wrap {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.filter-head .filter-head-bottom .active-filters .scroll-wrap {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  background: rgba(0, 128, 0, 0);
+  position: relative;
+  padding-right: 2.5em;
+  padding-left: 10px;
+}
+.filter-head .filter-head-bottom .active-filters .scroll-wrap .filter-label {
+  margin-left: 0 !important;
+  margin-right: 10px;
+}
+.filter-head .filter-head-bottom .active-filters .fade-r {
+  background: rgb(255, 36, 36);
+  background: linear-gradient(270deg, rgb(255, 252, 242) 20%, rgba(255, 255, 255, 0) 100%);
+  width: 10px;
+  height: 2.5em;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .filter-head .filter-head-bottom .active-filters .fade-r {
+    height: unset;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+  }
+}
+.filter-head .filter-head-bottom .active-filters .fade-l {
+  background: rgb(255, 36, 36);
+  background: linear-gradient(-270deg, rgb(255, 252, 242) 20%, rgba(255, 255, 255, 0) 100%);
+  width: 10px;
+  height: 2.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .filter-head .filter-head-bottom .active-filters .fade-l {
+    height: unset;
+    left: 0;
+    top: 50%;
+    bottom: 0;
+  }
+}
+.filter-head .filter-title {
+  margin-left: 0;
+}
+
 .clear-btn {
   background-color: rgb(255, 252, 242);
   margin-right: 0;
@@ -601,116 +742,22 @@ a {
 .open .filter-group {
   opacity: 100 !important;
 }
-.open .active-filters {
-  opacity: 0;
-}
-@media (max-width: 900px) {
-  .open .active-filters {
-    height: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
+.open .filter-head-bottom {
+  height: 0 !important;
+  overflow: hidden !important;
 }
 .open .filter-title i {
   rotate: 180deg;
   margin-bottom: 4px;
 }
-@media (max-width: 900px) {
-  .open .filter-head {
-    top: calc(-1.6em - 12px) !important;
-  }
+.open .fade-l {
+  opacity: 0;
+}
+.open .fade-r {
+  opacity: 0;
 }
 
-.filter-form {
-  max-height: 0;
-  width: 100%;
-  padding-left: 0;
-  top: calc(-1.5em - 13px);
-  z-index: 100;
-  transition: ease-in-out 0.2s;
-  margin-top: 5em;
-  overflow: hidden !important;
-}
-.filter-form .active-filters {
-  position: absolute;
-  top: calc(-1.5em - 12px);
-  left: 0%;
-  display: flex;
-  height: fit-content;
-  width: calc(80% + 2.5em);
-  overflow: hidden;
-  transition: ease-in-out 0.2s;
-}
-@media (max-width: 900px) {
-  .filter-form .active-filters {
-    width: 100%;
-  }
-}
-.filter-form .active-filters .scroll-wrap::-webkit-scrollbar {
-  display: none;
-}
-.filter-form .active-filters .scroll-wrap {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.filter-form .active-filters .scroll-wrap {
-  display: flex;
-  overflow-x: scroll;
-  width: 100%;
-  background: rgba(0, 128, 0, 0);
-  padding-right: 2.5em;
-}
-.filter-form .active-filters .scroll-wrap .filter-label {
-  margin-left: 0 !important;
-  margin-right: 10px;
-}
-.filter-form .active-filters .fade-r {
-  background: rgb(255, 36, 36);
-  background: linear-gradient(270deg, rgb(255, 252, 242) 20%, rgba(255, 255, 255, 0) 100%);
-  width: 6em;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-.filter-form .active-filters .fade-l {
-  background: rgb(255, 36, 36);
-  background: linear-gradient(-270deg, rgb(255, 252, 242) 20%, rgba(255, 255, 255, 0) 100%);
-  width: 20px;
-  height: 2.5em;
-  position: absolute;
-  bottom: 0;
-  left: -10px;
-  z-index: 1;
-  pointer-events: none;
-}
-.filter-form .active-filter {
-  min-width: max-content !important;
-}
-.filter-form .active-filter:hover {
-  background-color: rgba(0, 0, 0, 0.092) !important;
-}
-.filter-form .filter-head {
-  position: absolute;
-  top: calc(-1.5em - 12px);
-  right: 0;
-  display: flex;
-}
-@media (max-width: 900px) {
-  .filter-form .filter-head {
-    position: absolute;
-    top: calc(-3.8em - 12px);
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-.filter-form .filter-head .filter-title {
-  margin-left: 0;
-}
-.filter-form .filter-label {
+.filter-label {
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -725,12 +772,29 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.228);
   transition: ease-in-out 0.2s;
 }
-.filter-form .filter-label i {
+.filter-label i {
   font-size: 0.8em;
 }
-.filter-form .filter-label:hover {
+.filter-label:hover {
   border: 1px solid rgba(0, 0, 0, 0.228);
   background-color: rgba(0, 0, 0, 0);
+}
+
+.filter-form {
+  max-height: 0;
+  width: 100%;
+  padding-left: 0;
+  top: calc(-1.5em - 13px);
+  z-index: 100;
+  transition: ease-in-out 0.2s;
+  margin-top: 5em;
+  overflow: hidden !important;
+}
+.filter-form .active-filter {
+  min-width: max-content !important;
+}
+.filter-form .active-filter:hover {
+  background-color: rgba(0, 0, 0, 0.092) !important;
 }
 .filter-form .all-filters {
   transition: ease all 0.6s;

@@ -2,12 +2,11 @@
 
 
 
-
 const filterWrap = document.querySelector('.scroll-wrap')
 
 if(filterWrap){
 
-	console.log( ' exists')
+	
 	filterWrap.addEventListener("wheel", (evt) => {
 		evt.preventDefault();
 		filterWrap.scrollLeft += evt.deltaY;
@@ -16,21 +15,126 @@ if(filterWrap){
 
 
 
-const clearBtn = document.querySelector('.active-filters__clear')
+//--------------------------------------------
 
-if(filterWrap){
-	console.log('yes')
-}
+
+let windowWidth =  window.innerWidth 
+
+const clearBtn = document.querySelector('.active-filters__clear');
+const filterHead = document.querySelector('.filter-head');
+const fadeL = document.querySelector('.fade-l')
+
+
+
+let mobile = true;
+let activeFilters = false;
 
 if( filterWrap.childNodes.length === 1){
-
+	
 	clearBtn.style.display = "none";
+	fadeL.style.opacity = "0";
+	
+	activeFilters = false;
+	
 
 }else{
 
-	console.log( filterWrap.childNodes.length )
+	
+	activeFilters = true;
 }
-}
+
+
+//-------------------------------------------
+ let filterScroll = document.querySelector('.filters-scroll')
+
+ if( filterScroll){
+	enterView({
+		selector: '#filters',
+		enter: function(el) {
+	
+			
+	
+			filterScroll.style.height = "2em"
+		},
+		exit: function(el) {
+	
+			
+	
+			filterScroll.style.height = "0"
+		},
+	
+		offset: 1,
+	})
+
+ }
+
+
+
+
+// if( windowWidth <= 900 ){
+// 	mobile = true ;
+// 	console.log( mobile )
+// 	mobileFormat()
+	
+	
+// }else{
+// 	mobile = false;
+// 	console.log( mobile )
+// 	mobileFormat()
+// 	filterHead.style.background = 'red';
+// 	filterHead.style.top = '-2.2em !important';
+// }
+
+
+// function runWinBreakpoints(){
+// 	windowWidth = window.innerWidth ;
+	
+// }
+
+
+
+// function mobileFormat(){
+
+
+// 	if(mobile){
+// 		console.log(  'mobile stlyes')
+// 		if(activeFilters){
+// 			filterHead.style.top = '-4.5em';
+// 		} else{
+// 			filterHead.style.top = '-2.2em';
+// 		}
+		
+// 	}else{
+// 		console.log( 'remove mobile stlyes')
+// 		filterHead.style.background = 'red';
+// 	}
+	
+// }
+
+
+// window.addEventListener('resize', (event) => {
+
+// 	windowWidth = window.innerWidth ;
+	
+
+// 	if( windowWidth <= 900 ){
+// 		mobile = true 
+// 		mobileFormat()
+// 		console.log( mobile )
+// 	}else{
+// 		mobile = false
+// 		mobileFormat()
+// 		console.log( mobile )
+// 	}
+
+	
+
+
+// });
+
+
+
+
 
 const foot = document.querySelector('.footer')
 const nav = document.querySelector('.nav-wrapper')
@@ -127,7 +231,7 @@ enterView({
 		
 	},
 	
-	offset: 1, // enter at middle of viewport
+	offset: 1, 
 	
 });
 
@@ -135,6 +239,7 @@ enterView({
 	
 	selector: '#recommendations',
 
+	
 	
 	enter: function(el) {
 		el.classList.add('entered');
@@ -232,11 +337,17 @@ enterView({
 //  filters ----------------
 
 const filterForm = document.querySelector('.filter-form')
-const filterLabel = document.querySelector('.filter-label')
+const filterLabel = document.querySelectorAll('.filter-title')
 
 if(filterLabel){
 
-	filterLabel.addEventListener('click', () => {
+	
+
+	for(  i of filterLabel ){
+
+		 i.addEventListener('click', () => {
+
+			console.log('click')
 	
 		if(filterForm.classList.contains('open') ){
 			
@@ -250,7 +361,8 @@ if(filterLabel){
 		})
 
 }
-
+}
+}
 
 // atc -------------------------------------------------
 
