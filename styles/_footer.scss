@@ -9,13 +9,15 @@
 
 .footer{
     padding: tools.$gutter;
+    
 }
 
 .footer-top{
     padding-top: tools.$half;
     display: grid;
     grid-template-columns: 3fr 8fr 1fr;
-    border-top: tools.$standard-border-grey-0;
+    border-top: tools.$standard-border-grey !important;
+    
 }
 .footer-bottom{
     padding: tools.$gutter;

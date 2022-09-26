@@ -100,8 +100,8 @@ body{
     // background-image: linear-gradient(45deg, tools.$red 25%, transparent 25%, transparent 75%, tools.$red 75%), linear-gradient(45deg, tools.$red 25%, transparent 25%, transparent 75%, tools.$red 75%);
     // background-size: 100px 100px;
     // background-position: 0 0, 50px 50px;;
-     transform: scale(0.98, 0.98);
-    padding-top: 20em;
+     
+    
     
   }
 
@@ -111,6 +111,7 @@ body{
     // background-image: linear-gradient(45deg, tools.$red 25%, transparent 25%, transparent 75%, tools.$red 75%), linear-gradient(45deg, tools.$red 25%, transparent 25%, transparent 75%, tools.$red 75%);
     // background-size: 100px 100px;
     // background-position: 0 0, 50px 50px;;
+    padding-top:60vh;
     
     
   }
@@ -121,14 +122,15 @@ body{
     // background-image: linear-gradient(45deg, tools.$red 25%, transparent 25%, transparent 75%, tools.$red 75%), linear-gradient(45deg, tools.$red 25%, transparent 25%, transparent 75%, tools.$red 75%);
     // background-size: 100px 100px;
     // background-position: 0 0, 50px 50px;;
+    padding-top: 0em;
   }
   100%{
     background-color: rgb(0, 0, 0);
     // background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%);
     // background-size: 100px 100px;
     // background-position: 0 0, 50px 50px;;
-    padding-top: 0em;
-    transform: scale(1, 1);
+    
+    
   }
 }
 

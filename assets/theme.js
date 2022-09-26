@@ -1,6 +1,6 @@
 
 
-
+// Collections Page  filter Scrolling ---------------------------------------
 
 const filterWrap = document.querySelector('.scroll-wrap')
 
@@ -13,12 +13,10 @@ if(filterWrap){
 	});
 
 
+}
 
 
-//--------------------------------------------
 
-
-let windowWidth =  window.innerWidth 
 
 const clearBtn = document.querySelector('.active-filters__clear');
 const filterHead = document.querySelector('.filter-head');
@@ -26,115 +24,33 @@ const fadeL = document.querySelector('.fade-l')
 
 
 
+
+
 let mobile = true;
 let activeFilters = false;
 
-if( filterWrap.childNodes.length === 1){
-	
-	clearBtn.style.display = "none";
-	fadeL.style.opacity = "0";
-	
-	activeFilters = false;
-	
+if(filterWrap){
 
-}else{
 
-	
-	activeFilters = true;
+
+	if( filterWrap.childNodes.length === 1){
+		
+		clearBtn.style.display = "none";
+		fadeL.style.opacity = "0";
+		
+		activeFilters = false;
+		
+
+	}else{
+
+		
+		activeFilters = true;
+	}
+
 }
 
 
-//-------------------------------------------
- let filterScroll = document.querySelector('.filters-scroll')
-
- if( filterScroll){
-	enterView({
-		selector: '#filters',
-		enter: function(el) {
-	
-			
-	
-			filterScroll.style.height = "2em"
-		},
-		exit: function(el) {
-	
-			
-	
-			filterScroll.style.height = "0"
-		},
-	
-		offset: 1,
-	})
-
- }
-
-
-
-
-// if( windowWidth <= 900 ){
-// 	mobile = true ;
-// 	console.log( mobile )
-// 	mobileFormat()
-	
-	
-// }else{
-// 	mobile = false;
-// 	console.log( mobile )
-// 	mobileFormat()
-// 	filterHead.style.background = 'red';
-// 	filterHead.style.top = '-2.2em !important';
-// }
-
-
-// function runWinBreakpoints(){
-// 	windowWidth = window.innerWidth ;
-	
-// }
-
-
-
-// function mobileFormat(){
-
-
-// 	if(mobile){
-// 		console.log(  'mobile stlyes')
-// 		if(activeFilters){
-// 			filterHead.style.top = '-4.5em';
-// 		} else{
-// 			filterHead.style.top = '-2.2em';
-// 		}
-		
-// 	}else{
-// 		console.log( 'remove mobile stlyes')
-// 		filterHead.style.background = 'red';
-// 	}
-	
-// }
-
-
-// window.addEventListener('resize', (event) => {
-
-// 	windowWidth = window.innerWidth ;
-	
-
-// 	if( windowWidth <= 900 ){
-// 		mobile = true 
-// 		mobileFormat()
-// 		console.log( mobile )
-// 	}else{
-// 		mobile = false
-// 		mobileFormat()
-// 		console.log( mobile )
-// 	}
-
-	
-
-
-// });
-
-
-
-
+// Footer / Header / Cart --------------------------------------
 
 const foot = document.querySelector('.footer')
 const nav = document.querySelector('.nav-wrapper')
@@ -159,6 +75,8 @@ function tidyclose (){
 
 
  cartBtn.addEventListener('click', function (){
+
+	console.log('click')
 
 	if(nav.classList.contains('cart-open')){
 	  	if(!bottom){
@@ -215,7 +133,7 @@ enterView({
 let headerTop = document.querySelector('.header-top');
 
 
-const spacer = document.querySelector('.spacer')
+
 
 
 enterView({
@@ -235,40 +153,50 @@ enterView({
 	
 });
 
-enterView({
-	
-	selector: '#recommendations',
 
+
+// recomenations animations ---------------------------------
+
+if( document.querySelector('#recommendations') ){
+
+	enterView({
 	
+		selector: '#recommendations',
 	
-	enter: function(el) {
-		el.classList.add('entered');
 		
-	}
-
-	
-	
-	
-	
-	
-});
-
-enterView({
-	
-	selector: '.line',
-
-	
-	enter: function(el) {
-		el.classList.add('entered');
 		
-	}
+		enter: function(el) {
+			el.classList.add('entered');
+			
+		}
+	
+	});
+	
+}
+
+
+
+// line animations ----------------------------------- 
+
+
+if( document.querySelector('.line')){
 
 	
+
+	enterView({
 	
+		selector: '.line',
 	
-	
-	
-});
+		
+		enter: function(el) {
+			el.classList.add('entered');
+			
+		}	
+		
+	});
+
+}
+
 
 const pc = document.querySelectorAll(".product-card")
 
@@ -319,7 +247,9 @@ enterView({
 	selector: '.product-card',
 
 	enter: function(el) {
+		console.log( ' cards en')
 		el.classList.add('card-entered');
+		
 		
 		
 	},
@@ -329,7 +259,7 @@ enterView({
 	
 });
 
-//  cart--------------------------------------------
+
 
 
 
@@ -341,14 +271,11 @@ const filterLabel = document.querySelectorAll('.filter-title')
 
 if(filterLabel){
 
-	
-
 	for(  i of filterLabel ){
 
 		 i.addEventListener('click', () => {
 
-			console.log('click')
-	
+			
 		if(filterForm.classList.contains('open') ){
 			
 			filterForm.classList.remove('open')
@@ -362,13 +289,6 @@ if(filterLabel){
 
 }
 }
-}
-
-// atc -------------------------------------------------
 
 
 
-
-
-
-//----------------------------------------------------------

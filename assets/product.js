@@ -1,3 +1,5 @@
+console.log( 'connected ')
+
 
 const atcBtn = document.querySelector('.js-atc')
 const content = document.querySelector('#content')
