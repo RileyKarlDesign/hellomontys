@@ -1540,7 +1540,7 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 @media (max-width: 800px) {
   .collection-images {
