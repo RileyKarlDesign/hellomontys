@@ -28,6 +28,13 @@
     $standard-border-grey-0: 1px solid $grey-0;
     $drop-shadow-up: drop-shadow(-0px -10px 20px rgba(0, 0, 0, 0.372));
     $drop-shadow-center: drop-shadow(-0px -0px 20px rgba(0, 0, 0, 0.56));
+// mobile hover
+
+@media( hover: none ){
+    
+}
+
+
 
 // text decoration
 
