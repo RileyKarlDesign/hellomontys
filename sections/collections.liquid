@@ -1,26 +1,7 @@
 
 
 
-<div class="scrolled-filters">
 
-    {% for collection in collections %}
-
-    <a class="collection-filter" href="{{ collection.url }}">
-        
-    
-        {% if forloop.last %}
-        <h2> {{ collection.title }} </h2>
-        <img src="{{ collection.featured_image.src | img_url: 'master' }}" loading = 'lazy' width="auto" height="auto" alt="">
-        {% else %}
-        <h2> {{ collection.title }}</h2>
-        {% endif %}
-
-        <p class="label"> [ {{ collection.products_count }} ]  </p>
-    </a>
-
-{%endfor%}
-
-</div>
 
 <div class="collection-filters">
 
@@ -32,12 +13,12 @@
             
         
             {% if forloop.last %}
-            <h2> {{ collection.title }} </h2>
+            <p> {{ collection.title }} </p>
             {% else %}
-            <h2> {{ collection.title }}</h2>
+            <p> {{ collection.title }}</p>
             {% endif %}
 
-         <p class="label count"> [ {{ collection.products_count }} ]  </p> 
+         <p class="label count"> [ {{ collection.products_count }} ] </p> 
         </a>
     </div>
 
