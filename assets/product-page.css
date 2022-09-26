@@ -74,10 +74,6 @@ h5 {
   display: flex;
 }
 
-.wrapper {
-  padding: 10px;
-}
-
 .product-page-wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -123,6 +119,7 @@ h5 {
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 @media (max-width: 700px) {
   .product-page-images {
@@ -147,6 +144,10 @@ h5 {
   }
 }
 
+.swiper-wrapper {
+  padding-top: 10px;
+}
+
 .swiper {
   display: none;
   background-color: rgba(205, 172, 172, 0);
@@ -161,7 +162,7 @@ h5 {
 }
 .swiper .img-index {
   margin-bottom: 10px;
-  height: 20px;
+  height: 40px;
 }
 
 .swiper-btns {

@@ -17,14 +17,23 @@
     width: 100%;
     gap: tools.$half;
 
+    @media (max-width: 800px){
+
+        gap: 0;
+    }
+    
+
    
     
 
     .collections-title{
+        padding-top: tools.$half;
         display: flex;
         padding-bottom: 5px;
         gap: tools.$half;
         border-bottom: tools.$standard-border-grey ;
+
+       
     }
     
     
@@ -67,6 +76,7 @@
         height: 70vh;
         object-fit: cover;
         grid-column: 2 / 5;
+        padding-top: tools.$half;
 
         @media (max-width: 800px){
 

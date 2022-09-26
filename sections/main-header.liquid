@@ -47,7 +47,7 @@
         
             <div class="head-link-list">
                 {% for link in linklists.main-menu.links %}
-                <a class="link-btn" {% if link.active %} class="link-btn-active" {% endif %} href="{{ link.url }}"><h3>{{ link.title }}</h3></a>
+                <a class="link-btn" {% if link.active %} class="link-btn-active" {% endif %} href="{{ link.url }}"><p>{{ link.title }}</p></a>
                 {% endfor %}
                 </div>
                 <div class="link-btn cart-btn">

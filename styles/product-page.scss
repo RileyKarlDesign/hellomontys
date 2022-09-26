@@ -1,8 +1,6 @@
 @use 'tools';
 
-.wrapper{
-    padding: tools.$gutter;
-}
+
 
 .product-page-wrapper{
 
@@ -68,6 +66,7 @@
     grid-template-columns: 1fr 1fr ; 
     grid-gap: tools.$half; 
     padding-bottom: tools.$half;
+    padding-top:tools.$half;
 
     @media (max-width: 700px) {
         display: none;
@@ -109,8 +108,12 @@
 
 
 
+.swiper-wrapper{
+    padding-top:tools.$half;
+}
 
 .swiper{
+   
     display: none;
     background-color: rgba(205, 172, 172, 0);
     width: 100%;
@@ -127,7 +130,7 @@
 
     .img-index{
         margin-bottom: tools.$half;
-        height: 20px;
+        height: 40px;
     }
 }
 
