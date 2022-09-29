@@ -183,6 +183,10 @@
     justify-content: center;
     flex-direction: column;
     transition: tools.$transition-basic;
+
+    @media(max-width: 900px ){
+        top: calc(100% - 3.5em);
+    }
     
     
     
@@ -200,7 +204,7 @@
     }
 
 
-    @media (max-width: 1000px) {
+    @media (max-width: 900px) {
        
         bottom: 0px;
        opacity: 0.2;
@@ -229,7 +233,7 @@
     z-index: 10;
     // border: tools.$standard-border;
     
-    transition: tools.$transition-basic;
+    // transition: tools.$transition-basic;
     // backdrop-filter: blur(5px);
 
     border: tools.$standard-border-grey ;
@@ -238,6 +242,14 @@
     
 
     transition: tools.$transition-basic;
+
+
+    @media(max-width: 900px ){
+        border-radius: tools.$radius;
+        border-bottom: tools.$standard-border-grey ;
+    }
+
+
     .head-link-list{
         display: flex;
 

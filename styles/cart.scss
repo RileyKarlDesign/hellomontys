@@ -77,10 +77,20 @@ input{
 
 .cart-open{
     top: 15vh  ;
+
+    .cart{
+        border: 1px solid rgba(0, 0, 0, 0.228);
+        border-top: 0;
+    }
     
    .nav-wrapper{
     
     height: 70vh;
+
+
+   
+
+
    }
     
     .nav-content{
@@ -92,11 +102,16 @@ input{
         background-color:tools.$yellow ;
         transition: ease all 0.3;
         border-bottom: tools.$standard-border-grey;
+
+        @media(max-width: 900px ){
+            border-radius: tools.$radius tools.$radius 0 0 !important;
+            
+        }
     }
 }
 
 .cart-open .cart{
-    padding: tools.$gutter 0 ;
+    
     height: 70vh ;
     
     padding-top:0;
@@ -118,7 +133,7 @@ input{
 
 .cart{
     background-color:tools.$white !important;
-    border: tools.$standard-border-grey;
+    
     border-top: 0;
     width: 100%;
    height: 0;
