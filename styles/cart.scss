@@ -54,6 +54,15 @@ input{
     .nav-module{
         background-color: tools.$white-50 !important;
     }
+
+    @media ( max-width: 900px ){
+        top: calc( 100vh - 3.5em ) !important;
+
+        .cart{
+
+            height : 0 !important;
+        }
+    }
 }
 
 .cart-close-bottom{
@@ -147,7 +156,9 @@ input{
     
     border-radius: 0 0 tools.$radius tools.$radius;
     
-    
+    @media( max-width: 900px ){
+        transition: tools.$transition-basic;
+    }
     
 
  }

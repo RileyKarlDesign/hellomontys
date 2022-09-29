@@ -1279,6 +1279,14 @@ input {
 .cart-close .nav-module {
   background-color: rgba(255, 252, 242, 0.786) !important;
 }
+@media (max-width: 900px) {
+  .cart-close {
+    top: calc(100vh - 3.5em) !important;
+  }
+  .cart-close .cart {
+    height: 0 !important;
+  }
+}
 
 .cart-close-bottom .nav-module {
   background-color: rgba(255, 252, 242, 0.786) !important;
@@ -1332,6 +1340,11 @@ input {
   padding: 0;
   overflow: scroll;
   border-radius: 0 0 5px 5px;
+}
+@media (max-width: 900px) {
+  .cart {
+    transition: ease-in-out 0.2s;
+  }
 }
 
 .cart-section {
