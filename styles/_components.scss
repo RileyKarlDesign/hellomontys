@@ -125,13 +125,22 @@
 
 .version-mark{
     position: fixed ;
-    right: 5px;
-    top: 5px;
+    right: 3px;
+    top: 3px;
     color: tools.$grey;
    
-    padding: 2px 5px 0px 5px ;
+    padding: 2px 2px 0px 2px ;
     border-radius: 50%;
     z-index: 1;
+    
+    p{
+        font-size: 9px !important;
+    }
+
+
+    @media ( max-width:1000px ){
+        display: none;
+    }
 }
 
 .active-filters{
