@@ -23,6 +23,14 @@
         "type": "footer",
         "settings": {
         }
+      },
+      "nz-labels": {
+        "type": "nz-labels",
+        "settings": {
+          "collection": "aotearoa-labels",
+          "title_text": "",
+          "sub_text": ""
+        }
       }
     },
     "content_for_index": [
