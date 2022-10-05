@@ -1668,6 +1668,69 @@ input {
   height: 100vh;
 }
 
+.labels-open .label-draw-content-grid {
+  right: 0 !important;
+  pointer-events: none !important;
+}
+
+.exit {
+  height: 2em;
+  width: 2.5em;
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  right: calc(-2.5em + 1px);
+  top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(55, 123, 63);
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  border-left: 0;
+}
+
+.label-draw {
+  background: rgba(180, 185, 29, 0);
+  position: absolute;
+  z-index: 10;
+  height: calc(100vh - 20px);
+  width: calc(100% - 40px);
+}
+.label-draw .label-draw-content-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 0, 0);
+  border-radius: 5px;
+  transition: ease all 0.3s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  padding: 10px;
+}
+.label-draw .label-draw-links {
+  position: relative;
+  height: 100%;
+}
+
+#shopify-section-nz-labels {
+  height: 100%;
+}
+
+.block-wrapper {
+  background: rgb(55, 123, 63);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  height: 100%;
+  overflow: scroll;
+}
+.block-wrapper .vendor-block {
+  height: unset !important;
+  min-height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;

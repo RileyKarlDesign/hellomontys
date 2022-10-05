@@ -3,82 +3,108 @@
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
+<!--[if (gt IE 9)|!(IE)]><!-->
+  <html class="no-js"> <!--<![endif]-->
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     {% if template == 'index' %}
-    <title>{{ shop.name }} | {{ page_title }}</title>
+      <title>{{ shop.name }}
+        |
+        {{ page_title }}
+      </title>
     {% elsif template == '404' %}
-    <title>Page Not Found | {{ shop.name }}</title>
+      <title>Page Not Found |
+        {{ shop.name }}
+      </title>
     {% else %}
-    <title>{{ page_title }} | {{ shop.name }}</title>
+      <title>{{ page_title }}
+        |
+        {{ shop.name }}
+      </title>
     {% endif %}
     {% if page_description %}
-    <meta name="description" content="{{ page_description }}" />
+      <meta name="description" content="{{ page_description }}"/>
     {% endif %}
-    <link rel="canonical" href="{{ canonical_url }}" />
-    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="{{ canonical_url }}"/>
+    <meta name="viewport" content="width=device-width"/>
+
+
+    <div class="label-draw">
+      <div class="label-draw-content-grid">
+
+
+
+        <div class="label-draw-links">
+
+          <div class="exit">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
+          {% section  'nz-labels' %}
+
+        </div>
+
+      </div>
+    </div>
+
+
     {{ content_for_header }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
-  
+
     <script src="https://unpkg.com/enter-view"></script>
 
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-  
-
-  
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-</head>
-<body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
- 
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+
+  </head>
+  <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+
     <div class="ticker-top"></div>
     <div class="version-mark">
-      <p class="label"> V3 </p>
-  </div>
-    <div id="content" class="content-load  animate__animated animate__fadeIn   "  >
+      <p class="label">
+        V3
+      </p>
+    </div>
+    <div id="content" class="content-load  animate__animated animate__fadeIn   ">
 
       {% section'main-header' %}
 
       <div class="wrapper">
-      {{ content_for_layout }}
+        {{ content_for_layout }}
       </div>
-      
-    
 
 
-    {% section 'footer' %}
- 
-</div>
-<div class="ticker-bottom"></div>
-      <script type="application/json" data-ajax-cart-initial-state >
-        {{ cart | json }}
-      </script>
-       
-      <script type="module">
-        import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
-      </script>
-      
 
-      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"> </script>
-       <script src="{{ 'theme.js' | asset_url }}" defer ></script> 
-      {{ 'application.js' | asset_url | script_tag }}
-      
+      {% section 'footer' %}
 
-   
-  
+    </div>
+    <div class="ticker-bottom"></div>
+    <script type="application/json" data-ajax-cart-initial-state>
+      {{ cart | json }}
+    </script>
 
-</body>
+    <script type="module">
+      import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    {{ 'application.js' | asset_url | script_tag }}
+
+
+
+  </body>
 </html>

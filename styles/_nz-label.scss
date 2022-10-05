@@ -1,0 +1,96 @@
+@use 'components';
+@use 'tools';
+
+
+.labels-open{
+    .label-draw-content-grid{
+
+        
+        
+        right: 0 !important;
+        pointer-events: none !important;
+    }
+}
+
+
+.exit{
+    height: 2em;
+    width: 2.5em;
+    border-radius: 0 tools.$radius tools.$radius 0;
+    position: absolute;
+    right: calc( -2.5em + 1px ) ;
+    top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    background-color:tools.$green;
+    border: tools.$standard-border-grey;
+    border-left: 0;
+}
+
+.label-draw{
+    background: rgba(180, 185, 29, 0);
+    position: absolute;
+    z-index: 10;
+    
+   height: calc( 100vh - tools.$half * 2); 
+    
+    width: calc( 100% - 40px );
+  
+    
+    
+
+    .label-draw-content-grid{
+        display: grid;
+        gap: tools.$half;
+        grid-template-columns: repeat( 4, 1fr );
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 0, 0);
+        border-radius:tools.$radius;
+        transition : ease all 0.3s ;
+        
+        position: absolute;
+        
+        
+        top:0;
+        bottom: 0;
+        right: 100%;
+        padding: tools.$half;
+        
+
+        
+        
+    }
+
+    .label-draw-links{
+        position: relative;
+        height: 100%;
+    }
+}
+
+
+
+#shopify-section-nz-labels{
+    height: 100%;
+}
+
+.block-wrapper{
+    
+       
+        background: tools.$green;
+        border-radius:tools.$radius;
+        
+        border: tools.$standard-border-grey;
+        height: 100%;
+        overflow: scroll;
+
+        .vendor-block{
+            height: unset !important;
+            min-height: 100%;
+        }
+}
+
+

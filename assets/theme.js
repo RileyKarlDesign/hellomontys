@@ -49,6 +49,26 @@ if(filterWrap){
 
 }
 
+// labels -----------------------------------------------------
+
+const labels = document.querySelector('.label-draw');
+const labelBtn = document.querySelector('.js-label-draw-btn');
+
+
+
+
+labelBtn.addEventListener('click', () =>{
+
+	if( labels.classList.contains('labels-open') ){
+		labels.classList.remove('labels-open')
+	}else{
+		labels.classList.add('labels-open')
+	}
+	
+})
+
+
+
 
 // Footer / Header / Cart --------------------------------------
 

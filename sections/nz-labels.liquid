@@ -1,45 +1,48 @@
 {%- assign collection = collections[section.settings.collection] -%}
 
 <div class="block-wrapper">
-  
-  <div class="vendor-block" >
-  
+
+  <div class="vendor-block">
+    <h1>
+      yoyo
+    </h1>
+
 
     {% for i in collection.products %}
-        <h1> {{ i.vendor }} </h1>
+      <h1>
+        {{ i.vendor }}
+      </h1>
     {% endfor %}
-  
+
   </div>
 </div>
 
 {% schema %}
-{
-  "name": "labels",
-  "settings": [
-    { 
-      "type": "collection",
-      "id": "collection",
-      "label": "collection"    
-    },
-    {
-      "type":"text",
-      "id":"title_text",
-      "label":"home-text"
-  },
   {
-    "type":"text",
-    "id":"sub_text",
-    "label":"sub-text"
-}
-  ],
+    "name": "labels",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "collection"
+      }, {
+        "type": "text",
+        "id": "title_text",
+        "label": "home-text"
+      }, {
+        "type": "text",
+        "id": "sub_text",
+        "label": "sub-text"
+      }
+    ],
 
 
-  
-  "presets": [
-    {
-      "name": "labels",
-      "category": "Content"
-    }
-  ]
-}
-{% endschema %}
+
+    "presets": [
+      {
+        "name": "labels",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}}
