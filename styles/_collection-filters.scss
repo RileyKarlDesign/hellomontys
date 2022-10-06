@@ -7,6 +7,12 @@
     p{
         color: tools.$grey !important;
     }
+
+    &:hover{
+        color: tools.$grey !important;
+        
+        
+    }
 }
 
 
@@ -115,11 +121,12 @@
         
         padding:  tools.$half 0 ;
         border-bottom: tools.$standard-border-grey-0 ;
-        
+        transition: tools.$transition-basic;
          
         &:hover{
             color: tools.$grey !important;
             border-bottom: tools.$standard-border ;
+            padding-left: 5px;
         }
 
     }

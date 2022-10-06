@@ -2,63 +2,120 @@
 @use 'tools'; 
 
 
-.labels-open{
-    .label-draw-content-grid{
+.label-fixed{
+    
+    top: 10px !important;
+    height: calc( 100vh - 10px) !important;
 
+    @media( max-width: 900px ){
+        
+        top: calc( 2.5em + 10px ) !important;
+       
         
         
-        right: 0 !important;
-        pointer-events: none !important;
     }
+    
+}
+
+.labels-open{
+   
+    
+        
+        pointer-events: all !important;
+        left: 10px !important;
+        margin-top: 10px;
+
+       
+    
+
 }
 
 
-.exit{
+.exit-labels{
+
     height: 2em;
-    width: 2.5em;
+    width: 2.5rem !important;
     border-radius: 0 tools.$radius tools.$radius 0;
     position: absolute;
-    right: calc( -2.5em + 1px ) ;
+    right: calc( -2.5em ) ;
     top: 3em;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     
 
-    background-color:tools.$green;
+    background-color:tools.$green; 
     border: tools.$standard-border-grey;
     border-left: 0;
+    
+    
+    i{
+        transition: tools.$transition-basic;
+    }
+     
+
+        i:hover{
+            rotate: 90deg;
+        }
+
+        @media( max-width: 900px ){
+        
+            top:-2.25rem;
+            right: 3em;
+            rotate: -90deg;
+            
+            
+        }
+      
 }
 
 .label-draw{
     background: rgba(180, 185, 29, 0);
-    position: absolute;
-    z-index: 10;
-    
-   height: calc( 100vh - tools.$half * 2); 
-    
-    width: calc( 100% - 40px );
-  
-    
+    position: fixed;
+    z-index: 15;
+    bottom: 50px;
+    transition: ease-in-out all 0.5s;
+    width: calc( 25% + 7.5px );    
+    top:0px;
+    bottom: 0;
+    left: calc( -100% - 5em );
+    margin-top: 10px;
+
+    height: calc( 100vh - 20px);
+
+
+
+    @media( max-width: 1000px ){
+        
+        
+        top:20px;
+        width: calc( 25% + 3px);
+    }
+
+    @media( max-width: 900px ){
+        
+        top:calc( 2.5em + 20px);
+        width: calc( 100%  - 20px  );
+        margin-top: 0px;
+        
+        height: calc( 100vh - 20px - 2.5rem) !important;
+    }
+   
     
 
     .label-draw-content-grid{
-        display: grid;
-        gap: tools.$half;
-        grid-template-columns: repeat( 4, 1fr );
+        
+       
         height: 100%;
         width: 100%;
         background: rgba(255, 255, 0, 0);
         border-radius:tools.$radius;
         transition : ease all 0.3s ;
+        z-index: 5;
         
-        position: absolute;
-        
-        
-        top:0;
-        bottom: 0;
-        right: 100%;
         padding: tools.$half;
+        padding-top: 0;
         
 
         
@@ -68,6 +125,10 @@
     .label-draw-links{
         position: relative;
         height: 100%;
+        background: tools.$green;
+        border: tools.$standard-border-grey;
+        border-radius:tools.$radius;
+        pointer-events: unset;
     }
 }
 
@@ -80,17 +141,36 @@
 .block-wrapper{
     
        
-        background: tools.$green;
-        border-radius:tools.$radius;
         
-        border: tools.$standard-border-grey;
+        
+        
+        
         height: 100%;
         overflow: scroll;
 
         .vendor-block{
             height: unset !important;
             min-height: 100%;
+            text-align: left;
+            padding: tools.$half;
+
+            
+
         }
 }
 
 
+
+.label-filter{
+    border-bottom: tools.$standard-border-grey;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top {
+    margin-top: tools.$half;
+    border-top: tools.$standard-border-grey;
+  }

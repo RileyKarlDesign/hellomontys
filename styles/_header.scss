@@ -92,6 +92,7 @@
 
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
+    
 }
 
 
@@ -132,6 +133,8 @@
 
 
     .header-top{
+
+       
        
         .logo{
             
@@ -177,7 +180,7 @@
     left: 0;
     right: 0;
     top: calc(100% - 2.5em);
-    z-index: 100;
+    z-index: 200;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -196,6 +199,7 @@
 
     position:absolute;
     bottom: 0;
+    z-index: 200;
    
     transition: unset;
     .cart{

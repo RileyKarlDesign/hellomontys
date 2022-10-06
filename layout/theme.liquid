@@ -30,23 +30,7 @@
     <meta name="viewport" content="width=device-width"/>
 
 
-    <div class="label-draw">
-      <div class="label-draw-content-grid">
-
-
-
-        <div class="label-draw-links">
-
-          <div class="exit">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-
-          {% section  'nz-labels' %}
-
-        </div>
-
-      </div>
-    </div>
+  
 
 
     {{ content_for_header }}
@@ -72,6 +56,7 @@
   <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
 
     <div class="ticker-top"></div>
+    <div class="ticker-top ticker-top-two"></div>
     <div class="version-mark">
       <p class="label">
         V3
@@ -80,6 +65,26 @@
     <div id="content" class="content-load  animate__animated animate__fadeIn   ">
 
       {% section'main-header' %}
+
+        <div class="label-draw">
+      <div class="label-draw-content-grid">
+
+
+
+        <div class="label-draw-links">
+
+          <div class="exit-labels">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
+          {% section  'nz-labels' %}
+
+        </div>
+
+      </div>
+    </div>
+
+
 
       <div class="wrapper">
         {{ content_for_layout }}

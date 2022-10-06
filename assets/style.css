@@ -376,7 +376,7 @@ input:disabled + label {
   left: 0;
   right: 0;
   top: calc(100% - 2.5em);
-  z-index: 100;
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,6 +392,7 @@ input:disabled + label {
 .nav-bottom-fixed {
   position: absolute;
   bottom: 0;
+  z-index: 200;
   transition: unset;
 }
 .nav-bottom-fixed .cart {
@@ -1235,13 +1236,6 @@ optgroup * {
   }
 }
 
-.labels {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1437,6 +1431,9 @@ input {
 .active p {
   color: rgb(167, 167, 167) !important;
 }
+.active:hover {
+  color: rgb(167, 167, 167) !important;
+}
 
 .collection-filters {
   display: grid;
@@ -1506,10 +1503,12 @@ input {
   gap: 10px;
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: ease-in-out 0.2s;
 }
 .collection-filters .collection-filter:hover {
   color: rgb(167, 167, 167) !important;
   border-bottom: 1px solid rgba(19, 12, 12, 0.833);
+  padding-left: 5px;
 }
 .collection-filter:hover {
   color: rgba(0, 0, 0, 0.092);
@@ -1660,25 +1659,28 @@ input {
   }
 }
 
-.vendor-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+.label-fixed {
+  top: 10px !important;
+  height: calc(100vh - 10px) !important;
+}
+@media (max-width: 900px) {
+  .label-fixed {
+    top: calc(2.5em + 10px) !important;
+  }
 }
 
-.labels-open .label-draw-content-grid {
-  right: 0 !important;
-  pointer-events: none !important;
+.labels-open {
+  pointer-events: all !important;
+  left: 10px !important;
+  margin-top: 10px;
 }
 
-.exit {
+.exit-labels {
   height: 2em;
-  width: 2.5em;
+  width: 2.5rem !important;
   border-radius: 0 5px 5px 0;
   position: absolute;
-  right: calc(-2.5em + 1px);
+  right: -2.5em;
   top: 3em;
   display: flex;
   align-items: center;
@@ -1687,32 +1689,64 @@ input {
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-left: 0;
 }
+.exit-labels i {
+  transition: ease-in-out 0.2s;
+}
+.exit-labels i:hover {
+  rotate: 90deg;
+}
+@media (max-width: 900px) {
+  .exit-labels {
+    top: -2.25rem;
+    right: 3em;
+    rotate: -90deg;
+  }
+}
 
 .label-draw {
   background: rgba(180, 185, 29, 0);
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  z-index: 15;
+  bottom: 50px;
+  transition: ease-in-out all 0.5s;
+  width: calc(25% + 7.5px);
+  top: 0px;
+  bottom: 0;
+  left: calc(-100% - 5em);
+  margin-top: 10px;
   height: calc(100vh - 20px);
-  width: calc(100% - 40px);
+}
+@media (max-width: 1000px) {
+  .label-draw {
+    top: 20px;
+    width: calc(25% + 3px);
+  }
+}
+@media (max-width: 900px) {
+  .label-draw {
+    top: calc(2.5em + 20px);
+    width: calc(100% - 20px);
+    margin-top: 0px;
+    height: calc(100vh - 20px - 2.5rem) !important;
+  }
 }
 .label-draw .label-draw-content-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 0, 0);
   border-radius: 5px;
   transition: ease all 0.3s;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 100%;
+  z-index: 5;
   padding: 10px;
+  padding-top: 0;
 }
 .label-draw .label-draw-links {
   position: relative;
   height: 100%;
+  background: rgb(55, 123, 63);
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  border-radius: 5px;
+  pointer-events: unset;
 }
 
 #shopify-section-nz-labels {
@@ -1720,15 +1754,28 @@ input {
 }
 
 .block-wrapper {
-  background: rgb(55, 123, 63);
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.228);
   height: 100%;
   overflow: scroll;
 }
 .block-wrapper .vendor-block {
   height: unset !important;
   min-height: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+.label-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#top {
+  margin-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.228);
 }
 
 html {
@@ -1806,8 +1853,12 @@ body {
   animation: colorshift 0.8s ease;
 }
 
+.ticker-top-two {
+  height: 0;
+}
+
 .ticker-top {
-  height: 1px;
+  height: 0px;
   width: 100%;
 }
 

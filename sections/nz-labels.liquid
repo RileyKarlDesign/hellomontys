@@ -3,13 +3,17 @@
 <div class="block-wrapper">
 
   <div class="vendor-block">
-
+    <div class="anchor-circle"></div>
 
 
     {% for i in collection.products %}
-      <p>
-        {{ i.vendor }}
-      </p>
+
+        <a class="label-filter" {% if forloop.index == 1%} id="top"  {% endif %} >
+
+
+          <p>{{ i.vendor }}
+          </p>
+        </a>
     {% endfor %}
 
   </div>
@@ -43,4 +47,5 @@
       }
     ]
   }
-{% endschema %}}
+  
+{% endschema %}
