@@ -6,20 +6,20 @@
     <div class="anchor-circle"></div>
     
       {% for collection in collections %}
-
-          {% if collection.title | slice: 0 = '*' %}
+         {% assign collectionSlice = collection.title | slice: 0 %}
+           
+            
+          
+          {% if collectionSlice == '*' %}
          
-          {{ collection.title }}
+             
+             <p class="label-filter" ><a href=" {{ collection.url }} "> {{ collection.title | remove_first: "*" }}</a> </p>
 
-          {% endif %}
+          {% endif %} 
 
       {% endfor %}
 
-    {% comment %} {% for i in collection.all_vendors %}
-      
-        <p class="label-filter" >{{ i | link_to_vendor }} </p>
-        
-    {% endfor %} {% endcomment %}
+ 
 
 
     <ul>
@@ -29,33 +29,3 @@
   </div>
 </div>
 
-{% schema %}
-  {
-    "name": "labels",
-    "settings": [
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "collection"
-      }, {
-        "type": "text",
-        "id": "title_text",
-        "label": "home-text"
-      }, {
-        "type": "text",
-        "id": "sub_text",
-        "label": "sub-text"
-      }
-    ],
-
-
-
-    "presets": [
-      {
-        "name": "labels",
-        "category": "Content"
-      }
-    ]
-  }
-  
-{% endschema %}
