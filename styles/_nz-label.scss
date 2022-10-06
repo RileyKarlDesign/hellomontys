@@ -7,9 +7,9 @@
     top: 10px !important;
     height: calc( 100vh - 10px) !important;
 
-    @media( max-width: 900px ){
+    @media( max-width: 800px ){
         
-        top: calc( 2.5em + 10px ) !important;
+        top: calc( 100vh + 2.5em) !important;
        
         
         
@@ -22,8 +22,17 @@
     
         
         pointer-events: all !important;
-        left: 10px !important;
-        margin-top: 10px;
+        left: 20px !important;
+        
+
+        @media (max-width: 1000px){
+            left: 10px !important;
+        }
+
+        @media (max-width: 800px){
+            top: 30vh !important;
+        }
+        
 
        
     
@@ -59,7 +68,7 @@
             rotate: 90deg;
         }
 
-        @media( max-width: 900px ){
+        @media( max-width: 800px ){
         
             top:-2.25rem;
             right: 3em;
@@ -76,11 +85,11 @@
     z-index: 15;
     bottom: 50px;
     transition: ease-in-out all 0.5s;
-    width: calc( 25% + 7.5px );    
-    top:0px;
+    width: calc( 25% - 2px  );    
+    top:30px;
     bottom: 0;
     left: calc( -100% - 5em );
-    margin-top: 10px;
+    
 
     height: calc( 100vh - 20px);
 
@@ -89,17 +98,18 @@
     @media( max-width: 1000px ){
         
         
-        top:20px;
+        top:20px ;
         width: calc( 25% + 3px);
     }
 
-    @media( max-width: 900px ){
+    @media( max-width: 800px ){
         
-        top:calc( 2.5em + 20px);
-        width: calc( 100%  - 20px  );
+        top:calc( 100vh + 2.5em );
+        width: calc( 100%  - 20px );
         margin-top: 0px;
         
-        height: calc( 100vh - 20px - 2.5rem) !important;
+        height: calc( 70vh + 10px ) !important;
+        left: 10px;
     }
    
     
@@ -117,7 +127,10 @@
         padding: tools.$half;
         padding-top: 0;
         
-
+        @media( max-width: 800px ){
+        
+            padding: 0;
+        }
         
         
     }
