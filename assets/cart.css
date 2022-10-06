@@ -13,6 +13,12 @@ h1 {
   font-weight: 300;
   font-style: regular;
 }
+@media (max-height: 900px) {
+  h1 {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+}
 
 h2 {
   font-size: 1.5rem;
@@ -117,7 +123,7 @@ input {
   top: calc(100vh - 2.5em) !important;
 }
 .cart-close .nav-module {
-  background-color: rgba(255, 252, 242, 0.786) !important;
+  background-color: rgba(255, 252, 242, 0.905) !important;
 }
 @media (max-width: 900px) {
   .cart-close {
@@ -129,7 +135,7 @@ input {
 }
 
 .cart-close-bottom .nav-module {
-  background-color: rgba(255, 252, 242, 0.786) !important;
+  background-color: rgba(255, 252, 242, 0.905) !important;
   height: 2.5em !important;
 }
 

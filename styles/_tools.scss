@@ -2,12 +2,12 @@
 
     $black: rgba(19, 12, 12, 0.833);
     $white: rgb(255, 252, 242);
-    $white-50: rgba(255, 252, 242, 0.786);
+    $white-50: rgba(255, 252, 242, 0.905);
     $grey-0: rgba(0, 0, 0, 0);
     $grey: rgb(167, 167, 167);
     $grey50: rgba(0, 0, 0, 0.065);
     $yellow: rgb(255, 199, 46);
-    $green: rgb(55, 123, 63);
+    $green: rgb(63, 156, 71);
     $yellow-0: rgba(255, 199, 46, 0);
     $yellow50: rgba(255, 199, 46, 0.519);
     $red: rgb(255, 45, 34);
@@ -61,6 +61,11 @@
            
             font-weight: 300;
             font-style: regular;
+
+            @media ( max-height: 900px ) {
+                font-size: 1.25em;
+                line-height: 1.25em;
+            }
         }
         
         

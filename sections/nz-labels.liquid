@@ -4,17 +4,27 @@
 
   <div class="vendor-block">
     <div class="anchor-circle"></div>
+    
+      {% for collection in collections %}
+
+          {% if collection.title | slice: 0 = '*' %}
+         
+          {{ collection.title }}
+
+          {% endif %}
+
+      {% endfor %}
+
+    {% comment %} {% for i in collection.all_vendors %}
+      
+        <p class="label-filter" >{{ i | link_to_vendor }} </p>
+        
+    {% endfor %} {% endcomment %}
 
 
-    {% for i in collection.products %}
+    <ul>
 
-        <a class="label-filter" {% if forloop.index == 1%} id="top"  {% endif %} >
-
-
-          <p>{{ i.vendor }}
-          </p>
-        </a>
-    {% endfor %}
+</ul>
 
   </div>
 </div>
