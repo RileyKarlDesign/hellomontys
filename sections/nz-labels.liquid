@@ -3,7 +3,11 @@
 <div class="block-wrapper">
 
   <div class="vendor-block">
-    <div class="anchor-circle"></div>
+
+    <div class="slide-header">
+      <div class="anchor-circle"></div>
+       <p> Aotearoa Labels </p>
+    </div>
     
       {% for collection in collections %}
          {% assign collectionSlice = collection.title | slice: 0 %}
@@ -15,6 +19,10 @@
              
              <p class="label-filter" ><a href=" {{ collection.url }} "> {{ collection.title | remove_first: "*" }}</a> </p>
 
+              <div class="colection-hover-img"> 
+              <img class="hover-img" src=" {{ collection.image | img_url: 'master' }}" loading = 'lazy' width="500" height="auto" alt="">
+
+              </div>
           {% endif %} 
 
       {% endfor %}
