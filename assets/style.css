@@ -1663,6 +1663,11 @@ input {
   }
 }
 
+.slide-header {
+  display: flex;
+  gap: 10px;
+}
+
 .label-fixed {
   top: 10px !important;
   height: calc(100vh - 10px) !important;
@@ -1796,6 +1801,34 @@ input {
   border-top: 1px solid rgba(0, 0, 0, 0.228);
 }
 
+.colection-hover-img {
+  height: 100vh;
+  width: calc(100vw - 40px);
+  position: absolute;
+  left: -11px;
+  top: -11px;
+  right: -11px;
+  transition: ease-in-out 0.2s;
+  opacity: 0%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: -1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.colection-hover-img .hover-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (hover: hover) {
+  /* when hover is supported */
+  .label-filter:hover + .colection-hover-img {
+    opacity: 100%;
+  }
+}
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;

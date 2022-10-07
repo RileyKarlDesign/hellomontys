@@ -2,6 +2,11 @@
 @use 'tools'; 
 
 
+.slide-header{
+    display: flex;
+    gap: 10px;
+}
+
 .label-fixed{
     
     top: 10px !important;
@@ -23,6 +28,7 @@
         
         pointer-events: all !important;
         left: 20px !important;
+        
         
 
         @media (max-width: 1000px){
@@ -187,3 +193,55 @@
     margin-top: tools.$half;
     border-top: tools.$standard-border-grey;
   }
+
+
+  .colection-hover-img{
+
+    height: 100vh;
+    width: calc(100vw - 40px);
+    position: absolute;
+    left: -11px;
+    top: -11px;
+    right: -11px;
+    
+    transition: tools.$transition-basic;
+
+    opacity: 0%;
+    border-radius: tools.$radius;
+    
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+    border-radius: tools.$radius;
+    overflow: hidden;
+
+
+    .hover-img{
+        height: 100%;
+     width: 100%;
+     
+     object-fit: cover;
+     
+     
+
+     
+    }
+
+    
+}
+
+@media (hover: hover) {
+    /* when hover is supported */
+    .label-filter:hover + .colection-hover-img   {
+        
+           
+      
+        opacity: 100%;
+        
+
+    }
+
+  
+
+    
+}
