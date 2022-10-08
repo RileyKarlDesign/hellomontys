@@ -98,12 +98,13 @@
 
     {% if wear != '' %}
     <div class="metafeild-notes animate__animated animate__slideInLeft ">
-      <p class="warning-title" > Wear Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.notes | metafield_text }}</p>
+      <p class="warning-title" > Wear Notes  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> 
+      <p class="warning-text">{{ product.metafields.custom.notes | metafield_text }}</p>
       
       <div class=" warning-check">
         <input class="js-warning-check" type="checkbox" id="wear" name="scales">
         
-        <label for="wear"><div class="input-block"></div> I understand</label>
+        <label for="wear"><div class="input-block"></div> I agree to defects </label>
       </div>
    
    
@@ -114,12 +115,13 @@
 
     {% if shipping != '' %}
     <div class="metafeild-notes animate__animated animate__slideInLeft">
-      <p class="warning-title " > Shipping  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> <p>{{ product.metafields.custom.shipping | metafield_text }}</p>
+      <p class="warning-title " > Shipping  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </p> 
+      <p class= "warning-text" >{{ product.metafields.custom.shipping | metafield_text }}</p>
       
       <div class=" warning-check">
         <input class="js-warning-check" type="checkbox" id="shipping" name="scales">
         
-        <label for="shipping"><div class="input-block"></div> I understand</label>
+        <label for="shipping"><div class="input-block"></div> I agree to shipping</label>
       </div>
 
     </div>

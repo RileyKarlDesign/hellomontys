@@ -68,8 +68,12 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
           {% endif %}
    
           {% if material != '' %}
+
+            {% assign  materialStripped = material | remove:'and' %}
+            {% assign  materialLines = materialStripped | replace:',','<br>' %}
+
             <div class="single-metafield ">
-                <p class="metafield-title" > Material </p> <p>{{ material }}</p>
+                <p class="metafield-title" > Material </p> <p>{{ materialLines }}</p>
             </div>
           {% endif %}
 

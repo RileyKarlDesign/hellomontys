@@ -89,8 +89,8 @@
             
         }
 
-        $base : 16px ; 
-        $base-s: 13px;
+        $base : 14px ; 
+        $base-s: 12px;
 
         .filter-label{
             font-size: $base !important ;
@@ -106,12 +106,13 @@
             font-weight: 500;
             font-size:$base;
             color:$black; 
-            line-height:19px;
+            line-height:17px;
             font-style: regular;
+            letter-spacing: 0.3px;
 
             @media (max-width: 1000px) {
                 font-size:$base-s;
-        
+                line-height:15px;
             }
         }
 

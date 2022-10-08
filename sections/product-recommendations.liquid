@@ -1,21 +1,42 @@
-<div class="product-recommendations main-product-grid" data-product-id="{{ product.id }}" data-limit="3">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+<div class="product-recommendations" data-product-id="{{ product.id }}" data-limit="3">
+
+  <div class="product-reco-desktop"> 
   {%- if recommendations.products_count > 0 -%}
     <div class="line"></div>
     <div class="recommended-grid">
       <div class="title "> <div class="anchor-circle"> </div> <p> Related Products </p> </div>
+      <div class="fade">  </div>
+      <div class="recomended-product" id="{{ forloop.index }}">
       {%- for product in recommendations.products -%}
       
     
 
-      <div class="recomended-product" id="{{ forloop.index }}">
+      
       
         {% render 'product-card'with {product: product , forloop: forloop } %}
         
-      </div>
+      
+
       {%- endfor -%}
-    </div>
+
+      </div>
+
   {%- endif -%}
+  </div>
+
 </div>
+
+
+
+
+</div>
+
+
 
 
 
@@ -61,4 +82,7 @@ loadProductRecommendationsIntoSection();
 
 
 
+
+
 {% endjavascript %}
+

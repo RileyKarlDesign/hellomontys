@@ -1,4 +1,4 @@
-{%- assign collection = collections[section.settings.collection] -%}
+
 
 <div class="block-wrapper">
 
@@ -9,8 +9,10 @@
           <p> Aotearoa Labels </p>
        </div>
     <div class="label-link-list" > 
-      
+     
       {% assign thisCollection = collection.title %}
+        
+        
 
       {% for collection in collections %}
          {% assign collectionSlice = collection.title | slice: 0 %}
@@ -22,7 +24,7 @@
 
             <div class='label-container '> 
 
-                 <a href=" {{ collection.url }} "> <p class="grey" > {{ collection.title | remove_first: "*" }} </p>  </a> 
+                 <a> <p class="active" > {{ collection.title | remove_first: "*" }} </p>  </a> 
                 <p class="label">  [ {{ collection.all_products_count }} ] </p>
 
               </div>

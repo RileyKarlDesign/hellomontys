@@ -8,7 +8,9 @@
 }
 
 .footer{
-    padding: tools.$gutter;
+    padding-top: tools.$gutter;
+    padding-left: tools.$half;
+    padding-right: tools.$half;
     
 }
 
@@ -30,7 +32,8 @@
     
 }
 .footer-bottom{
-    padding: tools.$gutter;
-    padding-top: 0;
-
+    padding-top: tools.$gutter;
+    padding-left: tools.$half;
+    padding-right: tools.$half;
+    padding-bottom: 7px;
 }

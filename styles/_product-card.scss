@@ -22,11 +22,11 @@
     
     .makers-mark{
         position: absolute;
-        top: 5px;
-        right:-4px ;
+        top:5px;
+        right:5px ;
         background-color: tools.$yellow;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         border-radius: 50%;
         z-index: 10;
     }
@@ -55,7 +55,7 @@ a{
     border-radius: 0 !important;
 
     
-    
+    @media( hover: hover){
 
     :hover img {
         
@@ -68,7 +68,7 @@ a{
     :hover .img-tab{
         
         
-        bottom: 0em !important;
+        bottom: -1px !important;
         filter: tools.$drop-shadow-up;
     }
 
@@ -76,7 +76,7 @@ a{
         color: tools.$grey !important;
     }
 
-  
+}
     
 
     .product-img {
@@ -137,6 +137,10 @@ a{
             align-items: center;
             justify-content: center;
             pointer-events: none;
+
+            p{
+                display: block;
+            }
 
             
         }
