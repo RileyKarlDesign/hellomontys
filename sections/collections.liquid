@@ -17,9 +17,9 @@
     
     {% for collection in collections %}
     
-    
+    {% assign collectionSlice = collection.title | slice: 0 %}
         
-            
+        {% if collectionSlice != '*' %}
         
             {% if collection.title == thisCollection %}
             <div class=" active collection-main-link">
@@ -38,11 +38,13 @@
             {% endif %}
 
         
-
+        {% endif %}
         
     
 
     {% endfor %}
+
+    
     </div>  
 
 

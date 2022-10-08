@@ -5,12 +5,33 @@
 .slide-header{
     display: flex;
     gap: 10px;
+    border-bottom: tools.$standard-border-grey;
+    
+   
+    flex-basis: 1;
+
+    
+    padding-bottom: 10px
+    
+
 }
 
 .label-fixed{
     
-    top: 10px !important;
-    height: calc( 100vh - 10px) !important;
+     top: 10px !important;
+    height: calc( 100vh - 10px) !important; 
+    padding-top: 0px !important;
+
+    .label-draw-content-grid{
+        padding-top: 0 !important;
+       
+    }
+
+    @media( max-width: 1000px ){
+        
+        padding-bottom: 10px;
+    }
+
 
     @media( max-width: 800px ){
         
@@ -89,14 +110,12 @@
     background: rgba(180, 185, 29, 0);
     position: fixed;
     z-index: 15;
-    bottom: 50px;
+    
     transition: ease-in-out all 0.3s;
     width: calc( 25% - 2px  );    
-    top:30px;
-    bottom: 0;
+    top:20px;
+    bottom: 10px;
     left: calc( -100% - 5em );
-    
-
     height: calc( 100vh - 20px);
 
 
@@ -104,7 +123,8 @@
     @media( max-width: 1000px ){
         
         
-        top:20px ;
+        top:10px ;
+        bottom: 0px;
         width: calc( 25% + 3px);
     }
 
@@ -117,6 +137,15 @@
         height: calc( 70vh + 10px ) !important;
         left: 10px;
     }
+
+    .label-link-list{
+
+        
+        overflow: scroll;
+        height: 100%;
+    
+    }
+    
    
     
 
@@ -131,7 +160,13 @@
         z-index: 5;
         
         padding: tools.$half;
-        padding-top: 0;
+        padding-top: 10px;
+
+        @media( max-width: 1000px ){
+        
+            padding-bottom: 0px;
+        }
+        
         
         @media( max-width: 800px ){
         
@@ -143,14 +178,15 @@
 
     .label-draw-links{
         position: relative;
-        height: 100%;
+        
         background: tools.$green;
         border: tools.$standard-border-grey;
         border-radius:tools.$radius;
         pointer-events: unset;
+        height: 100%;
+        
     }
 }
-
 
 
 #shopify-section-nz-labels{
@@ -158,20 +194,21 @@
 }
 
 .block-wrapper{
-    
-       
-        
-        
-        
-        
+
         height: 100%;
-        overflow: scroll;
+        
 
         .vendor-block{
+
             height: unset !important;
-            min-height: 100%;
+            max-height: 100%;
             text-align: left;
             padding: tools.$half;
+
+            display: flex;
+            flex-direction: column;
+           
+
 
             
 
@@ -180,14 +217,7 @@
 
 
 
-.label-filter{
-    border-bottom: tools.$standard-border-grey;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+
 
 #top {
     margin-top: tools.$half;
@@ -195,53 +225,48 @@
   }
 
 
-  .colection-hover-img{
 
-    height: 100vh;
-    width: calc(100vw - 40px);
-    position: absolute;
-    left: -11px;
-    top: -11px;
-    right: -11px;
-    
-    transition: tools.$transition-basic;
-
-    opacity: 0%;
-    border-radius: tools.$radius;
-    
-    display: flex;
-    justify-content: flex-end;
-    z-index: -1;
-    border-radius: tools.$radius;
-    overflow: hidden;
-
-
-    .hover-img{
-        height: 100%;
-     width: 100%;
-     
-     object-fit: cover;
-     
-     
-
-     
-    }
-
-    
-}
 
 @media (hover: hover) {
     /* when hover is supported */
-    .label-filter:hover + .colection-hover-img   {
-        
-           
-      
-        opacity: 100%;
-        
-
-    }
+   
 
   
 
     
+}
+
+.label-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: tools.$standard-border-grey;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    transition: tools.$transition-basic;
+
+   
+
+
+    .label{
+        color: tools.$black !important;
+        width: max-content;
+
+        opacity: 60%;
+    }
+
+  
+}
+
+@media (hover: hover) {
+    /* when hover is supported */
+
+   .label-container:hover { 
+    padding-left: 5px;
+    border-bottom: tools.$standard-border;
+    
+}
+
 }

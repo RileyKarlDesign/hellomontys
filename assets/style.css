@@ -1666,11 +1666,23 @@ input {
 .slide-header {
   display: flex;
   gap: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
+  flex-basis: 1;
+  padding-bottom: 10px;
 }
 
 .label-fixed {
   top: 10px !important;
   height: calc(100vh - 10px) !important;
+  padding-top: 0px !important;
+}
+.label-fixed .label-draw-content-grid {
+  padding-top: 0 !important;
+}
+@media (max-width: 1000px) {
+  .label-fixed {
+    padding-bottom: 10px;
+  }
 }
 @media (max-width: 800px) {
   .label-fixed {
@@ -1725,17 +1737,17 @@ input {
   background: rgba(180, 185, 29, 0);
   position: fixed;
   z-index: 15;
-  bottom: 50px;
   transition: ease-in-out all 0.3s;
   width: calc(25% - 2px);
-  top: 30px;
-  bottom: 0;
+  top: 20px;
+  bottom: 10px;
   left: calc(-100% - 5em);
   height: calc(100vh - 20px);
 }
 @media (max-width: 1000px) {
   .label-draw {
-    top: 20px;
+    top: 10px;
+    bottom: 0px;
     width: calc(25% + 3px);
   }
 }
@@ -1748,6 +1760,10 @@ input {
     left: 10px;
   }
 }
+.label-draw .label-link-list {
+  overflow: scroll;
+  height: 100%;
+}
 .label-draw .label-draw-content-grid {
   height: 100%;
   width: 100%;
@@ -1756,7 +1772,12 @@ input {
   transition: ease all 0.3s;
   z-index: 5;
   padding: 10px;
-  padding-top: 0;
+  padding-top: 10px;
+}
+@media (max-width: 1000px) {
+  .label-draw .label-draw-content-grid {
+    padding-bottom: 0px;
+  }
 }
 @media (max-width: 800px) {
   .label-draw .label-draw-content-grid {
@@ -1765,11 +1786,11 @@ input {
 }
 .label-draw .label-draw-links {
   position: relative;
-  height: 100%;
   background: rgb(63, 156, 71);
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-radius: 5px;
   pointer-events: unset;
+  height: 100%;
 }
 
 #shopify-section-nz-labels {
@@ -1778,22 +1799,14 @@ input {
 
 .block-wrapper {
   height: 100%;
-  overflow: scroll;
 }
 .block-wrapper .vendor-block {
   height: unset !important;
-  min-height: 100%;
+  max-height: 100%;
   text-align: left;
   padding: 10px;
-}
-
-.label-filter {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  flex-direction: column;
 }
 
 #top {
@@ -1801,32 +1814,31 @@ input {
   border-top: 1px solid rgba(0, 0, 0, 0.228);
 }
 
-.colection-hover-img {
-  height: 100vh;
-  width: calc(100vw - 40px);
-  position: absolute;
-  left: -11px;
-  top: -11px;
-  right: -11px;
-  transition: ease-in-out 0.2s;
-  opacity: 0%;
-  border-radius: 5px;
-  display: flex;
-  justify-content: flex-end;
-  z-index: -1;
-  border-radius: 5px;
-  overflow: hidden;
+@media (hover: hover) {
+  /* when hover is supported */
 }
-.colection-hover-img .hover-img {
-  height: 100%;
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  object-fit: cover;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  transition: ease-in-out 0.2s;
+}
+.label-container .label {
+  color: rgba(19, 12, 12, 0.833) !important;
+  width: max-content;
+  opacity: 60%;
 }
 
 @media (hover: hover) {
   /* when hover is supported */
-  .label-filter:hover + .colection-hover-img {
-    opacity: 100%;
+  .label-container:hover {
+    padding-left: 5px;
+    border-bottom: 1px solid rgba(19, 12, 12, 0.833);
   }
 }
 html {

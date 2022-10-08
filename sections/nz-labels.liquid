@@ -5,29 +5,43 @@
   <div class="vendor-block">
 
     <div class="slide-header">
-      <div class="anchor-circle"></div>
-       <p> Aotearoa Labels </p>
-    </div>
-    
+       <div class="anchor-circle"></div>
+          <p> Aotearoa Labels </p>
+       </div>
+    <div class="label-link-list" > 
+      
+      {% assign thisCollection = collection.title %}
+
       {% for collection in collections %}
          {% assign collectionSlice = collection.title | slice: 0 %}
            
-            
           
           {% if collectionSlice == '*' %}
-         
-             
-             <p class="label-filter" ><a href=" {{ collection.url }} "> {{ collection.title | remove_first: "*" }}</a> </p>
 
-              <div class="colection-hover-img"> 
-              <img class="hover-img" src=" {{ collection.image | img_url: 'master' }}" loading = 'lazy' width="500" height="auto" alt="">
+            {% if thisCollection == collection.title %}
+
+            <div class='label-container '> 
+
+                 <a href=" {{ collection.url }} "> <p class="grey" > {{ collection.title | remove_first: "*" }} </p>  </a> 
+                <p class="label">  [ {{ collection.all_products_count }} ] </p>
 
               </div>
-          {% endif %} 
+
+            {% else %}
+         
+              <div class='label-container '> 
+
+                 <a href=" {{ collection.url }} "> <p class="" > {{ collection.title | remove_first: "*" }} </p>  </a> 
+                <p class="label">  [ {{ collection.all_products_count }} ] </p>
+
+              </div>
+
+            {% endif %} 
+            {% endif %} 
 
       {% endfor %}
 
- 
+     </div> 
 
 
     <ul>
