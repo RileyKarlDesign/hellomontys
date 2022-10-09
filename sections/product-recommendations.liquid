@@ -45,6 +45,8 @@
 
 
 {% javascript %}
+
+
 var loadProductRecommendationsIntoSection = function() {
   // Look for an element with class 'product-recommendations'
   var productRecommendationsSection = document.querySelector(".product-recommendations");
@@ -63,6 +65,8 @@ var loadProductRecommendationsIntoSection = function() {
       var container = document.createElement("div");
       container.innerHTML = request.response;
       productRecommendationsSection.parentElement.innerHTML = container.querySelector(".product-recommendations").innerHTML;
+
+      addScroll()
     }
   };
   request.send();
@@ -78,10 +82,6 @@ document.addEventListener("shopify:section:load", function(event) {
 });
 // Fetching the recommendations on page load
 loadProductRecommendationsIntoSection();
-
-
-
-
 
 
 {% endjavascript %}

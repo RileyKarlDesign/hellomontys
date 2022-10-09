@@ -1,4 +1,4 @@
-console.log( 'connected ')
+
 
 
 const atcBtn = document.querySelector('.js-atc')
@@ -17,31 +17,56 @@ atcBtn.addEventListener('click', () => {
 
 // labels -----------------------------------------------------
 
-const labels = document.querySelector('.label-draw');
-const labelBtn = document.querySelector('.js-label-draw-btn');
-const exitLabels = document.querySelector('.exit-labels')
+// const elLabels = document.querySelector('.label-draw');
+// const labelBtn = document.querySelector('.js-label-draw-btn');
+// const exitLabels = document.querySelector('.exit-labels')
 
 
 
-labelBtn.addEventListener('click', () =>{
+// labelBtn.addEventListener('click', () =>{
 
-	if( labels.classList.contains('labels-open') ){
-		labels.classList.remove('labels-open')
-	}else{
-		labels.classList.add('labels-open')
-	}
+// 	if( elLabels.classList.contains('labels-open') ){
+// 		elLabels.classList.remove('labels-open')
+// 	}else{
+// 		elLabels.classList.add('labels-open')
+// 	}
 	
-});
+// });
 
-exitLabels.addEventListener('click', () =>{
+// exitLabels.addEventListener('click', () =>{
 
-	if( labels.classList.contains('labels-open') ){
-		labels.classList.remove('labels-open')
-	}else{
-		labels.classList.add('labels-open')
-	}
+// 	if( elLabels.classList.contains('labels-open') ){
+// 		elLabels.classList.remove('labels-open')
+// 	}else{
+// 		elLabels.classList.add('labels-open')
+// 	}
 	
-});
+// });
+
+// related products scroll -------------------------------------
+
+
+function addScroll() {
+  
+	const recoScroll = document.querySelector('.recomended-product')
+	  
+	console.log('scroll added')
+	
+	  recoScroll.addEventListener("wheel", (evt) => {
+		  evt.preventDefault();
+		  recoScroll.scrollLeft += evt.deltaY;
+	  })
+	
+  }
+  
+
+
+
+	
+
+	
+
+
 
 
 
