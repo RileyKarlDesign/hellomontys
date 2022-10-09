@@ -127,10 +127,10 @@
         
         @media ( hover: hover ){
 
-            &:hover{
+            &:hover{ 
                 color: tools.$grey !important;
                 border-bottom: tools.$standard-border ;
-                padding-left: 5px;
+                padding-left: 5px; 
             }
 
         }

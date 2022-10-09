@@ -1464,8 +1464,10 @@ input {
 .active p {
   color: rgb(167, 167, 167) !important;
 }
-.active:hover {
-  color: rgb(167, 167, 167) !important;
+@media (hover: hover) {
+  .active:hover {
+    color: rgb(167, 167, 167) !important;
+  }
 }
 
 .collection-filters {
@@ -1524,8 +1526,10 @@ input {
     height: 50vh;
   }
 }
-.collection-filters:hover {
-  color: rgb(167, 167, 167);
+@media (hover: hover) {
+  .collection-filters:hover {
+    color: rgb(167, 167, 167);
+  }
 }
 .collection-filters .count {
   min-width: max-content;
@@ -1538,13 +1542,17 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   transition: ease-in-out 0.2s;
 }
-.collection-filters .collection-filter:hover {
-  color: rgb(167, 167, 167) !important;
-  border-bottom: 1px solid rgba(19, 12, 12, 0.833);
-  padding-left: 5px;
+@media (hover: hover) {
+  .collection-filters .collection-filter:hover {
+    color: rgb(167, 167, 167) !important;
+    border-bottom: 1px solid rgba(19, 12, 12, 0.833);
+    padding-left: 5px;
+  }
 }
-.collection-filter:hover {
-  color: rgba(0, 0, 0, 0.092);
+@media (hover: hover) {
+  .collection-filter:hover {
+    color: rgba(0, 0, 0, 0.092);
+  }
 }
 
 #recommendations {
