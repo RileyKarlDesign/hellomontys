@@ -1,17 +1,11 @@
-// window.addEventListener('load', function(event) {
-// 	let vh = window.innerHeight * 0.01;
-// 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+const documentHeight = () => {
+	const doc = document.documentElement
+	doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+   }
+   window.addEventListener('resize', documentHeight)
+   documentHeight()
 
-	
-//   }, true);
-
-// window.addEventListener('resize', function(event) {
-//   let vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-  
-// }, true);
-
+   
 // Collections Page  filter Scrolling ---------------------------------------
 
 const filterWrap = document.querySelector('.scroll-wrap')

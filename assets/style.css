@@ -1360,7 +1360,7 @@ input {
 }
 .cart-open .nav-content {
   height: calc(100% - 2.5em);
-  height: -webkit-fill-available;
+  height: var(--doc-height);
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46);
@@ -2014,7 +2014,8 @@ html {
 body {
   background-color: black;
   padding: 20px;
-  height: webkit-fill-available;
+  height: 100vh;
+  height: var(--doc-height);
   overflow-x: hidden;
 }
 @media (max-width: 1000px) {

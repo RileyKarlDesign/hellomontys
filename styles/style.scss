@@ -75,7 +75,8 @@ html{
 body{
     background-color:black;
       padding: 20px ; 
-      height: webkit-fill-available;
+      height: 100vh;
+      height: var(--doc-height);
 
       @media (max-width: 1000px) {
         padding: 0.7em;
