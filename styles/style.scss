@@ -25,7 +25,7 @@ html{
  
     scroll-snap-type: y mandatory;
 
-    height: webkit-fill-available;
+    height: var(--doc-height);
   
 }
 
