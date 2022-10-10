@@ -996,6 +996,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-direction: column-reverse;
+    gap: 0;
   }
 }
 
@@ -1029,7 +1030,7 @@ a {
   display: grid;
   grid-auto-rows: 50vw;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -1049,10 +1050,22 @@ a {
 }
 .product-page-images .img-index {
   border-radius: 10px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.065);
+  mix-blend-mode: difference;
+}
+@media (max-width: 700px) {
+  .product-page-images .img-index {
+    position: absolute;
+    top: 7px;
+    bottom: -10px;
+  }
 }
 .product-page-images img {
   width: 100%;
-  height: calc(100% - 10px);
+  height: 100%;
   object-fit: cover;
 }
 @media (max-width: 700px) {
@@ -1124,12 +1137,17 @@ a {
 .swiper-slide {
   width: 100%;
   height: 100%;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 .swiper-slide img {
   width: 100%;
-  height: calc(100% - 30px);
+  height: 95%;
   object-fit: cover;
+}
+@media (max-width: 80px) {
+  .swiper-slide img {
+    height: calc(100% - 30px);
+  }
 }
 
 .single-metafield {
@@ -1193,6 +1211,7 @@ a {
 }
 .metafeild-notes .metafield-title {
   padding-bottom: 10px;
+  display: flex;
 }
 .metafeild-notes .metafield-title i {
   font-size: 0.8em;
@@ -1206,9 +1225,12 @@ a {
 .warning-title {
   border-bottom: 1px solid rgba(0, 0, 0, 0.228);
   padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .warning-title i {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  padding-top: 2px;
   color: rgba(19, 12, 12, 0.833);
 }
 
@@ -1233,8 +1255,10 @@ a {
   color: rgb(167, 167, 167);
   grid-template-columns: 1fr 2fr;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 optgroup * {
@@ -1523,7 +1547,7 @@ input {
 @media (max-width: 800px) {
   .collection-filters img {
     grid-column: 1/5;
-    height: 50vh;
+    height: 71vh;
   }
 }
 @media (hover: hover) {
@@ -1859,6 +1883,7 @@ input {
 .label-draw .label-link-list {
   overflow: scroll;
   height: 100%;
+  padding-bottom: 5em;
 }
 .label-draw .label-draw-content-grid {
   height: 100%;
@@ -1868,7 +1893,7 @@ input {
   transition: ease all 0.3s;
   z-index: 5;
   padding: 10px;
-  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media (max-width: 1000px) {
   .label-draw .label-draw-content-grid {
@@ -1888,6 +1913,11 @@ input {
   pointer-events: unset;
   height: 100%;
 }
+@media (max-width: 800px) {
+  .label-draw .label-draw-links {
+    border-radius: 5px 5px 0 0;
+  }
+}
 
 #shopify-section-nz-labels {
   height: 100%;
@@ -1901,6 +1931,7 @@ input {
   max-height: 100%;
   text-align: left;
   padding: 10px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
 }

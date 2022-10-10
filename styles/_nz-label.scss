@@ -147,6 +147,8 @@
         
         overflow: scroll;
         height: 100%;
+        padding-bottom: 5em;
+        
     
     }
     
@@ -164,7 +166,8 @@
         z-index: 5;
         
         padding: tools.$half;
-        padding-top: 10px;
+        padding-bottom: 10px;
+        
 
         @media( max-width: 1000px ){
         
@@ -188,6 +191,12 @@
         border-radius:tools.$radius;
         pointer-events: unset;
         height: 100%;
+
+
+        @media( max-width: 800px ){
+        
+            border-radius:tools.$radius tools.$radius 0 0;
+        }
         
     }
 }
@@ -208,6 +217,7 @@
             max-height: 100%;
             text-align: left;
             padding: tools.$half;
+            padding-bottom: 0;
 
             display: flex;
             flex-direction: column;
