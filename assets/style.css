@@ -380,7 +380,7 @@ input:disabled + label {
   position: fixed;
   left: 0;
   right: 0;
-  top: calc(100% - 2.5em);
+  top: calc(var(--doc-height) - 2.5em);
   z-index: 200;
   display: flex;
   align-items: center;
