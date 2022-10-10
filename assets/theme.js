@@ -1,16 +1,16 @@
-window.addEventListener('load', function(event) {
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
+// window.addEventListener('load', function(event) {
+// 	let vh = window.innerHeight * 0.01;
+// 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 	
-  }, true);
+//   }, true);
 
-window.addEventListener('resize', function(event) {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+// window.addEventListener('resize', function(event) {
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
   
-}, true);
+// }, true);
 
 // Collections Page  filter Scrolling ---------------------------------------
 
