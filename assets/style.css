@@ -1359,8 +1359,7 @@ input {
   border-top: 0;
 }
 .cart-open .nav-content {
-  height: calc(100% - 2.5em);
-  height: var(--doc-height);
+  height: calc(var(--doc-height) - 2.5em);
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46);
