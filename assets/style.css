@@ -1350,7 +1350,6 @@ input {
 
 .cart-open {
   height: 100vh;
-  height: -webkit-fill-available;
   top: 0;
   padding-top: 15vh;
   padding-bottom: 15vh;
@@ -1361,6 +1360,7 @@ input {
 }
 .cart-open .nav-content {
   height: calc(100% - 2.5em);
+  height: -webkit-fill-available;
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46);
