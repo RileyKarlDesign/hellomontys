@@ -46,7 +46,8 @@ html{
     font-family: arial, helvetica, sans-serif;
 
     ::selection {
-        background: rgba(255, 119, 0, 0.781);
+        background: tools.$green;
+        color: tools.$white;
       }
   }
 
