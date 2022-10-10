@@ -1,4 +1,12 @@
+window.addEventListener('load', function(event) {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, true);
 
+window.addEventListener('resize', function(event) {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}, true);
 
 // Collections Page  filter Scrolling ---------------------------------------
 
