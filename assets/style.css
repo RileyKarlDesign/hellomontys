@@ -384,7 +384,6 @@ input:disabled + label {
   z-index: 200;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   transition: ease-in-out 0.2s;
 }
@@ -1330,6 +1329,7 @@ input {
 
 .cart-close {
   top: calc(100vh - 2.5em) !important;
+  padding-top: 0 !important;
 }
 .cart-close .nav-module {
   background-color: rgba(255, 252, 242, 0.905) !important;
@@ -1349,17 +1349,17 @@ input {
 }
 
 .cart-open {
-  top: 15vh;
+  height: 100vh;
+  top: 0;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
 }
 .cart-open .cart {
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-top: 0;
 }
-.cart-open .nav-wrapper {
-  height: 70vh;
-}
 .cart-open .nav-content {
-  height: 10em;
+  height: calc(100% - 2.5em);
 }
 .cart-open .nav-module {
   background-color: rgb(255, 199, 46);
@@ -1373,7 +1373,7 @@ input {
 }
 
 .cart-open .cart {
-  height: 70vh;
+  height: 100%;
   padding-top: 0;
   background-color: rgb(255, 199, 46) !important;
 }

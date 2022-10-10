@@ -51,6 +51,7 @@ input{
 
 .cart-close{
     top: calc( 100vh - 2.5em ) !important;
+    padding-top: 0 !important;
     .nav-module{
         background-color: tools.$white-50 !important;
     }
@@ -84,26 +85,24 @@ input{
     }
 }
 
-.cart-open{
-    top: 15vh  ;
 
+
+.cart-open{
+    height: 100vh;
+    top: 0;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+   
     .cart{
         border: 1px solid rgba(0, 0, 0, 0.228);
         border-top: 0;
+        
     }
     
-   .nav-wrapper{
-    
-    height: 70vh;
 
-
-   
-
-
-   }
     
     .nav-content{
-        height:10em;
+        height: calc( 100% - 2.5em);
         
     }
 
@@ -121,7 +120,7 @@ input{
 
 .cart-open .cart{
     
-    height: 70vh ;
+    height: 100% ;
     
     padding-top:0;
     background-color:tools.$yellow !important;

@@ -1,11 +1,15 @@
 window.addEventListener('load', function(event) {
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+	
   }, true);
 
 window.addEventListener('resize', function(event) {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  
 }, true);
 
 // Collections Page  filter Scrolling ---------------------------------------
@@ -256,14 +260,16 @@ pc.forEach( i => {
 
 
 
+let Cards = document.querySelectorAll('.product-card')
 
 
+if(Cards){
 enterView({
 	
 	selector: '.product-card',
 
 	enter: function(el) {
-		console.log( ' cards en')
+		
 		el.classList.add('card-entered');
 		
 		
@@ -275,7 +281,7 @@ enterView({
 	
 });
 
-
+}
 
 
 
