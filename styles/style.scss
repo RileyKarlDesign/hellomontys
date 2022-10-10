@@ -75,7 +75,7 @@ html{
 body{
     background-color:black;
       padding: 20px ; 
-      
+      height: var(--doc-height);
      
 
       @media (max-width: 1000px) {
