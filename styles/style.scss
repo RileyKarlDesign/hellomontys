@@ -24,6 +24,8 @@ html{
   scroll-behavior: smooth;
  
     scroll-snap-type: y mandatory;
+
+    height: webkit-fill-available;
   
 }
 
@@ -73,6 +75,7 @@ html{
 body{
     background-color:black;
       padding: 20px ; 
+      height: webkit-fill-available;
 
       @media (max-width: 1000px) {
         padding: 0.7em;
