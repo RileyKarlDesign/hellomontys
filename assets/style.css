@@ -1971,7 +1971,6 @@ input {
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  height: var(--doc-height);
 }
 
 .wrapper {
@@ -2013,7 +2012,6 @@ html {
 body {
   background-color: black;
   padding: 20px;
-  height: var(--doc-height);
   overflow-x: hidden;
 }
 @media (max-width: 1000px) {
@@ -2023,7 +2021,7 @@ body {
 }
 @media (max-width: 700px) {
   body {
-    padding: 3em 0.7em;
+    padding: 3em 0.7em 3em 0.7em;
   }
 }
 
@@ -2076,9 +2074,4 @@ body {
   height: fit-content;
   margin: auto;
   border-radius: 5px;
-}
-@media (max-width: 700px) {
-  #content {
-    margin-bottom: 3em;
-  }
 }

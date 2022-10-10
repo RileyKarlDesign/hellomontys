@@ -25,7 +25,7 @@ html{
  
     scroll-snap-type: y mandatory;
 
-    height: var(--doc-height);
+    
   
 }
 
@@ -75,7 +75,7 @@ html{
 body{
     background-color:black;
       padding: 20px ; 
-      height: var(--doc-height);
+      
      
 
       @media (max-width: 1000px) {
@@ -84,7 +84,7 @@ body{
     }
 
     @media (max-width: 700px) {
-      padding: 3em 0.7em;
+      padding: 3em 0.7em 3em 0.7em;
 
   }
     overflow-x: hidden
@@ -161,6 +161,8 @@ body{
 .ticker-bottom{
   height: 1px;
   width: 100%;
+
+
  
 }
 
@@ -193,10 +195,7 @@ body{
     // overflow: hidden;
     // max-width: 1300px;
 
-    @media (max-width: 700px) {
-      margin-bottom: 3em ;
-
-  }
+   
 }
 
 .content-load{
