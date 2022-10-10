@@ -72,6 +72,10 @@ select::-ms-expand {
   color: rgb(167, 167, 167) !important;
 }
 
+a, .link-btn {
+  cursor: pointer;
+}
+
 h1 {
   font-size: 26px;
   line-height: 32px;
@@ -1821,7 +1825,8 @@ input {
 }
 @media (max-width: 800px) {
   .labels-open {
-    top: 30vh !important;
+    top: 13vh !important;
+    padding: 10px;
   }
 }
 
@@ -1876,8 +1881,10 @@ input {
     top: calc(100vh + 2.5em);
     width: calc(100% - 20px);
     margin-top: 0px;
-    height: calc(70vh + 10px) !important;
+    height: calc(var(--doc-height) - 10vh - 10px) !important;
     left: 10px;
+    padding: 10px;
+    z-index: 201;
   }
 }
 .label-draw .label-link-list {
@@ -1910,7 +1917,6 @@ input {
   background: rgb(63, 156, 71);
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-radius: 5px;
-  pointer-events: unset;
   height: 100%;
 }
 @media (max-width: 800px) {
@@ -1984,7 +1990,8 @@ html {
   font-family: arial, helvetica, sans-serif;
 }
 * ::selection {
-  background: rgba(255, 119, 0, 0.781);
+  background: rgb(63, 156, 71);
+  color: rgb(255, 252, 242);
 }
 
 /* width */
