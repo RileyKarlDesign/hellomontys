@@ -67,6 +67,8 @@
         background-color: tools.$yellow;
         
     }
+
+   
     
 }
 
@@ -222,6 +224,15 @@
         padding-top: 0;
         border: tools.$standard-border-grey;
 
+    }
+
+    @media ( max-width: 600px ){
+
+        .nav-module{
+            border-radius: tools.$radius  tools.$radius 0 0 !important;
+            border-bottom: 0 !important;
+        }
+        
     }
     
 }
