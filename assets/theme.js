@@ -66,6 +66,39 @@ if(filterWrap){
 
 // Footer / Header / Cart --------------------------------------
 
+const footHeight = () => {
+
+	const foot = document.querySelector('#shopify-section-footer').clientHeight
+	console.log( foot )
+
+	const doc = document.documentElement
+	doc.style.setProperty('--foot-height', `${foot}px`)
+
+	
+
+	
+   }
+   
+   window.addEventListener('resize', footHeight)
+
+   const LoadFootHeight = () => {
+	
+	const foot = document.querySelector('#shopify-section-footer').clientHeight
+	console.log( foot )
+
+	const doc = document.documentElement
+	doc.style.setProperty('--foot-height', `${foot}px`)
+
+	
+
+	
+   }
+   window.addEventListener('load', footHeight)
+   
+   footHeight()
+
+
+
 const foot = document.querySelector('.footer')
 const nav = document.querySelector('.nav-wrapper')
 const cartBtn = document.querySelector('.cart-btn')
@@ -78,9 +111,12 @@ function tidyclose (){
 		nav.classList.remove('cart-open')
   		nav.classList.remove('cart-close')
 	}else{
-		nav.classList.remove('cart-open')
-  		nav.classList.remove('cart-close-bottom')
-		nav.classList.add('nav-bottom-fixed')
+		// nav.classList.add('nav-bottom-fixed')
+		// nav.classList.remove('cart-open')
+		nav.classList.remove('cart-bottom-close')
+		 
+		
+  		
 		
 		
 	}
@@ -92,26 +128,41 @@ function tidyclose (){
 
 	console.log('click')
 
-	if(nav.classList.contains('cart-open')){
-	  	if(!bottom){
-		
-		nav.classList.add('cart-close')
-	  	setTimeout(tidyclose,300)
-		} else{
-			
-			nav.classList.remove('cart-open')
-  		
-		nav.classList.add('nav-bottom-fixed')
-	  		
+	console.log(bottom)
+	
 
-			
-		}
-
-	}else{
-	  nav.classList.add('cart-open')
-	  nav.classList.remove('nav-bottom-fixed')
+	if(!nav.classList.contains('nav-open') && bottom ){
+	  
+		nav.classList.add('nav-open')
+		nav.classList.add('nav-bottom-open')
 		
+
+	} else if(!nav.classList.contains('nav-open')) {
+
+		nav.classList.add('nav-open')
+
+	} else if(nav.classList.contains('nav-open') && bottom ) {
+		
+		console.log('here')
+
+		nav.classList.remove('nav-open')
+		nav.classList.remove('nav-bottom-open')
+
+	}else if( nav.classList.contains('nav-open') ){
+
+		nav.classList.remove('nav-open')
+
 	}
+ })
+
+
+
+
+
+ cartBtn.addEventListener('click', function (){
+
+	
+
 	
  })
 
@@ -123,13 +174,15 @@ function tidyclose (){
 
 
 enterView({
-	selector: '.ticker-bottom',
+	selector: '.footer',
 	enter: function(el) {
 
 		bottom = true;
 
-		if(!nav.classList.contains('cart-open')){
-		 nav.classList.add('nav-bottom-fixed');
+		nav.classList.add('nav-bottom-fixed');
+
+		if(nav.classList.contains('nav-open')){
+		 nav.classList.add('nav-bottom-open');
 		}
 		
 		
@@ -139,6 +192,11 @@ enterView({
   exit: function(el) {
 		bottom = false;
 		nav.classList.remove('nav-bottom-fixed');
+		
+		
+		if(nav.classList.contains('nav-open')){
+			nav.classList.remove('nav-bottom-open');
+		   }
 	},
 });
 
