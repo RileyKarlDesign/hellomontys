@@ -191,6 +191,9 @@
     .cart{
         height: calc( 100% - 2.5em - 10px - 10%  ) !important;
         
+        @media( max-width: 1000px){
+            height: calc( 100% - 2.5em - 10px - 5%  ) !important;
+        }
     }
 
 }
