@@ -1952,6 +1952,12 @@ input {
   padding-bottom: 0vh !important;
   transition: ease all 0.3s;
 }
+@media (max-width: 900px) {
+  .nav-bottom-fixed .nav-module {
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+  }
+}
 .nav-bottom-fixed .cart {
   height: 0 !important;
   transition: ease-in-out 0.2s;

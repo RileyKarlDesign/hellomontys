@@ -94,6 +94,15 @@
     padding-bottom: 0vh !important;
     transition: ease all 0.3s;
 
+    @media ( max-width: 900px ){
+
+        .nav-module{
+            border-radius: tools.$radius  tools.$radius 0 0;
+            border-bottom: 0;
+        }
+        
+    }
+
     
     .cart{
         height:0 !important;
