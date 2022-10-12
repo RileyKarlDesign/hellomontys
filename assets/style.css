@@ -320,7 +320,7 @@ input:disabled + label {
   transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
   position: absolute;
   height: 2.5rem;
-  z-index: 200;
+  z-index: 20000;
 }
 .header-top a {
   line-height: 0 !important;
@@ -1972,6 +1972,7 @@ input {
   width: 21em;
   transition: ease all 0.3s;
   height: 100% !important;
+  position: relative;
 }
 @media (max-width: 1000px) {
   .nav-content {
@@ -2010,6 +2011,30 @@ input {
   border-right: 0;
 }
 
+.exit-cart {
+  height: 2em;
+  width: 2.5rem !important;
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  right: 0em;
+  top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 252, 242);
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  border-left: 0;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  z-index: 200;
+}
+.exit-cart i {
+  transition: ease-in-out 0.2s;
+}
+.exit-cart i:hover {
+  rotate: 90deg;
+}
+
 .nav-bottom-open {
   top: 30%;
   justify-content: flex-end;
@@ -2031,13 +2056,24 @@ input {
   padding-top: 15vh;
   padding-bottom: 15vh;
 }
+.nav-open .exit-cart {
+  right: calc(-2.5em + 1px);
+  top: 3em;
+  background-color: rgb(255, 252, 242);
+  opacity: 100%;
+  z-index: 200;
+}
+.nav-open .nav-module {
+  background-color: rgb(255, 252, 242);
+}
 .nav-open .cart {
   height: 100%;
   padding: 10px;
   padding-top: 0;
   border: 1px solid rgba(0, 0, 0, 0.228);
+  background-color: rgb(255, 252, 242) !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .nav-open .nav-module {
     border-radius: 5px 5px 0 0 !important;
     border-bottom: 0 !important;
