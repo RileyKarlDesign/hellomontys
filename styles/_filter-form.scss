@@ -386,6 +386,10 @@
     // }
     }
 
+   
+        
+  
+
 
     .filter-group{
         
@@ -405,7 +409,10 @@
          
         transition: ease all 1s;
         
-        
+        @media( max-width: 1000px ){
+
+            grid-template-columns: 4fr 8fr;
+        }
         
     }
 
@@ -600,6 +607,8 @@
         .filter-foot-wrapper{
             width: 100%;
             padding-top: 10px;
+            display: flex; 
+            justify-content: flex-end;
 
             .hero-btn{
                 width: 50%;

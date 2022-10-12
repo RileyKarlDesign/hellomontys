@@ -139,6 +139,8 @@ const labels = document.querySelector('.label-draw');
 const labelBtn = document.querySelector('.js-label-draw-btn');
 const exitLabels = document.querySelector('.exit-labels')
 
+if(labelBtn){
+
 
 
 labelBtn.addEventListener('click', () =>{
@@ -160,6 +162,8 @@ exitLabels.addEventListener('click', () =>{
 	}
 	
 })
+
+}
 
 enterView({
 	selector: '.ticker-top-two',

@@ -18,14 +18,19 @@
     
 }
 
+
+
+
 #add-to-cart-button:disabled {
    opacity: 60%;
-
+    
    &:hover{
          background-color: tools.$hovercolor !important; 
          border: tools.$standard-border-grey !important;      
     }
 }
+
+
 
 .hero-btn{  
 

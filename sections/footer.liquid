@@ -1,18 +1,73 @@
 
+        
+        <div class= "nav-space">
+          <div class="nav-wrapper">
+              <div class="nav-content">
+                <div class="nav-module  ">
+
+
+                    <div class="head-link-list">
+                      {% for link in linklists.main-menu.links %}
+
+                        {% if link.title == "Aotearoa Labels" %}
+                          <a class="link-btn js-label-draw-btn" {% if link.active %} class="link-btn-active js-labels"{% endif %} ">
+                            <p>{{ link.title }}
+                            </p>
+
+                          </a>
+                        {% else %}
+                          <a class="link-btn" {% if link.active %} class="link-btn-active"{% endif %} href="{{ link.url }}">
+                            <p>{{ link.title }}
+                            </p>
+                          </a>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                    <div class="link-btn cart-btn">
+
+
+                      <p>Cart (
+                        <span data-ajax-cart-bind-state="cart.item_count">
+
+                          {{ cart.item_count }}
+                        </span>
+                        )</p>
+
+
+
+                    </div>
+
+
+                </div>
+
+                {% render 'my-cart' %}
+
+              </div>
+          </div> 
+        </div> 
+      </div> 
+        
+            
+          
+        
+        
+        
+ 
+
 
 <div class="footer">
 
   
 
   <div class="footer-top">
-      <div class="contact">
+     
 
         <div class="email">
           <p class="label">Email</p>
           <p> hello@montys.com </p>
           <p> (+64) 27 566 344 </p>
         </div>
-      </div>
+      
 
       <div class="adress">
         <p class="label">Adress</p>
@@ -25,7 +80,7 @@
         <p> Facebook </p>
       </div>
         
-      </div>
+      
   </div>
  
 
@@ -35,6 +90,9 @@
 
     </div>
 </div>
+</div>
+</div>
+
   
   
   

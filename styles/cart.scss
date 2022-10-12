@@ -49,114 +49,65 @@ input{
     
 }
 
-.cart-close{
-    top: calc( 100vh - 2.5em ) !important;
-    padding-top: 0 !important;
-    .nav-module{
-        background-color: tools.$white-50 !important;
-    }
-
-    @media ( max-width: 900px ){
-        top: calc( 100vh - 3.5em ) !important;
-
-        .cart{
-
-            height : 0 !important;
-        }
-    }
-}
-
-.cart-close-bottom{
-//     position: absolute;
-//    bottom: calc( 5vh - 2em ) !important;
-    
-    // .cart{
-    //     height: 0 !important;
-    //     overflow: hidden !important;
-    //     padding: 0!important;
-    //     opacity: 0 !important;
-    // }
-    
-
-    
-    .nav-module{
-        background-color: tools.$white-50 !important;
-        height: 2.5em !important;
-    }
-}
 
 
-
-.cart-open{
-    height: var(--doc-height);
-    
-    top: 0;
-    padding-top: 15vh;
-    padding-bottom: 15vh;  
-    .cart{
-        border: 1px solid rgba(0, 0, 0, 0.228);
-        border-top: 0;
-        
-    }
-    
-
-    
-    .nav-content{
-        height: calc( 100% - 2.5em);
-        
-    }
-
-    .nav-module{
-        background-color:tools.$yellow ;
-        transition: ease all 0.3;
-        border-bottom: tools.$standard-border-grey;
-
-        @media(max-width: 900px ){
-            border-radius: tools.$radius tools.$radius 0 0 !important;
-            
-        }
-    }
-}
-
-.cart-open .cart{
-    
-    height: 100% ;
-    
-    padding-top:0;
-    background-color:tools.$yellow !important;
-
-    .items{
-        padding:  tools.$half ;
-        padding-top:0;
-        padding-bottom:0;
-    }
-
-    .cart-foot{
-        padding: tools.$half;
-
-    }
-    
-}
-
+//-------- cart inner 
 
 .cart{
     background-color:tools.$white !important;
     
     border-top: 0;
-    max-width: 100%;
+    width: 21em;
    height: 0;
     z-index: 10;
     padding:  0 ;
-    overflow: scroll;
+    transition: ease all 0.3s ;
+    
     // transition: tools.$transition-basic;
-   
-    
-    
-    
     border-radius: 0 0 tools.$radius tools.$radius;
+    position: relative;
+
+    @media ( max-width: 1000px ){
+        width: 19em ;
+    }
     
     @media( max-width: 900px ){
         transition: tools.$transition-basic;
+        transition: ease all 0.1s ;
+    }
+
+    .exit-cart{
+        display: none;
+        position: absolute;
+        left: 50%;
+        height: 0em;
+        width: 0em;
+        transition: ease all 0.3s;
+        padding-top: 0;
+        z-index: 20002;
+        top: 0em;
+        background-color: tools.$yellow;
+        
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 tools.$radius tools.$radius  0;
+        border:tools.$standard-border-grey;
+        border-left: 0;
+
+        i{
+            opacity: 0;
+        }
+        
+
+        .block{
+
+             position: absolute;
+            height: 100%;
+            width: 1em;
+            
+            left: -8px;
+            background-color: tools.$yellow;
+        }
     }
     
 
@@ -185,6 +136,7 @@ input{
     background-color:rgba(255, 0, 0, 0);
     height: 100%;
     overflow: scroll;
+    height: 100% !important;
     
  }
 
@@ -197,25 +149,19 @@ input{
     
     height: min-content;
     position: relative;
-    background-color:tools.$yellow;
-    padding-top:tools.$half;
+
+    
     border-top:tools.$standard-border-grey;
 
     .hero-btn{
-       
+        margin-bottom: 0;
+        margin-top: tools.$half;
         &:hover{
             background-color:rgba(255, 255, 255, 0)
         }
     }
    
 }
-
- .cart-items{
-    
-    height: 100% !important;
-    
- }
-
  .cart-item:nth-child(1){
     border-top: none;
     
@@ -223,7 +169,7 @@ input{
 
  .cart-item{
     width: 100%;
-    height: 15em;
+    height: 13em;
     padding-top: tools.$half;
     padding-bottom: tools.$half;
     
@@ -232,6 +178,9 @@ input{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @media ( max-width: 1000px){
+        height: 12em;
+    }
    
     .item-info{
         padding-left: tools.$half;

@@ -1,5 +1,11 @@
 <div class="cart">
   <!-- sections/my-cart.liquid -->
+
+  <div class="exit-cart">
+          <div class="block"></div> 
+            <i class="fa-solid fa-xmark"></i>
+            
+  </div>
   
   <form  action="{{ routes.cart_url }}" method="post" class="my-cart">
       <!-- data-ajax-cart-section makes the element's HTML update
@@ -88,7 +94,7 @@
               
                   </form>
               
-                  <img class="cart-logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt="">
+                  {% comment %} <img class="cart-logo" src=" {{ 'logo.svg' | asset_url }} " loading="lazy"  width="{{ image.width }}"height="{{ image.height }}" alt=""> {% endcomment %}
           </div>
  </div>
       

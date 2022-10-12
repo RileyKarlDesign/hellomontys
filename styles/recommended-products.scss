@@ -149,6 +149,9 @@ opacity: 100% !important;
 
     .product-card{
 
+       
+
+
 
         @media (max-width: 800px ) {
         width: 50vw;
@@ -159,6 +162,7 @@ opacity: 100% !important;
 
         .product-img{
 
+            height: 28vw;
 
             @media (max-width: 800px ) {
             height: 65vw;
