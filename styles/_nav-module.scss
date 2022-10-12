@@ -63,7 +63,7 @@
     height: 100%;
 
     .cart{
-        height: 70%;
+        height: 100%;
         background-color: tools.$yellow;
         
     }
@@ -113,6 +113,7 @@
     
     width: 21em;
     transition: ease all 0.3s;
+    height: 100% !important;
     
 
     @media( max-width: 1000px){
@@ -183,11 +184,13 @@
 .nav-bottom-open{
 
     //background-color: red;
-    
-    
+    top: 30%;
+    justify-content: flex-end;
+    height: calc( var(--doc-height) - var(--foot-height) ) !important;
+    padding-top: 10% !important;
     .cart{
-        height: 100% !important;
-
+        height: calc( 100% - 2.5em - 10px - 10%  ) !important;
+        
     }
 
 }
@@ -198,10 +201,13 @@
     height:var(--doc-height) ;
     top: 0vh;
     padding-top: 15vh;
+    padding-bottom: 15vh;
 
     .cart{
-        height: 70vh;
+        height:100%;
+        
         padding: tools.$half;
+        padding-top: 0;
         border: tools.$standard-border-grey;
 
     }

@@ -86,6 +86,11 @@ h5 {
   display: flex;
 }
 
+.recomended-wrapper {
+  height: 80vh;
+  background-color: red;
+}
+
 #recommendations {
   min-height: 80vh;
 }
