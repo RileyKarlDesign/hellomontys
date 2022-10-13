@@ -8,7 +8,7 @@ const documentHeight = () => {
    }
    window.addEventListener('resize', documentHeight)
    documentHeight()
-
+ 
    
 // Collections Page  filter Scrolling ---------------------------------------
 
