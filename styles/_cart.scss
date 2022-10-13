@@ -78,7 +78,7 @@ input{
     padding:  0 ;
     transition: ease all 0.3s ;
     position: relative;
-    top: -3px;    
+    top: -2px;    
     // transition: tools.$transition-basic;
     border-radius: 0 0 tools.$radius tools.$radius;
     position: relative;
@@ -88,6 +88,7 @@ input{
     }
     
     @media( max-width: 900px ){
+        width: 19em ;
         transition: tools.$transition-basic;
         transition: ease all 0.1s ;
     }
