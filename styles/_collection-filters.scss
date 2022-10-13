@@ -10,8 +10,14 @@
     @media ( hover:hover ){
         &:hover{
             color: tools.$grey !important;
+            padding-left: 0 !important;
+           
             
-            
+        }
+
+        .collection-filter{
+            padding-left: 0 !important;
+            border-bottom: tools.$standard-border-grey !important;
         }
     }
 }

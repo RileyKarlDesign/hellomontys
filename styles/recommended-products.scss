@@ -149,17 +149,23 @@ opacity: 100% !important;
     
     
 
-    
+    a{
+        width: 100%;
+
+        @media (max-width: 800px ) {
+            width: 70vw;
+        }
+    }
     
 
     .product-card{
 
        
-
+        width: 100% !important;
 
 
         @media (max-width: 800px ) {
-        width: 50vw;
+        width: 45vw !important;
         height: fit-content;
         }
         
@@ -167,10 +173,10 @@ opacity: 100% !important;
 
         .product-img{
 
-            height: 28vw;
+            height: 30vw;
 
             @media (max-width: 800px ) {
-            height: 65vw;
+            height: 60vw;
             }
         }
 

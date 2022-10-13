@@ -186,17 +186,28 @@ h5 {
     height: fit-content;
   }
 }
+.recomended-product a {
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .recomended-product a {
+    width: 70vw;
+  }
+}
+.recomended-product .product-card {
+  width: 100% !important;
+}
 @media (max-width: 800px) {
   .recomended-product .product-card {
-    width: 50vw;
+    width: 45vw !important;
     height: fit-content;
   }
 }
 .recomended-product .product-card .product-img {
-  height: 28vw;
+  height: 30vw;
 }
 @media (max-width: 800px) {
   .recomended-product .product-card .product-img {
-    height: 65vw;
+    height: 60vw;
   }
 }

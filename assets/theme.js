@@ -1,3 +1,7 @@
+
+
+
+
 const documentHeight = () => {
 	const doc = document.documentElement
 	doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
@@ -102,8 +106,36 @@ const footHeight = () => {
 const foot = document.querySelector('.footer')
 const nav = document.querySelector('.nav-wrapper')
 const cartBtn = document.querySelector('.cart-btn')
+let cartExit = document.querySelector('.exit-cart')
+
 
 let bottom = false;
+
+if(nav){
+	console.log('.exit-cart')
+}
+
+nav.addEventListener('click', function(){
+
+	if(nav.classList.contains('nav-open')){
+		nav.classList.remove('nav-open')
+		nav.classList.add('nav-open')
+	}
+
+})
+
+cartExit.addEventListener( 'click', function (){
+
+	nav.classList.remove('nav-open')
+	nav.classList.remove('nav-bottom-open')
+
+ })
+
+ 
+
+
+
+
 
 function tidyclose (){
 
@@ -124,6 +156,9 @@ function tidyclose (){
 }
 
 
+
+
+
  cartBtn.addEventListener('click', function (){
 
 	console.log('click')
@@ -135,6 +170,7 @@ function tidyclose (){
 	  
 		nav.classList.add('nav-open')
 		nav.classList.add('nav-bottom-open')
+		
 		
 
 	} else if(!nav.classList.contains('nav-open')) {
@@ -156,16 +192,12 @@ function tidyclose (){
  })
 
 
-
-
-
  cartBtn.addEventListener('click', function (){
 
 	
 
 	
  })
-
 
 
 
@@ -343,9 +375,9 @@ enterView({
 const filterForm = document.querySelector('.filter-form')
 const filterLabel = document.querySelectorAll('.filter-title')
 
-if(filterLabel){
 
-	for(  i of filterLabel ){
+
+	for( const i of filterLabel ){
 
 		 i.addEventListener('click', () => {
 
@@ -362,7 +394,7 @@ if(filterLabel){
 		})
 
 }
-}
+
 
 
 

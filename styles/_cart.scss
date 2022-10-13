@@ -36,6 +36,21 @@ input{
   }
 
 
+  .cart-empty{
+
+    height: 100%;
+    //background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .empty-wrapper{
+    height: 100%;
+  }
+
 .my-cart{
     height: 100%;
     transition: tools.$transition-basic;
@@ -128,7 +143,7 @@ input{
 .items{
     
     overflow: hidden;
-    
+    height: 100%;
     
 }
 

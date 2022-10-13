@@ -2,9 +2,7 @@
 @use 'tools';
 
 
-.active {
-    opacity: 50%;
-}
+
 
 .slide-header {
     display: flex;
@@ -286,4 +284,44 @@
 
     }
 
+}
+
+
+
+
+.label-link-list{
+
+.active {
+    
+    
+    opacity: 50% !important;
+   
+    p{
+        color: tools.$black !important;
+    }
+    @media( hover:  hover ){
+
+
+        &:hover{
+
+            padding-left: 0 !important;
+            border-bottom: unset !important;
+            border-bottom: tools.$standard-border-grey !important;
+            
+            a{
+                color: tools.$black !important;
+                border-bottom: none !important;
+            }
+            p{
+                color: tools.$black !important;
+            }
+
+            
+        }
+
+        
+    }
+
+    
+}
 }

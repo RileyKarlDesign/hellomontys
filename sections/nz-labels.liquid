@@ -24,9 +24,9 @@
 
             {% if thisCollection == collection.title %}
 
-            <div class='label-container '> 
+            <div class='label-container active '> 
 
-                 <a> <p class="active" > {{ collection.title | remove_first: "*" }} </p>  </a> 
+                 <a> <p > {{ collection.title | remove_first: "*" }} </p>  </a> 
                 <p class="label">  [ {{ collection.all_products_count }} ] </p>
 
               </div>
