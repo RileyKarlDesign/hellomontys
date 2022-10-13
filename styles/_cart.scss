@@ -77,7 +77,8 @@ input{
     z-index: 10;
     padding:  0 ;
     transition: ease all 0.3s ;
-    
+    position: relative;
+    top: -3px;    
     // transition: tools.$transition-basic;
     border-radius: 0 0 tools.$radius tools.$radius;
     position: relative;

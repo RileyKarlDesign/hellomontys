@@ -1307,6 +1307,8 @@ input {
   z-index: 10;
   padding: 0;
   transition: ease all 0.3s;
+  position: relative;
+  top: -3px;
   border-radius: 0 0 5px 5px;
   position: relative;
 }
@@ -2048,6 +2050,11 @@ input {
 @media (max-width: 1000px) {
   .nav-content {
     width: 19.5em;
+  }
+}
+@media (max-width: 600px) {
+  .nav-content {
+    width: fit-content;
   }
 }
 
