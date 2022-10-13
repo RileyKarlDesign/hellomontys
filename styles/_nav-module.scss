@@ -184,11 +184,21 @@
 
         border-right: tools.$standard-border-grey-0;
 
+        @media( max-width: 600px ){
+            padding-left: 0;
+            padding-right: 15px;
+        }
+
     }
 
     .cart-btn{
 
         border-right: 0;
+        @media( max-width: 600px ){
+            
+            padding-right: 0px;
+        }
+       
        
     }
 }

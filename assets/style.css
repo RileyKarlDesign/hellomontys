@@ -2086,8 +2086,19 @@ input {
 .nav-module .link-btn {
   border-right: 1px solid rgba(0, 0, 0, 0);
 }
+@media (max-width: 600px) {
+  .nav-module .link-btn {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+}
 .nav-module .cart-btn {
   border-right: 0;
+}
+@media (max-width: 600px) {
+  .nav-module .cart-btn {
+    padding-right: 0px;
+  }
 }
 
 .exit-cart {
