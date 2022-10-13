@@ -2099,6 +2099,11 @@ input {
   opacity: 0;
   z-index: 200;
 }
+@media (max-width: 600px) {
+  .exit-cart {
+    width: 2em;
+  }
+}
 .exit-cart i {
   transition: ease-in-out 0.2s;
 }
