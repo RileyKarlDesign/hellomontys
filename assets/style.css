@@ -1319,9 +1319,13 @@ input {
 }
 @media (max-width: 900px) {
   .cart {
-    width: 19em;
     transition: ease-in-out 0.2s;
     transition: ease all 0.1s;
+  }
+}
+@media (max-width: 600px) {
+  .cart {
+    width: 18.5em;
   }
 }
 .cart .exit-cart {
