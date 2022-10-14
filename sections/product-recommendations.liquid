@@ -6,9 +6,9 @@
     <div class="product-reco-desktop"> 
       {%- if recommendations.products_count > 0 -%}
         <div class="line"></div>
-        <div class="recommended-grid">
+          <div class="recommended-grid">
             <div class="title "> <div class="anchor-circle"> </div> <p> Related Products </p> </div>
-            <div class="fade">  </div>
+            
             <div class="recomended-product" id="{{ forloop.index }}">
               {%- for product in recommendations.products -%}
               
@@ -24,7 +24,37 @@
 
             </div>
 
+            <h1> swiper her </h1>
+
+            <div class=" swiper-reco">
+            <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+              <!-- Slides -->
+          
+                {% for product in recommendations.products  limit:3 %}
+                  <div class="swiper-slide">
+              
+                      
+                       {% render 'product-card'with {product: product , forloop: forloop }  %}
+                    
+                  </div>
+              {% endfor%}
+              
+              
+            </div>
+            <!-- If we need pagination -->
             
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-btns">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          
+            
+          </div>
+  
+  </div>
 
             
 
@@ -47,6 +77,47 @@
 
 
 
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+ 
+  
+  if(document.querySelectorAll('.swiper-reco')){
+
+     console.log( 'inside' )
+
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+ 
+  spaceBetween: 5,
+  slidesPerView:'auto' ,
+  mousewheel: false,
+  freeMode: true,
+ 
+  
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+  }
+
+
+  
+</script>
 
 
 

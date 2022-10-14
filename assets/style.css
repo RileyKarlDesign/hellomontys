@@ -1046,7 +1046,7 @@ a {
   padding-top: 10px;
 }
 
-.swiper {
+.swiper, .swiper-reco {
   display: none;
   background-color: rgba(205, 172, 172, 0);
   width: 100%;
@@ -1055,7 +1055,7 @@ a {
   cursor: url("image-path.png");
 }
 @media (max-width: 700px) {
-  .swiper {
+  .swiper, .swiper-reco {
     display: unset;
   }
 }
