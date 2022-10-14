@@ -73,7 +73,7 @@ if(filterWrap){
 const footHeight = () => {
 
 	const foot = document.querySelector('#shopify-section-footer').clientHeight
-	console.log( foot )
+	
 
 	const doc = document.documentElement
 	doc.style.setProperty('--foot-height', `${foot}px`)
@@ -88,7 +88,7 @@ const footHeight = () => {
    const LoadFootHeight = () => {
 	
 	const foot = document.querySelector('#shopify-section-footer').clientHeight
-	console.log( foot )
+	
 
 	const doc = document.documentElement
 	doc.style.setProperty('--foot-height', `${foot}px`)
@@ -109,10 +109,14 @@ const cartBtn = document.querySelector('.cart-btn')
 let cartExit = document.querySelector('.exit-cart')
 
 
+const labels = document.querySelector('.label-draw');
+const labelBtn = document.querySelector('.js-label-draw-btn');
+const exitLabels = document.querySelector('.exit-labels')
+
 let bottom = false;
 
 if(nav){
-	console.log('.exit-cart')
+	
 }
 
 nav.addEventListener('click', function(){
@@ -120,6 +124,7 @@ nav.addEventListener('click', function(){
 	if(nav.classList.contains('nav-open')){
 		nav.classList.remove('nav-open')
 		nav.classList.add('nav-open')
+		labels.classList.remove('labels-open')
 	}
 
 })
@@ -128,7 +133,7 @@ cartExit.addEventListener( 'click', function (){
 
 	nav.classList.remove('nav-open')
 	nav.classList.remove('nav-bottom-open')
-
+	labels.classList.remove('labels-open')
  })
 
  
@@ -161,9 +166,9 @@ function tidyclose (){
 
  cartBtn.addEventListener('click', function (){
 
-	console.log('click')
 
-	console.log(bottom)
+
+
 	
 
 	if(!nav.classList.contains('nav-open') && bottom ){
@@ -179,7 +184,7 @@ function tidyclose (){
 
 	} else if(nav.classList.contains('nav-open') && bottom ) {
 		
-		console.log('here')
+		
 
 		nav.classList.remove('nav-open')
 		nav.classList.remove('nav-bottom-open')
@@ -259,6 +264,28 @@ enterView({
 
 
 
+
+
+enterView({
+	
+	selector: '.ticker-bottom',
+
+	enter: function(el) {
+		labels.classList.add('label-draw-bottom');
+		
+	},
+	exit: function(el) {
+		
+		labels.classList.remove('label-draw-bottom');
+		
+	}
+	
+	
+	
+});
+
+
+
 // recomenations animations ---------------------------------
 
 if( document.querySelector('#recommendations') ){
@@ -302,40 +329,52 @@ if( document.querySelector('.line')){
 }
 
 
-const pc = document.querySelectorAll(".product-card")
+const pc = document.querySelectorAll(".js-pc")
+
 
 
 	
 	function freeze(e) {
-	//  e.preventDefault();
-	console.log( e.target.id );
+		
+		
+
+	 
 	
-	let tId = e.target.id ;
-		console.log( tId )
+	let tId = e.target.parentElement.id;
 		
 		
-	for( i of pc ){
-		
-		if ( i.id != tId ){
-			console.log(i)
 
 		
-			i.classList.remove('card-entered')
+
+
+	for( let i of pc ){
+		
+		if ( i.id != tId ){
+			
+			i.classList.add('non-click')
+			
 						
 
 		}
 	}
 
-	e.target.classList.add('card-clicked')
+	
 
 	
 }
 
+//----------
+
+function getId(e){
+
+}
 
 
 pc.forEach( i => {
+
 	i.style.transitionDelay = i.attributes.number.value + "00ms";
 	i.classList.add('card-entered')
+	
 
 	i.addEventListener( 'click', freeze )
 
@@ -344,15 +383,16 @@ pc.forEach( i => {
 
 
 
-let Cards = document.querySelectorAll('.product-card')
+let cards = document.querySelectorAll('.product-card')
 
 
-if(Cards){
+if(cards.length > 0){
 enterView({
 	
 	selector: '.product-card',
 
 	enter: function(el) {
+		
 		
 		el.classList.add('card-entered');
 		
@@ -360,7 +400,7 @@ enterView({
 		
 	},
 	
-	offset: 0.1,
+	offset: 0.15,
 	
 	
 });
@@ -394,6 +434,57 @@ const filterLabel = document.querySelectorAll('.filter-title')
 		})
 
 }
+
+    // labels -----------------------------------------------------
+	
+
+	enterView({
+		selector: '#ticker-top-two',
+		enter: function(el) {
+		labels.classList.add('label-fixed')
+		},
+	
+	  exit: function(el) {
+		labels.classList.remove('label-fixed')
+		},
+	
+		offset: 1, 
+	});
+
+
+
+	
+	
+	if(labelBtn){
+	
+	
+	
+	labelBtn.addEventListener('click', () =>{
+	
+		if( labels.classList.contains('labels-open') ){
+			labels.classList.remove('labels-open')
+		}else{
+			labels.classList.add('labels-open')
+			nav.classList.remove('nav-open')
+			nav.classList.remove('nav-bottom-open')
+		}
+		
+	})
+	
+	exitLabels.addEventListener('click', () =>{
+	
+		if( labels.classList.contains('labels-open') ){
+			labels.classList.remove('labels-open')
+		}else{
+			labels.classList.add('labels-open')
+		}
+		
+	})
+	
+	}
+
+
+	
 
 
 

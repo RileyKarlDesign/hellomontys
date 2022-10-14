@@ -19,17 +19,96 @@
 
   </div>
   
-  <div class="collection-images">
+  <div class=" collection-images collection-images-{{ collection.title }}">
 
   
   {%- for product in collection.products limit:3 -%}
     {% render 'product-card'with {product: product , forloop: forloop }  %}
   {%- endfor -%}
+  
 
 </div>
+
+    <div class="swiper swiper-{{ collection.title }}">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+          
+              {% for product in collection.products limit:3 %}
+                  <div class="swiper-slide">
+              
+                      
+                       {% render 'product-card'with {product: product , forloop: forloop }  %}
+                    
+                  </div>
+              {% endfor%}
+              
+              
+            </div>
+            <!-- If we need pagination -->
+            
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-btns">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          
+            
+          </div>
   
   </div>
 </div>
+
+
+
+
+
+
+
+
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+ 
+  
+  if(document.querySelectorAll('.swiper-{{ collection.title }}')){
+
+     console.log( 'inside' )
+
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+ 
+  spaceBetween: 5,
+  slidesPerView:'auto' ,
+  mousewheel: false,
+  freeMode: true,
+ 
+  
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+  }
+
+
+  
+</script>
+
 
 {% schema %}
 {

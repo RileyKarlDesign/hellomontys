@@ -1,18 +1,13 @@
-    <!-- 
-    title:
-    img: 
-    url: 
 
--->
 
 {% if product.available %}  
 
 
 {% assign mod = forloop.index | modulo: 4.5%}
     
-    
+ <div class="product-card js-pc" number= "{{ forloop.index }}" id="{{ forloop.index }}">   
 <a href="{{ product.url }}">
-    <div class="product-card" number= "{{ forloop.index }}" id="{{ forloop.index }}">
+    
         <div class="product-content">
             <!-- <p class="label"> {{ forloop.index }}</p> -->
         
@@ -129,8 +124,9 @@
         
         
         </div>
+        </a>
     </div>
-</a>
+
 
     
 {% endif %}

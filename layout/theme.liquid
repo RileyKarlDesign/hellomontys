@@ -47,13 +47,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    
 
+  <link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
   </head>
   <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
 
     <div class="ticker-top"></div>
-    <div class="ticker-top ticker-top-two"></div>
+    <div id=ticker-top-two></div>
     <div class="version-mark">
       <p class="label">
         V3

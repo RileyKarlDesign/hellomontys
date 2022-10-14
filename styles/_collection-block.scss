@@ -8,6 +8,9 @@
     .entered{
         width: 100%  !important;
       }
+
+
+      
 }
 
 
@@ -100,6 +103,26 @@
             }
     }
     }
+
+
+
+    .swiper{
+        display: none;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        cursor: grab;
+
+        @media (max-width: 800px){
+            display: unset !important;
+        }
+            
+        
+    }
+
+    .swiper-slide{
+        width: fit-content;
+    }
 }
 
 
@@ -109,10 +132,13 @@
     gap: tools.$half;
     overflow-x: scroll;
     overflow-y: hidden;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 
     @media (max-width: 800px) {
                
-        display: flex;
+        display: none;
         gap: tools.$half;
 
         .product-info{
@@ -122,3 +148,6 @@
 
     
 }
+
+
+

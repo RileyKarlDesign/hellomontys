@@ -64,7 +64,7 @@ $(document).ready(function() {
           let   
             $form = $(this),
             hasVariant = selectedVariant !== null,
-            canAddToCart =hasVariant && selectedVariant.inventory_quantity > 0
+            canAddToCart = hasVariant && selectedVariant.inventory_quantity > 0
             $id = $form.find('.js-variant-id')
             $addToCartButton = $form.find('#add-to-cart-button')
 
@@ -133,47 +133,4 @@ $(document).ready(function() {
     
     });
 
-    // labels -----------------------------------------------------
 
-const labels = document.querySelector('.label-draw');
-const labelBtn = document.querySelector('.js-label-draw-btn');
-const exitLabels = document.querySelector('.exit-labels')
-
-if(labelBtn){
-
-
-
-labelBtn.addEventListener('click', () =>{
-
-	if( labels.classList.contains('labels-open') ){
-		labels.classList.remove('labels-open')
-	}else{
-		labels.classList.add('labels-open')
-	}
-	
-})
-
-exitLabels.addEventListener('click', () =>{
-
-	if( labels.classList.contains('labels-open') ){
-		labels.classList.remove('labels-open')
-	}else{
-		labels.classList.add('labels-open')
-	}
-	
-})
-
-}
-
-enterView({
-	selector: '.ticker-top-two',
-	enter: function(el) {
-    labels.classList.add('label-fixed')
-	},
-
-  exit: function(el) {
-    labels.classList.remove('label-fixed')
-	},
-
-	offset: 1, 
-});
