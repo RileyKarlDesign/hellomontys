@@ -184,6 +184,7 @@ h5 {
     overflow: scroll;
     width: 100%;
     height: fit-content;
+    display: none;
   }
 }
 .recomended-product a {

@@ -1170,6 +1170,7 @@ a {
   width: 10px;
   margin-right: 10px;
   border: 1px solid rgba(19, 12, 12, 0.833);
+  margin-bottom: 3px;
   transition: ease-in-out 0.2s;
 }
 .metafeild-notes .warning-check .input-block:hover {
@@ -1648,6 +1649,7 @@ input {
     overflow: scroll;
     width: 100%;
     height: fit-content;
+    display: none;
   }
 }
 .recomended-product a {

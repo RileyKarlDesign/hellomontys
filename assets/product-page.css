@@ -304,6 +304,7 @@ h5 {
   width: 10px;
   margin-right: 10px;
   border: 1px solid rgba(19, 12, 12, 0.833);
+  margin-bottom: 3px;
   transition: ease-in-out 0.2s;
 }
 .metafeild-notes .warning-check .input-block:hover {
