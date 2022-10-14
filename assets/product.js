@@ -5,7 +5,6 @@ const atcBtn = document.querySelector('.js-atc')
 const content = document.querySelector('#content')
 
 
-console.log('product')
 
 atcBtn.addEventListener('click', () => {
 	
@@ -50,14 +49,21 @@ function addScroll() {
   
 	const recoScroll = document.querySelector('.recomended-product')
 	  
-	console.log('scroll added')
+	
 	
 	  recoScroll.addEventListener("wheel", (evt) => {
 		  evt.preventDefault();
 		  recoScroll.scrollLeft += evt.deltaY;
 	  })
 	
+
+
+
+	
   }
+
+
+ 
   
 
 
