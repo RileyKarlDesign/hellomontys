@@ -2108,7 +2108,7 @@ input {
 .exit-cart {
   display: none;
   height: 2em;
-  width: 2.5rem !important;
+  width: 2.5em !important;
   border-radius: 0 5px 5px 0;
   position: absolute;
   right: 0em;
@@ -2125,7 +2125,7 @@ input {
 }
 @media (max-width: 600px) {
   .exit-cart {
-    width: 2em;
+    width: 2em !important;
   }
 }
 .exit-cart i {
@@ -2162,6 +2162,11 @@ input {
   background-color: rgb(255, 252, 242);
   opacity: 100%;
   z-index: 200;
+}
+@media (max-width: 600px) {
+  .nav-open .exit-cart {
+    right: calc(-2em + 1px);
+  }
 }
 .nav-open .nav-module {
   background-color: rgb(255, 252, 242);

@@ -208,7 +208,7 @@
 
     display: none;
     height: 2em;
-    width: 2.5rem !important;
+    width: 2.5em !important;
     border-radius: 0 5px 5px 0;
     position: absolute;
     right: 0em;
@@ -224,7 +224,7 @@
     z-index: 200;
 
     @media( max-width: 600px ){
-        width: 2em ;
+        width: 2em !important ;
     }
 
     i {
@@ -275,6 +275,10 @@
         background-color: tools.$white;
         opacity: 100%;
         z-index: 200;
+
+        @media( max-width: 600px ){
+            right: calc( -2em + 1px );
+        }
     }
 
     .nav-module{
