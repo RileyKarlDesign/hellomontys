@@ -35,9 +35,18 @@ html{
 .wrapper{
   padding: 10px;
   padding-top:0px !important;
+  min-height: calc( var(--doc-height)  );
   
 }
 
+.full-screen{
+  height: var(--doc-height);
+  width: 100%;
+//background: red;;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
 
   @import url("https://use.typekit.net/pbr3aov.css");
@@ -196,7 +205,7 @@ body{
     width:100%;
     height: fit-content; 
     // overflow-x: hidden;
-    
+   
     
     
     margin: auto;
