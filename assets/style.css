@@ -223,7 +223,7 @@ h5 {
 .link-btn .maker {
   background-color: rgb(255, 199, 46);
 }
-@media (hover: hover) and (hover: hover) {
+@media (hover: hover) {
   .link-btn:hover {
     background-color: rgba(0, 0, 0, 0.092);
   }
@@ -986,6 +986,7 @@ a {
 .filter-footer .filter-foot-wrapper button {
   -webkit-appearance: none;
   border-radius: 0;
+  appearance: none;
 }
 .filter-footer .filter-foot-wrapper .hero-btn {
   width: 50%;
@@ -1109,6 +1110,7 @@ a {
     display: unset;
   }
 }
+
 .swiper-btns {
   position: absolute;
   top: 0;
@@ -1318,12 +1320,14 @@ optgroup * {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 input {
@@ -1480,6 +1484,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 50%;
 }
 .cart-item .item-info input {
   display: unset;
@@ -1614,6 +1619,7 @@ input {
     padding-left: 5px;
   }
 }
+
 @media (hover: hover) {
   .collection-filter:hover {
     color: rgba(0, 0, 0, 0.092);
@@ -2206,6 +2212,7 @@ input {
   .nav-bottom-fixed .nav-module {
     border-radius: 5px 5px 0 0;
     border-bottom: 0;
+    gap: 20px;
   }
 }
 .nav-bottom-fixed .cart {
@@ -2242,7 +2249,7 @@ input {
   justify-content: center;
   border-radius: 5px 5px 0 0;
   height: 2.5em;
-  padding: 10px;
+  gap: 20px;
   width: 100%;
   z-index: 10;
   border: 1px solid rgba(0, 0, 0, 0.228);
@@ -2259,25 +2266,14 @@ input {
     border-bottom: 1px solid rgba(0, 0, 0, 0.228);
   }
 }
-.nav-module .link-btn {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  /*
-    Introduced in Internet Explorer 10.
-    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-  */
-  -ms-user-select: none;
-  user-select: none;
-}
-@media (hover: hover) {
-  .nav-module .link-btn:hover {
-    background-color: unset !important;
-    opacity: 50%;
-  }
-}
 .nav-module .head-link-list {
   display: flex;
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .nav-module .head-link-list {
+    gap: 15px;
+  }
 }
 .nav-module .link-btn {
   border-right: 1px solid rgba(0, 0, 0, 0);
@@ -2363,6 +2359,15 @@ input {
 .nav-open .nav-module {
   background-color: rgb(255, 252, 242);
 }
+.nav-open .nav-module .link-btn {
+  color: red !important;
+}
+@media (hover: hover) {
+  .nav-open .nav-module .link-btn:hover {
+    background-color: rgba(255, 255, 255, 0) !important;
+    opacity: 50% !important;
+  }
+}
 .nav-open .cart {
   height: 100%;
   padding: 10px;
@@ -2374,6 +2379,21 @@ input {
   .nav-open .nav-module {
     border-radius: 5px 5px 0 0 !important;
     border-bottom: 0 !important;
+  }
+}
+
+.link-btn-nav {
+  cursor: pointer;
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .link-btn-nav {
+    gap: 15px;
+  }
+}
+@media (hover: hover) {
+  .link-btn-nav :hover {
+    opacity: 50%;
   }
 }
 
@@ -2444,18 +2464,20 @@ body {
 @keyframes colorshift {
   0% {
     background-color: rgb(60, 157, 99);
+    scale: 1 1;
   }
   25% {
     background-color: rgb(60, 157, 99);
     padding-top: 10em;
-    scale: 1 1;
+    scale: 0.7 0.7;
   }
   75% {
     background-color: rgb(60, 157, 99);
-    padding-top: 10em;
+    scale: 0.7 0.7;
   }
   100% {
     background-color: rgb(0, 0, 0);
+    scale: 1 1;
   }
 }
 .atc-animation {

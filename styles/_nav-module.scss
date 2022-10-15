@@ -101,6 +101,7 @@
         .nav-module{
             border-radius: tools.$radius  tools.$radius 0 0;
             border-bottom: 0;
+            gap: 20px;
         }
         
     }
@@ -148,7 +149,7 @@
     justify-content: center;
     border-radius: tools.$radius tools.$radius 0 0 ;
     height: 2.5em;
-    padding: 10px;
+    gap: 20px;
     width: 100%;
     z-index: 10;
     // border: tools.$standard-border;
@@ -176,9 +177,12 @@
    
     .head-link-list{
         display: flex;
-
+        gap: 20px;
         
-
+        @media(max-width: 900px ){
+            
+            gap: 15px;
+        } 
        
     }
 
@@ -287,6 +291,26 @@
 
     .nav-module{
         background-color: tools.$white;
+
+        .link-btn{  
+
+    
+            color: red !important; 
+           
+          
+        
+             
+            @media (hover: hover){ 
+        
+                &:hover{
+                    
+                    background-color: rgba(255, 255, 255, 0) !important;
+                    opacity: 50% !important;
+                     
+                }
+            }
+        
+        }
     }
 
     
@@ -312,23 +336,22 @@
     
 }
 
-.link-btn-nav{  
 
+.link-btn-nav{
+    cursor: pointer;
     
-    color: red; 
-    padding-left: 20px; 
-  
-
-     
-    @media (hover: hover){ 
-
-        &:hover{
+    gap: 20px;
+        
+        @media(max-width: 900px ){
             
-            background-color: rgba(255, 255, 255, 0) !important;
-            opacity: 50% !important;
-             
-        }
-    }
+            gap: 15px;
+        } 
+    
 
+    @media ( hover: hover){
+
+        :hover{
+            opacity: 50%;
+        } 
+    }
 }
- 
