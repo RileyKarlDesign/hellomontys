@@ -8,9 +8,9 @@
     position: absolute;
     display: flex;
     align-items: flex-end;
-    padding-bottom: var(--foot-height) ;
     
-    bottom: 0;
+    
+    bottom: var(--foot-height);
     left :0;
     right: 0;
 }
@@ -163,12 +163,40 @@
 
     transition: tools.$transition-basic;
 
+    p{
+        margin-bottom: 2px;
+    }
 
     @media(max-width: 900px ){
         border-radius: tools.$radius;
         border-bottom: tools.$standard-border-grey ;
     }
 
+
+    .link-btn{
+
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+     
+        /*
+          Introduced in Internet Explorer 10.
+          See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+        */
+        -ms-user-select: none;
+        user-select: none;
+
+        @media (hover: hover){
+
+            &:hover{
+
+                background-color: unset !important;
+                opacity: 50%;
+                
+            }
+        }
+
+    }
 
     .head-link-list{
         display: flex;

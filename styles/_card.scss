@@ -4,9 +4,11 @@
     
     
     width: 100%;
-     padding-bottom:5em;
+     
      padding-top:tools.$half;
-
+    h1{
+        padding-bottom:5em;
+}
     img{
         width: 100%;
         height:70vh; 
@@ -18,7 +20,8 @@
         
         
         width: 100%;
-        padding-top: tools.$half;
+        
+
 
     }
 }
@@ -27,4 +30,9 @@
     padding-top:tools.$half;
     display: flex;
     gap: tools.$half;
+    margin-bottom: 10px ;
+    
+    .label{
+        margin-bottom: 0;
+    }
 }

@@ -26,8 +26,7 @@
     @media( hover: hover){
 
         :hover .img-tab{
-        
-        
+
             bottom: -1px !important;
             filter: tools.$drop-shadow-up;
         }
@@ -195,7 +194,7 @@ a{
         position: absolute;
         top: 5px;
         right:-20px ;
-        background-color: tools.$yellow;
+        background-color: tools.$green !important;
         width: 0px;
         height: 0px;
         border-radius: 50%;

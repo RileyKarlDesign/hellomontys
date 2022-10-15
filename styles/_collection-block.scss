@@ -23,7 +23,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: tools.$half;
-    margin-bottom: tools.$half;
+    margin-bottom: 5em;
     
     @media (max-width: 800px) {
             
@@ -165,3 +165,17 @@
 
 
 
+.see-more{
+    transition: tools.$transition-basic;
+
+    border-bottom: tools.$standard-border-0;
+
+    @media (hover:hover) {
+        
+        &:hover{
+
+            border-bottom: tools.$standard-border;
+            color: tools.$black !important;
+        }
+    }
+}

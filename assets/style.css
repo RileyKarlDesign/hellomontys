@@ -130,7 +130,7 @@ p, a, label, input, button, .btn, .cart-bt {
 @media (max-width: 1000px) {
   p, a, label, input, button, .btn, .cart-bt {
     font-size: 12px;
-    line-height: 15px;
+    line-height: 16px;
   }
 }
 
@@ -150,6 +150,7 @@ h5 {
   color: rgb(167, 167, 167) !important;
   font-size: 10px !important;
   line-height: 15px;
+  margin-bottom: 5px;
 }
 
 .flex {
@@ -589,7 +590,7 @@ a {
   position: absolute;
   top: 5px;
   right: -20px;
-  background-color: rgb(255, 199, 46);
+  background-color: rgb(60, 157, 99) !important;
   width: 0px;
   height: 0px;
   border-radius: 50%;
@@ -1138,7 +1139,7 @@ a {
 }
 @media (max-width: 700px) {
   .swiper-slide img {
-    height: calc(100% - 40px);
+    height: calc(100% - 25px);
   }
 }
 
@@ -1275,11 +1276,18 @@ optgroup * {
   grid-template-columns: 3fr 5fr;
   min-height: 40vh;
   margin-bottom: 5em;
+  margin-top: 3em;
 }
 @media (max-width: 800px) {
   .page-content {
     grid-template-columns: 1fr;
   }
+}
+.page-content .content p {
+  margin-bottom: 15px;
+}
+.page-content .content .label {
+  margin-bottom: 5px !important;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -1499,6 +1507,9 @@ input {
   border-top: none;
   border-radius: 0 0 5px 5px;
   margin-left: auto;
+}
+.collection-filters p {
+  margin-top: 2px;
 }
 @media (max-width: 800px) {
   .collection-filters {
@@ -1734,8 +1745,10 @@ input {
 
 .card-img {
   width: 100%;
-  padding-bottom: 5em;
   padding-top: 10px;
+}
+.card-img h1 {
+  padding-bottom: 5em;
 }
 .card-img img {
   width: 100%;
@@ -1744,13 +1757,16 @@ input {
 }
 .card-img h1 {
   width: 100%;
-  padding-top: 10px;
 }
 
 .img-sub-txt {
   padding-top: 10px;
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
+}
+.img-sub-txt .label {
+  margin-bottom: 0;
 }
 
 .block-wrapper {
@@ -1764,7 +1780,7 @@ input {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5em;
 }
 @media (max-width: 800px) {
   .collection-block {
@@ -1854,6 +1870,17 @@ input {
   }
 }
 
+.see-more {
+  transition: ease-in-out 0.2s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+@media (hover: hover) {
+  .see-more:hover {
+    border-bottom: 1px solid rgba(19, 12, 12, 0.833);
+    color: rgba(19, 12, 12, 0.833) !important;
+  }
+}
+
 .slide-header {
   display: flex;
   gap: 10px;
@@ -1897,6 +1924,7 @@ input {
   .labels-open {
     top: 13vh !important;
     padding: 10px;
+    padding-bottom: 29px !important;
   }
 }
 
@@ -1922,9 +1950,10 @@ input {
 }
 @media (max-width: 800px) {
   .exit-labels {
-    top: -2.25rem;
+    top: -2rem;
     right: 3em;
     rotate: -90deg;
+    width: 2rem !important;
   }
 }
 
@@ -1942,7 +1971,7 @@ input {
 @media (max-width: 1000px) {
   .label-draw {
     top: 15px;
-    bottom: 0px;
+    bottom: 10px;
     height: calc(100vh - 25px);
     width: calc(25% + 3px);
   }
@@ -1990,18 +2019,17 @@ input {
   border-radius: 5px;
   height: 100%;
 }
-@media (max-width: 800px) {
-  .label-draw .label-draw-links {
-    border-radius: 5px 5px 0 0;
-  }
-}
-
 .label-draw-bottom {
   padding-bottom: 20px;
 }
 @media (max-width: 1000px) {
   .label-draw-bottom {
     padding-bottom: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .label-draw-bottom {
+    padding-bottom: 45px !important;
   }
 }
 
@@ -2079,8 +2107,7 @@ input {
   position: absolute;
   display: flex;
   align-items: flex-end;
-  padding-bottom: var(--foot-height);
-  bottom: 0;
+  bottom: var(--foot-height);
   left: 0;
   right: 0;
 }
@@ -2183,10 +2210,30 @@ input {
   overflow: hidden;
   transition: ease-in-out 0.2s;
 }
+.nav-module p {
+  margin-bottom: 2px;
+}
 @media (max-width: 900px) {
   .nav-module {
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.228);
+  }
+}
+.nav-module .link-btn {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in Internet Explorer 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (hover: hover) {
+  .nav-module .link-btn:hover {
+    background-color: unset !important;
+    opacity: 50%;
   }
 }
 .nav-module .head-link-list {

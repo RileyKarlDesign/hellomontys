@@ -16,8 +16,11 @@
         }
 
         .collection-filter{
+            
             padding-left: 0 !important;
             border-bottom: tools.$standard-border-grey !important;
+
+            
         }
     }
 }
@@ -29,6 +32,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
     gap: tools.$half;
+
+    p{
+        margin-top: 2px;
+    }
 
     @media (max-width: 800px){
 

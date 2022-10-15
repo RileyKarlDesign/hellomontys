@@ -1,7 +1,11 @@
 {
-    "blog": {
-      "comment": {
-        "email": "Your email"
+    "social": {
+      "links": {
+        "insta": "https://www.instagram.com/montysakl/?hl=en",
+        "email" : "hello@montys.co.nz",
+        "phone" : "(+64) 27 566 344",
+        "adress" : "8 Durham Street East, Auckland CBD,",
+        "city" : "Auckland 1010"
       }
     }
   }

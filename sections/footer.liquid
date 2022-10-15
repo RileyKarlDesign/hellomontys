@@ -72,20 +72,21 @@
 
         <div class="email">
           <p class="label">Email</p>
-          <p> hello@montys.com </p>
-          <p> (+64) 27 566 344 </p>
+          <p>  {{ 'social.links.email' |  t }} </p>
+          <p>  {{ 'social.links.phone' |  t }} </p>
         </div>
       
 
       <div class="adress">
         <p class="label">Adress</p>
-        <p> 8 Durham Street East, Auckland CBD, <br> Auckland 1010 </p>
+        <p> {{ 'social.links.adress' |  t }} </p>
+        <p> {{ 'social.links.city' |  t }} </p>
       </div>
 
       <div class="social">
         <p class="label">Social</p>
-        <p> Instagram </p>
-        <p> Facebook </p>
+        <p> <a href="{{ 'social.links.insta' |  t }}" target="_blank"> Instagram </a></p>
+       
       </div>
         
       

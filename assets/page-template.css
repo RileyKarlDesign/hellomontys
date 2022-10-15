@@ -64,7 +64,7 @@ p, a, label, input, button, .btn, .cart-bt {
 @media (max-width: 1000px) {
   p, a, label, input, button, .btn, .cart-bt {
     font-size: 12px;
-    line-height: 15px;
+    line-height: 16px;
   }
 }
 
@@ -84,6 +84,7 @@ h5 {
   color: rgb(167, 167, 167) !important;
   font-size: 10px !important;
   line-height: 15px;
+  margin-bottom: 5px;
 }
 
 .flex {
@@ -103,9 +104,16 @@ h5 {
   grid-template-columns: 3fr 5fr;
   min-height: 40vh;
   margin-bottom: 5em;
+  margin-top: 3em;
 }
 @media (max-width: 800px) {
   .page-content {
     grid-template-columns: 1fr;
   }
+}
+.page-content .content p {
+  margin-bottom: 15px;
+}
+.page-content .content .label {
+  margin-bottom: 5px !important;
 }
