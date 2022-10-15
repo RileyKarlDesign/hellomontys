@@ -1,6 +1,6 @@
 
 
-
+console.log( "%c🫵🏻🤡"," font-size: 80px")
 
 const documentHeight = () => {
 	const doc = document.documentElement

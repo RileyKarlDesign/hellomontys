@@ -1,6 +1,11 @@
 .unavailble {
   color: rgb(167, 167, 167);
-  text-decoration: line-through;
+  text-decoration: line-through; 
+}
+
+.link-btn-nav{
+  background-color: green !important; 
+  color: red !important;
 }
 
 .grey {
@@ -302,3 +307,4 @@ input:disabled + label {
 .nav-module .cart-btn {
   border-right: 0;
 }
+

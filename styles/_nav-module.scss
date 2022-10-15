@@ -170,34 +170,10 @@
     @media(max-width: 900px ){
         border-radius: tools.$radius;
         border-bottom: tools.$standard-border-grey ;
-    }
+    } 
 
 
-    .link-btn{
-
-    -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-        color: red;
-   /*
-     Introduced in Internet Explorer 10.
-     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-   */
-   -ms-user-select: none;
-   user-select: none;
-
-        @media (hover: hover){
-
-            &:hover{
-
-                background-color: rgba(255, 255, 255, 0) !important;
-                opacity: 50% !important;
-                
-            }
-        }
-
-    }
-
+   
     .head-link-list{
         display: flex;
 
@@ -331,8 +307,28 @@
             border-radius: tools.$radius  tools.$radius 0 0 !important;
             border-bottom: 0 !important;
         }
-        
+         
     }
     
 }
 
+.link-btn-nav{  
+
+    
+    color: red; 
+    padding-left: 20px; 
+  
+
+     
+    @media (hover: hover){ 
+
+        &:hover{
+            
+            background-color: rgba(255, 255, 255, 0) !important;
+            opacity: 50% !important;
+             
+        }
+    }
+
+}
+ 
