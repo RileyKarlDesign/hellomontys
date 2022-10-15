@@ -5,7 +5,7 @@
 
 // buttons
 
-.btn{
+.btn{ 
     background-color: tools.$hovercolor;
     border-radius: tools.$radius;
     padding-top:3px; 
@@ -14,9 +14,7 @@
     padding-right:5px;
 }
 
-.btn-active{
-    
-}
+
 
 
 
@@ -167,9 +165,7 @@
     }
 }
 
-.active-filters{
 
-}
 
 .active-filter {
     color: tools.$white !important;
