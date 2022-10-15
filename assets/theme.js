@@ -430,9 +430,11 @@ const filterLabel = document.querySelectorAll('.filter-title')
 		if(filterForm.classList.contains('open') ){
 			
 			filterForm.classList.remove('open')
+			filterWrap.style.opacity= ' 100 '
 			// filterLabel.innerHTML=' Filters <i class="fa-solid fa-plus"></i> '
 		} else{
 			filterForm.classList.add('open')
+			filterWrap.style.opacity = ' 0 '
 			// filterLabel.innerHTML=' Filters <i class="fa-solid fa-minus"></i> '
 		}
 			

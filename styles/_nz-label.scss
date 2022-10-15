@@ -16,7 +16,12 @@
     flex-basis: 1;
 
 
-    padding-bottom: tools.$half
+    padding-bottom: tools.$half;
+
+    .anchor-circle{
+        margin-bottom: 2px;
+        margin-top: 0 !important;
+    }
 }
 
 .label-fixed {

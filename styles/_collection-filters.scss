@@ -52,7 +52,10 @@
         padding-bottom: tools.$half;
         gap: tools.$half;
         border-bottom: tools.$standard-border-grey ;
-
+        .anchor-circle{
+            
+            margin-top: 4px !important;
+        }
        
     }
     

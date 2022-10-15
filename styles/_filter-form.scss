@@ -32,16 +32,7 @@
             margin-bottom: 4px
         }
     }
-
-    .fade-l{
-        opacity: 0
-    }
-
-    .fade-r{
-        opacity: 0
-    }
-
-    
+   
 
 }
 
@@ -185,7 +176,7 @@ bottom: 10vh;
                 position: relative;
                 padding-right: 2.5em;
                 padding-left: 10px;
-    
+                transition: tools.$transition-basic;
                 .filter-label{
                     margin-left: 0 !important;
                     margin-right: tools.$half;
@@ -202,15 +193,12 @@ bottom: 10vh;
            
             .fade-r{
                 background: rgb(255, 36, 36);
-                background: linear-gradient(270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
-                width: 10px;
+                //background: linear-gradient(270deg, tools.$white 20%,  rgba(255, 255, 255, 0) 100%);
+                width:10em;
                 height: 2.5em;
-                position: absolute;
-                bottom: 0;
                 
-                right: 0;
-                z-index: 1;
-                pointer-events: none;
+                
+                
 
                 
                 
@@ -615,6 +603,10 @@ bottom: 10vh;
 
             .hero-btn{
                 width: 50%;
+
+                @media (max-width: 1000px) {
+                    width: 66.5%;
+                }
             }
             
             
