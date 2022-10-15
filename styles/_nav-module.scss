@@ -129,7 +129,7 @@
     
 
     @media( max-width: 1000px){
-        width: 19.5em;
+        width: 20em;
     }
     @media( max-width: 600px){
         width: 18.5em;
@@ -175,16 +175,16 @@
 
     .link-btn{
 
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-     
-        /*
-          Introduced in Internet Explorer 10.
-          See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-        */
-        -ms-user-select: none;
-        user-select: none;
+         -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in Internet Explorer 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
 
         @media (hover: hover){
 

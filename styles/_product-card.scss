@@ -203,6 +203,7 @@ a{
         height: 0px;
         border-radius: 50%;
         transition: ease-in-out 0.2s;
+        border: tools.$standard-border-grey;
         
         z-index: 10;
     }

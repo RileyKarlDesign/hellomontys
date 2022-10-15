@@ -87,7 +87,7 @@ input{
     position: relative;
 
     @media ( max-width: 1000px ){
-        width: 19.5em ;
+        width: 20em ;
     }
     
     @media( max-width: 900px ){
@@ -195,22 +195,20 @@ input{
 
  .cart-item{
     width: 100%;
-    height:20vw;
+    height:fit-content;
     padding-top: tools.$half;
     padding-bottom: tools.$half;
     
     border-top: tools.$standard-border-grey;
    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: tools.$half;
     overflow: hidden;
 
-    @media ( max-width: 1000px){
-        height: 12em;
-    }
+    
    
     .item-info{
-        padding-left: tools.$half;
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -241,11 +239,15 @@ input{
 
     .cart-image{
         
-        height:100%; 
+        height:30vh; 
         width: 100%;
         object-fit: cover;
         overflow: hidden;
+        
+        @media ( max-width: 900px ) {
 
+            height:26vh; 
+        }
 
     }
 
