@@ -2,8 +2,10 @@
   "current": {
     "text_color": "#ca1616",
     "checkout_use_storefront_logo": true,
+    "checkout_logo_image": "shopify:\/\/shop_images\/Frame_106.png",
     "checkout_body_background_color": "#000000",
     "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_image": "shopify:\/\/shop_images\/Frame_106_ee3d757c-970b-4f3f-a87c-19678bb4c256.png",
     "sections": {
       "main-header": {
         "type": "main-header",
