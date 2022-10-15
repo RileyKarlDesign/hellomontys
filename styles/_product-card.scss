@@ -131,6 +131,10 @@ a{
 
             p{
                 display: block;
+                margin-top: 4px;
+                @media( max-width: 800px ){
+                    margin-top: 4px;
+                }
             }
 
             

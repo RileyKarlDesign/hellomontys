@@ -35,6 +35,9 @@ input{
     scrollbar-width: none !important;  /* Firefox */
   }
 
+  .info{
+    margin-bottom: 5px;
+  }
 
   .cart-empty{
 
@@ -192,7 +195,7 @@ input{
 
  .cart-item{
     width: 100%;
-    height: 13em;
+    height:20vw;
     padding-top: tools.$half;
     padding-bottom: tools.$half;
     
@@ -200,6 +203,7 @@ input{
    
     display: grid;
     grid-template-columns: 1fr 1fr;
+    overflow: hidden;
 
     @media ( max-width: 1000px){
         height: 12em;
@@ -230,15 +234,19 @@ input{
     }
     .label{
         color: tools.$black !important ;
+        opacity: 50%;
+        margin-bottom: 2px;
     }
 
 
     .cart-image{
         
-        height: 100%; 
+        height:100%; 
         width: 100%;
         object-fit: cover;
         overflow: hidden;
+
+
     }
 
 

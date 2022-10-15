@@ -9,21 +9,21 @@
 
     {% endif %}
 
+    {% if collection.title contains "*"  %}
+      
+      <div class="header-makers-mark animate__animated animate__slideInRight"></div>
+
+    {% endif %}
+
       {% if product %}
 
-      {% for p in  product.collections%}
+       {% for p in  product.collections %}
         {% if p.title == 'All Aotearoa Labels' %}
         <div class="header-makers-mark animate__animated animate__slideInRight"></div>
 
         {% endif %}
-
-<<<<<<< HEAD
-      {% endfor %}
-=======
-    {% endif %}
->>>>>>> 4a47fe982251a8f83d320e36cedc614e60976b56
-
-    {% endif %}
+        {% endfor %}
+          {% endif %}
       
 
 
