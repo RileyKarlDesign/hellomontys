@@ -101,11 +101,14 @@
         background-color: tools.$yellow;
     }
 
+    @media (hover: hover){
+
     &:hover{
         background-color: tools.$hovercolor ;
         
         
     }
+}
     
 }
 

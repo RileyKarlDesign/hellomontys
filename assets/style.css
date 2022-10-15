@@ -219,8 +219,10 @@ h5 {
 .link-btn .maker {
   background-color: rgb(255, 199, 46);
 }
-.link-btn:hover {
-  background-color: rgba(0, 0, 0, 0.092);
+@media (hover: hover) {
+  .link-btn:hover {
+    background-color: rgba(0, 0, 0, 0.092);
+  }
 }
 
 .link-btn-active {
