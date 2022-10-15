@@ -59,7 +59,7 @@
 
     pointer-events: all !important;
     left: 20px !important;
-
+    opacity: 100% !important;
 
 
     @media (max-width: 1000px) {
@@ -124,7 +124,7 @@
     background: rgba(180, 185, 29, 0);
     position: fixed;
     z-index: 15;
-
+    opacity: 0;
     transition: ease-in-out all 0.3s;
     width: calc(25% - 2px);
     top: 20px;
