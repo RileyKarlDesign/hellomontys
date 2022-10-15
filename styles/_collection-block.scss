@@ -29,7 +29,18 @@
             
         display: flex;
         flex-direction: column !important;
+        height: 70vh;
 
+       
+    
+    }
+
+    @media (max-width: 600px) {
+            
+        display: flex;
+        flex-direction: column !important;
+        height: fit-content;
+        margin-bottom: 5em;
 
        
     
@@ -116,12 +127,15 @@
         @media (max-width: 800px){
             display: unset !important;
         }
+
+        height: fit-content;
             
         
     }
 
     .swiper-slide{
         width: fit-content;
+        height: fit-content;
     }
 }
 

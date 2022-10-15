@@ -83,10 +83,16 @@ h1 {
   font-weight: 300;
   font-style: regular;
 }
-@media (max-height: 900px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 1.25em;
-    line-height: 1.25em;
+    line-height: 1.35em;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1em !important;
+    line-height: 1.3em;
   }
 }
 
@@ -295,7 +301,7 @@ input:disabled + label {
 .header-makers-mark {
   height: 30px;
   width: 30px;
-  background-color: rgb(63, 156, 71);
+  background-color: rgb(60, 157, 99);
   border-radius: 50%;
   position: fixed;
   right: 25px;
@@ -1268,6 +1274,7 @@ optgroup * {
   display: grid;
   grid-template-columns: 3fr 5fr;
   min-height: 40vh;
+  margin-bottom: 5em;
 }
 @media (max-width: 800px) {
   .page-content {
@@ -1583,7 +1590,7 @@ input {
 }
 
 .swiper-slide-reco {
-  height: 80vw !important;
+  height: 90vw !important;
   padding: 0;
 }
 .swiper-slide-reco a {
@@ -1593,7 +1600,7 @@ input {
   height: 100%;
 }
 .swiper-slide-reco .product-card .product-img {
-  height: 60vw;
+  height: 70vw;
 }
 
 .recomended-wrapper {
@@ -1763,6 +1770,15 @@ input {
   .collection-block {
     display: flex;
     flex-direction: column !important;
+    height: 70vh;
+  }
+}
+@media (max-width: 600px) {
+  .collection-block {
+    display: flex;
+    flex-direction: column !important;
+    height: fit-content;
+    margin-bottom: 5em;
   }
 }
 @media (max-width: 800px) {
@@ -1806,6 +1822,7 @@ input {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
   cursor: grab;
+  height: fit-content;
 }
 @media (max-width: 800px) {
   .collection-block .swiper {
@@ -1814,6 +1831,7 @@ input {
 }
 .collection-block .swiper-slide {
   width: fit-content;
+  height: fit-content;
 }
 
 .collection-images {
@@ -1892,7 +1910,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(63, 156, 71);
+  background-color: rgb(60, 157, 99);
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-left: 0;
 }
@@ -1967,7 +1985,7 @@ input {
 }
 .label-draw .label-draw-links {
   position: relative;
-  background: rgb(63, 156, 71);
+  background: rgb(60, 157, 99);
   border: 1px solid rgba(0, 0, 0, 0.228);
   border-radius: 5px;
   height: 100%;
@@ -2290,7 +2308,7 @@ html {
   font-style: normal;
 }
 * ::selection {
-  background: rgb(63, 156, 71);
+  background: rgb(60, 157, 99);
   color: rgb(255, 252, 242);
 }
 
@@ -2329,16 +2347,16 @@ body {
 
 @keyframes colorshift {
   0% {
-    background-color: rgb(63, 156, 71);
+    background-color: rgb(60, 157, 99);
     scale: 1 1;
   }
   25% {
-    background-color: rgb(63, 156, 71);
+    background-color: rgb(60, 157, 99);
     padding-top: 10em;
     scale: 1 1;
   }
   75% {
-    background-color: rgb(63, 156, 71);
+    background-color: rgb(60, 157, 99);
     padding-top: 10em;
     scale: 1 1;
   }

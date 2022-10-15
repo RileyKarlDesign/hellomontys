@@ -19,7 +19,7 @@ $(document).ready(function() {
             $form = $(this).closest(addToCartFormSelector),
             selectedVariant = productForm.getActiveVariant($form);
 
-            console.log( selectedVariant );
+           
 
             $form.trigger('form:change',[ selectedVariant ])
     
@@ -37,9 +37,9 @@ $(document).ready(function() {
             },
             selectedVariant = null;
 
-            console.log(' getting variant')
+          
 
-            console.log('form')
+            
 
             $.each(formData, function(index, item) {
               if(item.name.indexOf('option') !== -1 ){
@@ -78,7 +78,7 @@ $(document).ready(function() {
               $addToCartButton.prop('disabled', true );
             }
 
-            console.log( canAddToCart )
+           
         },
     
         init: function(){
