@@ -1,6 +1,7 @@
 
 
 console.log( "%c🫵🏻🤡"," font-size: 80px")
+document.documentElement.style.setProperty('--animate-duration', '.8s');
 
 const documentHeight = () => {
 	const doc = document.documentElement

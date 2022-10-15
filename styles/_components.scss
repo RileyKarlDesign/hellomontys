@@ -30,6 +30,22 @@
 }
 
 
+.hero-img{
+    height: calc(var(--doc-height) - 40px );
+       
+    min-height: 50em;
+
+    img{
+        height: 100% !important;
+    }
+
+    @media(max-width: 1000px){
+        height: calc(var(--doc-height) - 17vh ) !important;
+        min-height: 10em !important;
+        
+    }
+}
+
 
 .hero-btn{  
 
