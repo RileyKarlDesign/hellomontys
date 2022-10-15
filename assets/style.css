@@ -784,8 +784,10 @@ a {
 .filter-head .active-filter {
   min-width: max-content !important;
 }
-.filter-head .active-filter:hover {
-  background-color: rgba(0, 0, 0, 0.092) !important;
+@media (hover: hover) {
+  .filter-head .active-filter:hover {
+    background-color: rgba(0, 0, 0, 0.092) !important;
+  }
 }
 .filter-head .filter-title {
   margin-left: 0;
@@ -795,8 +797,10 @@ a {
   background-color: rgb(255, 252, 242);
   margin-right: 0;
 }
-.clear-btn:hover {
-  background-color: rgba(0, 0, 0, 0.092) !important;
+@media (hover: hover) {
+  .clear-btn:hover {
+    background-color: rgba(0, 0, 0, 0.092) !important;
+  }
 }
 
 .filter-title i {
@@ -821,9 +825,11 @@ a {
 .filter-label i {
   font-size: 0.8em;
 }
-.filter-label:hover {
-  border: 1px solid rgba(0, 0, 0, 0.228);
-  background-color: rgba(0, 0, 0, 0);
+@media (hover: hover) {
+  .filter-label:hover {
+    border: 1px solid rgba(0, 0, 0, 0.228);
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 .filter-form {
@@ -882,8 +888,10 @@ a {
   height: fit-content !important;
   border: none;
 }
-.filter-form .filter-tag input + label:hover {
-  color: rgba(19, 12, 12, 0.833);
+@media (hover: hover) {
+  .filter-form .filter-tag input + label:hover {
+    color: rgba(19, 12, 12, 0.833);
+  }
 }
 .filter-form .reset {
   background-color: rgb(255, 252, 242) !important;
@@ -919,8 +927,10 @@ a {
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-.filter-form input + label:hover {
-  color: rgba(19, 12, 12, 0.833);
+@media (hover: hover) {
+  .filter-form input + label:hover {
+    color: rgba(19, 12, 12, 0.833);
+  }
 }
 .filter-form input:checked + label {
   color: rgba(19, 12, 12, 0.833) !important;
