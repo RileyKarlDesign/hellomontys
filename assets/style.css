@@ -169,9 +169,11 @@ h5 {
 #add-to-cart-button:disabled {
   opacity: 60%;
 }
-#add-to-cart-button:disabled:hover {
-  background-color: rgba(0, 0, 0, 0.092) !important;
-  border: 1px solid rgba(0, 0, 0, 0.228) !important;
+@media (hover: hover) {
+  #add-to-cart-button:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.092) !important;
+    border: 1px solid rgba(0, 0, 0, 0.228) !important;
+  }
 }
 
 .hero-btn {
@@ -185,9 +187,11 @@ h5 {
   border: 1px solid rgba(0, 0, 0, 0.228);
   transition: ease-in-out 0.2s;
 }
-.hero-btn:hover {
-  border: 1px solid rgba(19, 12, 12, 0.833);
-  background-color: rgb(255, 252, 242);
+@media (hover: hover) {
+  .hero-btn:hover {
+    border: 1px solid rgba(19, 12, 12, 0.833);
+    background-color: rgb(255, 252, 242);
+  }
 }
 
 .anchor-circle {
@@ -219,7 +223,7 @@ h5 {
 .link-btn .maker {
   background-color: rgb(255, 199, 46);
 }
-@media (hover: hover) {
+@media (hover: hover) and (hover: hover) {
   .link-btn:hover {
     background-color: rgba(0, 0, 0, 0.092);
   }
@@ -286,8 +290,10 @@ input + label {
   cursor: pointer;
   border: none;
 }
-input + label:hover {
-  color: rgba(19, 12, 12, 0.833);
+@media (hover: hover) {
+  input + label:hover {
+    color: rgba(19, 12, 12, 0.833);
+  }
 }
 
 input:checked + label {
@@ -1899,6 +1905,7 @@ input {
 
 .see-more {
   transition: ease-in-out 0.2s;
+  width: fit-content;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 @media (hover: hover) {

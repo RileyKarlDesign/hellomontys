@@ -23,11 +23,12 @@
 
 #add-to-cart-button:disabled {
    opacity: 60%;
-    
+   @media (hover: hover){
    &:hover{
          background-color: tools.$hovercolor !important; 
          border: tools.$standard-border-grey !important;      
     }
+}
 }
 
 
@@ -45,11 +46,12 @@
     margin-bottom: tools.$half;
     border: tools.$standard-border-grey;
     transition: tools.$transition-basic;
-
+    @media (hover: hover){
     &:hover{
         border: tools.$standard-border;
         background-color: tools.$white
     }
+}
 
 }
 
@@ -102,12 +104,13 @@
     }
 
     @media (hover: hover){
-
+        @media (hover: hover){
     &:hover{
         background-color: tools.$hovercolor ;
         
         
     }
+}
 }
     
 }
@@ -194,12 +197,13 @@ input +  label {
     color: tools.$grey;
     cursor: pointer;
     border: none;
-
+    @media (hover: hover){
     &:hover{
         color: tools.$black;
     }
     
     }
+}
 
 input:checked +  label {
      color: tools.$black !important;

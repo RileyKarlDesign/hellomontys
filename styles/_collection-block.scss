@@ -167,7 +167,7 @@
 
 .see-more{
     transition: tools.$transition-basic;
-
+    width: fit-content;
     border-bottom: tools.$standard-border-0;
 
     @media (hover:hover) {
