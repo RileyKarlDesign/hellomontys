@@ -958,6 +958,10 @@ a {
   display: flex;
   justify-content: flex-end;
 }
+.filter-footer .filter-foot-wrapper button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 .filter-footer .filter-foot-wrapper .hero-btn {
   width: 50%;
 }

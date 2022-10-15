@@ -601,6 +601,11 @@ bottom: 10vh;
             display: flex; 
             justify-content: flex-end;
 
+            button{
+                -webkit-appearance: none;
+                border-radius: 0;
+            }
+
             .hero-btn{
                 width: 50%;
 
