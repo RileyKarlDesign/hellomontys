@@ -1,5 +1,9 @@
 {
   "current": {
+    "text_color": "#ca1616",
+    "checkout_use_storefront_logo": true,
+    "checkout_body_background_color": "#000000",
+    "checkout_input_background_color_mode": "transparent",
     "sections": {
       "main-header": {
         "type": "main-header",
@@ -27,9 +31,6 @@
       "nz-labels": {
         "type": "nz-labels",
         "settings": {
-          "collection": "aotearoa-labels",
-          "title_text": "",
-          "sub_text": ""
         }
       }
     },
