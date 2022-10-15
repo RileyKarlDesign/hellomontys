@@ -8,7 +8,10 @@
     display: flex;
     gap: tools.$half;
     border-bottom: tools.$standard-border-grey;
-
+    display: flex;
+        align-items: center;
+        gap: tools.$half;
+        
 
     flex-basis: 1;
 
@@ -126,8 +129,9 @@
     @media(max-width: 1000px) {
 
 
-        top: tools.$half;
+        top: 15px;
         bottom: 0px;
+        height: calc(100vh - 25px);
         width: calc(25% + 3px);
     }
 
@@ -204,6 +208,12 @@
 
 .label-draw-bottom{
     padding-bottom: 20px;
+
+    @media (max-width: 1000px) {
+
+        padding-bottom: 25px;
+
+    }
 }
 
 #shopify-section-nz-labels {

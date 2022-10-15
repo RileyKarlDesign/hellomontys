@@ -1,80 +1,55 @@
-<script src="{{'product.js'|asset_url}}" defer="defer"></script> 
-
-
-
-
-
-<!--  
- {% for feild in product.metafields.custom.colour %}
-
-    <p> {{ feild | metafield_text }}</p>
-
- {% endfor %} -->
-
-
-
+<script src="{{'product.js'|asset_url}}" defer="defer"  ></script> 
 
 
  {% assign current_variant = product.selected_or_first_available_variant %}
 
 
-   
-
-
-    
-
 <div class="product-page-wrapper">
 
-  
-  
     <div class="product-page-info">
       
-        <div class="product-title">  <div class="anchor-circle"> </div> <p> {{ product.title }} </p></div>
-        
-        <p class="product-description">{{ product.description }}</p>
-         
-        
-        <!-- metafields -->
-        
-       
-       
-      
-     
-    
-         <div class="metafields">
-
-          {% assign colour = product.metafields.custom.colour | metafield_text %}
-          {% assign material = product.metafields.custom.material | metafield_text %}
-          {% assign vendor = product.vendor  %}
-          
-          
-          {% if vendor != "hellomonty's" %}
-            <div class="single-metafield">
-              <p class="metafield-title" > Label</p> <a href="/collections/vendors?q={{vendor}}"> <p>{{ vendor }}</p></a>
-
-            </div>
-          {% endif %}
-
-
-          {% if colour != '' %}
-            <div class="single-metafield  ">
-                <p class="metafield-title" > Color</p>  <p>{{ colour }}</p>
-            </div>
-          {% endif %}
-   
-          {% if material != '' %}
-
-            {% assign  materialStripped = material | remove:'and' %}
-            {% assign  materialLines = materialStripped | replace:',','<br>' %}
-
-            <div class="single-metafield ">
-                <p class="metafield-title" > Material </p> <p>{{ materialLines }}</p>
-            </div>
-          {% endif %}
-
-          
-   
+        <div class="product-title"> 
+            <div class="anchor-circle"> </div>
+            <p> {{ product.title }} </p> 
         </div>
+        
+          <p class="product-description">{{ product.description }}</p>
+
+
+             <div class="metafields">
+
+                {% assign colour = product.metafields.custom.colour | metafield_text %}
+                {% assign material = product.metafields.custom.material | metafield_text %}
+                {% assign vendor = product.vendor  %}
+                
+          
+                  {% if vendor != "hellomonty's" %}
+                    <div class="single-metafield">
+                      <p class="metafield-title" > Label</p> <a href="/collections/vendors?q={{vendor}}"> <p>{{ vendor }}</p></a>
+
+                    </div>
+                  {% endif %}
+
+
+                  {% if colour != '' %}
+                    <div class="single-metafield  ">
+                        <p class="metafield-title" > Color</p>  <p>{{ colour }}</p>
+                    </div>
+                  {% endif %}
+          
+                  {% if material != '' %}
+
+                    {% assign  materialStripped = material | remove:'and' %}
+                    {% assign  materialLines = materialStripped | replace:',','<br>' %}
+
+                    <div class="single-metafield ">
+                        <p class="metafield-title" > Material </p> <p>{{ materialLines }}</p>
+                    </div>
+                  {% endif %}
+
+          
+   
+            </div>
 
         <!-- //---------------------------------------------------------------- -->
     
@@ -93,80 +68,61 @@
      
        <div class="product-page-images">
           {% for image in product.images %}
+              
               <div class="product-img">
                 
-                <img src="{{ image.src | product_img_url: 'large' }}"" width='500' height='auto'}>
+                <img src="{{ image.src | product_img_url: 'master' }}" width='500' height='auto'>
                 <div class="img-index label"> <p class="label img-count">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
+
               </div>
 
           {% endfor %}
 
 
-        
-
-          
-           </div>
+      </div>
 
            <div class="swiper">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-          
-              {% for image in product.images %}
-                  <div class="swiper-slide">
-              
-                      
-                      <img src="{{ image.src | product_img_url: 'large' }}" width='500' height='auto'}>
-                      <div class="img-index label"> <p class="label img-count">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
-                    
-                  </div>
-              {% endfor%}
-              
-              
-            </div>
-            <!-- If we need pagination -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
             
+                  {% for image in product.images %}
+                      <div class="swiper-slide">
+                  
+                          
+                          <img src="{{ image.src | product_img_url: 'large' }}" width='500' height='auto'}>
+                          <div class="img-index label"> <p class="label img-count">{{ forloop.index }} / {{ forloop.length }}  </p> </div>
+                        
+                      </div>
+                  {% endfor%}
+                
+                
+              </div>
           
-            <!-- If we need navigation buttons -->
-            <div class="swiper-btns">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
           
             
           </div>
-           
-
-
-           
 
 
 </div>
 
 
+<div id="recommendations">
+        
+    {% section 'product-recommendations' %}
+
+</div>     
+
+
 
   
-    <div id="recommendations">
-        
-      {% section 'product-recommendations' %}
-
-    </div> 
+    
  
 
-<style> 
-
-.swiper{
-
-  cursor: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1581299/profile/profile-80.jpg' )
-}
 
 
 
-</style>
-
-
-
-<!-- related products -->
+</div> 
 
 
 
@@ -176,30 +132,19 @@
   
   if(document.querySelector('.swiper')){
     const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  spaceBetween: 0,
-  slidesPerView:'1.1' ,
-  mousewheel: true,
-  autoplay: false,
+
+                direction: 'horizontal',
+                loop: true,
+                spaceBetween: 0,
+                slidesPerView:'1.1' ,
+                mousewheel: true,
+                autoplay: false,
+                
   
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+
+              });
 
   }
 

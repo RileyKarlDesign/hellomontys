@@ -145,6 +145,17 @@ a{
         padding-bottom: 2em;
         // background-color: red;
 
+        .label{
+            margin-bottom:5px;
+        }
+
+        .vendor{
+          p{
+            color: tools.$grey !important;
+            
+          }  
+        }
+
         .info-section {
             padding-top:tools.$half;
             

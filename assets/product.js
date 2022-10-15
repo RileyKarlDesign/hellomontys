@@ -48,19 +48,34 @@ atcBtn.addEventListener('click', () => {
 function addScroll() {
   
 	const recoScroll = document.querySelector('.recomended-product')
-	  
-	
-	
-	  recoScroll.addEventListener("wheel", (evt) => {
-		  evt.preventDefault();
-		  recoScroll.scrollLeft += evt.deltaY;
-	  })
-	
+  
+		const recoSwiper = new Swiper('.reco-swiper', {
+			effect: 'slide',
+			slidesPerView: 1.8,
+			spaceBetween: 10,
+			dragable: true,
+			freeMode: true,
+
+			pagination: {
+			el: '.swiper-pagination',
+			},
+    
+			navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+			},
+
+			scrollbar: {
+			el: '.swiper-scrollbar',
+			}
+		  });
+  
+	}
 
 
 
 	
-  }
+  
 
 
  

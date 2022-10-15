@@ -342,14 +342,19 @@ const pc = document.querySelectorAll(".js-pc")
 	
 	let tId = e.target.parentElement.id;
 		
-		
+	let clicked = e.target.parentElement	
 
+	if(clicked){
 		
+		clicked.classList.add('clicked')
+	}
 
 
 	for( let i of pc ){
-		
-		if ( i.id != tId ){
+
+		i.style.transitionDelay = "000ms";
+		i.style.transitionDuration = "900ms";
+		if (!i.classList.contains('clicked') ){
 			
 			i.classList.add('non-click')
 			

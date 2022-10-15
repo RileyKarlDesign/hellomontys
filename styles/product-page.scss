@@ -8,7 +8,7 @@
    
     grid-template-columns: 1fr 1fr 1fr 1fr;
     
-    padding-bottom: 0;
+    padding: 0;
     gap: tools.$half;
     // grid-gap: tools.$gutter;
 
@@ -46,11 +46,17 @@
         // border-top: tools.$standard-border !important;
         margin-bottom:tools.$gutter;
        
-        padding-bottom: tools.$half;
-        padding-top: tools.$half;
+        
+        
         border-bottom: tools.$standard-border-grey !important;
         display: flex;
+        align-items: center;
         gap: tools.$half;
+        height: 2.5em;
+        
+        p{
+            line-height: 16px;
+        }
 
     }
 

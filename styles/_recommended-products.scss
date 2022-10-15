@@ -1,5 +1,59 @@
 @use 'tools';
 
+
+
+
+
+
+
+
+    .slider-box{
+        height: 100%;
+        width: 100%;
+        background-color: bisque;
+        overflow: hidden;
+        display: none ;
+
+        @media ( max-width: 800px ) {
+
+            display: unset;
+            
+        }
+
+       
+
+        
+   
+
+        
+    }
+
+    .swiper-slide-reco{
+            
+        
+        
+        
+        height: 80vw !important;
+        padding: 0;
+        
+        a{
+            height: 100%;
+        }
+
+        img{
+            height: 100%;
+        }
+
+        .product-card{
+            
+            .product-img{
+                height: 60vw;
+            }
+            
+        }
+    }
+
+
 // .product-reco-desktop{
 
 //             background-color: red !important; 
@@ -17,6 +71,7 @@
 .recomended-wrapper{
     height: 80vh;
     background-color: red;
+    overflow: hidden;
 }
 
 
@@ -24,7 +79,7 @@
 #recommendations{
    
     
-    
+    overflow: hidden;
     min-height: 80vh;
 
     .product-card{
@@ -40,6 +95,10 @@
     
     
 }
+
+
+
+
 
 .line{
     border-top: tools.$standard-border-grey;
@@ -188,3 +247,5 @@ opacity: 100% !important;
     
     
 }
+
+

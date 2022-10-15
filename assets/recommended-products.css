@@ -50,11 +50,9 @@ h3 {
 }
 
 p, a, label, input, button, .btn, .cart-bt {
-  font-weight: 500;
   font-size: 14px;
   color: rgba(19, 12, 12, 0.833);
-  line-height: 17px;
-  font-style: regular;
+  line-height: 18px;
   letter-spacing: 0.3px;
 }
 @media (max-width: 1000px) {
@@ -89,9 +87,11 @@ h5 {
 .recomended-wrapper {
   height: 80vh;
   background-color: red;
+  overflow: hidden;
 }
 
 #recommendations {
+  overflow: hidden;
   min-height: 80vh;
 }
 #recommendations .product-card {
@@ -211,4 +211,11 @@ h5 {
   .recomended-product .product-card .product-img {
     height: 60vw;
   }
+}
+
+.swiper-reco {
+  background-color: pink !important;
+}
+.swiper-reco .slide-wrapper {
+  background-color: aquamarine;
 }

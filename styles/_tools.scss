@@ -111,11 +111,11 @@
 
         p, a, label, input, button, .btn, .cart-bt{
             
-            font-weight: 500;
+            
             font-size:$base;
             color:$black; 
-            line-height:17px;
-            font-style: regular;
+            line-height:18px;
+            // font-smooth: always;
             letter-spacing: 0.3px;
 
             @media (max-width: 1000px) {

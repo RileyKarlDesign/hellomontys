@@ -50,11 +50,9 @@ h3 {
 }
 
 p, a, label, input, button, .btn, .cart-bt {
-  font-weight: 500;
   font-size: 14px;
   color: rgba(19, 12, 12, 0.833);
-  line-height: 17px;
-  font-style: regular;
+  line-height: 18px;
   letter-spacing: 0.3px;
 }
 @media (max-width: 1000px) {
@@ -89,7 +87,7 @@ h5 {
 .product-page-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-bottom: 0;
+  padding: 0;
   gap: 10px;
 }
 @media (max-width: 700px) {
@@ -114,11 +112,14 @@ h5 {
 }
 .product-page-info .product-title {
   margin-bottom: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.228) !important;
   display: flex;
+  align-items: center;
   gap: 10px;
+  height: 2.5em;
+}
+.product-page-info .product-title p {
+  line-height: 16px;
 }
 .product-page-info .product-description {
   margin-bottom: 10px;

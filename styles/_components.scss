@@ -55,13 +55,24 @@
 
 .anchor-circle{
 
-    margin-top: 2px;
+    
 
-    height: 11px !important;
-    width: 11px !important;
+
+
+    
+
+    height: 13px !important;
+    width: 13px !important;
     
     background-color: tools.$black;
     border-radius: 50%;
+
+    @media( max-width: 1000px ){
+
+        height: 11px !important;
+    width: 11px !important;
+
+    }
 
 }
 
