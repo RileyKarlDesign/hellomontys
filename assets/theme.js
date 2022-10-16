@@ -48,7 +48,7 @@ if(filterWrap){
 		
 		clearBtn.style.display = "none";
 		fadeL.style.opacity = "0";
-		
+		fadeL.style.height = "0";
 		activeFilters = false;
 		
 
