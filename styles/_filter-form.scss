@@ -16,7 +16,7 @@
 
     .filter-group{
         
-        display: grid;
+        display: block;
         max-height:100%;
     }
 
@@ -399,7 +399,7 @@ bottom: 10vh;
         
        
         width:min-content;
-        display: none;
+        display: grid;
         grid-template-columns: 4fr 4fr;
         width: 100%;
         border-top: tools.$standard-border-grey;
