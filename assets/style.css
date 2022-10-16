@@ -663,7 +663,7 @@ a {
   max-height: 70vh !important;
 }
 .open .filter-group {
-  opacity: 100 !important;
+  display: grid;
   max-height: 100%;
 }
 .open .filter-head-bottom {
@@ -885,12 +885,11 @@ a {
 }
 .filter-form .filter-group {
   width: min-content;
-  display: grid;
+  display: none;
   grid-template-columns: 4fr 4fr;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.228);
   padding-top: 10px;
-  opacity: 100%;
   transition: ease all 1s;
 }
 @media (max-width: 1000px) {

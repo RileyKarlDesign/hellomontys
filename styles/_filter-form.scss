@@ -16,7 +16,7 @@
 
     .filter-group{
         
-        opacity: 100!important;
+        display: grid;
         max-height:100%;
     }
 
@@ -399,7 +399,7 @@ bottom: 10vh;
         
        
         width:min-content;
-        display: grid;
+        display: none;
         grid-template-columns: 4fr 4fr;
         width: 100%;
         border-top: tools.$standard-border-grey;
@@ -408,7 +408,7 @@ bottom: 10vh;
         //background-color: tools.$white;
         
         // animation
-       opacity: 100%;
+       
          
         transition: ease all 1s;
         
