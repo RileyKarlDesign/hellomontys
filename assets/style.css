@@ -1519,14 +1519,14 @@ input {
   margin-bottom: 2px;
 }
 .cart-item .cart-image {
-  height: 26vh;
+  height: 28vh;
   width: 100%;
   object-fit: cover;
   overflow: hidden;
 }
 @media (max-width: 900px) {
   .cart-item .cart-image {
-    height: 28vh;
+    height: 27vh;
   }
 }
 @media (max-width: 600px) {
