@@ -773,17 +773,12 @@ a {
   background: rgba(0, 128, 0, 0);
   position: relative;
   padding-right: 2.5em;
-  padding-left: 10px;
+  padding-left: 0px;
   transition: ease-in-out 0.2s;
 }
 .filter-head .filter-head-bottom .active-filters .scroll-wrap .filter-label {
   margin-left: 0 !important;
   margin-right: 10px;
-}
-@media (max-width: 900px) {
-  .filter-head .filter-head-bottom .active-filters .scroll-wrap {
-    padding-left: 0px;
-  }
 }
 .filter-head .filter-head-bottom .active-filters .fade-r {
   background: rgb(255, 36, 36);
