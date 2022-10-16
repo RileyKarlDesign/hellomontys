@@ -1519,7 +1519,7 @@ input {
   margin-bottom: 2px;
 }
 .cart-item .cart-image {
-  height: 28vh;
+  height: 27.5vh;
   width: 100%;
   object-fit: cover;
   overflow: hidden;
