@@ -176,15 +176,15 @@ h5 {
   }
 }
 
-.hero-img {
+.main-hero-img {
   height: calc(var(--doc-height) - 40px);
   min-height: 50em;
 }
-.hero-img img {
+.main-hero-img img {
   height: 100% !important;
 }
 @media (max-width: 1000px) {
-  .hero-img {
+  .main-hero-img {
     height: calc(var(--doc-height) - 17vh) !important;
     min-height: 10em !important;
   }
