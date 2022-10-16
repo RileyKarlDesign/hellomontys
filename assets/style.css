@@ -467,7 +467,7 @@ input:disabled + label {
 
 .footer-bottom {
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px !important;
 }
 
 .product-page-grid {
@@ -2096,7 +2096,7 @@ input {
 }
 @media (max-width: 800px) {
   .label-draw-bottom {
-    padding-bottom: 45px !important;
+    padding-bottom: 40px !important;
   }
 }
 
