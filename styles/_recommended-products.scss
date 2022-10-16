@@ -172,22 +172,6 @@ opacity: 100% !important;
 
 }
 
-.fade{
-
-    position: absolute; 
-    right: -10px;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-    background-color: red;
-    z-index: 5;
-    pointer-events: none;
-
-    
-    background: linear-gradient(270deg, tools.$white 10%, rgba(255, 255, 255, 0) 80% );
-
-    display: none;
-}
 
 
 .recomended-product{

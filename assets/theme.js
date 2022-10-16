@@ -47,8 +47,8 @@ if(filterWrap){
 	if( filterWrap.childNodes.length === 1){
 		
 		clearBtn.style.display = "none";
-		fadeL.style.opacity = "0";
-		fadeL.style.height = "0";
+		
+		
 		activeFilters = false;
 		
 
@@ -432,10 +432,12 @@ const filterLabel = document.querySelectorAll('.filter-title')
 			
 			filterForm.classList.remove('open')
 			filterWrap.style.opacity= ' 100 '
+			filterWrap.style.height = ' 100% '
 			// filterLabel.innerHTML=' Filters <i class="fa-solid fa-plus"></i> '
 		} else{
 			filterForm.classList.add('open')
 			filterWrap.style.opacity = ' 0 '
+			filterWrap.style.height = ' 0 '
 			// filterLabel.innerHTML=' Filters <i class="fa-solid fa-minus"></i> '
 		}
 			
