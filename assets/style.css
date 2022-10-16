@@ -178,7 +178,7 @@ h5 {
 }
 
 .main-hero-img {
-  height: calc(var(--doc-height) - 40px);
+  height: calc(var(--doc-height) - 10em);
   min-height: 50em;
 }
 .main-hero-img img {
