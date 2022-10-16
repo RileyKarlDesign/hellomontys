@@ -80,6 +80,7 @@ a, .link-btn {
 h1 {
   font-size: 26px;
   line-height: 32px;
+  color: rgba(19, 12, 12, 0.833);
   font-weight: 300;
   font-style: regular;
 }
