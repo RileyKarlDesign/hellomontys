@@ -242,14 +242,18 @@ input{
 
     .cart-image{
         
-        height:35vh; 
+        height:26vh ; 
         width: 100%;
         object-fit: cover;
         overflow: hidden;
         
         @media ( max-width: 900px ) {
 
-            height:30vh; 
+            height:28vh ; 
+        }
+        @media ( max-width: 600px ) {
+
+            height:25vh ; 
         }
 
     }
