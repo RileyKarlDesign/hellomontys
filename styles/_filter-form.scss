@@ -16,7 +16,7 @@
 
     .filter-group{
         
-        display: block;
+        opacity: 100!important;
         max-height:100%;
     }
 
@@ -408,7 +408,7 @@ bottom: 10vh;
         //background-color: tools.$white;
         
         // animation
-       
+       opacity: 100%;
          
         transition: ease all 1s;
         
