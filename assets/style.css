@@ -274,7 +274,7 @@ h5 {
   z-index: 1;
 }
 .version-mark p {
-  font-size: 9px !important;
+  font-size: 8px !important;
 }
 @media (max-width: 1000px) {
   .version-mark {
