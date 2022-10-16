@@ -214,7 +214,7 @@ input{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 50%;
+        width: 60%;
     
         input{
             display:  unset;
@@ -242,14 +242,14 @@ input{
 
     .cart-image{
         
-        height:30vh; 
+        height:35vh; 
         width: 100%;
         object-fit: cover;
         overflow: hidden;
         
         @media ( max-width: 900px ) {
 
-            height:26vh; 
+            height:30vh; 
         }
 
     }
