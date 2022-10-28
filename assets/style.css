@@ -332,12 +332,18 @@ input:disabled + label {
   background-color: rgb(60, 157, 99);
   border-radius: 50%;
   position: fixed;
-  right: 25px;
-  top: 25px;
+  right: 35px;
+  top: 35px;
   justify-self: flex-end;
   z-index: 10;
   transition: ease all 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.228);
+}
+@media (max-width: 1600px) {
+  .header-makers-mark {
+    right: 25px;
+    top: 25px;
+  }
 }
 @media (max-width: 1000px) {
   .header-makers-mark {
