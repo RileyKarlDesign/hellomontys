@@ -31,8 +31,8 @@
 
 
 .main-hero-img{
-    height: calc(var(--doc-height) - 6em );
-       
+    height: calc(100vh - 6em );
+    
     
     //border: 2px solid green;
     img{
@@ -41,13 +41,13 @@
 
 
     @media (max-width: 1650px) {
-        height: calc(var(--doc-height) - 10em ) !important;
+        height: calc(100vh - 10em ) !important;
         
 
     }
 
     @media(max-width: 1000px){ 
-        height: calc(var(--doc-height) - 17em ) !important;
+        height: calc(100vh - 17em ) !important;
         
         
     }

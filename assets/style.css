@@ -178,19 +178,19 @@ h5 {
 }
 
 .main-hero-img {
-  height: calc(var(--doc-height) - 6em);
+  height: calc(100vh - 6em);
 }
 .main-hero-img img {
   height: 100% !important;
 }
 @media (max-width: 1650px) {
   .main-hero-img {
-    height: calc(var(--doc-height) - 10em) !important;
+    height: calc(100vh - 10em) !important;
   }
 }
 @media (max-width: 1000px) {
   .main-hero-img {
-    height: calc(var(--doc-height) - 17em) !important;
+    height: calc(100vh - 17em) !important;
   }
 }
 
@@ -1373,6 +1373,10 @@ input {
   margin-bottom: 5px;
 }
 
+#your-shopping-cart {
+  height: 100vh;
+}
+
 .cart-empty {
   height: 100%;
   display: flex;
@@ -1611,10 +1615,16 @@ input {
 }
 .collection-filters img {
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   object-fit: cover;
   grid-column: 2/5;
   padding-top: 10px;
+}
+@media (max-width: 1200px) {
+  .collection-filters img {
+    height: 74vh;
+    min-height: 0em !important;
+  }
 }
 @media (max-width: 800px) {
   .collection-filters img {
@@ -2467,6 +2477,7 @@ html {
 body {
   background-color: black;
   padding: 30px;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 @media (max-width: 1650px) {
@@ -2526,6 +2537,7 @@ body {
   position: relative;
   width: 100%;
   height: fit-content;
+  min-height: 100vh;
   margin: auto;
   border-radius: 5px;
 }
