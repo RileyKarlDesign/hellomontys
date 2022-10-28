@@ -95,10 +95,12 @@ html{
   background: #555;
 }
 
+
+
 body{
     background-color:black;
       padding: 30px ; 
-      
+      min-height: 100vh;
      
       @media (max-width: 1650px) {
         padding: 20px;
@@ -219,7 +221,7 @@ body{
     width:100%;
     height: fit-content; 
     // overflow-x: hidden;
-   
+    min-height: 100vh;
     
     
     margin: auto;
