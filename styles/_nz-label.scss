@@ -60,7 +60,14 @@
     pointer-events: all !important;
     left: 20px !important;
     opacity: 100% !important;
-
+    
+    
+   
+    @media (max-width: 1200px){
+        padding: 0px;
+        height: 74vh;
+        min-height: 0em !important;
+    }
 
     @media (max-width: 1000px) {
         left: tools.$half !important;
@@ -178,9 +185,14 @@
         transition: ease all 0.3s;
         z-index: 5;
 
-        padding: tools.$half;
-        padding-bottom: tools.$half;
+        padding: 20px;
+        padding-right: 6px;
+        
 
+        @media(max-width: 1600px) {
+            padding: tools.$half;
+            padding-bottom: tools.$half;
+        }
 
         @media(max-width: 1000px) {
 

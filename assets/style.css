@@ -1984,6 +1984,13 @@ input {
   left: 20px !important;
   opacity: 100% !important;
 }
+@media (max-width: 1200px) {
+  .labels-open {
+    padding: 0px;
+    height: 74vh;
+    min-height: 0em !important;
+  }
+}
 @media (max-width: 1000px) {
   .labels-open {
     left: 10px !important;
@@ -2069,8 +2076,14 @@ input {
   border-radius: 5px;
   transition: ease all 0.3s;
   z-index: 5;
-  padding: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
+  padding-right: 6px;
+}
+@media (max-width: 1600px) {
+  .label-draw .label-draw-content-grid {
+    padding: 10px;
+    padding-bottom: 10px;
+  }
 }
 @media (max-width: 1000px) {
   .label-draw .label-draw-content-grid {
