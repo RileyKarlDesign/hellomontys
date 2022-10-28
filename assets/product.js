@@ -4,13 +4,25 @@
 const atcBtn = document.querySelector('.js-atc')
 const content = document.querySelector('#content')
 
+const headLogo = document.querySelector('.logo')
+const footNav = document.querySelector('.nav-wrapper')
+
 
 
 atcBtn.addEventListener('click', () => {
 	
 	document.body.classList.add('atc-animation')
-	content.classList.add('content-animation')
+	headLogo.classList.add('inviz')
+	footNav.classList.add('inviz-foot')
+	//content.classList.add('content-animation')
 
+	atcBtn.innerHTML='Adding to cart...'
+	 atcBtn.classList.add('atc-click')
+	
+	setTimeout(function() {
+		document.body.classList.remove('atc-animation')
+		atcBtn.innerHTML='Add to cart'
+	  }, 1000);
 })
 
 

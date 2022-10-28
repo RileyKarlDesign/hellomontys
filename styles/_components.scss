@@ -31,19 +31,28 @@
 
 
 .main-hero-img{
-    height: calc(var(--doc-height) - 10em );
+    height: calc(var(--doc-height) - 6em );
        
-    min-height: 50em;
+    
     //border: 2px solid green;
     img{
         height: 100% !important;
     }
 
+
+    @media (max-width: 1650px) {
+        height: calc(var(--doc-height) - 10em ) !important;
+        
+
+    }
+
     @media(max-width: 1000px){ 
-        height: calc(var(--doc-height) - 17vh ) !important;
-        min-height: 10em !important;
+        height: calc(var(--doc-height) - 17em ) !important;
+        
         
     }
+
+
 }
 
 
