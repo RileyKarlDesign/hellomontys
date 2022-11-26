@@ -21,6 +21,7 @@ atcBtn.addEventListener('click', () => {
 	
 	setTimeout(function() {
 		document.body.classList.remove('atc-animation')
+		atcBtn.classList.remove('atc-click')
 		atcBtn.innerHTML='Add to cart'
 	  }, 1000);
 })

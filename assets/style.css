@@ -398,7 +398,7 @@ input:disabled + label {
   line-height: 0 !important;
 }
 .header-top .logo {
-  background-color: rgba(255, 252, 242, 0.923);
+  background-color: rgb(255, 252, 242);
   height: 2.5rem;
   padding: 10px;
   border-radius: 0 0 5px 5px;
@@ -1857,7 +1857,7 @@ input {
     display: flex;
     flex-direction: column !important;
     height: fit-content;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
   }
 }
 @media (max-width: 800px) {
@@ -2280,7 +2280,7 @@ input {
 }
 
 .nav-module {
-  background-color: rgba(255, 252, 242, 0.923);
+  background-color: rgb(255, 252, 242);
   display: flex;
   align-items: center;
   justify-content: center;
